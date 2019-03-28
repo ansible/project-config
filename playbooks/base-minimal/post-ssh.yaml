@@ -1,0 +1,8 @@
+- hosts: all
+  # NOTE(pabelanger): We ignore_errors for the following tasks as not to fail
+  # successful jobs.
+  ignore_errors: yes
+  tasks:
+    - name: Run remove-build-sshkey role
+      include_role:
+        name: remove-build-sshkey
