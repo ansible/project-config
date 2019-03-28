@@ -1,0 +1,67 @@
+---
+# Changes to this job require a special procedure, because they can
+# not be tested before landing, and if they are faulty, they will
+# break all jobs, meaning subsequent corrections will not be able to
+# land.  To make a change:
+#
+# 1) Ensure that base-minimal-test and its playbooks are identical to
+#    base-minimal.
+# 2) Make the change to base-minimal-test and/or its playbooks.
+# 3) Merge the change from step 2.  No jobs normally use
+#    base-minimal-test, so this is safe.
+# 4) Propose a change to a job to reparent it to base-minimal-test.
+#    Choose a job which will exercise whatever you are changing.  The
+#    "unittests" job in zuul-jobs is a good choice.  Use [DNM] in the
+#    commit subject so that people know not to merge the change.  Set
+#    it to "Work in progress" so people don't review it.
+# 5) Once test results arrive for the change in step 2, make a change
+#    which copies the job and/or playbooks of base-minimal-test to
+#    base-minimal. In the commit message, link to (without using
+#    Depends-On:) the change from step 4 so reviewers can see the
+#    test results.
+# 6) Once the change in step 5 merges, abandon the change from step 4.
+
+- job:
+    name: base-minimal
+    parent: null
+    description: |
+      The base-minimal job for Ansible installation of Zuul.
+    pre-run: playbooks/base-minimal/pre.yaml
+    post-run:
+      - playbooks/base-minimal/post-ssh.yaml
+      - playbooks/base-minimal/post-logs.yaml
+    roles:
+      - zuul: openstack-infra/zuul-jobs
+    post-timeout: 1800
+    timeout: 1800
+    vars:
+      ara_report_type: html
+      ara_report_path: ara-report
+      ara_compress_html: false
+    nodeset:
+      nodes:
+        - name: ubuntu-bionic
+          label: ubuntu-bionic-1vcpu
+
+- job:
+    name: base-minimal-test
+    parent: null
+    description: |
+      A job to test changes to the base-minimal job without disturbing the
+      main job in production.  Not for general use.
+    pre-run: playbooks/base-minimal-test/pre.yaml
+    post-run:
+      - playbooks/base-minimal-test/post-ssh.yaml
+      - playbooks/base-minimal-test/post-logs.yaml
+    roles:
+      - zuul: openstack-infra/zuul-jobs
+    post-timeout: 1800
+    timeout: 1800
+    vars:
+      ara_report_type: html
+      ara_report_path: ara-report
+      ara_compress_html: false
+    nodeset:
+      nodes:
+        - name: ubuntu-bionic
+          label: ubuntu-bionic-1vcpu

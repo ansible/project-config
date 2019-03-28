@@ -1,0 +1,19 @@
+- hosts: localhost
+  tasks:
+    - name: Run log-inventory role
+      include_role:
+        name: log-inventory
+
+- hosts: all
+  tasks:
+    - name: Run add-build-sshkey role
+      include_role:
+        name: add-build-sshkey
+
+    - name: Run start-zuul-console role
+      include_role:
+        name: start-zuul-console
+
+    - name: Run prepare-workspace role
+      include_role:
+        name: prepare-workspace
