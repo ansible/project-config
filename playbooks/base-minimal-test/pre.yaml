@@ -1,5 +1,11 @@
 - hosts: localhost
   tasks:
+    - name: Run emit-job-header role
+      include_role:
+        name: emit-job-header
+      vars:
+        zuul_log_url: https://object-storage-ca-ymq-1.vexxhost.net/v1/a0b4156a37f9453eb4ec7db5422272df/logs
+
     - name: Run log-inventory role
       include_role:
         name: log-inventory
