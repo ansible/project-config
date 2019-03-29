@@ -1,0 +1,9 @@
+---
+- project:
+    name: github.com/ansible/project-config
+    check:
+      jobs:
+        - noop
+    gate:
+      jobs:
+        - noop
