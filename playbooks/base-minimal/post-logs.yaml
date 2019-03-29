@@ -8,3 +8,9 @@
     - name: Run htmlify-logs role
       include_role:
         name: htmlify-logs
+
+    - name: Run upload-logs-swift role
+      include_role:
+        name: upload-logs-swift
+      vars:
+        zuul_log_cloud_config: "{{ vexxhost_clouds_yaml }}"
