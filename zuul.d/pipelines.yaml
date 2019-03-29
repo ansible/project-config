@@ -29,3 +29,48 @@
       github.com:
         status: 'failure'
       mysql:
+
+- pipeline:
+    name: gate
+    description: |
+      Changes that have been approved by core developers are enqueued
+      in order in this pipeline, and if they pass tests, will be
+      merged.
+    success-message: Build succeeded (gate pipeline).
+    failure-message: |
+      Build failed (gate pipeline).  For information on how to proceed, see
+      http://docs.openstack.org/infra/manual/developers.html#automated-testing
+    manager: dependent
+    precedence: normal
+    require:
+      github.com:
+        label:
+          - gate
+        status: "ansible-zuul\\[bot\\]:ansible/check:success"
+        open: True
+        current-patchset: True
+    trigger:
+      github.com:
+        - event: pull_request
+          action: status
+          status: "ansible-zuul\\[bot\\]:ansible/check:success"
+        - event: pull_request
+          action: labeled
+          label:
+            - gate
+    start:
+      github.com:
+        status: 'pending'
+        status-url: 'https://dashboard.zuul.ansible.com/t/ansible/status'
+        comment: false
+    success:
+      github.com:
+        status: 'success'
+        merge: true
+      mysql:
+    failure:
+      github.com:
+        status: 'failure'
+      mysql:
+    window-floor: 20
+    window-increase-factor: 2
