@@ -15,6 +15,8 @@
       vars:
         zuul_log_cloud_config: "{{ vexxhost_clouds_yaml }}"
 
+    # NOTE(pabelanger): We should update upload-logs-swift role to accept a
+    # zuul_log_url variable so we don't have to do this.
     - name: Setup log path fact
       include_role:
         name: set-zuul-log-path-fact
