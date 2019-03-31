@@ -4,7 +4,7 @@
       include_role:
         name: emit-job-header
       vars:
-        zuul_log_url: https://object-storage-ca-ymq-1.vexxhost.net/v1/a0b4156a37f9453eb4ec7db5422272df/logs
+        zuul_log_url: https://logs.zuul.ansible.com
 
     - name: Run log-inventory role
       include_role:
