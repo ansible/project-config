@@ -40,10 +40,7 @@
       ara_compress_html: false
     secrets:
       - vexxhost_clouds_yaml
-    nodeset:
-      nodes:
-        - name: ubuntu-bionic
-          label: ubuntu-bionic-1vcpu
+    nodeset: centos-7-1vcpu
 
 - job:
     name: base-minimal-test
