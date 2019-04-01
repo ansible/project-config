@@ -47,8 +47,8 @@
         label:
           - gate
         status: "ansible-zuul\\[bot\\]:ansible/check:success"
-        open: True
-        current-patchset: True
+        open: true
+        current-patchset: true
     trigger:
       github.com:
         - event: pull_request

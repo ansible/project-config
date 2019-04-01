@@ -4,6 +4,8 @@
     check:
       jobs:
         - noop
+        - tox-linters:
+            voting: false
     gate:
       jobs:
         - noop
