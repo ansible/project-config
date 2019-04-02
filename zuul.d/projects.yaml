@@ -3,9 +3,7 @@
     name: github.com/ansible/project-config
     check:
       jobs:
-        - noop
-        - tox-linters:
-            voting: false
+        - tox-linters
     gate:
       jobs:
-        - noop
+        - tox-linters
