@@ -74,3 +74,121 @@
       mysql:
     window-floor: 20
     window-increase-factor: 2
+
+- pipeline:
+    name: post
+    description: |
+      This pipeline runs jobs that operate after each change is
+      merged. Queue items are identified by the abbreviated hash (git
+      log --format=%h) of the merge commit.
+    manager: supercedent
+    precedence: high
+    post-review: true
+    trigger:
+      github.com:
+        - event: push
+          ref: ^refs/heads/.*$
+    success:
+      mysql:
+    failure:
+      mysql:
+
+- pipeline:
+    name: tag
+    description: This pipeline runs jobs in response to any tag event.
+    manager: independent
+    precedence: high
+    post-review: true
+    trigger:
+      github.com:
+        - event: push
+          ref: ^refs/tags/.*$
+    success:
+      mysql:
+
+- pipeline:
+    name: pre-release
+    description: When a commit is tagged with a pre-release tag, this pipeline runs jobs that publish archives and documentation.
+    manager: independent
+    precedence: high
+    post-review: true
+    trigger:
+      github.com:
+        - event: push
+          ref: ^refs/tags/[0-9]+(\.[0-9]+)*(a|b|rc)[0-9]+$
+    success:
+      mysql:
+
+- pipeline:
+    name: release
+    description: When a commit is tagged as a release, this pipeline runs jobs that publish archives and documentation.
+    manager: independent
+    precedence: high
+    post-review: true
+    trigger:
+      github.com:
+        - event: push
+          ref: ^refs/tags/[0-9]+(\.[0-9]+)*$
+    success:
+      mysql:
+
+- pipeline:
+    name: periodic
+    post-review: true
+    description: Jobs in this queue are triggered daily.
+    manager: independent
+    precedence: low
+    trigger:
+      timer:
+        - time: '0 0 * * *'
+    success:
+      mysql:
+    failure:
+      mysql:
+
+- pipeline:
+    name: periodic-1hr
+    post-review: true
+    description: Jobs in this queue are triggered hourly.
+    manager: independent
+    precedence: low
+    trigger:
+      timer:
+        - time: '0 * * * *'
+    success:
+      mysql:
+    failure:
+      mysql:
+
+- pipeline:
+    name: unlabel-on-push
+    description: |
+      If a PR is pushed to and has the gate label, we want to remove that.
+    manager: independent
+    precedence: high
+    trigger:
+      github.com:
+        - event: pull_request
+          action:
+            - changed
+    require:
+      github.com:
+        label:
+          - gate
+    success:
+      github.com:
+        unlabel:
+          - gate
+        comment: false
+      mysql:
+
+- pipeline:
+    name: merge-check
+    description: >
+      Each time a change merges, this pipeline verifies that all open changes
+      on the same project are still mergeable.
+    failure-message: Build failed (merge-check pipeline).
+    manager: independent
+    precedence: low
+    ignore-dependencies: true
+    trigger: {}
