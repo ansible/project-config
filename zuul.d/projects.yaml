@@ -7,3 +7,10 @@
     gate:
       jobs:
         - tox-linters
+
+# NOTE(pabelanger): We current don't gate these projects.
+- project:
+    name: github.com/ansible-network/windmill-config
+    check:
+      jobs:
+        - noop
