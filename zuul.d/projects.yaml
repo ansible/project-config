@@ -1,5 +1,12 @@
 ---
 - project:
+    # NOTE(pabelanger): All projects in ansible-network must run
+    # system-required project-template
+    name: ^github.com/ansible-network/.*
+    templates:
+      - system-required
+
+- project:
     name: github.com/ansible-network/arista_eos
     default-branch: devel
     templates:
