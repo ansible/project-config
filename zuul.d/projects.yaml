@@ -53,4 +53,6 @@
         - tox-linters
     promote:
       jobs:
-        - windmill-config-deploy
+        - windmill-config-deploy:
+            files:
+              - zuul/tenants.yaml
