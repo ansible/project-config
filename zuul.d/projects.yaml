@@ -6,6 +6,11 @@
       - ansible-python-jobs
 
 - project:
+    name: github.com/ansible-network/sandbox
+    templates:
+      - noop-jobs
+
+- project:
     name: github.com/ansible/project-config
     check:
       jobs:
