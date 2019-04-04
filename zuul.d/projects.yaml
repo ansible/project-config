@@ -35,3 +35,6 @@
     gate:
       jobs:
         - tox-linters
+    promote:
+      jobs:
+        - windmill-config-deploy
