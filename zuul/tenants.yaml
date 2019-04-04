@@ -6,7 +6,7 @@
     name: ansible
     # NOTE(pabelanger): By default, we don't want to load any branches
     # that are unprotected. This means projects need to enable branch
-    # protection to load jobs from them.
+    # protection to in-tree zuul.yaml files.
     exclude-unprotected-branches: true
     source:
       github.com:
