@@ -5,7 +5,8 @@
 - tenant:
     name: ansible
     # NOTE(pabelanger): By default, we don't want to load any branches
-    # that are unprotected.
+    # that are unprotected. This means projects need to enable branch
+    # protection to load jobs from them.
     exclude-unprotected-branches: true
     source:
       github.com:
