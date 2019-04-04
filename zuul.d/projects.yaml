@@ -7,3 +7,9 @@
     gate:
       jobs:
         - tox-linters
+
+- project:
+    name: github.com/ansible-network/arista_eos
+    default-branch: devel
+    templates:
+      - ansible-python-jobs
