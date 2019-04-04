@@ -13,6 +13,22 @@
       - ansible-python-jobs
 
 - project:
+    name: github.com/ansible-network/juniper_junos
+    default-branch: devel
+    templates:
+      - ansible-python-jobs
+    check:
+      jobs:
+        - ansible-tox-py27
+        - ansible-tox-py36
+        - ansible-tox-py37
+    gate:
+      jobs:
+        - ansible-tox-py27
+        - ansible-tox-py36
+        - ansible-tox-py37
+
+- project:
     name: github.com/ansible-network/packet-ci-cloud
     templates:
       - noop-jobs
