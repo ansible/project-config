@@ -31,6 +31,12 @@
       - ansible-python-jobs
 
 - project:
+    name: github.com/ansible-network/config_manager
+    default-branch: devel
+    templates:
+      - noop-jobs
+
+- project:
     name: github.com/ansible-network/juniper_junos
     default-branch: devel
     templates:
