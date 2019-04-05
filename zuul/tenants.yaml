@@ -22,6 +22,7 @@
           - ansible-network/cisco_iosxr
           - ansible-network/cisco_nxos
           - ansible-network/config_manager
+          - ansible-network/frr
           - ansible-network/juniper_junos
           - ansible-network/network-runner
           - ansible-network/packet-ci-cloud
