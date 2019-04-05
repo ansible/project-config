@@ -18,6 +18,7 @@
           # After this point, sorting projects alphabetically will help
           # merge conflicts
           - ansible-network/arista_eos
+          - ansible-network/aws
           - ansible-network/cisco_iosxr
           - ansible-network/cisco_nxos
           - ansible-network/juniper_junos
