@@ -26,6 +26,7 @@
           - ansible-network/packet-ci-cloud
           - ansible-network/releases
           - ansible-network/resource_module_builder
+          - ansible-network/resource_module_models
           - ansible-network/sandbox
           - ansible-network/windmill-config
 
