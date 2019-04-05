@@ -22,6 +22,7 @@
           - ansible-network/cisco_nxos
           - ansible-network/juniper_junos
           - ansible-network/packet-ci-cloud
+          - ansible-network/releases
           - ansible-network/resource_module_builder
           - ansible-network/sandbox
           - ansible-network/windmill-config
