@@ -63,6 +63,11 @@
       - noop-jobs
 
 - project:
+    name: github.com/ansible-network/resource_module_models
+    templates:
+      - noop-jobs
+
+- project:
     name: github.com/ansible-network/sandbox
     templates:
       - noop-jobs
