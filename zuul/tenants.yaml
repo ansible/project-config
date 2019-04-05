@@ -32,6 +32,7 @@
           - ansible-network/resource_module_builder
           - ansible-network/resource_module_models
           - ansible-network/resource_module_planning
+          - ansible-network/rhel
           - ansible-network/sandbox
           - ansible-network/windmill-config
 
