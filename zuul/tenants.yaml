@@ -30,6 +30,12 @@
           - ansible-network/sandbox
           - ansible-network/windmill-config
 
+          # Don't load any configuration from these projects because we
+          # don't gate them, so they could wedge our config.
+          - include: []
+            projects:
+              - ansible/ansible-runner
+
       git.openstack.org:
         untrusted-projects:
           - openstack-infra/zuul-jobs
