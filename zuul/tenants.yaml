@@ -23,6 +23,7 @@
           - ansible-network/cisco_nxos
           - ansible-network/config_manager
           - ansible-network/juniper_junos
+          - ansible-network/network-runner
           - ansible-network/packet-ci-cloud
           - ansible-network/releases
           - ansible-network/resource_module_builder
