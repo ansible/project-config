@@ -37,6 +37,11 @@
       - noop-jobs
 
 - project:
+    name: github.com/ansible-network/configure-system-properties
+    templates:
+      - noop-jobs
+
+- project:
     name: github.com/ansible-network/frr
     default-branch: devel
     templates:
