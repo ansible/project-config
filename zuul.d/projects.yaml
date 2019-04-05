@@ -13,6 +13,12 @@
       - ansible-python-jobs
 
 - project:
+    name: github.com/ansible-network/aws
+    default-branch: devel
+    templates:
+      - noop-jobs
+
+- project:
     name: github.com/ansible-network/cisco_iosxr
     default-branch: devel
     templates:
