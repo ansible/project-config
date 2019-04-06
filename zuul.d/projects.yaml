@@ -106,6 +106,12 @@
       - noop-jobs
 
 - project:
+    name: github.com/ansible-network/rhel
+    default-branch: devel
+    templates:
+      - noop-jobs
+
+- project:
     name: github.com/ansible-network/sandbox
     templates:
       - noop-jobs
