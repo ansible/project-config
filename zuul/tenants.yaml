@@ -36,6 +36,7 @@
           - ansible-network/net_operations
           - ansible-network/network_configurator
           - ansible-network/network-image-builder
+          - ansible-network/network-proposals
           - ansible-network/network-runner
           - ansible-network/openstack
           - ansible-network/packet-ci-cloud
