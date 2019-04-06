@@ -81,6 +81,12 @@
       - noop-jobs
 
 - project:
+    name: github.com/ansible-network/network_configurator
+    default-branch: devel
+    templates:
+      - noop-jobs
+
+- project:
     name: github.com/ansible-network/network-image-builder
     templates:
       - noop-jobs
