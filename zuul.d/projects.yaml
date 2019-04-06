@@ -84,6 +84,12 @@
       - noop-jobs
 
 - project:
+    name: github.com/ansible-network/content_store
+    default-branch: devel
+    templates:
+      - noop-jobs
+
+- project:
     name: github.com/ansible-network/frr
     default-branch: devel
     templates:
