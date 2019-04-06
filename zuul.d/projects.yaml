@@ -19,6 +19,12 @@
       - noop-jobs
 
 - project:
+    name: github.com/ansible-network/azure
+    default-branch: devel
+    templates:
+      - noop-jobs
+
+- project:
     name: github.com/ansible-network/cisco_iosxr
     default-branch: devel
     templates:
