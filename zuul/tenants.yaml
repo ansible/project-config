@@ -28,6 +28,7 @@
           - ansible-network/frr
           - ansible-network/juniper_junos
           - ansible-network/linux_network
+          - ansible-network/network_configurator
           - ansible-network/network-image-builder
           - ansible-network/network-runner
           - ansible-network/openstack
