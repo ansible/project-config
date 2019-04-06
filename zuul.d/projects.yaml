@@ -25,6 +25,11 @@
       - noop-jobs
 
 - project:
+    name: github.com/ansible-network/backup_config
+    templates:
+      - noop-jobs
+
+- project:
     name: github.com/ansible-network/cisco_asa
     default-branch: devel
     templates:
