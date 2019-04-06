@@ -80,6 +80,12 @@
       - noop-jobs
 
 - project:
+    name: github.com/ansible-network/openstack
+    default-branch: devel
+    templates:
+      - noop-jobs
+
+- project:
     name: github.com/ansible-network/packet-ci-cloud
     templates:
       - noop-jobs
