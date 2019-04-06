@@ -122,6 +122,11 @@
       - noop-jobs
 
 - project:
+    name: github.com/ansible-network/network-proposals
+    templates:
+      - noop-jobs
+
+- project:
     name: github.com/ansible-network/network-runner
     templates:
       - noop-jobs
