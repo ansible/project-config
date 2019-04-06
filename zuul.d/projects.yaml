@@ -76,6 +76,11 @@
         - ansible-tox-py37
 
 - project:
+    name: github.com/ansible-network/linux_network
+    templates:
+      - noop-jobs
+
+- project:
     name: github.com/ansible-network/network-image-builder
     templates:
       - noop-jobs
