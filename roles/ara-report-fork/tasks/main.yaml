@@ -1,0 +1,83 @@
+---
+- block:
+    - name: Check that ARA is installed
+      command: bash -c "type -p {{ ara_report_executable }}"
+      ignore_errors: true
+      register: ara_installed
+
+    - name: Warn if ARA is not installed
+      debug:
+        msg: |
+          ARA is not installed on the executor node, no report will be available.
+      when: ara_installed.rc != 0
+
+    - name: Check that the ARA database exists
+      stat:
+        path: "{{ ara_database_path }}"
+      register: ara_db
+
+    - name: Warn if no database is found
+      debug:
+        msg: |
+          No report will be available because the ARA database was not found.
+      when: not ara_db.stat.exists
+
+    - name: Validate role configuration
+      assert:
+        that:
+          - ara_report_type in ['html', 'database']
+          - ara_compress_html in [true, false]
+          - ara_report_run in [true, false, 'failure']
+  rescue:
+    - name: Role validation rescue
+      debug:
+        msg: |
+          Something failed during the validation of the role configuration
+          and pre-requirements.
+          It is likely that no report will be available, please verify the
+          execution and the parameters of the role for details.
+
+- name: Prefix the log path with the log root
+  set_fact:
+    final_ara_report_path: "{{ zuul.executor.log_root }}/{{ ara_report_path }}"
+
+- when:
+    - ara_installed.rc == 0
+    - ara_db.stat.exists
+    - ara_report_type == 'html'
+  block:
+    # Always generate (true), never (false) or only on failure ('failure')
+    # Additionally cover for edge cases where zuul_success might be undefined
+    - name: Generate ARA HTML output
+      command: "{{ ara_report_executable }} generate html {{ final_ara_report_path }}"
+      environment:
+        ARA_DATABASE: "sqlite:///{{ ara_database_path }}"
+      when: ara_report_run | bool or
+            (ara_report_run == 'failure' and not zuul_success | default(false) | bool)
+      register: ara_generated
+
+    - name: Compress ARA HTML output
+      command: gzip --recursive --best {{ final_ara_report_path }}
+      when:
+        - ara_compress_html | bool
+        - not ara_generated | skipped
+  rescue:
+    - name: HTML generation rescue
+      debug:
+        msg: |
+          Something failed during the generation of the HTML report.
+          Please verify the execution of the role for details.
+
+- when:
+    - ara_installed.rc == 0
+    - ara_db.stat.exists
+    - ara_report_type == 'database'
+    - ara_report_run | bool or (ara_report_run == 'failure' and not zuul_success | default(false) | bool)
+  block:
+    - name: Create the ARA database report directory
+      file:
+        path: "{{ final_ara_report_path }}"
+        state: directory
+
+    - name: Save the ARA database
+      command: cp {{ ara_database_path }} {{ final_ara_report_path }}

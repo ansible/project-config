@@ -1,0 +1,29 @@
+---
+# Whether to run this role or not
+# Possible values:
+#   - true (always)
+#   - false (never)
+#   - 'failure' (only on failure)
+ara_report_run: true
+
+# Absolute path where the ARA database is expected on the control node.
+ara_database_path: "{{ zuul.executor.work_root }}/.ara/ansible.sqlite"
+
+# Whether the report is in html format or in database format
+# Possible values:
+#  - html
+#  - database
+ara_report_type: 'html'
+
+# When report_type is 'html' directory where the HTML report will be generated.
+# When report_type is 'database', directory where the database is saved.
+# Note that when using 'database', an ARA web application can load the database
+# dynamically. See the ARA documentation for details:
+# https://ara.readthedocs.io/en/latest/advanced.html#serving-ara-sqlite-databases-over-http
+# This path is relative to the root of the log directory.
+ara_report_path: 'ara'
+
+# When report_type is 'html', whether to compress the ARA HTML output or not
+ara_compress_html: true
+
+ara_report_executable: ara
