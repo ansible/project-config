@@ -48,26 +48,6 @@
       - ansible-python-jobs
 
 - project:
-    name: github.com/ansible-network/cloud_vpn_aws_vpn_provider
-    templates:
-      - noop-jobs
-
-- project:
-    name: github.com/ansible-network/cloud_vpn_aws_vpn_provisioner
-    templates:
-      - noop-jobs
-
-- project:
-    name: github.com/ansible-network/cloud_vpn_csr_provider
-    templates:
-      - noop-jobs
-
-- project:
-    name: github.com/ansible-network/cloud_vpn_vyos_provider
-    templates:
-      - noop-jobs
-
-- project:
     name: github.com/ansible-network/config_manager
     default-branch: devel
     templates:
