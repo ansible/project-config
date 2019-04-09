@@ -130,12 +130,8 @@
 
 - project:
     name: github.com/ansible/project-config
-    check:
-      jobs:
-        - tox-linters
-    gate:
-      jobs:
-        - tox-linters
+    templates:
+      - ansible-python-jobs
     promote:
       jobs:
         - windmill-config-deploy:
