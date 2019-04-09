@@ -54,23 +54,7 @@
       - noop-jobs
 
 - project:
-    name: github.com/ansible-network/configure-system-properties
-    templates:
-      - noop-jobs
-
-- project:
-    name: github.com/ansible-network/configure-vlan
-    templates:
-      - noop-jobs
-
-- project:
     name: github.com/ansible-network/content_store
-    default-branch: devel
-    templates:
-      - noop-jobs
-
-- project:
-    name: github.com/ansible-network/frr
     default-branch: devel
     templates:
       - noop-jobs
@@ -92,11 +76,6 @@
         - ansible-tox-py37
 
 - project:
-    name: github.com/ansible-network/linux_network
-    templates:
-      - noop-jobs
-
-- project:
     name: github.com/ansible-network/net_operations
     templates:
       - noop-jobs
@@ -109,11 +88,6 @@
 
 - project:
     name: github.com/ansible-network/network-image-builder
-    templates:
-      - noop-jobs
-
-- project:
-    name: github.com/ansible-network/network-proposals
     templates:
       - noop-jobs
 
