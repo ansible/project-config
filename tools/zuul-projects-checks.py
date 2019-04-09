@@ -105,7 +105,7 @@ def check_pipeline(project, job_pipeline, pipeline_name):
         if isinstance(job, dict):
             for name in job:
                 if ('voting' in job[name] and
-                    (not job[name]['voting'])):
+                        (not job[name]['voting'])):
                     errors = True
                     print("  Found non-voting job in %s:" % pipeline_name)
                     print("    project: %s" % project['name'])
