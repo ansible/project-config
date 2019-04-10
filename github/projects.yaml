@@ -24,7 +24,7 @@
 #
 ---
 - project: ansible-network/content_store
-  description: Ansible Network Content Store Role
+  description: Ansible Network content store role
 - project: ansible-network/net_operations
   archived: true
   description: RETIRED, Ansible role for network operations automation
