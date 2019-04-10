@@ -140,6 +140,7 @@
         - project-config-tox-github
     promote:
       jobs:
+        - project-config-github-promote
         - windmill-config-deploy:
             files:
               - zuul/tenants.yaml
