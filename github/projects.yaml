@@ -14,6 +14,7 @@
 
 # Example format:
 # - project: ansible/foo
+#   archived: true
 #   description: This is a great project
 #   options:
 #     - has-downloads
@@ -22,6 +23,9 @@
 #     - has-wiki
 #
 ---
+- project: ansible-network/net_operations
+  archived: true
+  description: RETIRED, Ansible role for network operations automation
 - project: ansible-network/sandbox
   description: Sandbox for first time contributors
 - project: ansible-network/windmill-config
