@@ -132,6 +132,12 @@
     name: github.com/ansible/project-config
     templates:
       - ansible-python-jobs
+    check:
+      jobs:
+        - project-config-tox-github
+    gate:
+      jobs:
+        - project-config-tox-github
     promote:
       jobs:
         - windmill-config-deploy:

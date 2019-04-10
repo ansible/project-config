@@ -63,3 +63,14 @@
     secrets:
       - vexxhost_clouds_yaml
     nodeset: centos-7-1vcpu
+
+# ansible/project-config jobs
+- job:
+    name: project-config-tox-github
+    parent: tox
+    description: |
+      Runs checks on github-related configuration.  Uses ``github``
+      tox env.
+    vars:
+      tox_envlist: github
+    nodeset: fedora-latest-1vcpu
