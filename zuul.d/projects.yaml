@@ -129,6 +129,19 @@
       - noop-jobs
 
 - project:
+    name: github.com/ansible/ansible-runner
+    templates:
+      - system-required
+    check:
+      jobs:
+        - ansible-tox-py27:
+            voting: false
+        - ansible-tox-py36:
+            voting: false
+        - ansible-tox-py37:
+            voting: false
+
+- project:
     name: github.com/ansible/project-config
     templates:
       - ansible-python-jobs
