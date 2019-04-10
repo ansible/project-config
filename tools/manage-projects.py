@@ -92,6 +92,10 @@ class Client(object):
                 name=repo_name, **kwargs)
             return
 
+        if repo.archived:
+            # Repo is archived, we cannot update it.
+            return
+
         if kwargs['allow_merge_commit'] == repo.allow_merge_commit:
             del kwargs['allow_merge_commit']
         if kwargs['allow_rebase_merge'] == repo.allow_rebase_merge:
@@ -108,6 +112,9 @@ class Client(object):
             del kwargs['has_projects']
         if kwargs['has_wiki'] == repo.has_wiki:
             del kwargs['has_wiki']
+        if item.get('archived', False):
+            kwargs['archived'] = True
+
         if kwargs:
             LOG.info("Updating %s in github", repo_name)
             repo.edit(repo_name, **kwargs)
