@@ -17,6 +17,7 @@
           - ansible/ansible-zuul-jobs
           # After this point, sorting projects alphabetically will help
           # merge conflicts
+          - ansible/network
           - ansible-network/arista_eos
           - ansible-network/aws
           - ansible-network/azure
