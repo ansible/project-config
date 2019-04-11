@@ -23,12 +23,20 @@
 #     - has-wiki
 #
 ---
+- project: ansible-network/backup_config
+  description: Ansible role for backup of running configurations from network devices
+- project: ansible-network/cisco_iosxr
+  description: Ansible Network Cisco IOS-XR Provider Role
 - project: ansible-network/content_store
   description: Ansible Network content store role
+- project: ansible-network/network_configurator
+  description: Ansible role to configure Tower for network operations
 - project: ansible-network/net_operations
   archived: true
   description: RETIRED, Ansible role for network operations automation
 - project: ansible-network/sandbox
   description: Sandbox for first time contributors
+- project: ansible-network/vyos
+  description: Ansible Network VyOS Provider Role
 - project: ansible-network/windmill-config
   description: Ansible configuration files for windmill project
