@@ -146,6 +146,13 @@
         - ansible-tox-py37
 
 - project:
+    name: github.com/ansible/network
+    default-branch: devel
+    templates:
+      - system-required
+      - noop-jobs
+
+- project:
     name: github.com/ansible/project-config
     templates:
       - system-required
