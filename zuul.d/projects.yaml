@@ -136,10 +136,14 @@
       jobs:
         - ansible-tox-linters
         - ansible-tox-py27
-        - ansible-tox-py36:
-            voting: false
-        - ansible-tox-py37:
-            voting: false
+        - ansible-tox-py36
+        - ansible-tox-py37
+    gate:
+      jobs:
+        - ansible-tox-linters
+        - ansible-tox-py27
+        - ansible-tox-py36
+        - ansible-tox-py37
 
 - project:
     name: github.com/ansible/project-config
