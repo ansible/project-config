@@ -134,6 +134,7 @@
       - system-required
     check:
       jobs:
+        - ansible-tox-linters
         - ansible-tox-py27
         - ansible-tox-py36:
             voting: false
