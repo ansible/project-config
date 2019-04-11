@@ -74,3 +74,10 @@
     vars:
       tox_envlist: github
     nodeset: fedora-latest-1vcpu
+    files:
+      - github/projects.yaml
+      - requirements.txt
+      - test-requirements.txt
+      - tools/check_projects_yaml_alphabetized.sh
+      - tools/manage-projects.py
+      - tox.ini
