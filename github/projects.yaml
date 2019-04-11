@@ -40,3 +40,5 @@
   description: Ansible Network VyOS Provider Role
 - project: ansible-network/windmill-config
   description: Ansible configuration files for windmill project
+- project: ansible/network
+  description: Ansible collection for network devices
