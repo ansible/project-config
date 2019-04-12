@@ -129,7 +129,15 @@
     name: github.com/ansible-network/vyos
     default-branch: devel
     templates:
-      - noop-jobs
+      - ansible-python3-jobs
+    check:
+      jobs:
+        - ansible-tox-linters
+        - ansible-tox-py27
+    gate:
+      jobs:
+        - ansible-tox-linters
+        - ansible-tox-py27
 
 - project:
     name: github.com/ansible/ansible-runner
