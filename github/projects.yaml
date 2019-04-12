@@ -25,6 +25,8 @@
 ---
 - project: ansible-network/backup_config
   description: Ansible role for backup of running configurations from network devices
+- project: ansible-network/cisco_ios
+  description: Ansible Network Cisco IOS Provider Role
 - project: ansible-network/cisco_iosxr
   description: Ansible Network Cisco IOS-XR Provider Role
 - project: ansible-network/content_store
