@@ -156,16 +156,30 @@
 - project:
     name: github.com/ansible-network/vyos
     default-branch: devel
-    templates:
-      - ansible-python3-jobs
     check:
       jobs:
         - ansible-tox-linters
-        - ansible-tox-py27
+        - ansible-tox-py27:
+            required-projects:
+              - name: github.com/ansible-network/network-engine
+        - ansible-tox-py36:
+            required-projects:
+              - name: github.com/ansible-network/network-engine
+        - ansible-tox-py37:
+            required-projects:
+              - name: github.com/ansible-network/network-engine
     gate:
       jobs:
         - ansible-tox-linters
-        - ansible-tox-py27
+        - ansible-tox-py27:
+            required-projects:
+              - name: github.com/ansible-network/network-engine
+        - ansible-tox-py36:
+            required-projects:
+              - name: github.com/ansible-network/network-engine
+        - ansible-tox-py37:
+            required-projects:
+              - name: github.com/ansible-network/network-engine
 
 - project:
     name: github.com/ansible-network/yang
