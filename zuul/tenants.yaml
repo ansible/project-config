@@ -32,6 +32,7 @@
           - ansible-network/juniper_junos
           - ansible-network/net_operations
           - ansible-network/network_configurator
+          - ansible-network/network-engine
           - ansible-network/network-image-builder
           - ansible-network/network-runner
           - ansible-network/openstack
