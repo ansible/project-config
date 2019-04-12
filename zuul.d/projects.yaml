@@ -140,6 +140,20 @@
         - ansible-tox-py27
 
 - project:
+    name: github.com/ansible-network/yang
+    default-branch: devel
+    templates:
+      - ansible-python3-jobs
+    check:
+      jobs:
+        - ansible-tox-linters
+        - ansible-tox-py27
+    gate:
+      jobs:
+        - ansible-tox-linters
+        - ansible-tox-py27
+
+- project:
     name: github.com/ansible/ansible-runner
     templates:
       - system-required
