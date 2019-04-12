@@ -32,7 +32,7 @@
 - project: ansible-network/content_store
   description: Ansible Network content store role
 - project: ansible-network/network-engine
-  description: |
+  description: >-
     This role provides the foundation for building network roles by providing
     modules and plugins that are common to all Ansible Network roles.
 - project: ansible-network/network_configurator
