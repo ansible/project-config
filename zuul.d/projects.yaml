@@ -64,16 +64,13 @@
     default-branch: devel
     templates:
       - ansible-python-jobs
+      - ansible-python3-jobs
     check:
       jobs:
         - ansible-tox-py27
-        - ansible-tox-py36
-        - ansible-tox-py37
     gate:
       jobs:
         - ansible-tox-py27
-        - ansible-tox-py36
-        - ansible-tox-py37
 
 - project:
     name: github.com/ansible-network/network_configurator
@@ -138,20 +135,17 @@
     name: github.com/ansible/ansible-runner
     templates:
       - system-required
+      - ansible-python3-jobs
     check:
       jobs:
         - ansible-build-python-tarball
         - ansible-tox-linters
         - ansible-tox-py27
-        - ansible-tox-py36
-        - ansible-tox-py37
     gate:
       jobs:
         - ansible-build-python-tarball
         - ansible-tox-linters
         - ansible-tox-py27
-        - ansible-tox-py36
-        - ansible-tox-py37
 
 - project:
     name: github.com/ansible/ansible-zuul-jobs
