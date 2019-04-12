@@ -152,6 +152,11 @@
         - ansible-tox-py37
 
 - project:
+    name: github.com/ansible/ansible-zuul-jobs
+    templates:
+      - system-required
+
+- project:
     name: github.com/ansible/network
     default-branch: devel
     templates:
