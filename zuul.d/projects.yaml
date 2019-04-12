@@ -226,17 +226,4 @@
 - project:
     name: github.com/ansible/project-config
     templates:
-      - system-required
-      - ansible-python-jobs
-    check:
-      jobs:
-        - project-config-tox-github
-    gate:
-      jobs:
-        - project-config-tox-github
-    promote:
-      jobs:
-        - project-config-github-promote
-        - windmill-config-deploy:
-            files:
-              - zuul/tenants.yaml
+      - noop-jobs
