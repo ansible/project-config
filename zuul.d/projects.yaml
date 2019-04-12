@@ -129,6 +129,12 @@
       - noop-jobs
 
 - project:
+    name: github.com/ansible-network/vyos
+    default-branch: devel
+    templates:
+      - noop-jobs
+
+- project:
     name: github.com/ansible/ansible-runner
     templates:
       - system-required
