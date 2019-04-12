@@ -40,6 +40,7 @@
           - ansible-network/resource_module_planning
           - ansible-network/rhel
           - ansible-network/sandbox
+          - ansible-network/vyos
           - ansible-network/windmill-config
 
           # Don't load any configuration from these projects because we
