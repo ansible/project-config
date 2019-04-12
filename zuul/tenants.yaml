@@ -17,6 +17,7 @@
           - ansible/ansible-zuul-jobs
           # After this point, sorting projects alphabetically will help
           # merge conflicts
+          - ansible/ansible-runner
           - ansible/network
           - ansible-network/arista_eos
           - ansible-network/aws
@@ -42,12 +43,6 @@
           - ansible-network/sandbox
           - ansible-network/vyos
           - ansible-network/windmill-config
-
-          # Don't load any configuration from these projects because we
-          # don't gate them, so they could wedge our config.
-          - include: []
-            projects:
-              - ansible/ansible-runner
 
       git.openstack.org:
         untrusted-projects:
