@@ -140,12 +140,14 @@
       - system-required
     check:
       jobs:
+        - ansible-build-python-tarball
         - ansible-tox-linters
         - ansible-tox-py27
         - ansible-tox-py36
         - ansible-tox-py37
     gate:
       jobs:
+        - ansible-build-python-tarball
         - ansible-tox-linters
         - ansible-tox-py27
         - ansible-tox-py36
