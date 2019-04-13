@@ -27,6 +27,7 @@
           - ansible-network/cisco_ios
           - ansible-network/cisco_iosxr
           - ansible-network/cisco_nxos
+          - ansible-network/cloud_vpn
           - ansible-network/config_manager
           - ansible-network/content_store
           - ansible-network/juniper_junos
