@@ -62,6 +62,16 @@
       - ansible-python-jobs
 
 - project:
+    name: github.com/ansible-network/cloud_vpn
+    default-branch: devel
+    check:
+      jobs:
+        - ansible-tox-linters
+    gate:
+      jobs:
+        - ansible-tox-linters
+
+- project:
     name: github.com/ansible-network/config_manager
     default-branch: devel
     templates:
