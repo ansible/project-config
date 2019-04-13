@@ -29,6 +29,8 @@
   description: Ansible Network Cisco IOS Provider Role
 - project: ansible-network/cisco_iosxr
   description: Ansible Network Cisco IOS-XR Provider Role
+- project: ansible-network/cloud_vpn
+  description: Ansible Cloud VPN Role
 - project: ansible-network/content_store
   description: Ansible Network content store role
 - project: ansible-network/network-engine
