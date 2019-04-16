@@ -23,6 +23,8 @@
 #     - has-wiki
 #
 ---
+- project: ansible-network/ansible-zuul-jobs
+  description: Defines test jobs and roles
 - project: ansible-network/backup_config
   description: Ansible role for backup of running configurations from network devices
 - project: ansible-network/cisco_ios
@@ -50,5 +52,7 @@
   description: Ansible configuration files for windmill project
 - project: ansible-network/yang
   description: Ansible Yang Role
+- project: ansible-network/zuul-config
+  description: Repo containing Zuul project configuration
 - project: ansible/network
   description: Ansible collection for network devices
