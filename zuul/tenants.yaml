@@ -48,6 +48,12 @@
           - ansible-network/windmill-config
           - ansible-network/yang
 
+          # Don't load any configuration from these projects because we
+          # don't gate them, so they could wedge our config.
+          - include: []
+            projects:
+              - ansible/molecule
+
       git.openstack.org:
         untrusted-projects:
           - openstack-infra/zuul-jobs
