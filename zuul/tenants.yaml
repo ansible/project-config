@@ -64,3 +64,14 @@
               - openstack/windmill
               - openstack/windmill-backup
               - openstack/windmill-ops
+
+      opendev.org:
+        untrusted-projects:
+          - zuul/zuul-jobs
+          # Don't load any configuration from these projects because we
+          # don't gate them, so they could wedge our config.
+          - include: []
+            projects:
+              - windmill/windmill
+              - windmill/windmill-backup
+              - windmill/windmill-ops
