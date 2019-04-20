@@ -31,7 +31,7 @@
       - playbooks/base-minimal/post-ssh.yaml
       - playbooks/base-minimal/post-logs.yaml
     roles:
-      - zuul: openstack-infra/zuul-jobs
+      - zuul: opendev.org/zuul/zuul-jobs
     post-timeout: 1800
     timeout: 1800
     vars:
@@ -53,7 +53,7 @@
       - playbooks/base-minimal-test/post-ssh.yaml
       - playbooks/base-minimal-test/post-logs.yaml
     roles:
-      - zuul: openstack-infra/zuul-jobs
+      - zuul: opendev.org/zuul/zuul-jobs
     post-timeout: 1800
     timeout: 1800
     vars:
