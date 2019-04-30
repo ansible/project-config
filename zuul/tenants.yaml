@@ -52,6 +52,7 @@
           # don't gate them, so they could wedge our config.
           - include: []
             projects:
+              - ansible/ansible
               - ansible/molecule
 
       opendev.org:
