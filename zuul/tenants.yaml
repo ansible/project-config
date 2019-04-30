@@ -53,6 +53,7 @@
           - include: []
             projects:
               - ansible/ansible
+              - ansible/awx
               - ansible/molecule
 
       opendev.org:
