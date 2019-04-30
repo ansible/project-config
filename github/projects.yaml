@@ -23,6 +23,8 @@
 #     - has-wiki
 #
 ---
+- project: ansible-community/ansible-bender
+  description: ansible-playbook + buildah = a sweet container image
 - project: ansible-network/ansible-zuul-jobs
   description: Defines test jobs and roles
 - project: ansible-network/backup_config
