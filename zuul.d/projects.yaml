@@ -227,6 +227,12 @@
       - system-required
 
 - project:
+    name: github.com/ansible/awx
+    default-branch: devel
+    check:
+      jobs: []
+
+- project:
     name: github.com/ansible/network
     default-branch: devel
     templates:
