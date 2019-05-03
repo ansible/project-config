@@ -124,6 +124,8 @@
 - project:
     name: github.com/ansible-network/network-runner
     default-branch: devel
+    templates:
+      - ansible-python3-jobs
     check:
       jobs:
         - ansible-tox-linters
