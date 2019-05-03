@@ -123,8 +123,13 @@
 
 - project:
     name: github.com/ansible-network/network-runner
-    templates:
-      - noop-jobs
+    default-branch: devel
+    check:
+      jobs:
+        - ansible-tox-linters
+    gate:
+      jobs:
+        - ansible-tox-linters
 
 - project:
     name: github.com/ansible-network/openstack
