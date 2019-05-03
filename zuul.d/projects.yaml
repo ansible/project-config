@@ -129,9 +129,11 @@
     check:
       jobs:
         - ansible-tox-linters
+        - ansible-tox-py27
     gate:
       jobs:
         - ansible-tox-linters
+        - ansible-tox-py27
 
 - project:
     name: github.com/ansible-network/openstack
