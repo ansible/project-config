@@ -11,7 +11,7 @@
       include_role:
         name: log-inventory
 
-- hosts: all
+- hosts: all:!appliance
   tasks:
     - name: Run add-build-sshkey role
       include_role:
