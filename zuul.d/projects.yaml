@@ -213,6 +213,10 @@
         - ansible-tox-py27
 
 - project:
+    name: github.com/ansible/ansible
+    default-branch: devel
+
+- project:
     name: github.com/ansible/ansible-runner
     templates:
       - system-required
