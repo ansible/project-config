@@ -163,7 +163,7 @@
 - pipeline:
     name: periodic
     post-review: true
-    description: Jobs in this queue are triggered daily.
+    description: Jobs in this queue are triggered on a timer daily.
     manager: independent
     precedence: low
     trigger:
@@ -177,7 +177,7 @@
 - pipeline:
     name: periodic-1hr
     post-review: true
-    description: Jobs in this queue are triggered hourly.
+    description: Jobs in this queue are triggered on a timer hourly.
     manager: independent
     precedence: low
     trigger:
