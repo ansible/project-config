@@ -215,7 +215,7 @@
 - project:
     name: github.com/ansible/ansible
     default-branch: devel
-    periodic-1hr:
+    periodic:
       jobs:
         - ansible-test-network-integration-vyos:
             branches:
