@@ -217,6 +217,15 @@
 - project:
     name: github.com/ansible/ansible
     default-branch: devel
+    periodic-1h:
+      jobs:
+        - ansible-test-network-integration-eos:
+            branches:
+              - devel
+              - stable-2.8
+              - stable-2.7
+              - stable-2.6
+              - stable-2.5
     periodic:
       jobs:
         - ansible-test-network-integration-vyos:
