@@ -189,6 +189,20 @@
       mysql:
 
 - pipeline:
+    name: periodic-3hr
+    post-review: true
+    description: Jobs in this queue are triggered every 3 hours.
+    manager: independent
+    precedence: low
+    trigger:
+      timer:
+        - time: '0 */3 * * *'
+    success:
+      mysql:
+    failure:
+      mysql:
+
+- pipeline:
     name: unlabel-on-push
     description: |
       If a PR is pushed to and has the gate label, we want to remove that.
