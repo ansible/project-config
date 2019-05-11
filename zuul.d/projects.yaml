@@ -223,18 +223,9 @@
             branches:
               - devel
               - stable-2.8
-        - ansible-test-network-integration-vyos:
-            branches:
-              - devel
-              - stable-2.8
     periodic:
       jobs:
         - ansible-test-network-integration-eos:
-            branches:
-              - stable-2.7
-              - stable-2.6
-              - stable-2.5
-        - ansible-test-network-integration-vyos:
             branches:
               - stable-2.7
               - stable-2.6
