@@ -217,19 +217,8 @@
 - project:
     name: github.com/ansible/ansible
     default-branch: devel
-    periodic-3hr:
-      jobs:
-        - ansible-test-network-integration-eos:
-            branches:
-              - devel
-              - stable-2.8
-    periodic:
-      jobs:
-        - ansible-test-network-integration-eos:
-            branches:
-              - stable-2.7
-              - stable-2.6
-              - stable-2.5
+    templates:
+      - ansible-test-network-integration
 
 - project:
     name: github.com/ansible/ansible-runner
