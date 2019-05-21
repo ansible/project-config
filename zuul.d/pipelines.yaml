@@ -234,3 +234,33 @@
     precedence: low
     ignore-dependencies: true
     trigger: {}
+
+- pipeline:
+    name: third-party-check
+    description: |
+      Newly uploaded patchsets to projects that are external to Ansible
+      enter this pipeline to receive an initial +/-1 Verified vote.
+    success-message: Build succeeded (third-party-check pipeline).
+    # TODO(mordred) We should write a document for non-OpenStack developers
+    failure-message: |
+      Build failed (third-party-check pipeline) integration testing with
+      Ansible.
+    manager: independent
+    precedence: low
+    trigger:
+      github.com:
+        - event: pull_request
+          action:
+            - opened
+            - changed
+            - reopened
+        - event: pull_request
+          action: comment
+          comment: (?i)^\s*recheck\s*$
+    success:
+      mysql:
+    failure:
+      mysql:
+    # Don't report merge-failures to github.com
+    merge-failure:
+      mysql:
