@@ -257,9 +257,17 @@
         - event: pull_request
           action: comment
           comment: (?i)^\s*recheck\s*$
+    start:
+      github.com:
+        status: pending
+        comment: false
     success:
+      github.com:
+        status: 'success'
       mysql:
     failure:
+      github.com:
+        status: 'failure'
       mysql:
     # Don't report merge-failures to github.com
     merge-failure:
