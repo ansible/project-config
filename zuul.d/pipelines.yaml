@@ -260,6 +260,7 @@
     start:
       github.com:
         status: pending
+        status-url: 'https://dashboard.zuul.ansible.com/t/ansible/status'
         comment: false
     success:
       github.com:
