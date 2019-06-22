@@ -35,7 +35,6 @@
     post-timeout: 1800
     timeout: 1800
     vars:
-      ara_report_executable: /var/lib/zuul/venv/ansible/2.8/bin/ara
       ara_report_type: html
       ara_report_path: ara-report
       ara_compress_html: false
@@ -58,7 +57,6 @@
     post-timeout: 1800
     timeout: 1800
     vars:
-      ara_report_executable: /var/lib/zuul/venv/ansible/2.8/bin/ara
       ara_report_type: html
       ara_report_path: ara-report
       ara_compress_html: false
