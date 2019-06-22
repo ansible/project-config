@@ -2,11 +2,9 @@
 - hosts: localhost
   gather_facts: false
   tasks:
-    - name: Run ara-report-fork role
+    - name: Run ara-report role
       include_role:
-        name: ara-report-fork
-      vars:
-        ara_report_executable: /var/lib/zuul/venv/ansible/2.7/bin/ara
+        name: ara-report
 
     - name: Run htmlify-logs role
       include_role:
