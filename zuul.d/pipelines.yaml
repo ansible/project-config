@@ -5,7 +5,7 @@
       Newly uploaded patchsets enter this pipeline to receive an
       initial +/-1 Verified vote.
     manager: independent
-    precedence: low
+    precedence: normal
     trigger:
       github.com:
         - event: pull_request
@@ -41,7 +41,7 @@
       Build failed (gate pipeline).  For information on how to proceed, see
       http://docs.openstack.org/infra/manual/developers.html#automated-testing
     manager: dependent
-    precedence: normal
+    precedence: high
     require:
       github.com:
         label:
