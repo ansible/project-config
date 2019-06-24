@@ -54,6 +54,7 @@
             projects:
               - ansible/ansible
               - ansible/awx
+              - ansible-community/ansible-bender
               - ansible/molecule
 
       opendev.org:
