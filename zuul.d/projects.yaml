@@ -7,6 +7,11 @@
       - system-required
 
 - project:
+    name: github.com/ansible-community/ansible-bender
+    templates:
+      - noop-jobs
+
+- project:
     name: github.com/ansible-network/arista_eos
     default-branch: devel
     templates:
