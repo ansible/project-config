@@ -22,6 +22,6 @@
       include_role:
         name: start-zuul-console
 
-    - name: Run prepare-workspace-fork role
+    - name: Run prepare-workspace-git role
       include_role:
-        name: prepare-workspace-fork
+        name: prepare-workspace-git
