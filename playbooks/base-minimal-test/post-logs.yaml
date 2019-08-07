@@ -10,6 +10,10 @@
       include_role:
         name: htmlify-logs
 
+    - name: Run Zuul manifest role
+      include_role:
+        name: generate-zuul-manifest
+
     - name: Run upload-logs-swift role
       include_role:
         name: upload-logs-swift
