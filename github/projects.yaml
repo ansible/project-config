@@ -27,6 +27,8 @@
   description: ansible-playbook + buildah = a sweet container image
 - project: ansible-network/ansible-zuul-jobs
   description: Defines test jobs and roles
+- project: ansible-network/ansible_collections.vyos.vyos
+  description: Ansible Collection for VyOS
 - project: ansible-network/backup_config
   description: Ansible role for backup of running configurations from network devices
 - project: ansible-network/cisco_ios

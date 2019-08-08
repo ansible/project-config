@@ -19,6 +19,7 @@
           # merge conflicts
           - ansible/ansible-runner
           - ansible/network
+          - ansible-network/ansible_collections.vyos.vyos
           - ansible-network/arista_eos
           - ansible-network/aws
           - ansible-network/azure
