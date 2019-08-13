@@ -12,6 +12,11 @@
       - noop-jobs
 
 - project:
+    name: github.com/ansible-network/ansible_collections.arista.eos
+    templates:
+      - noop-jobs
+
+- project:
     name: github.com/ansible-network/ansible_collections.vyos.vyos
     templates:
       - noop-jobs
