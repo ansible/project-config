@@ -199,7 +199,7 @@
       github.com:
         - event: pull_request
           action: comment
-          comment: (?i)^(Patch Set [0-9]+:)?( [\w\\+-]*)*(\n\n)?\s*check experimental\s*$
+          comment: (?i)^\s*check experimental\s*$
     success:
       github.com: {}
       mysql:
