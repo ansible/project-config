@@ -189,6 +189,25 @@
       mysql:
 
 - pipeline:
+    name: experimental
+    description: On-demand pipeline for requesting a run against a set of jobs that are not yet gating. Leave review comment of "check experimental" to run jobs in this pipeline.
+    success-message: Build succeeded (experimental pipeline).
+    failure-message: Build failed (experimental pipeline).
+    manager: independent
+    precedence: low
+    trigger:
+      github.com:
+        - event: pull_request
+          action: comment
+          comment: (?i)^(Patch Set [0-9]+:)?( [\w\\+-]*)*(\n\n)?\s*check experimental\s*$
+    success:
+      github.com: {}
+      mysql:
+    failure:
+      github.com: {}
+      mysql:
+
+- pipeline:
     name: unlabel-on-push
     description: |
       If a PR is pushed to and has the gate label, we want to remove that.
