@@ -68,11 +68,13 @@
     success:
       github.com:
         status: 'success'
+        status-url: 'https://dashboard.zuul.ansible.com/t/ansible/buildset/{buildset.uuid}'
         merge: true
       mysql:
     failure:
       github.com:
         status: 'failure'
+        status-url: 'https://dashboard.zuul.ansible.com/t/ansible/buildset/{buildset.uuid}'
       mysql:
     window-floor: 20
     window-increase-factor: 2
@@ -272,10 +274,12 @@
     success:
       github.com:
         status: 'success'
+        status-url: 'https://dashboard.zuul.ansible.com/t/ansible/buildset/{buildset.uuid}'
       mysql:
     failure:
       github.com:
         status: 'failure'
+        status-url: 'https://dashboard.zuul.ansible.com/t/ansible/buildset/{buildset.uuid}'
       mysql:
     # Don't report merge-failures to github.com
     merge-failure:
