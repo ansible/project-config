@@ -8,6 +8,7 @@
     # that are unprotected. This means projects need to enable branch
     # protection to in-tree zuul.yaml files.
     exclude-unprotected-branches: true
+    report-build-page: true
     source:
       github.com:
         config-projects:
