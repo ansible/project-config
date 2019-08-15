@@ -29,6 +29,8 @@
   description: Defines test jobs and roles
 - project: ansible-network/ansible_collections.arista.eos
   description: Ansible Network Collection for Arista EOS
+- project: ansible-network/ansible_collections.cisco.ios
+  description: Ansible Network Collection for Cisco IOS
 - project: ansible-network/ansible_collections.vyos.vyos
   description: Ansible Network Collection for VyOS
 - project: ansible-network/backup_config
