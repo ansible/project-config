@@ -17,6 +17,11 @@
       - noop-jobs
 
 - project:
+    name: github.com/ansible-network/ansible_collections.cisco.ios
+    templates:
+      - noop-jobs
+
+- project:
     name: github.com/ansible-network/ansible_collections.vyos.vyos
     templates:
       - noop-jobs
