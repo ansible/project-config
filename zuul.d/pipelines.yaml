@@ -24,10 +24,12 @@
     success:
       github.com:
         status: 'success'
+        status-url: 'https://dashboard.zuul.ansible.com/t/ansible/buildset/{buildset.uuid}'
       mysql:
     failure:
       github.com:
         status: 'failure'
+        status-url: 'https://dashboard.zuul.ansible.com/t/ansible/buildset/{buildset.uuid}'
       mysql:
 
 - pipeline:
