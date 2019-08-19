@@ -31,6 +31,8 @@
   description: Ansible Network Collection for Arista EOS
 - project: ansible-network/ansible_collections.cisco.ios
   description: Ansible Network Collection for Cisco IOS
+- project: ansible-network/ansible_collections.cisco.iosxr
+  description: Ansible Network Collection for Cisco IOSXR
 - project: ansible-network/ansible_collections.juniper.junos
   description: Ansible Network Collection for Juniper JunOS
 - project: ansible-network/ansible_collections.vyos.vyos
