@@ -14,27 +14,27 @@
 - project:
     name: github.com/ansible-network/ansible_collections.arista.eos
     templates:
-      - noop-jobs
+      - ansible-python-jobs
 
 - project:
     name: github.com/ansible-network/ansible_collections.cisco.ios
     templates:
-      - noop-jobs
+      - ansible-python-jobs
 
 - project:
     name: github.com/ansible-network/ansible_collections.cisco.iosxr
     templates:
-      - noop-jobs
+      - ansible-python-jobs
 
 - project:
     name: github.com/ansible-network/ansible_collections.juniper.junos
     templates:
-      - noop-jobs
+      - ansible-python-jobs
 
 - project:
     name: github.com/ansible-network/ansible_collections.vyos.vyos
     templates:
-      - noop-jobs
+      - ansible-python-jobs
 
 - project:
     name: github.com/ansible-network/arista_eos
