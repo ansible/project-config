@@ -24,6 +24,7 @@
           - ansible-network/ansible_collections.cisco.ios
           - ansible-network/ansible_collections.cisco.iosxr
           - ansible-network/ansible_collections.juniper.junos
+          - ansible-network/ansible_collections.network.cli
           - ansible-network/ansible_collections.vyos.vyos
           - ansible-network/arista_eos
           - ansible-network/aws
