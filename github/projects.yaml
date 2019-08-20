@@ -35,6 +35,8 @@
   description: Ansible Network Collection for Cisco IOSXR
 - project: ansible-network/ansible_collections.juniper.junos
   description: Ansible Network Collection for Juniper JunOS
+- project: ansible-network/ansible_collections.network.cli
+  description: Ansible Network Collection for Network CLI
 - project: ansible-network/ansible_collections.vyos.vyos
   description: Ansible Network Collection for VyOS
 - project: ansible-network/backup_config
