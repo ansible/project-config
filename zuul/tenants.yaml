@@ -60,6 +60,7 @@
           - include: []
             projects:
               - ansible/ansible
+              - ansible/ansible-bare
               - ansible/awx
               - ansible-community/ansible-bender
               - ansible/molecule
