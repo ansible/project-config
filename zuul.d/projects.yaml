@@ -14,21 +14,25 @@
 - project:
     name: github.com/ansible-network/ansible_collections.arista.eos
     templates:
+      - ansible-collections-arista-eos
       - ansible-python-jobs
 
 - project:
     name: github.com/ansible-network/ansible_collections.cisco.ios
     templates:
+      - ansible-collections-cisco-ios
       - ansible-python-jobs
 
 - project:
     name: github.com/ansible-network/ansible_collections.cisco.iosxr
     templates:
+      - ansible-collections-cisco-iosxr
       - ansible-python-jobs
 
 - project:
     name: github.com/ansible-network/ansible_collections.juniper.junos
     templates:
+      - ansible-collections-juniper-junos
       - ansible-python-jobs
 
 - project:
