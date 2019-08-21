@@ -39,6 +39,7 @@
 - project:
     name: github.com/ansible-network/ansible_collections.vyos.vyos
     templates:
+      - ansible-collections-vyos-vyos
       - ansible-python-jobs
 
 - project:
