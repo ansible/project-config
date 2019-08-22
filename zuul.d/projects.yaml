@@ -143,6 +143,11 @@
       - noop-jobs
 
 - project:
+    name: github.com/ansible-network/network_content_collector
+    templates:
+      - noop-jobs
+
+- project:
     name: github.com/ansible-network/network-engine
     default-branch: devel
     templates:
