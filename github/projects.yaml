@@ -55,6 +55,8 @@
     modules and plugins that are common to all Ansible Network roles.
 - project: ansible-network/network_configurator
   description: Ansible role to configure Tower for network operations
+- project: ansible-network/network_content_collector
+  description: Ansible Network content creator for collections
 - project: ansible-network/net_operations
   archived: true
   description: RETIRED, Ansible role for network operations automation
