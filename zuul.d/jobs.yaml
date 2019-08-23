@@ -87,6 +87,7 @@
 - job:
     name: propose-github-updates
     abstract: true
+    pre-run: playbooks/propose-github-updates/pre.yaml
     post-run: playbooks/propose-github-updates/post.yaml
     secrets:
       - github_proposal_bot
