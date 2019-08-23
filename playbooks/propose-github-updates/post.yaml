@@ -12,6 +12,9 @@
     - name: Create pull request
       args:
         chdir: "{{ proposal_project_src }}"
+        executable: /bin/bash
+      environment:
+        GIT_EDITOR: cat
       shell: git pull-request
 
     - name: Shred github credentials
