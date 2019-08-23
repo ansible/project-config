@@ -1,0 +1,18 @@
+---
+- hosts: all
+  tasks:
+    - name: Create github credentials
+      copy: "{{ github_proposal_bot.token }}"
+      dest: ~/.netrc
+      mode: 0600
+
+    - name: Install git-pull-request
+      shell: pip3 install git-pull-request --user
+
+    - name: Create pull request
+      args:
+        chdir: "{{ proposal_project_src }}"
+      shell: git pull-request
+
+    - name: Shred github credentials
+      shell: shred ~/.netrc
