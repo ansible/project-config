@@ -83,3 +83,11 @@
       - tools/check_projects_yaml_alphabetized.sh
       - tools/manage-projects.py
       - tox.ini
+
+- job:
+    name: propose-github-updates
+    abstract: true
+    post-run: playbooks/propose-github-updates/post.yaml
+    secrets:
+      - github_proposal_bot
+    nodeset: fedora-latest-1vcpu
