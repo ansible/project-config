@@ -43,8 +43,6 @@
 - project:
     name: github.com/ansible-network/ansible_collections.network.netconf
     templates:
-      - ansible-collections-cisco-iosxr
-      - ansible-collections-juniper-junos
       - ansible-python-jobs
 
 - project:
