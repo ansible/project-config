@@ -14,11 +14,21 @@
       include_role:
         name: generate-zuul-manifest
 
-    - name: Run upload-logs-swift role
-      include_role:
-        name: upload-logs-swift
-      vars:
-        zuul_log_cloud_config: "{{ vexxhost_clouds_yaml }}"
+    - name: Upload logs to swift
+      block:
+        - name: Run upload-logs-swift role
+          include_role:
+            name: upload-logs-swift
+          vars:
+            zuul_log_cloud_config: "{{ vexxhost_clouds_yaml }}"
+      rescue:
+        # NOTE(pabelanger): If for some reason we cannot upload logs, try
+        # again. It is possible network issue on remote side.
+        - name: Run upload-logs-swift role
+          include_role:
+            name: upload-logs-swift
+          vars:
+            zuul_log_cloud_config: "{{ vexxhost_clouds_yaml }}"
 
     # NOTE(pabelanger): We should update upload-logs-swift role to accept a
     # zuul_log_url variable so we don't have to do this.
