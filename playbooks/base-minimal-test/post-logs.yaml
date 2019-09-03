@@ -15,6 +15,7 @@
         name: generate-zuul-manifest
 
     - name: Run upload-logs-swift role
+      no_log: true
       include_role:
         name: upload-logs-swift
       vars:
