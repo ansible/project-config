@@ -14,15 +14,28 @@
       include_role:
         name: generate-zuul-manifest
 
-    - name: Run upload-logs-swift role
-      no_log: true
-      include_role:
-        name: upload-logs-swift
-      vars:
-        zuul_log_partition: true
-        zuul_log_container: ansible
-        zuul_log_cloud_config: "{{ item }}"
-      with_random_choice:
-        - "{{ rackspace_dfw_clouds_yaml }}"
-        - "{{ rackspace_iad_clouds_yaml }}"
-        - "{{ rackspace_ord_clouds_yaml }}"
+    - name: Upload logs to swift
+      block:
+        - name: Run upload-logs-swift role
+          no_log: true
+          include_role:
+            name: upload-logs-swift
+          vars:
+            zuul_log_partition: true
+            zuul_log_container: ansible
+            zuul_log_cloud_config: "{{ vexxhost_clouds_yaml }}"
+      rescue:
+        # NOTE(pabelanger): If for some reason we cannot upload logs, try
+        # again. This time we'll upload to rackspace.
+        - name: Run upload-logs-swift role
+          no_log: true
+          include_role:
+            name: upload-logs-swift
+          vars:
+            zuul_log_partition: true
+            zuul_log_container: ansible
+            zuul_log_cloud_config: "{{ item }}"
+          with_random_choice:
+            - "{{ rackspace_dfw_clouds_yaml }}"
+            - "{{ rackspace_iad_clouds_yaml }}"
+            - "{{ rackspace_ord_clouds_yaml }}"
