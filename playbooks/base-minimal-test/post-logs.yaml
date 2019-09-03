@@ -24,3 +24,5 @@
         zuul_log_cloud_config: "{{ item }}"
       with_random_choice:
         - "{{ rackspace_dfw_clouds_yaml }}"
+        - "{{ rackspace_iad_clouds_yaml }}"
+        - "{{ rackspace_ord_clouds_yaml }}"
