@@ -63,6 +63,7 @@
       ara_report_path: ara-report
       ara_compress_html: false
     secrets:
+      - rackspace_dfw_clouds_yaml
       - vexxhost_clouds_yaml
     nodeset: centos-7-1vcpu
 
