@@ -30,6 +30,11 @@
       - ansible-python-jobs
 
 - project:
+    name: github.com/ansible-network/ansible_collections.cisco.nxos
+    templates:
+      - ansible-python-jobs
+
+- project:
     name: github.com/ansible-network/ansible_collections.juniper.junos
     templates:
       - ansible-collections-juniper-junos
