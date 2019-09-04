@@ -33,6 +33,8 @@
   description: Ansible Network Collection for Cisco IOS
 - project: ansible-network/ansible_collections.cisco.iosxr
   description: Ansible Network Collection for Cisco IOSXR
+- project: ansible-network/ansible_collections.cisco.nxos
+  description: Ansible Network Collection for Cisco NXOS
 - project: ansible-network/ansible_collections.juniper.junos
   description: Ansible Network Collection for Juniper JunOS
 - project: ansible-network/ansible_collections.network.cli
