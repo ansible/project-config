@@ -23,6 +23,7 @@
           - ansible-network/ansible_collections.arista.eos
           - ansible-network/ansible_collections.cisco.ios
           - ansible-network/ansible_collections.cisco.iosxr
+          - ansible-network/ansible_collections.cisco.nxos
           - ansible-network/ansible_collections.juniper.junos
           - ansible-network/ansible_collections.network.cli
           - ansible-network/ansible_collections.network.netconf
