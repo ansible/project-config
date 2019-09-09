@@ -69,6 +69,14 @@
               - ansible/molecule
               - metal3-io/metal3-dev-env
 
+      github-3pci:
+        untrusted-projects:
+          # Don't load any configuration from these projects because we
+          # don't gate them, so they could wedge our config.
+          - include: []
+            projects:
+              - pabelanger/pabelanger-sandbox1
+
       opendev.org:
         untrusted-projects:
           - zuul/zuul-jobs
