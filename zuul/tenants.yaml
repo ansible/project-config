@@ -67,6 +67,7 @@
               - ansible/awx
               - ansible-community/ansible-bender
               - ansible/molecule
+              - metal3-io/metal3-dev-env
 
       opendev.org:
         untrusted-projects:
