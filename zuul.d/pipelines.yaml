@@ -300,6 +300,47 @@
       mysql:
 
 - pipeline:
+    name: 3pci-check
+    description: |
+      Newly uploaded patchsets to projects that are external to Ansible
+      enter this pipeline to receive an initial +/-1 Verified vote.
+    success-message: Build succeeded (third-party-check pipeline).
+    # TODO(mordred) We should write a document for non-OpenStack developers
+    failure-message: |
+      Build failed (third-party-check pipeline) integration testing with
+      Ansible.
+    manager: independent
+    precedence: low
+    trigger:
+      github-3pci:
+        - event: pull_request
+          action:
+            - opened
+            - changed
+            - reopened
+        - event: pull_request
+          action: comment
+          comment: (?i)^\s*recheck\s*$
+    start:
+      github-3pci:
+        status: pending
+        status-url: 'https://dashboard.zuul.ansible.com/t/ansible/status'
+        comment: false
+    success:
+      github-3pci:
+        status: 'success'
+        status-url: 'https://dashboard.zuul.ansible.com/t/ansible/buildset/{buildset.uuid}'
+      mysql:
+    failure:
+      github-3pci:
+        status: 'failure'
+        status-url: 'https://dashboard.zuul.ansible.com/t/ansible/buildset/{buildset.uuid}'
+      mysql:
+    # Don't report merge-failures to github.com
+    merge-failure:
+      mysql:
+
+- pipeline:
     name: third-party-check-silent
     description: |
       Newly uploaded patchsets to projects that are external to Ansible
