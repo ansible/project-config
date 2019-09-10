@@ -333,3 +333,9 @@
         - windmill-config-deploy:
             files:
               - zuul/tenants.yaml
+
+- project:
+    name: github.com/pabelanger/pabelanger-sandbox1
+    3pci-check:
+      jobs:
+        - noop
