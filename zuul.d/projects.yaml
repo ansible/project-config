@@ -272,6 +272,11 @@
         - ansible-tox-py27
 
 - project:
+    name: github.com/ansible-security/ids_config
+    templates:
+      - noop-jobs
+
+- project:
     name: github.com/ansible/ansible
     default-branch: devel
     templates:
