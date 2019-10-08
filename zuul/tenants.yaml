@@ -19,6 +19,7 @@
           # After this point, sorting projects alphabetically will help
           # merge conflicts
           - ansible/ansible-runner
+          - ansible-community/ansible-bender
           - ansible/network
           - ansible-network/ansible_collections.arista.eos
           - ansible-network/ansible_collections.cisco.ios
@@ -65,7 +66,6 @@
               - ansible/ansible
               - ansible/ansible-bare
               - ansible/awx
-              - ansible-community/ansible-bender
               - ansible/molecule
               - metal3-io/metal3-dev-env
 
