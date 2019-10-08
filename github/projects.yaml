@@ -74,5 +74,7 @@
   description: Ansible Yang Role
 - project: ansible-network/zuul-config
   description: Repo containing Zuul project configuration
+- project: ansible-security/ids_config
+  description: Ansible role to provide configuration Intrusion Detection Systems
 - project: ansible/network
   description: Ansible collection for network devices
