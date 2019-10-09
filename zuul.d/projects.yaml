@@ -282,8 +282,12 @@
 
 - project:
     name: github.com/ansible-security/ids_install
-    templates:
-      - noop-jobs
+    check:
+      jobs:
+        - ansible-tox-linters
+    gate:
+      jobs:
+        - ansible-tox-linters
 
 - project:
     name: github.com/ansible/ansible
