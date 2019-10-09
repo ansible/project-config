@@ -59,6 +59,7 @@
           - ansible-network/windmill-config
           - ansible-network/yang
           - ansible-security/ids_config
+          - ansible-security/ids_install
 
           # Don't load any configuration from these projects because we
           # don't gate them, so they could wedge our config.
