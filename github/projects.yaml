@@ -76,5 +76,7 @@
   description: Repo containing Zuul project configuration
 - project: ansible-security/ids_config
   description: Ansible role to provide configuration Intrusion Detection Systems
+- project: ansible-security/ids_install
+  description: Ansible role to install configuration Intrusion Detection Systems
 - project: ansible/network
   description: Ansible collection for network devices
