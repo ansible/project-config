@@ -277,11 +277,6 @@
       - noop-jobs
 
 - project:
-    name: github.com/ansible-security/ids_install
-    templates:
-      - noop-jobs
-
-- project:
     name: github.com/ansible/ansible
     default-branch: devel
     templates:
