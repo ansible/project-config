@@ -60,6 +60,7 @@
           - ansible-network/yang
           - ansible-security/ids_config
           - ansible-security/ids_install
+          - ansible-security/ids_rule
 
           # Don't load any configuration from these projects because we
           # don't gate them, so they could wedge our config.
