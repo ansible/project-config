@@ -1,0 +1,10 @@
+---
+- hosts: all
+  tasks:
+    - name: Setup tox role
+      include_role:
+        name: tox
+      vars:
+        tox_envlist: venv
+        tox_extra_args: -vv --notest
+        tox_install_siblings: false

@@ -98,3 +98,10 @@
     secrets:
       - github_proposal_bot
     nodeset: fedora-latest-1vcpu
+
+- job:
+    name: release-ansible-galaxy-collection
+    description: |
+      Release ansible collection to galaxy.
+    pre-run: playbooks/ansible-collection/pre.yaml
+    run: playbooks/ansible-collection/run.yaml
