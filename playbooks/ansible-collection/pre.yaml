@@ -1,0 +1,10 @@
+---
+- hosts: all
+  tasks:
+    - name: Run bindep role
+      include_role:
+        name: bindep
+
+    - name: Run revoke-sudo role
+      include_role:
+        name: revoke-sudo
