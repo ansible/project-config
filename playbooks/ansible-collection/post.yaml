@@ -4,9 +4,14 @@
     - name: Find tarballs in folder
       find:
         file_type: file
-        paths: "{{ ansible_user_dir }}/{{ zuul.project.src_dir }}"
+        paths: "{{ ansible_user_dir }}/{{ zuul.project.src_dir }}/artifacts"
         patterns: "*.tar.gz"
       register: result
+
+    - name: Display stat for tarballs
+      stat:
+        path: "{{ item.path }}"
+      with_items: "{{ result.files }}"
 
     - name: Ensure artifacts directory exists
       file:
