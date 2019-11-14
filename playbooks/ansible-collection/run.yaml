@@ -8,3 +8,9 @@
         tox_envlist: venv
         tox_extra_args: -vv --notest
         tox_install_siblings: false
+
+    - name: Run build-ansible-collection role
+      include_role:
+        name: build-ansible-collection
+      vars:
+        ansible_galaxy_executable: "{{ ansible_user_dir }}/{{ zuul.project.src_dir }}/.tox/venv/ansible-galaxy"
