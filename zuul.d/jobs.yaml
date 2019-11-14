@@ -107,7 +107,14 @@
     run:
       - playbooks/ansible-collection/run-pre.yaml
       - playbooks/ansible-collection/run.yaml
-    post-run: playbooks/ansible-collection/post.yaml
+    post-run:
+      - playbooks/ansible-collection/post.yaml
+      - playbooks/publish/ansible-galaxy.yaml
     required-projects:
       - github.com/ansible-network/releases
+    vars:
+      ansible_galaxy_executable: "/opt/venv/zuul-ansible/{{ ansible_version.full }}/bin/ansible-galaxy"
+    secrets:
+      - secret: galaxy_dev_secret
+        name: ansible_galaxy_info
     nodeset: centos-8-1vcpu
