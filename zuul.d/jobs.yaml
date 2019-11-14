@@ -105,3 +105,4 @@
       Release ansible collection to galaxy.
     pre-run: playbooks/ansible-collection/pre.yaml
     run: playbooks/ansible-collection/run.yaml
+    nodeset: centos-8-1vcpu
