@@ -13,4 +13,4 @@
       include_role:
         name: build-ansible-collection
       vars:
-        ansible_galaxy_executable: "{{ ansible_user_dir }}/{{ zuul.project.src_dir }}/.tox/venv/ansible-galaxy"
+        ansible_galaxy_executable: "{{ ansible_user_dir }}/{{ zuul.project.src_dir }}/.tox/venv/bin/ansible-galaxy"
