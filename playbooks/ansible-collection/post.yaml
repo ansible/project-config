@@ -1,0 +1,23 @@
+---
+- hosts: all
+  tasks:
+    - name: Find tarballs in folder
+      find:
+        file_type: file
+        paths: "{{ ansible_user_dir }}/{{ zuul.project.src_dir }}"
+        patterns: "*.tar.gz"
+      register: result
+
+    - name: Ensure artifacts directory exists
+      file:
+        path: "{{ zuul.executor.work_root }}/artifacts"
+        state: directory
+      delegate_to: localhost
+
+    - name: Collect tarball artifacts
+      synchronize:
+        dest: "{{ zuul.executor.work_root }}/artifacts/"
+        mode: pull
+        src: "{{ item.path }}"
+        verify_host: true
+      with_items: "{{ result.files }}"
