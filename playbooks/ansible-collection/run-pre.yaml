@@ -12,4 +12,4 @@
     - name: Generate version number for ansible collection.
       args:
         chdir: "{{ zuul.project.src_dir }}"
-      command: "{{ zuul.projects['github.com/ansible-network/releases'].src_dir }}/.tox/venv/bin/generate-ansible-collection"
+      command: "{{ ansible_user_dir }}/{{ zuul.projects['github.com/ansible-network/releases'].src_dir }}/.tox/venv/bin/generate-ansible-collection"
