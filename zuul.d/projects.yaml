@@ -204,6 +204,15 @@
       - noop-jobs
 
 - project:
+    name: github.com/ansible-network/releases
+    check:
+      jobs:
+        - ansible-tox-linters
+    gate:
+      jobs:
+        - ansible-tox-linters
+
+- project:
     name: github.com/ansible-network/resource_module_builder
     templates:
       - noop-jobs
