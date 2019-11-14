@@ -113,7 +113,8 @@
     required-projects:
       - github.com/ansible-network/releases
     vars:
-      ansible_galaxy_executable: "/opt/venv/zuul-ansible/{{ ansible_version.full }}/bin/ansible-galaxy"
+      # TODO(pabelanger): Remove 2.9.1 once zuul jobs support ansible 2.9
+      ansible_galaxy_executable: "/opt/venv/zuul-ansible/2.9.1/bin/ansible-galaxy"
     secrets:
       - secret: galaxy_dev_secret
         name: ansible_galaxy_info
