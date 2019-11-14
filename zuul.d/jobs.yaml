@@ -104,6 +104,10 @@
     description: |
       Release ansible collection to galaxy.
     pre-run: playbooks/ansible-collection/pre.yaml
-    run: playbooks/ansible-collection/run.yaml
+    run:
+      - playbooks/ansible-collection/run-pre.yaml
+      - playbooks/ansible-collection/run.yaml
     post-run: playbooks/ansible-collection/post.yaml
+    required-projects:
+      - github.com/ansible-network/releases
     nodeset: centos-8-1vcpu
