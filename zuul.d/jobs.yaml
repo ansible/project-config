@@ -100,9 +100,10 @@
     nodeset: fedora-latest-1vcpu
 
 - job:
-    name: release-ansible-galaxy-collection
+    name: release-ansible-collection-galaxy
     description: |
-      Release ansible collection to galaxy.
+      Release ansible collection to https://galaxy.ansible.com
+    final: true
     pre-run: playbooks/ansible-collection/pre.yaml
     run:
       - playbooks/ansible-collection/run-pre.yaml
@@ -116,7 +117,7 @@
       # TODO(pabelanger): Remove 2.9.1 once zuul jobs support ansible 2.9
       ansible_galaxy_executable: "/opt/venv/zuul-ansible/2.9.1/bin/ansible-galaxy"
     secrets:
-      - secret: galaxy_dev_secret
+      - secret: galaxy_secret
         name: ansible_galaxy_info
     nodeset: centos-8-1vcpu
 
@@ -124,6 +125,7 @@
     name: release-ansible-collection-galaxy-dev
     description: |
       Release ansible collection to https://galaxy-dev.ansible.com
+    final: true
     pre-run: playbooks/ansible-collection/pre.yaml
     run:
       - playbooks/ansible-collection/run-pre.yaml
