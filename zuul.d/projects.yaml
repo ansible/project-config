@@ -16,34 +16,40 @@
     templates:
       - ansible-collections-arista-eos
       - ansible-python-jobs
+      - publish-to-galaxy
 
 - project:
     name: github.com/ansible-network/ansible_collections.cisco.ios
     templates:
       - ansible-collections-cisco-ios
       - ansible-python-jobs
+      - publish-to-galaxy
 
 - project:
     name: github.com/ansible-network/ansible_collections.cisco.iosxr
     templates:
       - ansible-collections-cisco-iosxr
       - ansible-python-jobs
+      - publish-to-galaxy
 
 - project:
     name: github.com/ansible-network/ansible_collections.cisco.nxos
     templates:
       - ansible-python-jobs
+      - publish-to-galaxy
 
 - project:
     name: github.com/ansible-network/ansible_collections.juniper.junos
     templates:
       - ansible-collections-juniper-junos
       - ansible-python-jobs
+      - publish-to-galaxy
 
 - project:
     name: github.com/ansible-network/ansible_collections.network.cli
     templates:
       - ansible-python-jobs
+      - publish-to-galaxy
 
 - project:
     name: github.com/ansible-network/ansible_collections.network.netconf
@@ -51,6 +57,7 @@
       - ansible-collections-cisco-iosxr-netconf
       - ansible-collections-juniper-junos-netconf
       - ansible-python-jobs
+      - publish-to-galaxy
 
 - project:
     name: github.com/ansible-network/ansible_collections.vyos.vyos
