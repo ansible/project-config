@@ -57,6 +57,7 @@
     templates:
       - ansible-collections-vyos-vyos
       - ansible-python-jobs
+      - publish-to-galaxy
 
 - project:
     name: github.com/ansible-network/arista_eos
