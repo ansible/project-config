@@ -74,6 +74,8 @@
   description: Ansible Yang Role
 - project: ansible-network/zuul-config
   description: Repo containing Zuul project configuration
+- project: ansible-security/ansible_collections.ibm.qradar
+  description: IBM QRadar Ansible Collection
 - project: ansible-security/ids_config
   description: Ansible role to provide configuration Intrusion Detection Systems
 - project: ansible-security/ids_install
