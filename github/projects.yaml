@@ -57,6 +57,8 @@
   description: >-
     This role provides the foundation for building network roles by providing
     modules and plugins that are common to all Ansible Network roles.
+- project: ansible-network/network_collections_migration
+  description: Supported Ansible Network collections and migration scenarios
 - project: ansible-network/network_configurator
   description: Ansible role to configure Tower for network operations
 - project: ansible-network/network_content_collector

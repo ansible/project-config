@@ -42,6 +42,7 @@
           - ansible-network/content_store
           - ansible-network/juniper_junos
           - ansible-network/net_operations
+          - ansible-network/network_collections_migration
           - ansible-network/network_configurator
           - ansible-network/network_content_collector
           - ansible-network/network-engine
