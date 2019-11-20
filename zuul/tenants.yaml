@@ -69,6 +69,7 @@
             projects:
               - ansible/ansible
               - ansible/ansible-bare
+              - ansible-community/collection_migration
               - ansible/awx
               - ansible/molecule
               - metal3-io/metal3-dev-env
