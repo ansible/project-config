@@ -157,6 +157,11 @@
         - ansible-tox-py27
 
 - project:
+    name: github.com/ansible-network/network_collections_migration
+    templates:
+      - noop-jobs
+
+- project:
     name: github.com/ansible-network/network_configurator
     default-branch: devel
     templates:
