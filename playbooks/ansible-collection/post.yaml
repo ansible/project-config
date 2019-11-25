@@ -34,7 +34,8 @@
         data:
           zuul:
             artifacts:
-              - name: "{{ item.path | basename | replace('.tar.gz', '') }}"
+              - name: "{{ item.path | basename | replace('.tar.gz', '') | split('-')[0] }}.{{ item.path | basename | replace('.tar.gz', '') | split('-')[1] }}"
                 url: "artifacts/{{ item.path | basename }}"
                 metadata:
                   type: ansible_collection
+                  version: "{{ item.path | basename | replace('.tar.gz', '') | split('-')[2:] | join('-') }}"
