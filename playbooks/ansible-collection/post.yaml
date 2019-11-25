@@ -15,13 +15,13 @@
 
     - name: Ensure artifacts directory exists
       file:
-        path: "{{ zuul.executor.work_root }}/artifacts"
+        path: "{{ zuul.executor.log_root }}/artifacts"
         state: directory
       delegate_to: localhost
 
     - name: Collect tarball artifacts
       synchronize:
-        dest: "{{ zuul.executor.work_root }}/artifacts/"
+        dest: "{{ zuul.executor.log_root }}/artifacts/"
         mode: pull
         src: "{{ item.path }}"
         verify_host: true
