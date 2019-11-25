@@ -26,3 +26,15 @@
         src: "{{ item.path }}"
         verify_host: true
       with_items: "{{ result.files }}"
+
+    - name: Return collection artifacts to Zuul
+      loop: "{{ result.files }}"
+      when: "item.path.endswith('.tar.gz')"
+      zuul_return:
+        data:
+          zuul:
+            artifacts:
+              - name: "{{ item.path | basename | replace('.tar.gz', '') }}"
+                url: "artifacts/{{ item.path | basename }}"
+                metadata:
+                  type: ansible_collection
