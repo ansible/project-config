@@ -100,6 +100,21 @@
     nodeset: fedora-latest-1vcpu
 
 - job:
+    name: build-ansible-collection-galaxy
+    description: |
+      Build ansible collection
+    abstract: true
+    pre-run: playbooks/ansible-collection/pre.yaml
+    run:
+      - playbooks/ansible-collection/run-pre.yaml
+      - playbooks/ansible-collection/run.yaml
+    post-run:
+      - playbooks/ansible-collection/post.yaml
+    required-projects:
+      - github.com/ansible-network/releases
+    nodeset: centos-8-1vcpu
+
+- job:
     name: release-ansible-collection-galaxy
     description: |
       Release ansible collection to https://galaxy.ansible.com
