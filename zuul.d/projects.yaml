@@ -132,6 +132,12 @@
         - ansible-tox-linters
 
 - project:
+    name: github.com/ansible-network/community.netcommon
+    templates:
+      - ansible-python-jobs
+      - publish-to-galaxy-master-only
+
+- project:
     name: github.com/ansible-network/config_manager
     default-branch: devel
     templates:
