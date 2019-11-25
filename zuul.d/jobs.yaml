@@ -100,10 +100,9 @@
     nodeset: fedora-latest-1vcpu
 
 - job:
-    name: build-ansible-collection-galaxy
+    name: build-ansible-collection
     description: |
       Build ansible collection
-    abstract: true
     pre-run: playbooks/ansible-collection/pre.yaml
     run:
       - playbooks/ansible-collection/run-pre.yaml
