@@ -1,0 +1,41 @@
+---
+- hosts: all
+  tasks:
+    - name: Find tarballs in folder
+      find:
+        file_type: file
+        paths: "{{ ansible_user_dir }}/artifacts"
+        patterns: "*.tar.gz"
+      register: result
+
+    - name: Display stat for tarballs
+      stat:
+        path: "{{ item.path }}"
+      with_items: "{{ result.files }}"
+
+    - name: Ensure artifacts directory exists
+      file:
+        path: "{{ zuul.executor.log_root }}/artifacts"
+        state: directory
+      delegate_to: localhost
+
+    - name: Collect tarball artifacts
+      synchronize:
+        dest: "{{ zuul.executor.log_root }}/artifacts/"
+        mode: pull
+        src: "{{ item.path }}"
+        verify_host: true
+      with_items: "{{ result.files }}"
+
+    - name: Return collection artifacts to Zuul
+      loop: "{{ result.files }}"
+      when: "item.path.endswith('.tar.gz')"
+      zuul_return:
+        data:
+          zuul:
+            artifacts:
+              - name: "{% set x = item.path | basename | replace('.tar.gz', '') %}{{ x.split('-')[0] }}.{{ x.split('-')[1] }}"
+                url: "artifacts/{{ item.path | basename }}"
+                metadata:
+                  type: ansible_collection
+                  version: "{% set x = item.path | basename | replace('.tar.gz', '') %}{{ x.split('-')[2:] | join('-') }}"

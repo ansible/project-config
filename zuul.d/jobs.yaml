@@ -100,6 +100,18 @@
     nodeset: fedora-latest-1vcpu
 
 - job:
+    name: build-ansible-collections
+    description: |
+      Build ansible collections and return artifacts to zuul
+    pre-run: playbooks/build-ansible-collections/pre.yaml
+    run: playbooks/build-ansible-collections/run.yaml
+    post-run:
+      - playbooks/build-ansible-collections/post.yaml
+    required-projects:
+      - github.com/ansible-network/releases
+    nodeset: centos-8-1vcpu
+
+- job:
     name: build-ansible-collection
     description: |
       Build ansible collection
