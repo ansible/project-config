@@ -1,0 +1,25 @@
+---
+- hosts: all
+  tasks:
+    - name: Setup tox role
+      include_role:
+        name: tox
+      vars:
+        tox_extra_args: -vv --notest
+        tox_install_siblings: false
+        zuul_work_dir: "{{ zuul.projects['github.com/ansible-network/releases'].src_dir }}"
+
+    - name: Generate version number for ansible collection
+      args:
+        chdir: "{{ ansible_user_dir }}/{{ item.src_dir }}"
+      shell: "if test -f 'galaxy.yml'; then {{ ansible_user_dir }}/{{ zuul.projects['github.com/ansible-network/releases'].src_dir }}/.tox/venv/bin/generate-ansible-collection; fi"
+      with_items: "{{ zuul.projects.values() | list }}"
+
+    - name: Run build-ansible-collection role
+      include_role:
+        name: build-ansible-collection
+      vars:
+        ansible_galaxy_executable: "{{ ansible_user_dir }}/{{ zuul.projects['github.com/ansible-network/releases'].src_dir }}/.tox/venv/bin/ansible-galaxy"
+        ansible_galaxy_output_path: "{{ ansible_user_dir }}/artifacts"
+        zuul_work_dir: "{{ ansible_user_dir }}/{{ item.src_dir }}"
+      with_items: "{{ zuul.projects.values() | list }}"
