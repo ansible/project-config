@@ -72,6 +72,7 @@
               - ansible/ansible-bare
               - ansible-community/collection_migration
               - ansible/awx
+              - ansible/galaxy
               - ansible/molecule
               - metal3-io/metal3-dev-env
 
