@@ -74,6 +74,7 @@
               - ansible/awx
               - ansible/galaxy
               - ansible/molecule
+              - ansible/workshops
               - metal3-io/metal3-dev-env
 
       github-3pci:
