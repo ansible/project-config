@@ -387,6 +387,13 @@
               - zuul/tenants.yaml
 
 - project:
+    name: github.com/ansible/workshops
+    default-branch: devel
+    third-party-check:
+      jobs:
+        - ansible-tox-linters
+
+- project:
     name: github.com/pabelanger/pabelanger-sandbox1
     3pci-check:
       jobs:
