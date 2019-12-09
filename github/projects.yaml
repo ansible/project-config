@@ -86,3 +86,5 @@
   description: Ansible role to install configuration Intrusion Detection Systems
 - project: ansible/network
   description: Ansible collection for network devices
+- project: ansible/workshops
+  description: Training Course for Ansible Automation Platform
