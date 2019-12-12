@@ -7,6 +7,10 @@
       - system-required
 
 - project:
+    name: github.com/ansible-collection-migration/ansible-minimal
+    default-branch: devel
+
+- project:
     name: github.com/ansible-community/ansible-bender
     templates:
       - noop-jobs
