@@ -53,6 +53,8 @@
   description: Ansible Network Cisco IOS-XR Provider Role
 - project: ansible-network/cloud_vpn
   description: Ansible Cloud VPN Role
+- project: ansible-network/collection_migration
+  description: scripts and scenarios for migration from core code to collections
 - project: ansible-network/community.netcommon
   description: Ansible Network Collection for Common Code
 - project: ansible-network/content_store
