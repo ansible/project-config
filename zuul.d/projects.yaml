@@ -151,6 +151,11 @@
         - ansible-tox-linters
 
 - project:
+    name: github.com/ansible-network/collection_migration
+    templates:
+      - noop-jobs
+
+- project:
     name: github.com/ansible-network/community.netcommon
     templates:
       - ansible-python-jobs
