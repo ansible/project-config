@@ -27,6 +27,8 @@
   description: ansible-playbook + buildah = a sweet container image
 - project: ansible-network/ansible-zuul-jobs
   description: Defines test jobs and roles
+- project: ansible-network/ansible_collections.ansible.netcommon
+  description: Ansible Network Collection for Common Code
 - project: ansible-network/ansible_collections.arista.eos
   description: Ansible Network Collection for Arista EOS
 - project: ansible-network/ansible_collections.cisco.ios
