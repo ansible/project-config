@@ -54,33 +54,9 @@
       - publish-to-galaxy-master-only
 
 - project:
-    name: github.com/ansible-network/ansible_collections.juniper.junos
-    templates:
-      - ansible-collections-juniper-junos
-      - ansible-python-jobs
-      - integrated-queue
-      - publish-to-galaxy-master-only
-
-- project:
     name: github.com/ansible-network/ansible_collections.junipernetworks.junos
     templates:
       - ansible-collections-junipernetworks-junos
-      - ansible-python-jobs
-      - integrated-queue
-      - publish-to-galaxy-master-only
-
-- project:
-    name: github.com/ansible-network/ansible_collections.network.cli
-    templates:
-      - ansible-python-jobs
-      - integrated-queue
-      - publish-to-galaxy-master-only
-
-- project:
-    name: github.com/ansible-network/ansible_collections.network.netconf
-    templates:
-      - ansible-collections-cisco-iosxr-netconf
-      - ansible-collections-juniper-junos-netconf
       - ansible-python-jobs
       - integrated-queue
       - publish-to-galaxy-master-only
