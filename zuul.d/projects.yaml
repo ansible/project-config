@@ -19,6 +19,7 @@
     name: github.com/ansible-network/ansible_collections.ansible.netcommon
     templates:
       - ansible-python-jobs
+      - integrated-queue
       - publish-to-galaxy-master-only
 
 - project:
@@ -26,6 +27,7 @@
     templates:
       - ansible-collections-arista-eos
       - ansible-python-jobs
+      - integrated-queue
       - publish-to-galaxy-master-only
 
 - project:
@@ -33,6 +35,7 @@
     templates:
       - ansible-collections-cisco-ios
       - ansible-python-jobs
+      - integrated-queue
       - publish-to-galaxy-master-only
 
 - project:
@@ -40,12 +43,14 @@
     templates:
       - ansible-collections-cisco-iosxr
       - ansible-python-jobs
+      - integrated-queue
       - publish-to-galaxy-master-only
 
 - project:
     name: github.com/ansible-network/ansible_collections.cisco.nxos
     templates:
       - ansible-python-jobs
+      - integrated-queue
       - publish-to-galaxy-master-only
 
 - project:
@@ -53,12 +58,14 @@
     templates:
       - ansible-collections-juniper-junos
       - ansible-python-jobs
+      - integrated-queue
       - publish-to-galaxy-master-only
 
 - project:
     name: github.com/ansible-network/ansible_collections.network.cli
     templates:
       - ansible-python-jobs
+      - integrated-queue
       - publish-to-galaxy-master-only
 
 - project:
@@ -67,6 +74,7 @@
       - ansible-collections-cisco-iosxr-netconf
       - ansible-collections-juniper-junos-netconf
       - ansible-python-jobs
+      - integrated-queue
       - publish-to-galaxy-master-only
 
 - project:
@@ -74,6 +82,7 @@
     templates:
       - ansible-collections-vyos-vyos
       - ansible-python-jobs
+      - integrated-queue
       - publish-to-galaxy-master-only
 
 - project:
