@@ -78,6 +78,8 @@
               - ansible/molecule
               - ansible/workshops
               - metal3-io/metal3-dev-env
+              - pycontribs/pytest-molecule
+              - pycontribs/selinux
 
       github-3pci:
         untrusted-projects:
