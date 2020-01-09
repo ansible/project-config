@@ -422,3 +422,13 @@
     3pci-check:
       jobs:
         - noop
+
+- project:
+    name: github.com/pycontribs/pytest-molecule
+    templates:
+      - noop-jobs
+
+- project:
+    name: github.com/pycontribs/selinux
+    templates:
+      - noop-jobs
