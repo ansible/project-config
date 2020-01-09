@@ -19,6 +19,7 @@
           # After this point, sorting projects alphabetically will help
           # merge conflicts
           - ansible/ansible-runner
+          - ansible/molecule
           - ansible-community/ansible-bender
           - ansible/network
           - ansible-network/ansible_collections.ansible.netcommon
@@ -65,6 +66,8 @@
           - ansible-security/ansible_collections.ibm.qradar
           - ansible-security/ids_config
           - ansible-security/ids_install
+          - pycontribs/pytest-molecule
+          - pycontribs/selinux
 
           # Don't load any configuration from these projects because we
           # don't gate them, so they could wedge our config.
@@ -75,10 +78,7 @@
               - ansible-community/collection_migration
               - ansible/awx
               - ansible/galaxy
-              - ansible/molecule
               - ansible/workshops
-              - pycontribs/pytest-molecule
-              - pycontribs/selinux
 
       github-3pci:
         untrusted-projects:
