@@ -1,8 +1,8 @@
 ---
 - project:
-    # NOTE(pabelanger): All projects in ansible-network must run
-    # system-required project-template
-    name: ^github.com/ansible-network/.*
+    # NOTE(pabelanger): All projects in ansible-network / ansible-security
+    # must run system-required project-template
+    name: ^github.com/ansible-(network|security)/.*
     templates:
       - system-required
 
