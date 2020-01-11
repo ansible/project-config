@@ -418,12 +418,6 @@
         - ansible-tox-linters
 
 - project:
-    name: github.com/pabelanger/pabelanger-sandbox1
-    3pci-check:
-      jobs:
-        - noop
-
-- project:
     name: github.com/pycontribs/pytest-molecule
     templates:
       - noop-jobs
