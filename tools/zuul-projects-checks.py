@@ -14,6 +14,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+import re
 import sys
 import yaml
 
@@ -41,6 +42,39 @@ def check_projects_sorted():
                   {"last": last, "current": current})
             errors = True
         last = current
+
+    if not errors:
+        print("... all fine.")
+    return errors
+
+
+def check_system_templates():
+    """Check that each repo has a system-required template."""
+
+    errors = False
+    print("\nChecking for usage of system-required")
+    print("=====================================")
+    for entry in projects:
+        project = entry['project']
+        name = project['name']
+        # By default, projects under github.com/ansible-network have
+        # system-template applied
+        if re.match("^github.com/ansible-(network|security)/.*", name):
+            continue
+        # TODO(pabelanger): We need to make this more dynamic.
+        if re.match("^github.com/ansible/ansible", name):
+            continue
+        try:
+            correct = False
+            for template in project['templates']:
+                if template == 'system-required':
+                    correct = True
+            if not correct:
+                raise
+        except Exception:
+            print("ERROR: Project %s has no system-required template" %
+                  project['name'])
+            errors = True
 
     if not errors:
         print("... all fine.")
@@ -172,7 +206,8 @@ def check_only_boilerplate():
 
 def check_all():
 
-    errors = check_projects_sorted()
+    errors = check_system_templates()
+    errors = check_projects_sorted() or errors
     errors = blacklist_jobs() or errors
     errors = check_release_jobs() or errors
     errors = check_voting() or errors
