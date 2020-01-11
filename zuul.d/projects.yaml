@@ -420,9 +420,9 @@
 - project:
     name: github.com/pycontribs/pytest-molecule
     templates:
-      - noop-jobs
+      - system-required
 
 - project:
     name: github.com/pycontribs/selinux
     templates:
-      - noop-jobs
+      - system-required
