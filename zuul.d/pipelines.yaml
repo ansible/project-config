@@ -19,7 +19,7 @@
     start:
       github.com:
         status: 'pending'
-        status-url: 'https://dashboard.zuul.ansible.com/t/ansible/status'
+        status-url: 'https://dashboard.zuul.ansible.com/t/ansible/status/change/{change.number},{change.patchset}'
         comment: false
     success:
       github.com:
