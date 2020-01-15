@@ -413,11 +413,6 @@
         - ansible-tox-linters
 
 - project:
-    name: github.com/pycontribs/pytest-molecule
-    templates:
-      - system-required
-
-- project:
     name: github.com/pycontribs/selinux
     templates:
       - system-required

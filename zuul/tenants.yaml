@@ -66,7 +66,6 @@
           - ansible-security/ansible_collections.ibm.qradar
           - ansible-security/ids_config
           - ansible-security/ids_install
-          - pycontribs/pytest-molecule
           - pycontribs/selinux
 
           # Don't load any configuration from these projects because we
