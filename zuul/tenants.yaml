@@ -21,6 +21,16 @@
           - ansible/ansible-runner
           - ansible/molecule
           - ansible-community/ansible-bender
+          - ansible-community/molecule-azure
+          - ansible-community/molecule-digitalocean
+          - ansible-community/molecule-ec2
+          - ansible-community/molecule-gce
+          - ansible-community/molecule-hetznercloud
+          - ansible-community/molecule-libvirt
+          - ansible-community/molecule-linode
+          - ansible-community/molecule-openstack
+          - ansible-community/molecule-vagrant
+          - ansible-community/pytest-molecule
           - ansible/network
           - ansible-network/ansible_collections.ansible.netcommon
           - ansible-network/ansible_collections.arista.eos
