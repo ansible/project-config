@@ -18,6 +18,7 @@
 - project:
     name: github.com/ansible-network/ansible_collections.ansible.netcommon
     templates:
+      - ansible-collections-cisco-iosxr-netconf
       - ansible-python-jobs
       - integrated-queue
       - publish-to-galaxy-master-only
