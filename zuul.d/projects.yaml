@@ -158,6 +158,7 @@
 - project:
     name: github.com/ansible-network/community.netcommon
     templates:
+      - ansible-collections-cisco-iosxr-netconf
       - ansible-python-jobs
       - publish-to-galaxy-master-only
 
