@@ -25,6 +25,20 @@
 ---
 - project: ansible-community/ansible-bender
   description: ansible-playbook + buildah = a sweet container image
+- project: ansible-community/molecule-azure
+  description: Molecule Azure Driver Plugin
+- project: ansible-community/molecule-digitalocean
+  description: molecule-digitalocean
+- project: ansible-community/molecule-ec2
+  description: molecule-ec2
+- project: ansible-community/molecule-libvirt
+  description: Molecule LibVirt Provider
+- project: ansible-community/molecule-lxd
+  description: molecule-lxd
+- project: ansible-community/molecule-vagrant
+  description: Molecule Vangrant Driver
+- project: ansible-community/pytest-molecule
+  description: Enables pytest to discover molecule scenarios and run them
 - project: ansible-network/ansible-zuul-jobs
   description: Defines test jobs and roles
 - project: ansible-network/ansible_collections.ansible.netcommon
