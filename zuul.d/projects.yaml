@@ -63,6 +63,14 @@
       - publish-to-galaxy-master-only
 
 - project:
+    name: github.com/ansible-network/ansible_collections.junipernetworks.junos
+    templates:
+      - ansible-collections-juniper-junos
+      - ansible-python-jobs
+      - integrated-queue
+      - publish-to-galaxy-master-only
+
+- project:
     name: github.com/ansible-network/ansible_collections.vyos.vyos
     templates:
       - ansible-collections-vyos-vyos
