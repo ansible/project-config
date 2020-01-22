@@ -88,6 +88,7 @@
               - ansible-community/collection_migration
               - ansible/awx
               - ansible/galaxy
+              - ansible/pylibssh
               - ansible/workshops
 
       github-3pci:
