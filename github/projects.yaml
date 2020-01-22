@@ -38,7 +38,8 @@
 - project: ansible-network/ansible_collections.cisco.nxos
   description: Ansible Network Collection for Cisco NXOS
 - project: ansible-network/ansible_collections.juniper.junos
-  description: Ansible Network Collection for Juniper JunOS
+  archived: true
+  description: RETIRED, Ansible Network Collection for Juniper JunOS
 - project: ansible-network/ansible_collections.junipernetworks.junos
   description: Ansible Network Collection for Juniper JunOS
 - project: ansible-network/ansible_collections.network.cli
