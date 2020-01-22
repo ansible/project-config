@@ -16,6 +16,36 @@
       - noop-jobs
 
 - project:
+    name: github.com/ansible-community/molecule-azure
+    templates:
+      - system-required
+
+- project:
+    name: github.com/ansible-community/molecule-digitalocean
+    templates:
+      - system-required
+
+- project:
+    name: github.com/ansible-community/molecule-ec2
+    templates:
+      - system-required
+
+- project:
+    name: github.com/ansible-community/molecule-libvirt
+    templates:
+      - system-required
+
+- project:
+    name: github.com/ansible-community/molecule-vagrant
+    templates:
+      - system-required
+
+- project:
+    name: github.com/ansible-community/pytest-molecule
+    templates:
+      - system-required
+
+- project:
     name: github.com/ansible-network/ansible_collections.ansible.netcommon
     templates:
       - ansible-collections-cisco-iosxr-netconf
