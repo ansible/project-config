@@ -81,7 +81,7 @@
       tox env.
     vars:
       tox_envlist: github
-    nodeset: fedora-latest-1vcpu
+    nodeset: centos-8-1vcpu
     files:
       - github/projects.yaml
       - requirements.txt
@@ -97,7 +97,7 @@
     post-run: playbooks/propose-github-updates/post.yaml
     secrets:
       - github_proposal_bot
-    nodeset: fedora-latest-1vcpu
+    nodeset: centos-8-1vcpu
 
 - job:
     name: build-ansible-collection
