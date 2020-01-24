@@ -19,7 +19,6 @@
           # After this point, sorting projects alphabetically will help
           # merge conflicts
           - ansible/ansible-runner
-          - ansible/molecule
           - ansible-community/ansible-bender
           - ansible-community/molecule-azure
           - ansible-community/molecule-digitalocean
