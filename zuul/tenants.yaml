@@ -20,6 +20,7 @@
           # merge conflicts
           - ansible/ansible-runner
           - ansible-community/ansible-bender
+          - ansible-community/molecule
           - ansible-community/molecule-azure
           - ansible-community/molecule-digitalocean
           - ansible-community/molecule-ec2
