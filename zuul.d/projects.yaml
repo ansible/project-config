@@ -16,6 +16,11 @@
       - noop-jobs
 
 - project:
+    name: github.com/ansible-community/molecule
+    templates:
+      - system-required
+
+- project:
     name: github.com/ansible-community/molecule-azure
     templates:
       - system-required
