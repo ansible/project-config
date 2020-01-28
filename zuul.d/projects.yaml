@@ -421,6 +421,10 @@
     third-party-check:
       jobs:
         - ansible-tox-linters
+        - ansible-workshop-f5
+        - ansible-workshop-rhel
+        - ansible-workshop-network
+        - ansible-workshop-security
 
 - project:
     name: github.com/pycontribs/selinux
