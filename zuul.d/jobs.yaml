@@ -121,10 +121,9 @@
       - playbooks/build-python-tarball/post.yaml
       - playbooks/publish/pypi.yaml
     secrets:
-      - secret: testpypi_secret
+      - secret: pypi_secret
         name: pypi_info
     vars:
-      bdist_wheel_xargs: "--universal"
       release_python: python3
     nodeset: centos-8-1vcpu
 
