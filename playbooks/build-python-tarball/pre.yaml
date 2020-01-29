@@ -1,0 +1,17 @@
+---
+- hosts: all
+  tasks:
+    - name: Run bindep role
+      include_role:
+        name: bindep
+
+    # NOTE(pabelanger): We should consider pushing this into bindep.txt file, as build dependency.
+    - name: Ensure python3-wheel is installed
+      become: true
+      package:
+        name: python3-wheel
+        state: present
+
+    - name: Run revoke-sudo role
+      include_role:
+        name: revoke-sudo
