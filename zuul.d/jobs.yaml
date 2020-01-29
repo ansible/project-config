@@ -154,3 +154,15 @@
       - secret: galaxy_dev_secret
         name: ansible_galaxy_info
     nodeset: centos-8-1vcpu
+
+- job:
+    name: ansible-python-upload-pypi
+    description: |
+      Release ansible python project to https://pypi.org/
+    final: true
+    parent: ansible-build-python-tarball
+    secrets:
+      - secret: jenkins_pypi_info
+        name: pypi_info
+    nodeset: centos-8-1vcpu
+    post-run: playbooks/python/upload-pypi.yaml
