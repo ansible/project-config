@@ -1,6 +1,6 @@
 ---
 - hosts: localhost
-  roles:
+  tasks:
     - name: Publish artifacts to pypi
       block:
         - name: Create virtualenv for twine
