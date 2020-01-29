@@ -1,8 +1,19 @@
 ---
 - hosts: localhost
   roles:
-    - role: ensure-twine
-      when: zuul_success | bool
-    - role: upload-pypi
-      pypi_path: "{{ zuul.executor.work_root }}/artifacts"
+    - name: Publish artifacts to pypi
+      block:
+        - name: Create virtualenv for twine
+          shell: virtualenv --python python3 ~/venv
+
+        - name: Install twine into virtualenv
+          shell: ~/venv/bin/pip install twine
+
+        - name: Run upload-pypi role
+          include_role:
+            name: upload-pypi
+          vars:
+            pypi_path: "{{ zuul.executor.work_root }}/artifacts"
+            pypi_twine_executable: ~/venv/bin/twine
+
       when: zuul_success | bool
