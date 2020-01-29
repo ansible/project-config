@@ -363,16 +363,14 @@
     name: github.com/ansible/ansible-runner
     templates:
       - system-required
+      - ansible-python-jobs
       - ansible-python3-jobs
+      - publish-to-pypi
     check:
       jobs:
-        - ansible-build-python-tarball
-        - ansible-tox-linters
         - ansible-tox-py27
     gate:
       jobs:
-        - ansible-build-python-tarball
-        - ansible-tox-linters
         - ansible-tox-py27
 
 - project:
