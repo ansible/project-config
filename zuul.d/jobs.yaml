@@ -112,6 +112,16 @@
     nodeset: centos-8-1vcpu
 
 - job:
+    name: release-ansible-python
+    description: |
+      Release python tarballs / wheels to pypi.org.
+    parent: ansible-build-python-tarball
+    post-run: playbooks/publish/pypi.yaml
+    secrets:
+      - secret: testpypi_secret
+        name: pypi_info
+
+- job:
     name: release-ansible-collection-galaxy
     description: |
       Release ansible collection to https://galaxy.ansible.com
