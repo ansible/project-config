@@ -137,6 +137,8 @@
           ref: ^refs/tags/.*$
     success:
       mysql:
+    failure:
+      mysql:
 
 - pipeline:
     name: pre-release
@@ -150,6 +152,8 @@
           ref: ^refs/tags/[0-9]+(\.[0-9]+)*(a|b|rc)[0-9]+$
     success:
       mysql:
+    failure:
+      mysql:
 
 - pipeline:
     name: release
@@ -162,6 +166,8 @@
         - event: push
           ref: ^refs/tags/[0-9]+(\.[0-9]+)*$
     success:
+      mysql:
+    failure:
       mysql:
 
 - pipeline:
@@ -245,6 +251,8 @@
         unlabel:
           - gate
         comment: false
+      mysql:
+    failure:
       mysql:
 
 - pipeline:
