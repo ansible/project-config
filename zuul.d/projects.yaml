@@ -39,6 +39,7 @@
     name: github.com/ansible-community/molecule-libvirt
     templates:
       - system-required
+      - publish-to-pypi
 
 - project:
     name: github.com/ansible-community/molecule-vagrant
