@@ -126,7 +126,6 @@
     vars:
       bdist_wheel_xargs: "--universal"
       release_python: python3
-      twine_python: python3
     nodeset: centos-8-1vcpu
 
 - job:
