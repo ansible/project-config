@@ -29,6 +29,8 @@
   description: Molecule aids in the development and testing of Ansible roles
 - project: ansible-community/molecule-azure
   description: Molecule Azure Driver Plugin
+- project: ansible-community/molecule-containers
+  description: Molecule Containers Driver Plugin
 - project: ansible-community/molecule-digitalocean
   description: molecule-digitalocean
 - project: ansible-community/molecule-ec2

@@ -22,6 +22,7 @@
           - ansible-community/ansible-bender
           - ansible-community/molecule
           - ansible-community/molecule-azure
+          - ansible-community/molecule-containers
           - ansible-community/molecule-digitalocean
           - ansible-community/molecule-ec2
           # - ansible-community/molecule-gce
