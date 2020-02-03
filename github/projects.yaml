@@ -113,3 +113,5 @@
   description: Ansible collection for network devices
 - project: ansible/workshops
   description: Training Course for Ansible Automation Platform
+- project: virt-lightning/esxi-cloud-images
+  description: Generate Cloud image of ESXi, as used in Ansible-VMware CI
