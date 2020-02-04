@@ -361,6 +361,7 @@
 
 - project:
     name: github.com/ansible/ansible-runner
+    default-branch: devel
     templates:
       - system-required
       - ansible-python-jobs
