@@ -78,7 +78,6 @@
           - ansible-security/ids_config
           - ansible-security/ids_install
           - pycontribs/selinux
-          - virt-lightning/esxi-cloud-images
 
           # Don't load any configuration from these projects because we
           # don't gate them, so they could wedge our config.
