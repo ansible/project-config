@@ -108,6 +108,14 @@
       - publish-to-galaxy-master-only
 
 - project:
+    name: github.com/ansible-network/ansible_collections.community.vmware
+    templates:
+      - ansible-collections-community-vmware
+      - ansible-python-jobs
+      - integrated-queue
+      - publish-to-galaxy-master-only
+
+- project:
     name: github.com/ansible-network/arista_eos
     default-branch: devel
     templates:
