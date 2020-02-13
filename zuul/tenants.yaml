@@ -19,6 +19,13 @@
           # After this point, sorting projects alphabetically will help
           # merge conflicts
           - ansible/ansible-runner
+          - ansible-collections/eos
+          - ansible-collections/ios
+          - ansible-collections/iosxr
+          - ansible-collections/junos
+          - ansible-collections/netcommon
+          - ansible-collections/nxos
+          - ansible-collections/vyos
           - ansible-community/ansible-bender
           - ansible-community/molecule
           - ansible-community/molecule-azure
