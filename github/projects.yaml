@@ -23,6 +23,8 @@
 #     - has-wiki
 #
 ---
+- project: ansible-collections/amazon
+  description: Ansible Collection for Amazon AWS
 - project: ansible-collections/eos
   description: Ansible Network Collection for Arista EOS
 - project: ansible-collections/ios
@@ -35,6 +37,10 @@
   description: Ansible Network Collection for Common Code
 - project: ansible-collections/nxos
   description: Ansible Network Collection for Cisco NXOS
+- project: ansible-collections/vmware
+  description: Ansible Collection for VMWare
+- project: ansible-collections/vmware_rest
+  description: Ansible Collection for VMWare (REST modules)
 - project: ansible-collections/vyos
   description: Ansible Network Collection for VyOS
 - project: ansible-community/ansible-bender
