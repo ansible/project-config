@@ -23,6 +23,20 @@
 #     - has-wiki
 #
 ---
+- project: ansible-collections/eos
+  description: Ansible Network Collection for Arista EOS
+- project: ansible-collections/ios
+  description: Ansible Network Collection for Cisco IOS
+- project: ansible-collections/iosxr
+  description: Ansible Network Collection for Cisco IOSXR
+- project: ansible-collections/junos
+  description: Ansible Network Collection for Juniper JunOS
+- project: ansible-collections/netcommon
+  description: Ansible Network Collection for Common Code
+- project: ansible-collections/nxos
+  description: Ansible Network Collection for Cisco NXOS
+- project: ansible-collections/vyos
+  description: Ansible Network Collection for VyOS
 - project: ansible-community/ansible-bender
   description: ansible-playbook + buildah = a sweet container image
 - project: ansible-community/molecule
