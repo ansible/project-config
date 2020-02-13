@@ -86,6 +86,9 @@ class Client(object):
             LOG.info('Fetching github info about %s', repo_name)
             repo = org.get_repo(repo_name)
         except github.GithubException:
+            # NOTE(pabelanger): We should also allow to import an existing
+            # project from upstream source.
+            kwargs['auto_init'] = True
             LOG.info(
                 'Creating %s in github', repo_name)
             repo = org.create_repo(
