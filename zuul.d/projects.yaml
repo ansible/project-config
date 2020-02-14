@@ -70,6 +70,12 @@
       - publish-to-galaxy
 
 - project:
+    name: github.com/ansible-collections/vmware
+    templates:
+      - system-required
+      - ansible-collections-community-vmware
+
+- project:
     name: github.com/ansible-collections/vyos
     templates:
       - system-required
