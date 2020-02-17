@@ -48,6 +48,14 @@
       - publish-to-galaxy-master-only
 
 - project:
+    name: github.com/ansible-collections/nxos
+    templates:
+      - system-required
+      - ansible-python-jobs
+      - integrated-queue
+      - publish-to-galaxy-master-only
+
+- project:
     name: github.com/ansible-community/ansible-bender
     templates:
       - noop-jobs
@@ -87,13 +95,6 @@
     name: github.com/ansible-community/pytest-molecule
     templates:
       - system-required
-
-- project:
-    name: github.com/ansible-network/ansible_collections.cisco.nxos
-    templates:
-      - ansible-python-jobs
-      - integrated-queue
-      - publish-to-galaxy-master-only
 
 - project:
     name: github.com/ansible-network/ansible_collections.junipernetworks.junos
