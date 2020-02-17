@@ -29,6 +29,15 @@
       - publish-to-galaxy-master-only
 
 - project:
+    name: github.com/ansible-collections/iosxr
+    templates:
+      - system-required
+      - ansible-collections-cisco-iosxr
+      - ansible-python-jobs
+      - integrated-queue
+      - publish-to-galaxy-master-only
+
+- project:
     name: github.com/ansible-collections/netcommon
     templates:
       - system-required
@@ -78,14 +87,6 @@
     name: github.com/ansible-community/pytest-molecule
     templates:
       - system-required
-
-- project:
-    name: github.com/ansible-network/ansible_collections.cisco.iosxr
-    templates:
-      - ansible-collections-cisco-iosxr
-      - ansible-python-jobs
-      - integrated-queue
-      - publish-to-galaxy-master-only
 
 - project:
     name: github.com/ansible-network/ansible_collections.cisco.nxos
