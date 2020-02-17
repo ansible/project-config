@@ -11,6 +11,11 @@
     default-branch: devel
 
 - project:
+    name: github.com/ansible-collections/asa
+    templates:
+      - system-required
+
+- project:
     name: github.com/ansible-collections/eos
     templates:
       - system-required
@@ -425,10 +430,5 @@
 
 - project:
     name: github.com/pycontribs/selinux
-    templates:
-      - system-required
-
-- project:
-    name: https://github.com/ansible-collections/asa
     templates:
       - system-required
