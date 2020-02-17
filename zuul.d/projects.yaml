@@ -429,9 +429,6 @@
       - system-required
 
 - project:
-    name: https://github.com/ansible-security/ansible_collections.cisco.asa
+    name: https://github.com/ansible-collections/asa
     templates:
-      - ansible-collections-cisco-asa
-      - ansible-python-jobs
-      - integrated-queue
-      - publish-to-galaxy-master-only
+      - system-required
