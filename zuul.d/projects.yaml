@@ -20,6 +20,16 @@
       - publish-to-galaxy-master-only
 
 - project:
+    name: github.com/ansible-collections/netcommon
+    templates:
+      - system-required
+      - ansible-collections-cisco-iosxr-netconf
+      - ansible-collections-juniper-junos-netconf
+      - ansible-python-jobs
+      - integrated-queue
+      - publish-to-galaxy-master-only
+
+- project:
     name: github.com/ansible-community/ansible-bender
     templates:
       - noop-jobs
@@ -59,15 +69,6 @@
     name: github.com/ansible-community/pytest-molecule
     templates:
       - system-required
-
-- project:
-    name: github.com/ansible-network/ansible_collections.ansible.netcommon
-    templates:
-      - ansible-collections-cisco-iosxr-netconf
-      - ansible-collections-juniper-junos-netconf
-      - ansible-python-jobs
-      - integrated-queue
-      - publish-to-galaxy-master-only
 
 - project:
     name: github.com/ansible-network/ansible_collections.cisco.ios
