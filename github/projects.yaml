@@ -25,6 +25,8 @@
 ---
 - project: ansible-collections/amazon
   description: Ansible Collection for Amazon AWS
+- project: ansible-collections/asa
+  description: Ansible Security Collection for Cisco ASA
 - project: ansible-collections/eos
   description: Ansible Network Collection for Arista EOS
 - project: ansible-collections/ios
