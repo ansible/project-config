@@ -11,6 +11,15 @@
     default-branch: devel
 
 - project:
+    name: github.com/ansible-collections/eos
+    templates:
+      - system-required
+      - ansible-collections-arista-eos
+      - ansible-python-jobs
+      - integrated-queue
+      - publish-to-galaxy-master-only
+
+- project:
     name: github.com/ansible-community/ansible-bender
     templates:
       - noop-jobs
@@ -56,14 +65,6 @@
     templates:
       - ansible-collections-cisco-iosxr-netconf
       - ansible-collections-juniper-junos-netconf
-      - ansible-python-jobs
-      - integrated-queue
-      - publish-to-galaxy-master-only
-
-- project:
-    name: github.com/ansible-network/ansible_collections.arista.eos
-    templates:
-      - ansible-collections-arista-eos
       - ansible-python-jobs
       - integrated-queue
       - publish-to-galaxy-master-only
