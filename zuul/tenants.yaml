@@ -20,6 +20,7 @@
           # merge conflicts
           - ansible/ansible-runner
           - ansible-collections/amazon
+          - ansible-collections/asa
           - ansible-collections/eos
           - ansible-collections/ios
           - ansible-collections/iosxr
