@@ -75,29 +75,8 @@
   description: Enables pytest to discover molecule scenarios and run them
 - project: ansible-network/ansible-zuul-jobs
   description: Defines test jobs and roles
-- project: ansible-network/ansible_collections.ansible.netcommon
-  description: Ansible Network Collection for Common Code
-- project: ansible-network/ansible_collections.arista.eos
-  description: Ansible Network Collection for Arista EOS
-- project: ansible-network/ansible_collections.cisco.ios
-  description: Ansible Network Collection for Cisco IOS
-- project: ansible-network/ansible_collections.cisco.iosxr
-  description: Ansible Network Collection for Cisco IOSXR
-- project: ansible-network/ansible_collections.cisco.nxos
-  description: Ansible Network Collection for Cisco NXOS
 - project: ansible-network/ansible_collections.community.vmware
   description: Ansible Collection for VMWare
-- project: ansible-network/ansible_collections.juniper.junos
-  archived: true
-  description: RETIRED, Ansible Network Collection for Juniper JunOS
-- project: ansible-network/ansible_collections.junipernetworks.junos
-  description: Ansible Network Collection for Juniper JunOS
-- project: ansible-network/ansible_collections.network.cli
-  description: Ansible Network Collection for Network CLI
-- project: ansible-network/ansible_collections.network.netconf
-  description: Ansible Network Collection for Network NETCONF
-- project: ansible-network/ansible_collections.vyos.vyos
-  description: Ansible Network Collection for VyOS
 - project: ansible-network/backup_config
   description: Ansible role for backup of running configurations from network devices
 - project: ansible-network/cisco_ios
