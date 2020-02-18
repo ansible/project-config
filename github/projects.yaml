@@ -57,10 +57,18 @@
   description: molecule-digitalocean
 - project: ansible-community/molecule-ec2
   description: molecule-ec2
+- project: ansible-community/molecule-gce
+  description: Molecule GCE Driver
+- project: ansible-community/molecule-hetznercloud
+  description: Molecule HetznerCloud Driver
 - project: ansible-community/molecule-libvirt
   description: Molecule LibVirt Provider
+- project: ansible-community/molecule-linode
+  description: Molecule Linode Driver
 - project: ansible-community/molecule-lxd
   description: molecule-lxd
+- project: ansible-community/molecule-openstack
+  description: Molecule OpenStack Driver
 - project: ansible-community/molecule-vagrant
   description: Molecule Vangrant Driver
 - project: ansible-community/pytest-molecule
