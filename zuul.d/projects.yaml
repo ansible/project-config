@@ -86,37 +86,85 @@
 - project:
     name: github.com/ansible-community/molecule
     templates:
+      - publish-to-pypi
       - system-required
 
 - project:
     name: github.com/ansible-community/molecule-azure
     templates:
+      - publish-to-pypi
+      - system-required
+
+- project:
+    name: github.com/ansible-community/molecule-containers
+    templates:
+      - publish-to-pypi
       - system-required
 
 - project:
     name: github.com/ansible-community/molecule-digitalocean
     templates:
+      - publish-to-pypi
       - system-required
 
 - project:
     name: github.com/ansible-community/molecule-ec2
     templates:
+      - publish-to-pypi
+      - system-required
+
+- project:
+    name: github.com/ansible-community/molecule-gce
+    templates:
+      - publish-to-pypi
+      - system-required
+
+- project:
+    name: github.com/ansible-community/molecule-goss
+    templates:
+      - publish-to-pypi
+      - system-required
+
+- project:
+    name: github.com/ansible-community/molecule-hetznercloud
+    templates:
+      - publish-to-pypi
       - system-required
 
 - project:
     name: github.com/ansible-community/molecule-libvirt
     templates:
-      - system-required
       - publish-to-pypi
+      - system-required
+
+- project:
+    name: github.com/ansible-community/molecule-linode
+    templates:
+      - publish-to-pypi
+      - system-required
+
+- project:
+    name: github.com/ansible-community/molecule-lxd
+    templates:
+      - publish-to-pypi
+      - system-required
+
+- project:
+    name: github.com/ansible-community/molecule-openstack
+    templates:
+      - publish-to-pypi
+      - system-required
 
 - project:
     name: github.com/ansible-community/molecule-vagrant
     templates:
+      - publish-to-pypi
       - system-required
 
 - project:
     name: github.com/ansible-community/pytest-molecule
     templates:
+      - publish-to-pypi
       - system-required
 
 - project:
