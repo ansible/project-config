@@ -65,6 +65,15 @@
       - publish-to-galaxy-master-only
 
 - project:
+    name: github.com/ansible-collections/vyos
+    templates:
+      - system-required
+      - ansible-collections-vyos-vyos
+      - ansible-python-jobs
+      - integrated-queue
+      - publish-to-galaxy-master-only
+
+- project:
     name: github.com/ansible-community/ansible-bender
     templates:
       - noop-jobs
@@ -104,14 +113,6 @@
     name: github.com/ansible-community/pytest-molecule
     templates:
       - system-required
-
-- project:
-    name: github.com/ansible-network/ansible_collections.vyos.vyos
-    templates:
-      - ansible-collections-vyos-vyos
-      - ansible-python-jobs
-      - integrated-queue
-      - publish-to-galaxy-master-only
 
 - project:
     name: github.com/ansible-network/arista_eos
