@@ -7,6 +7,10 @@
       - system-required
 
 - project:
+    name: github.com/ansible-collection-migration/ansible-base
+    default-branch: devel
+
+- project:
     name: github.com/ansible-collections/eos
     templates:
       - system-required
