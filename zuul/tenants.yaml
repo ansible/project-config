@@ -87,6 +87,7 @@
           - include: []
             projects:
               - ansible/ansible
+              - ansible-collection-migration/ansible-base
               - ansible-community/collection_migration
               - ansible/awx
               - ansible/galaxy
