@@ -37,6 +37,7 @@
           - ansible-community/molecule-digitalocean
           - ansible-community/molecule-ec2
           - ansible-community/molecule-gce
+          - ansible-community/molecule-goss
           - ansible-community/molecule-hetznercloud
           - ansible-community/molecule-libvirt
           - ansible-community/molecule-linode
