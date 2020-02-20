@@ -41,6 +41,7 @@
           - ansible-community/molecule-hetznercloud
           - ansible-community/molecule-libvirt
           - ansible-community/molecule-linode
+          - ansible-community/molecule-lxd
           - ansible-community/molecule-openstack
           - ansible-community/molecule-vagrant
           - ansible-community/pytest-molecule
