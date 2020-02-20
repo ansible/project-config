@@ -17,7 +17,7 @@
       - ansible-collections-arista-eos
       - ansible-python-jobs
       - integrated-queue
-      - publish-to-galaxy-master-only
+      - publish-to-galaxy
 
 - project:
     name: github.com/ansible-collections/ios
@@ -26,7 +26,7 @@
       - ansible-collections-cisco-ios
       - ansible-python-jobs
       - integrated-queue
-      - publish-to-galaxy-master-only
+      - publish-to-galaxy
 
 - project:
     name: github.com/ansible-collections/iosxr
@@ -35,7 +35,7 @@
       - ansible-collections-cisco-iosxr
       - ansible-python-jobs
       - integrated-queue
-      - publish-to-galaxy-master-only
+      - publish-to-galaxy
 
 - project:
     name: github.com/ansible-collections/junos
@@ -44,7 +44,7 @@
       - ansible-collections-juniper-junos
       - ansible-python-jobs
       - integrated-queue
-      - publish-to-galaxy-master-only
+      - publish-to-galaxy
 
 - project:
     name: github.com/ansible-collections/netcommon
@@ -54,7 +54,7 @@
       - ansible-collections-juniper-junos-netconf
       - ansible-python-jobs
       - integrated-queue
-      - publish-to-galaxy-master-only
+      - publish-to-galaxy
 
 - project:
     name: github.com/ansible-collections/nxos
@@ -62,7 +62,7 @@
       - system-required
       - ansible-python-jobs
       - integrated-queue
-      - publish-to-galaxy-master-only
+      - publish-to-galaxy
 
 - project:
     name: github.com/ansible-collections/vyos
@@ -71,7 +71,7 @@
       - ansible-collections-vyos-vyos
       - ansible-python-jobs
       - integrated-queue
-      - publish-to-galaxy-master-only
+      - publish-to-galaxy
 
 - project:
     name: github.com/ansible-community/ansible-bender
