@@ -11,6 +11,11 @@
     default-branch: devel
 
 - project:
+    name: github.com/ansible-collections/asa
+    templates:
+      - system-required
+
+- project:
     name: github.com/ansible-collections/eos
     templates:
       - system-required
