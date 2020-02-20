@@ -59,6 +59,8 @@
   description: molecule-ec2
 - project: ansible-community/molecule-gce
   description: Molecule GCE Driver
+- project: ansible-community/molecule-goss
+  description: Molecule Goss Verifier
 - project: ansible-community/molecule-hetznercloud
   description: Molecule HetznerCloud Driver
 - project: ansible-community/molecule-libvirt
