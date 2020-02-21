@@ -76,6 +76,12 @@
       - ansible-collections-community-vmware
 
 - project:
+    name: github.com/ansible-collections/vmware_rest
+    templates:
+      - system-required
+      - ansible-python-jobs
+
+- project:
     name: github.com/ansible-collections/vyos
     templates:
       - system-required
