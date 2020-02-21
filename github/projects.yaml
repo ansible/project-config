@@ -77,8 +77,6 @@
   description: Enables pytest to discover molecule scenarios and run them
 - project: ansible-network/ansible-zuul-jobs
   description: Defines test jobs and roles
-- project: ansible-network/ansible_collections.community.vmware
-  description: Ansible Collection for VMWare
 - project: ansible-network/backup_config
   description: Ansible role for backup of running configurations from network devices
 - project: ansible-network/cisco_ios
