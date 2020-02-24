@@ -27,6 +27,7 @@
           - ansible-collections/junos
           - ansible-collections/netcommon
           - ansible-collections/nxos
+          - ansible-collections/openvswitch
           - ansible-collections/vmware
           - ansible-collections/vmware_rest
           - ansible-collections/vyos
