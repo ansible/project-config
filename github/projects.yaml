@@ -39,6 +39,8 @@
   description: Ansible Network Collection for Common Code
 - project: ansible-collections/nxos
   description: Ansible Network Collection for Cisco NXOS
+- project: ansible-collections/openvswitch
+  description: Ansible Network Collection for Open vSwitch
 - project: ansible-collections/vmware
   description: Ansible Collection for VMWare
 - project: ansible-collections/vmware_rest
