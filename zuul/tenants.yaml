@@ -28,6 +28,7 @@
           - ansible-collections/netcommon
           - ansible-collections/nxos
           - ansible-collections/openvswitch
+          - ansible-collections/skydive
           - ansible-collections/vmware
           - ansible-collections/vmware_rest
           - ansible-collections/vyos
