@@ -29,6 +29,8 @@
   description: Ansible Security Collection for Cisco ASA
 - project: ansible-collections/eos
   description: Ansible Network Collection for Arista EOS
+- project: ansible-collections/frr
+  description: Ansible Collection for Free Range Routing (FRR)
 - project: ansible-collections/ios
   description: Ansible Network Collection for Cisco IOS
 - project: ansible-collections/iosxr

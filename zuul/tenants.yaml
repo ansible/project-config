@@ -22,6 +22,7 @@
           - ansible-collections/amazon
           - ansible-collections/asa
           - ansible-collections/eos
+          - ansible-collections/frr
           - ansible-collections/ios
           - ansible-collections/iosxr
           - ansible-collections/junos
