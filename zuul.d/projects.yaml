@@ -79,6 +79,14 @@
       - publish-to-galaxy
 
 - project:
+    name: github.com/ansible-collections/skydive
+    templates:
+      - system-required
+      - ansible-python-jobs
+      - integrated-queue
+      - publish-to-galaxy
+
+- project:
     name: github.com/ansible-collections/vmware
     templates:
       - system-required
