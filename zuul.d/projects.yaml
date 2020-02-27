@@ -16,6 +16,14 @@
       - system-required
 
 - project:
+    name: github.com/ansible-collections/checkpoint
+    templates:
+      - system-required
+      - ansible-python-jobs
+      - integrated-queue
+      - publish-to-galaxy
+
+- project:
     name: github.com/ansible-collections/eos
     templates:
       - system-required
