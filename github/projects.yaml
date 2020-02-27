@@ -128,6 +128,8 @@
   description: Ansible role to provide configuration Intrusion Detection Systems
 - project: ansible-security/ids_install
   description: Ansible role to install configuration Intrusion Detection Systems
+- project: ansible/ansible-lint
+  description: Ansible linter
 - project: ansible/network
   description: Ansible collection for network devices
 - project: ansible/workshops
