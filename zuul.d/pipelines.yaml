@@ -18,16 +18,19 @@
           comment: (?i)^\s*recheck\s*$
     start:
       github.com:
+        check: in_progress
         status: 'pending'
         status-url: 'https://dashboard.zuul.ansible.com/t/ansible/status/change/{change.number},{change.patchset}'
         comment: false
     success:
       github.com:
+        check: success
         status: 'success'
         status-url: 'https://dashboard.zuul.ansible.com/t/ansible/buildset/{buildset.uuid}'
       mysql:
     failure:
       github.com:
+        check: failure
         status: 'failure'
         status-url: 'https://dashboard.zuul.ansible.com/t/ansible/buildset/{buildset.uuid}'
       mysql:
