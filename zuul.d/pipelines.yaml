@@ -291,18 +291,17 @@
           comment: (?i)^\s*recheck\s*$
     start:
       github.com:
-        status: pending
-        status-url: 'https://dashboard.zuul.ansible.com/t/ansible/status/change/{change.number},{change.patchset}'
+        check: in_progress
         comment: false
     success:
       github.com:
-        status: 'success'
-        status-url: 'https://dashboard.zuul.ansible.com/t/ansible/buildset/{buildset.uuid}'
+        check: success
+        comment: false
       mysql:
     failure:
       github.com:
-        status: 'failure'
-        status-url: 'https://dashboard.zuul.ansible.com/t/ansible/buildset/{buildset.uuid}'
+        check: failure
+        comment: false
       mysql:
     # Don't report merge-failures to github.com
     merge-failure:
