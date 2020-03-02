@@ -119,7 +119,6 @@
     templates:
       - system-required
       - ansible-collections-vyos-vyos
-      - ansible-python-jobs
       - integrated-queue
       - publish-to-galaxy
 
