@@ -14,6 +14,9 @@
     name: github.com/ansible-collections/asa
     templates:
       - system-required
+      - ansible-python-jobs
+      - integrated-queue
+      - publish-to-galaxy
 
 - project:
     name: github.com/ansible-collections/checkpoint
