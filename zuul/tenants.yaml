@@ -93,6 +93,7 @@
           - include: []
             projects:
               - ansible/ansible
+              - ansible/ansible-lint
               - ansible-collection-migration/ansible-base
               - ansible-community/collection_migration
               - ansible/awx
