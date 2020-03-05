@@ -469,6 +469,36 @@
       - ansible-test-network-integration
 
 - project:
+    name: github.com/ansible/ansible-lint
+    third-party-check:
+      jobs:
+        - tox-docs
+        - tox-linters:
+            vars:
+              tox_envlist: lint
+        - tox-py27:
+            vars:
+              tox_envlist: py27-ansible29
+        - ansible-tox-py27:
+            vars:
+              tox_envlist: py27-ansible28
+        - tox-py35:
+            vars:
+              tox_envlist: py35-ansible29
+        - tox-py36:
+            vars:
+              tox_envlist: py36-ansible29
+        - tox-py37:
+            vars:
+              tox_envlist: py37-ansible29
+        - ansible-tox-py37:
+            vars:
+              tox_envlist: py37-ansible28
+        - tox-py38:
+            vars:
+              tox_envlist: py38-ansible29
+
+- project:
     name: github.com/ansible/ansible-runner
     default-branch: devel
     templates:
