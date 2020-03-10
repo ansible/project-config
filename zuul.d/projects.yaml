@@ -560,6 +560,11 @@
     third-party-check:
       jobs:
         - ansible-tox-linters
+        - workshops-tox-integration-f5
+        - workshops-tox-integration-networking
+        - workshops-tox-integration-rhel
+        - workshops-tox-integration-security
+        - workshops-tox-integration-windows
 
 - project:
     name: github.com/project-receptor/receptor
