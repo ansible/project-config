@@ -111,12 +111,14 @@
     templates:
       - system-required
       - ansible-collections-community-vmware
+    merge-mode: squash-merge
 
 - project:
     name: github.com/ansible-collections/vmware_rest
     templates:
       - system-required
       - ansible-python-jobs
+    merge-mode: squash-merge
 
 - project:
     name: github.com/ansible-collections/vyos
