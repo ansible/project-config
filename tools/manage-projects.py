@@ -67,7 +67,7 @@ class Client(object):
         kwargs = {
             'allow_merge_commit': True,
             'allow_rebase_merge': False,
-            'allow_squash_merge': False,
+            'allow_squash_merge': True,
             'description': item.get('description', None),
         }
         options = item.get('options', [])
