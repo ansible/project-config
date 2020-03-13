@@ -118,6 +118,7 @@
     templates:
       - system-required
       - ansible-python-jobs
+      - publish-to-galaxy
     merge-mode: squash-merge
 
 - project:
