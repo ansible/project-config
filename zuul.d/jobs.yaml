@@ -170,3 +170,14 @@
       - secret: galaxy_dev_secret
         name: ansible_galaxy_info
     nodeset: centos-8-1vcpu
+
+- job:
+    name: ansible-workshops-tox-integration
+    description: |
+      Running workshops from https://github.com/ansible/workshops
+    run:
+      - playbooks/workshops/run.yaml
+    secrets:
+      - secret: aws_workshops_secrets
+        name: aws_workshops_data
+    nodeset: centos-7-1vcpu
