@@ -180,4 +180,4 @@
     secrets:
       - secret: aws_workshops_secrets
         name: aws_workshops_data
-    nodeset: centos-7-1vcpu
+    nodeset: centos-8-1vcpu
