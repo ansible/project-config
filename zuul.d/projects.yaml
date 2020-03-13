@@ -111,6 +111,7 @@
     templates:
       - system-required
       - ansible-collections-community-vmware
+      - publish-to-galaxy
     merge-mode: squash-merge
 
 - project:
@@ -118,6 +119,7 @@
     templates:
       - system-required
       - ansible-python-jobs
+      - publish-to-galaxy
     merge-mode: squash-merge
 
 - project:
