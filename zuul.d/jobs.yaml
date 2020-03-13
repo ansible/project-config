@@ -70,7 +70,7 @@
       - rackspace_iad_clouds_yaml
       - rackspace_ord_clouds_yaml
       - vexxhost_clouds_yaml
-    nodeset: centos-7-1vcpu
+    nodeset: centos-8-1vcpu
 
 # ansible/project-config jobs
 - job:
