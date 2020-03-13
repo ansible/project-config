@@ -14,6 +14,19 @@
         dest: '{{ ansible_user_dir }}/{{ zuul.project.src_dir }}/provisioner/tower_license.json'
         content: '{{ aws_workshops_data.tower_license }}'
 
+    - name: Ensure the aws folder exist in HOME
+      file:
+        path: '{{ ansible_env.HOME }}/.aws'
+        state: directory
+
+    - name: Lay the credential file
+      copy:
+        dest: '{{ ansible_env.HOME }}/.aws/credentials'
+        content: |
+          [default]
+          aws_access_key = {{ aws_workshops_data.aws_access_key }}
+          aws_secret_key = {{ aws_workshops_data.aws_secret_key }}
+
     - name: Run tox
       include_role:
         name: tox
@@ -21,6 +34,3 @@
         tox_envlist: 'workshop-{{ workshop_type }}'
         test_setup_skip: true
         zuul_work_dir: "{{ zuul.project.src_dir }}"
-      environment:
-        AWS_SECRET_KEY: '{{ aws_workshops_data.aws_secret_key }}'
-        AWS_ACCESS_KEY: '{{ aws_workshops_data.aws_access_key }}'
