@@ -24,8 +24,8 @@
         dest: '{{ ansible_env.HOME }}/.aws/credentials'
         content: |
           [default]
-          aws_access_key = {{ aws_workshops_data.aws_access_key }}
-          aws_secret_key = {{ aws_workshops_data.aws_secret_key }}
+          aws_access_key_id = {{ aws_workshops_data.aws_access_key }}
+          aws_secret_access_key = {{ aws_workshops_data.aws_secret_key }}
 
     - name: Run tox
       include_role:
