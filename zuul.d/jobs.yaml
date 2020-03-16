@@ -181,3 +181,4 @@
       - secret: aws_workshops_secrets
         name: aws_workshops_data
     nodeset: centos-8-1vcpu
+    timeout: 3600
