@@ -1,14 +1,6 @@
 ---
 - hosts: all
   tasks:
-    - name: Setup tox role
-      include_role:
-        name: tox
-      vars:
-        tox_extra_args: -vv --notest
-        tox_install_siblings: false
-        zuul_work_dir: "{{ zuul.project.src_dir }}"
-
     - name: Copy tower-license
       copy:
         dest: '{{ ansible_user_dir }}/{{ zuul.project.src_dir }}/provisioner/tower_license.json'
