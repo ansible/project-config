@@ -173,6 +173,7 @@
 
 - job:
     name: ansible-workshops-tox-integration
+    parent: tox
     description: |
       Running workshops from https://github.com/ansible/workshops
     run:
