@@ -1,0 +1,6 @@
+---
+- hosts: all
+  tasks:
+    - name: Enable epel-repository
+      become: true
+      command: yum-config-manager --enable epel

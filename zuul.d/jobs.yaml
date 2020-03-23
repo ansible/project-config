@@ -176,6 +176,8 @@
     parent: tox
     description: |
       Running workshops from https://github.com/ansible/workshops
+    pre-run:
+      - playbooks/workshops/pre.yaml
     run:
       - playbooks/workshops/run.yaml
     secrets:
