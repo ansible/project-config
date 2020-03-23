@@ -4,3 +4,9 @@
     - name: Enable epel-repository
       become: true
       command: yum-config-manager --enable epel
+
+    - name: Run bindep role
+      include_role:
+        name: bindep
+      vars:
+        bindep_profile: epel
