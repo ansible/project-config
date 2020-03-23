@@ -24,5 +24,7 @@
         name: tox
       vars:
         tox_envlist: 'workshop-{{ workshop_type }}'
+        tox_environment:
+          WORKSHOPS_CHANGE_ID: '{{ zuul.change | int }}'
         test_setup_skip: true
         zuul_work_dir: "{{ zuul.project.src_dir }}"
