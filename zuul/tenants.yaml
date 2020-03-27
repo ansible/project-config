@@ -20,6 +20,7 @@
           # merge conflicts
           - ansible/ansible-runner
           - ansible-collections/amazon
+          - ansible-collections/ansible.netcommon
           - ansible-collections/checkpoint
           - ansible-collections/cisco.asa
           - ansible-collections/eos
@@ -27,7 +28,6 @@
           - ansible-collections/ios
           - ansible-collections/iosxr
           - ansible-collections/junos
-          - ansible-collections/netcommon
           - ansible-collections/nxos
           - ansible-collections/openvswitch
           - ansible-collections/skydive

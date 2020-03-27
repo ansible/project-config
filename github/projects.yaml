@@ -25,6 +25,8 @@
 ---
 - project: ansible-collections/amazon
   description: Ansible Collection for Amazon AWS
+- project: ansible-collections/ansible.netcommon
+  description: Ansible Network Collection for Common Code
 - project: ansible-collections/checkpoint
   description: Ansible Security Collection for Check Point devices
 - project: ansible-collections/cisco.asa
@@ -39,8 +41,6 @@
   description: Ansible Network Collection for Cisco IOSXR
 - project: ansible-collections/junos
   description: Ansible Network Collection for Juniper JunOS
-- project: ansible-collections/netcommon
-  description: Ansible Network Collection for Common Code
 - project: ansible-collections/nxos
   description: Ansible Network Collection for Cisco NXOS
 - project: ansible-collections/openvswitch
