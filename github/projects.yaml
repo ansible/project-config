@@ -13,7 +13,7 @@
 # under the License.
 
 # Example format:
-# - project: ansible/foo
+# - project: ansible/example
 #   archived: true
 #   description: This is a great project
 #   options:
