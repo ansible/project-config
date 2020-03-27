@@ -27,12 +27,12 @@
   description: Ansible Collection for Amazon AWS
 - project: ansible-collections/ansible.netcommon
   description: Ansible Network Collection for Common Code
+- project: ansible-collections/arista.eos
+  description: Ansible Network Collection for Arista EOS
 - project: ansible-collections/checkpoint
   description: Ansible Security Collection for Check Point devices
 - project: ansible-collections/cisco.asa
   description: Ansible Security Collection for Cisco ASA
-- project: ansible-collections/eos
-  description: Ansible Network Collection for Arista EOS
 - project: ansible-collections/frr
   description: Ansible Collection for Free Range Routing (FRR)
 - project: ansible-collections/ios
