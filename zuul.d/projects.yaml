@@ -21,6 +21,15 @@
       - publish-to-galaxy
 
 - project:
+    name: github.com/ansible-collections/arista.eos
+    templates:
+      - system-required
+      - ansible-collections-arista-eos
+      - ansible-python-jobs
+      - integrated-queue
+      - publish-to-galaxy
+
+- project:
     name: github.com/ansible-collections/checkpoint
     templates:
       - system-required
@@ -36,15 +45,6 @@
       - ansible-python-jobs
       - integrated-queue
       - publish-to-galaxy
-
-# - project:
-#     name: github.com/ansible-collections/eos
-#     templates:
-#       - system-required
-#       - ansible-collections-arista-eos
-#       - ansible-python-jobs
-#       - integrated-queue
-#       - publish-to-galaxy
 
 - project:
     name: github.com/ansible-collections/frr
