@@ -20,8 +20,8 @@
           # merge conflicts
           - ansible/ansible-runner
           - ansible-collections/amazon
-          - ansible-collections/asa
           - ansible-collections/checkpoint
+          - ansible-collections/cisco.asa
           - ansible-collections/eos
           - ansible-collections/frr
           - ansible-collections/ios
