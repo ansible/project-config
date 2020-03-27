@@ -10,14 +10,14 @@
     name: github.com/ansible-collection-migration/ansible-base
     default-branch: devel
 
-- project:
-    name: github.com/ansible-collections/asa
-    templates:
-      - system-required
-      - ansible-collections-cisco-asa
-      - ansible-python-jobs
-      - integrated-queue
-      - publish-to-galaxy
+# - project:
+#     name: github.com/ansible-collections/asa
+#     templates:
+#       - system-required
+#       - ansible-collections-cisco-asa
+#       - ansible-python-jobs
+#       - integrated-queue
+#       - publish-to-galaxy
 
 - project:
     name: github.com/ansible-collections/checkpoint
