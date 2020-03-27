@@ -11,6 +11,16 @@
     default-branch: devel
 
 - project:
+    name: github.com/ansible-collections/ansible.netcommon
+    templates:
+      - system-required
+      - ansible-collections-cisco-iosxr-netconf
+      - ansible-collections-juniper-junos-netconf
+      - ansible-python-jobs
+      - integrated-queue
+      - publish-to-galaxy
+
+- project:
     name: github.com/ansible-collections/checkpoint
     templates:
       - system-required
@@ -70,16 +80,6 @@
       - ansible-python-jobs
       - integrated-queue
       - publish-to-galaxy
-
-# - project:
-#     name: github.com/ansible-collections/netcommon
-#     templates:
-#       - system-required
-#       - ansible-collections-cisco-iosxr-netconf
-#       - ansible-collections-juniper-junos-netconf
-#       - ansible-python-jobs
-#       - integrated-queue
-#       - publish-to-galaxy
 
 - project:
     name: github.com/ansible-collections/nxos
