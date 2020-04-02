@@ -55,6 +55,12 @@
       - publish-to-galaxy
 
 - project:
+    name: github.com/ansible-collections/ibm.qradar
+    templates:
+      - system-required
+      - publish-to-galaxy
+
+- project:
     name: github.com/ansible-collections/ios
     templates:
       - system-required
@@ -442,12 +448,6 @@
       jobs:
         - ansible-tox-linters
         - ansible-tox-py27
-
-# - project:
-#     name: github.com/ansible-security/ansible_collections.ibm.qradar
-#     templates:
-#       - noop-jobs
-#       - publish-to-galaxy
 
 - project:
     name: github.com/ansible-security/ids_config
