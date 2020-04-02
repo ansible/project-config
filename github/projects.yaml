@@ -23,7 +23,7 @@
 #     - has-wiki
 #
 ---
-- project: ansible-collections/amazon
+- project: ansible-collections/amazon.aws
   description: Ansible Collection for Amazon AWS
 - project: ansible-collections/ansible.netcommon
   description: Ansible Network Collection for Common Code
@@ -35,6 +35,8 @@
   description: Ansible Security Collection for Cisco ASA
 - project: ansible-collections/frr
   description: Ansible Collection for Free Range Routing (FRR)
+- project: ansible-collections/ibm.qradar
+  description: IBM QRadar Ansible Collection
 - project: ansible-collections/ios
   description: Ansible Network Collection for Cisco IOS
 - project: ansible-collections/iosxr
@@ -122,8 +124,6 @@
   description: Ansible Yang Role
 - project: ansible-network/zuul-config
   description: Repo containing Zuul project configuration
-- project: ansible-security/ansible_collections.ibm.qradar
-  description: IBM QRadar Ansible Collection
 - project: ansible-security/ids_config
   description: Ansible role to provide configuration Intrusion Detection Systems
 - project: ansible-security/ids_install
