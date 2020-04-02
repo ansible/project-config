@@ -19,12 +19,13 @@
           # After this point, sorting projects alphabetically will help
           # merge conflicts
           - ansible/ansible-runner
-          - ansible-collections/amazon
+          - ansible-collections/amazon.aws
           - ansible-collections/ansible.netcommon
           - ansible-collections/arista.eos
           - ansible-collections/checkpoint
           - ansible-collections/cisco.asa
           - ansible-collections/frr
+          - ansible-collections/ibm.qradar
           - ansible-collections/ios
           - ansible-collections/iosxr
           - ansible-collections/junos
@@ -82,7 +83,6 @@
           - ansible-network/vyos
           - ansible-network/windmill-config
           - ansible-network/yang
-          - ansible-security/ansible_collections.ibm.qradar
           - ansible-security/ids_config
           - ansible-security/ids_install
           - project-receptor/receptor
