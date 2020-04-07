@@ -53,7 +53,7 @@
   description: Ansible Collection for VMWare
 - project: ansible-collections/vmware_rest
   description: Ansible Collection for VMWare (REST modules)
-- project: ansible-collections/vyos
+- project: ansible-collections/vyos.vyos
   description: Ansible Network Collection for VyOS
 - project: ansible-community/ansible-bender
   description: ansible-playbook + buildah = a sweet container image
