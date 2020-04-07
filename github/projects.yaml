@@ -41,7 +41,7 @@
   description: IBM QRadar Ansible Collection
 - project: ansible-collections/iosxr
   description: Ansible Network Collection for Cisco IOSXR
-- project: ansible-collections/junos
+- project: ansible-collections/junipernetworks.junos
   description: Ansible Network Collection for Juniper JunOS
 - project: ansible-collections/nxos
   description: Ansible Network Collection for Cisco NXOS
