@@ -28,7 +28,7 @@
           - ansible-collections/frr
           - ansible-collections/ibm.qradar
           - ansible-collections/iosxr
-          - ansible-collections/junos
+          - ansible-collections/junipernetworks.junos
           - ansible-collections/nxos
           - ansible-collections/openvswitch
           - ansible-collections/skydive

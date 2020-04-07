@@ -78,14 +78,14 @@
       - integrated-queue
       - publish-to-galaxy
 
-- project:
-    name: github.com/ansible-collections/junos
-    templates:
-      - system-required
-      - ansible-collections-juniper-junos
-      - ansible-python-jobs
-      - integrated-queue
-      - publish-to-galaxy
+# - project:
+#     name: github.com/ansible-collections/junos
+#     templates:
+#       - system-required
+#       - ansible-collections-juniper-junos
+#       - ansible-python-jobs
+#       - integrated-queue
+#       - publish-to-galaxy
 
 - project:
     name: github.com/ansible-collections/nxos
