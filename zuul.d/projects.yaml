@@ -47,6 +47,15 @@
       - publish-to-galaxy
 
 - project:
+    name: github.com/ansible-collections/cisco.ios
+    templates:
+      - system-required
+      - ansible-collections-cisco-ios
+      - ansible-python-jobs
+      - integrated-queue
+      - publish-to-galaxy
+
+- project:
     name: github.com/ansible-collections/frr
     templates:
       - system-required
@@ -59,15 +68,6 @@
     templates:
       - system-required
       - publish-to-galaxy
-
-# - project:
-#     name: github.com/ansible-collections/ios
-#     templates:
-#       - system-required
-#       - ansible-collections-cisco-ios
-#       - ansible-python-jobs
-#       - integrated-queue
-#       - publish-to-galaxy
 
 - project:
     name: github.com/ansible-collections/iosxr
