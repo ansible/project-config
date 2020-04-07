@@ -24,9 +24,9 @@
           - ansible-collections/arista.eos
           - ansible-collections/checkpoint
           - ansible-collections/cisco.asa
+          - ansible-collections/cisco.ios
           - ansible-collections/frr
           - ansible-collections/ibm.qradar
-          - ansible-collections/ios
           - ansible-collections/iosxr
           - ansible-collections/junos
           - ansible-collections/nxos

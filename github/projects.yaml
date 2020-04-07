@@ -33,12 +33,12 @@
   description: Ansible Security Collection for Check Point devices
 - project: ansible-collections/cisco.asa
   description: Ansible Security Collection for Cisco ASA
+- project: ansible-collections/cisco.ios
+  description: Ansible Network Collection for Cisco IOS
 - project: ansible-collections/frr
   description: Ansible Collection for Free Range Routing (FRR)
 - project: ansible-collections/ibm.qradar
   description: IBM QRadar Ansible Collection
-- project: ansible-collections/ios
-  description: Ansible Network Collection for Cisco IOS
 - project: ansible-collections/iosxr
   description: Ansible Network Collection for Cisco IOSXR
 - project: ansible-collections/junos
