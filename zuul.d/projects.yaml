@@ -64,13 +64,13 @@
       - integrated-queue
       - publish-to-galaxy
 
-# - project:
-#     name: github.com/ansible-collections/frr
-#     templates:
-#       - system-required
-#       - ansible-python-jobs
-#       - integrated-queue
-#       - publish-to-galaxy
+- project:
+    name: github.com/ansible-collections/frr.frr
+    templates:
+      - system-required
+      - ansible-python-jobs
+      - integrated-queue
+      - publish-to-galaxy
 
 - project:
     name: github.com/ansible-collections/ibm.qradar
