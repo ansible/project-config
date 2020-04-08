@@ -590,3 +590,9 @@
     name: github.com/pycontribs/selinux
     templates:
       - system-required
+
+- project:
+    name: github.com/ansible/galaxy-api
+    third-party-check:
+      jobs:
+        - ansible-tox-linters
