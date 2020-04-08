@@ -98,6 +98,7 @@
               - ansible-community/collection_migration
               - ansible/awx
               - ansible/galaxy
+              - ansible/galaxy-api
               - ansible/pylibssh
               - ansible/workshops
 
