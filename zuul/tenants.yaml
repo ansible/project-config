@@ -25,9 +25,9 @@
           - ansible-collections/checkpoint
           - ansible-collections/cisco.asa
           - ansible-collections/cisco.ios
+          - ansible-collections/cisco.iosxr
           - ansible-collections/frr
           - ansible-collections/ibm.qradar
-          - ansible-collections/iosxr
           - ansible-collections/junipernetworks.junos
           - ansible-collections/nxos
           - ansible-collections/openvswitch.openvswitch
