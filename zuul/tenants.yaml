@@ -30,7 +30,7 @@
           - ansible-collections/iosxr
           - ansible-collections/junipernetworks.junos
           - ansible-collections/nxos
-          - ansible-collections/openvswitch
+          - ansible-collections/openvswitch.openvswitch
           - ansible-collections/skydive
           - ansible-collections/vmware
           - ansible-collections/vmware_rest

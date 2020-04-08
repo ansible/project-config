@@ -95,14 +95,14 @@
       - integrated-queue
       - publish-to-galaxy
 
-- project:
-    name: github.com/ansible-collections/openvswitch
-    templates:
-      - system-required
-      - ansible-collections-openvswitch-openvswitch
-      - ansible-python-jobs
-      - integrated-queue
-      - publish-to-galaxy
+# - project:
+#     name: github.com/ansible-collections/openvswitch
+#     templates:
+#       - system-required
+#       - ansible-collections-openvswitch-openvswitch
+#       - ansible-python-jobs
+#       - integrated-queue
+#       - publish-to-galaxy
 
 - project:
     name: github.com/ansible-collections/skydive
