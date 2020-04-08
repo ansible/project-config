@@ -37,7 +37,7 @@
   description: Ansible Network Collection for Cisco IOS
 - project: ansible-collections/cisco.iosxr
   description: Ansible Network Collection for Cisco IOSXR
-- project: ansible-collections/frr
+- project: ansible-collections/frr.frr
   description: Ansible Collection for Free Range Routing (FRR)
 - project: ansible-collections/ibm.qradar
   description: IBM QRadar Ansible Collection
