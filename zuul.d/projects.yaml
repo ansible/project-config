@@ -16,6 +16,7 @@
       - system-required
       - ansible-collections-cisco-iosxr-netconf
       - ansible-collections-juniper-junos-netconf
+      - ansible-collections-openvswitch-openvswitch
       - ansible-python-jobs
       - integrated-queue
       - publish-to-galaxy
