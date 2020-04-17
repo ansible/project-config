@@ -69,6 +69,7 @@
     name: github.com/ansible-collections/cisco.nxos
     templates:
       - system-required
+      - ansible-collections-cisco-nxos
       - ansible-python-jobs
       - integrated-queue
       - publish-to-galaxy
