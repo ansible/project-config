@@ -35,6 +35,7 @@
           - ansible-collections/vmware
           - ansible-collections/vmware_rest
           - ansible-collections/vyos.vyos
+          - ansible-collections/ibm.qradar
           - ansible-community/ansible-bender
           - ansible-community/molecule
           - ansible-community/molecule-azure

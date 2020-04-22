@@ -55,6 +55,8 @@
   description: Ansible Collection for VMWare (REST modules)
 - project: ansible-collections/vyos.vyos
   description: Ansible Network Collection for VyOS
+- project: ansible-collections/ibm.qradar
+  description: Ansible Collection for IBM QRadar
 - project: ansible-community/ansible-bender
   description: ansible-playbook + buildah = a sweet container image
 - project: ansible-community/molecule

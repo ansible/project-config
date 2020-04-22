@@ -140,6 +140,14 @@
       - publish-to-galaxy
 
 - project:
+    name: github.com/ansible-collections/ibm.qradar
+    templates:
+      - system-required
+      - ansible-python-jobs
+      - publish-to-galaxy
+    merge-mode: squash-merge
+
+- project:
     name: github.com/ansible-community/ansible-bender
     templates:
       - noop-jobs
