@@ -177,6 +177,7 @@
     description: |
       Running workshops from https://github.com/ansible/workshops
     pre-run:
+      - playbooks/base-minimal-with-aws-session/pre.yaml
       - playbooks/workshops/pre.yaml
     run:
       - playbooks/workshops/run.yaml
@@ -185,3 +186,15 @@
         name: aws_workshops_data
     nodeset: centos-8-1vcpu
     timeout: 5400
+
+- job:
+    name: base-with-aws-session
+    parent: base-minimal
+    description: |
+      Basic-minimal job with an associated AWS/STS session
+    pre-run:
+      - playbooks/base-minimal-with-aws-session/pre.yaml
+    secrets:
+      - secret: aws_workshops_secrets
+        name: aws_workshops_data
+    nodeset: centos-8-1vcpu
