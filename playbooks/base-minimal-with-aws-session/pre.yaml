@@ -1,0 +1,24 @@
+---
+- hosts: all:!appliance
+  tasks:
+    - name: Ensure the aws folder exist in HOME
+      file:
+        path: '{{ ansible_env.HOME }}/.aws'
+        state: directory
+
+    - name: Generate a session token from the AWS Security Token Service
+      sts_session_token:
+        aws_access_key: "{{ aws_workshops_data.aws_access_key }}"
+        aws_secret_key: "{{ aws_workshops_data.aws_secret_key }}"
+        duration_seconds: 3600
+      register: session_credentials
+
+    # See: https://boto.readthedocs.io/en/latest/boto_config_tut.html
+    - name: Lay the credential file
+      copy:
+        dest: '{{ ansible_env.HOME }}/.aws/credentials'
+        content: |
+          [default]
+          aws_access_key_id = {{ session_credentials.sts_creds.access_key }}
+          aws_secret_access_key = {{ session_credentials.sts_creds.secret_key }}
+          aws_security_token = {{ session_credentials.sts_creds.session_token }}
