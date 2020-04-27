@@ -26,6 +26,7 @@
     templates:
       - system-required
       - ansible-collections-arista-eos
+      - ansible-collections-arista-eos-units
       - ansible-python-jobs
       - integrated-queue
       - publish-to-galaxy
@@ -43,6 +44,7 @@
     templates:
       - system-required
       - ansible-collections-cisco-asa
+      - ansible-collections-cisco-asa-units
       - ansible-python-jobs
       - integrated-queue
       - publish-to-galaxy
@@ -52,6 +54,7 @@
     templates:
       - system-required
       - ansible-collections-cisco-ios
+      - ansible-collections-cisco-ios-units
       - ansible-python-jobs
       - integrated-queue
       - publish-to-galaxy
@@ -61,6 +64,7 @@
     templates:
       - system-required
       - ansible-collections-cisco-iosxr
+      - ansible-collections-cisco-iosxr-units
       - ansible-python-jobs
       - integrated-queue
       - publish-to-galaxy
@@ -70,6 +74,7 @@
     templates:
       - system-required
       - ansible-collections-cisco-nxos
+      - ansible-collections-cisco-nxos-units
       - ansible-python-jobs
       - integrated-queue
       - publish-to-galaxy
@@ -93,6 +98,7 @@
     templates:
       - system-required
       - ansible-collections-juniper-junos
+      - ansible-collections-juniper-junos-units
       - ansible-python-jobs
       - integrated-queue
       - publish-to-galaxy
@@ -102,6 +108,7 @@
     templates:
       - system-required
       - ansible-collections-openvswitch-openvswitch
+      - ansible-collections-openvswitch-openvswitch-units
       - ansible-python-jobs
       - integrated-queue
       - publish-to-galaxy
@@ -135,6 +142,7 @@
     templates:
       - system-required
       - ansible-collections-vyos-vyos
+      - ansible-collections-vyos-vyos-units
       - ansible-python-jobs
       - integrated-queue
       - publish-to-galaxy
