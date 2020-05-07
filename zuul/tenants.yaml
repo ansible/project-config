@@ -32,6 +32,7 @@
           - ansible-collections/junipernetworks.junos
           - ansible-collections/openvswitch.openvswitch
           - ansible-collections/skydive
+          - ansible-collections/splunk.enterprise_security
           - ansible-collections/vmware
           - ansible-collections/vmware_rest
           - ansible-collections/vyos.vyos
