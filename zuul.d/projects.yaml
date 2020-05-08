@@ -495,30 +495,14 @@
         - ansible-lint-tox-docs
         - ansible-lint-tox-linters
         - ansible-lint-tox-packaging
-        - ansible-lint-tox-py35-ansible28
-        - ansible-lint-tox-py35-ansible29
-        - ansible-lint-tox-py35-ansibledevel
-        - ansible-lint-tox-py38-ansible28
+        - ansible-lint-tox-py36-ansible28
+        - ansible-lint-tox-py36-ansible29
+        - ansible-lint-tox-py36-ansibledevel
+        - ansible-lint-tox-py37-ansible28
+        - ansible-lint-tox-py37-ansible29
+        - ansible-lint-tox-py37-ansibledevel
         - ansible-lint-tox-py38-ansible29
         - ansible-lint-tox-py38-ansibledevel
-        # 2nd stage:
-        - ansible-lint-tox-py36-ansible28: &stage2
-            dependencies:
-              - ansible-lint-tox-docs
-              - ansible-lint-tox-linters
-              - ansible-lint-tox-packaging
-              - ansible-lint-tox-py35-ansible28
-              - ansible-lint-tox-py35-ansible29
-              - ansible-lint-tox-py35-ansibledevel
-              - ansible-lint-tox-py38-ansible28
-              - ansible-lint-tox-py38-ansible29
-              - ansible-lint-tox-py38-ansibledevel
-        - ansible-lint-tox-py36-ansible29: *stage2
-        - ansible-lint-tox-py36-ansibledevel: *stage2
-        - ansible-lint-tox-py37-ansible28: *stage2
-        - ansible-lint-tox-py37-ansible29: *stage2
-        - ansible-lint-tox-py37-ansibledevel: *stage2
-
 - project:
     name: github.com/ansible/ansible-runner
     default-branch: devel
