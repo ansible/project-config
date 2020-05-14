@@ -49,7 +49,7 @@
   description: Ansible Network Collection for Open vSwitch
 - project: ansible-collections/skydive
   description: Ansible Collection for Skydive network / protocols analyzer
-- project: ansible-collections/splunk.enterprise_security
+- project: ansible-collections/splunk.es
   description: Ansible Collection for Splunk Enterprise
 - project: ansible-collections/vmware
   description: Ansible Collection for VMWare
