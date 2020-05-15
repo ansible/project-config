@@ -122,6 +122,12 @@
       - publish-to-galaxy
 
 - project:
+    name: github.com/ansible-collections/splunk.es
+    templates:
+      - system-required
+    merge-mode: squash-merge
+
+- project:
     name: github.com/ansible-collections/vmware
     templates:
       - system-required
