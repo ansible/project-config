@@ -96,6 +96,7 @@
               - ansible/ansible
               - ansible/ansible-lint
               - ansible-community/collection_migration
+              - ansible-collections/community.general
               - ansible/awx
               - ansible/galaxy
               - ansible/pylibssh
