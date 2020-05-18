@@ -35,6 +35,7 @@
             zuul_log_partition: true
             zuul_log_container: ansible
             zuul_log_cloud_config: "{{ item }}"
+            zuul_log_delete_after: 7776000
           with_random_choice:
             - "{{ rackspace_dfw_clouds_yaml }}"
             - "{{ rackspace_iad_clouds_yaml }}"
