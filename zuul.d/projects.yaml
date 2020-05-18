@@ -76,6 +76,12 @@
       - publish-to-galaxy
 
 - project:
+    name: github.com/ansible-collections/community.general
+    templates:
+      - system-required
+      - publish-to-galaxy
+
+- project:
     name: github.com/ansible-collections/frr.frr
     templates:
       - system-required
