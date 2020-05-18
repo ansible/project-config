@@ -77,9 +77,15 @@
 
 - project:
     name: github.com/ansible-collections/community.general
-    templates:
-      - system-required
-      - publish-to-galaxy
+    third-party-check:
+      jobs:
+        - build-ansible-collection
+    pre-release:
+      jobs:
+        - release-ansible-collection-galaxy
+    release:
+      jobs:
+        - release-ansible-collection-galaxy
 
 - project:
     name: github.com/ansible-collections/frr.frr
