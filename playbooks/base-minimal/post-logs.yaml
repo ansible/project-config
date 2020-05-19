@@ -14,6 +14,12 @@
       include_role:
         name: generate-zuul-manifest
 
+    - name: Set zuul-log-path fact
+      include_role:
+        name: set-zuul-log-path-fact
+      vars:
+        zuul_log_path_shard_build: true
+
     - name: Upload logs to swift
       block:
         - name: Run upload-logs-swift role
@@ -22,7 +28,6 @@
             name: upload-logs-swift
           vars:
             zuul_log_partition: true
-            zuul_log_path_shard_build: true
             zuul_log_container: ansible
             zuul_log_cloud_config: "{{ vexxhost_clouds_yaml }}"
             zuul_log_delete_after: 7776000
@@ -35,7 +40,6 @@
             name: upload-logs-swift
           vars:
             zuul_log_partition: true
-            zuul_log_path_shard_build: true
             zuul_log_container: ansible
             zuul_log_cloud_config: "{{ item }}"
             zuul_log_delete_after: 7776000
