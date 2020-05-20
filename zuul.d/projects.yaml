@@ -133,6 +133,8 @@
     name: github.com/ansible-collections/splunk.es
     templates:
       - system-required
+      - publish-to-galaxy
+      - ansible-collections-security-splunk-es
     merge-mode: squash-merge
 
 - project:
