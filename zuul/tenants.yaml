@@ -99,6 +99,7 @@
               - ansible-collections/community.general
               - ansible/awx
               - ansible/galaxy
+              - ansible/galaxy-importer
               - ansible/pylibssh
               - ansible/workshops
 
