@@ -34,4 +34,4 @@
     - name: Confirm collection can be imported into galaxy
       loop: "{{ result.files }}"
       when: "item.path.endswith('.tar.gz')"
-      shell: "{{ ansible_user_dir }}/{{ zuul.projects['github.com/ansible-network/releases'].src_dir }}/tools/validate-collection.sh {{ item.path }}"
+      shell: "source {{ ansible_user_dir }}/{{ zuul.projects['github.com/ansible-network/releases'].src_dir }}/.tox/venv/bin/activate; {{ ansible_user_dir }}/{{ zuul.projects['github.com/ansible-network/releases'].src_dir }}/tools/validate-collection.sh {{ item.path }}"
