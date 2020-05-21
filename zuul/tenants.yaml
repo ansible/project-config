@@ -96,7 +96,18 @@
               - ansible/ansible
               - ansible/ansible-lint
               - ansible-community/collection_migration
+              - ansible-collections/community.aws
+              - ansible-collections/community.azure
+              - ansible-collections/community.cassandra
+              - ansible-collections/community.crypto
               - ansible-collections/community.general
+              - ansible-collections/community.grafana
+              - ansible-collections/community.libvirt
+              - ansible-collections/community.mongodb
+              - ansible-collections/community.network
+              - ansible-collections/community.rabbitmq
+              - ansible-collections/community.windows
+              - ansible-collections/community.zabbix
               - ansible/awx
               - ansible/galaxy
               - ansible/galaxy-importer
