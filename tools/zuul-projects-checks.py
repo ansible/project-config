@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 
 # Copyright 2017 SUSE Linux GmbH
 #
@@ -14,14 +14,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from pathlib import Path
-import re
 import sys
 import yaml
 
-tenants = yaml.safe_load(Path("zuul/tenants.yaml").read_text())
-projects = yaml.safe_load(Path("zuul.d/projects.yaml").read_text())
-ansible_tenant = tenants[0]["tenant"]
+projects_yaml = 'zuul.d/projects.yaml'
+projects = yaml.safe_load(open(projects_yaml))
 
 
 def normalize(s):
@@ -173,45 +170,6 @@ def check_only_boilerplate():
     return errors
 
 
-def check_project_templates():
-
-    print("\nChecking that every project has entries")
-    print("======================")
-
-    untrusted_github_projects = ansible_tenant["source"]["github.com"][
-        "untrusted-projects"
-    ]
-    github_projects = [
-        "github.com/" + i for i in untrusted_github_projects if type(i) == str
-    ]
-
-    errors = False
-    for github_project in github_projects:
-        templates = []
-        for project in [i["project"] for i in projects]:
-            name = project["name"]
-            if name.startswith("^") and re.match(name, github_project):
-                templates += project.get("templates", [])
-            elif github_project == name:
-                templates += project.get("templates", [])
-        if not templates:
-            print(
-                "No template for project {github_project}".format(
-                    github_project=github_project
-                )
-            )
-            errors = True
-        if "system-required" not in templates:
-            print(
-                (
-                    "system-required template not enabled for "
-                    "{github_project}"
-                ).format(github_project=github_project)
-            )
-            errors = True
-    return errors
-
-
 def check_all():
 
     errors = check_projects_sorted()
@@ -219,12 +177,11 @@ def check_all():
     errors = check_release_jobs() or errors
     errors = check_voting() or errors
     errors = check_only_boilerplate() or errors
-    errors = check_project_templates() or errors
 
     if errors:
-        print("\nFound errors in zuul configuration!\n")
+        print("\nFound errors in zuul.d/projects.yaml!\n")
     else:
-        print("\nNo errors found in zuul configuration!\n")
+        print("\nNo errors found in zuul.d/projects.yaml!\n")
     return errors
 
 
