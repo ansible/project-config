@@ -86,6 +86,7 @@
           - ansible-network/yang
           - ansible-security/ids_config
           - ansible-security/ids_install
+          - EducationSwing/zuul-test
           - project-receptor/receptor
           - pycontribs/selinux
 

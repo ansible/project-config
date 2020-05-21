@@ -134,6 +134,8 @@
   description: Ansible collection for network devices
 - project: ansible/workshops
   description: Training Course for Ansible Automation Platform
+- project: EducationSwing/zuul-test
+  description: zuul-test repo
 - project: project-receptor/receptor
   description: >-
     Project Receptor is a flexible multi-service relayer with remote execution and
