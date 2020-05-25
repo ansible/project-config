@@ -499,6 +499,14 @@
       - ansible-test-network-integration
 
 - project:
+    name: github.com/ansible/ansible-builder
+    default-branch: devel
+    templates:
+      - system-required
+      - ansible-python-jobs
+      - ansible-python3-jobs
+
+- project:
     name: github.com/ansible/ansible-lint
     # jobs listed in project-config and defined in ansible-zuul-jobs because
     # the project is not gated by zuul (check/gate) as jobs cannot come from
