@@ -115,6 +115,7 @@
     templates:
       - system-required
       - publish-to-galaxy
+      - ansible-collections-security-ibm-qradar
 
 - project:
     name: github.com/ansible-collections/junipernetworks.junos
