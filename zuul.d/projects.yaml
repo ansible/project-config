@@ -105,6 +105,7 @@
     merge-mode: squash-merge
     templates:
       - system-required
+      - ansible-collections-frr-frr-units
       - ansible-python-jobs
       - integrated-queue
       - publish-to-galaxy
