@@ -31,6 +31,10 @@
         patterns: "*.tar.gz"
       register: result
 
+    - name: Install the Collections locally, to be sure the dependencies get pulled
+      command: "{{ ansible_galaxy_executable }} collection install --force {{ item.path }}"
+      loop: "{{ result.files }}"
+
     - name: Confirm collection can be imported into galaxy
       loop: "{{ result.files }}"
       when: "item.path.endswith('.tar.gz')"
