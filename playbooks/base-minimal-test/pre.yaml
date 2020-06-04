@@ -22,6 +22,8 @@
       include_role:
         name: start-zuul-console
 
+- hosts: all:!appliance*
+  tasks:
     - name: Run prepare-workspace-git role
       include_role:
         name: prepare-workspace-git
