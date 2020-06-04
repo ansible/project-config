@@ -93,6 +93,7 @@
     name: github.com/ansible-collections/community.general
     third-party-check:
       jobs:
+        - ansible-galaxy-importer
         - build-ansible-collection
     pre-release:
       jobs:
