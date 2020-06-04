@@ -23,15 +23,3 @@
         ansible_galaxy_output_path: "{{ ansible_user_dir }}/artifacts"
         zuul_work_dir: "{{ ansible_user_dir }}/{{ item.src_dir }}"
       with_items: "{{ zuul.projects.values() | list }}"
-
-    - name: Find tarballs in folder
-      find:
-        file_type: file
-        paths: "{{ ansible_user_dir }}/artifacts"
-        patterns: "*.tar.gz"
-      register: result
-
-    - name: Confirm collection can be imported into galaxy
-      loop: "{{ result.files }}"
-      when: "item.path.endswith('.tar.gz')"
-      shell: "source {{ ansible_user_dir }}/{{ zuul.projects['github.com/ansible-network/releases'].src_dir }}/.tox/venv/bin/activate; {{ ansible_user_dir }}/{{ zuul.projects['github.com/ansible-network/releases'].src_dir }}/tools/validate-collection.sh {{ item.path }}"
