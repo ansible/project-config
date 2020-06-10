@@ -24,6 +24,7 @@
       - ansible-python-jobs
       - integrated-queue
       - publish-to-galaxy
+      - publish-to-automation-hub
 
 - project:
     name: github.com/ansible-collections/arista.eos
