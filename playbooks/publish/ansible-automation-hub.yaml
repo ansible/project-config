@@ -1,0 +1,12 @@
+---
+- hosts: localhost
+  tasks:
+    - name: Publish collections to Ansible Galaxy
+      block:
+        - name: Run upload-ansible-collection-fork
+          include_role:
+            name: upload-ansible-collection-fork
+          vars:
+            ansible_galaxy_type: automation_hub
+
+      when: zuul_success | bool
