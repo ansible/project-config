@@ -128,6 +128,28 @@
     nodeset: centos-8-1vcpu
 
 - job:
+    name: release-ansible-collection-automation-hub
+    description: |
+      Release ansible collection to https://cloud.redhat.com/ansible/automation-hub
+    final: true
+    pre-run: playbooks/ansible-collection/pre.yaml
+    run:
+      - playbooks/ansible-collection/run-pre.yaml
+      - playbooks/ansible-collection/run.yaml
+    post-run:
+      - playbooks/ansible-collection/post.yaml
+      - playbooks/publish/ansible-automation-hub.yaml
+    required-projects:
+      - github.com/ansible-network/releases
+    vars:
+      # TODO(pabelanger): Remove 2.9.1 once zuul jobs support ansible 2.9
+      ansible_galaxy_executable: "/opt/venv/zuul-ansible/2.9.1/bin/ansible-galaxy"
+    secrets:
+      - secret: ansible_automation_hub_secret
+        name: ansible_galaxy_info
+    nodeset: centos-8-1vcpu
+
+- job:
     name: release-ansible-collection-galaxy
     description: |
       Release ansible collection to https://galaxy.ansible.com
