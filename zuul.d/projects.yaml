@@ -30,6 +30,7 @@
     name: github.com/ansible-collections/ansible.posix
     templates:
       - system-required
+      - publish-to-galaxy
 
 - project:
     name: github.com/ansible-collections/arista.eos
