@@ -27,6 +27,8 @@
   description: Ansible Collection for Amazon AWS
 - project: ansible-collections/ansible.netcommon
   description: Ansible Network Collection for Common Code
+- project: ansible-collections/ansible.posix
+  description: Ansible Collection for Posix
 - project: ansible-collections/arista.eos
   description: Ansible Network Collection for Arista EOS
 - project: ansible-collections/checkpoint
