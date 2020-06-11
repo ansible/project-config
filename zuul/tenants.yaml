@@ -22,6 +22,7 @@
           - ansible/ansible-runner
           - ansible-collections/amazon.aws
           - ansible-collections/ansible.netcommon
+          - ansible-collections/ansible.posix
           - ansible-collections/arista.eos
           - ansible-collections/checkpoint
           - ansible-collections/cisco.asa
