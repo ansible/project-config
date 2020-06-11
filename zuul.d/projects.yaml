@@ -27,6 +27,11 @@
       - publish-to-automation-hub
 
 - project:
+    name: github.com/ansible-collections/ansible.posix
+    templates:
+      - system-required
+
+- project:
     name: github.com/ansible-collections/arista.eos
     merge-mode: squash-merge
     templates:
