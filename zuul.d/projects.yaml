@@ -540,12 +540,12 @@
         - ansible-lint-tox-packaging
         - ansible-lint-tox-py36-ansible28
         - ansible-lint-tox-py36-ansible29
-        - ansible-lint-tox-py36-ansibledevel
+        # - ansible-lint-tox-py36-ansibledevel
         - ansible-lint-tox-py37-ansible28
         - ansible-lint-tox-py37-ansible29
-        - ansible-lint-tox-py37-ansibledevel
+        # - ansible-lint-tox-py37-ansibledevel
         - ansible-lint-tox-py38-ansible29
-        - ansible-lint-tox-py38-ansibledevel
+        # - ansible-lint-tox-py38-ansibledevel
 - project:
     name: github.com/ansible/ansible-runner
     default-branch: devel
