@@ -110,6 +110,19 @@
         - release-ansible-collection-galaxy
 
 - project:
+    name: github.com/ansible-collections/community.zabbix
+    third-party-check:
+      jobs:
+        - ansible-galaxy-importer
+        - build-ansible-collection
+    pre-release:
+      jobs:
+        - release-ansible-collection-galaxy
+    release:
+      jobs:
+        - release-ansible-collection-galaxy
+
+- project:
     name: github.com/ansible-collections/frr.frr
     merge-mode: squash-merge
     templates:
