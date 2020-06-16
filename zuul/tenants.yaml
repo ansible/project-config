@@ -39,6 +39,7 @@
           - ansible-collections/vmware_rest
           - ansible-collections/vyos.vyos
           - ansible-community/ansible-bender
+          - ansible-community/asa
           - ansible-community/molecule
           - ansible-community/molecule-azure
           - ansible-community/molecule-containers

@@ -61,6 +61,8 @@
   description: Ansible Network Collection for VyOS
 - project: ansible-community/ansible-bender
   description: ansible-playbook + buildah = a sweet container image
+- project: ansible-community/asa
+  description: Ansible Community Collection for Cisco ASA
 - project: ansible-community/molecule
   description: Molecule aids in the development and testing of Ansible roles
 - project: ansible-community/molecule-azure
