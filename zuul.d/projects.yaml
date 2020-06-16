@@ -11,6 +11,8 @@
     merge-mode: squash-merge
     templates:
       - system-required
+      - publish-to-galaxy
+      - publish-to-automation-hub
 
 - project:
     name: github.com/ansible-collections/ansible.netcommon
@@ -95,6 +97,14 @@
       - ansible-python-jobs
       - integrated-queue
       - publish-to-galaxy
+
+- project:
+    name: github.com/ansible-collections/community.aws
+    merge-mode: squash-merge
+    templates:
+      - system-required
+      - publish-to-galaxy
+      - publish-to-automation-hub
 
 - project:
     name: github.com/ansible-collections/community.general
