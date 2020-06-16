@@ -104,7 +104,6 @@
     templates:
       - system-required
       - publish-to-galaxy
-      - publish-to-automation-hub
 
 - project:
     name: github.com/ansible-collections/community.general
