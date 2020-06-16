@@ -179,8 +179,9 @@
     merge-mode: squash-merge
     templates:
       - system-required
-      - publish-to-galaxy
       - ansible-collections-security-splunk-es
+      - publish-to-galaxy
+      - publish-to-automation-hub
 
 - project:
     name: github.com/ansible-collections/vmware
