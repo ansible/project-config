@@ -138,8 +138,9 @@
     merge-mode: squash-merge
     templates:
       - system-required
-      - publish-to-galaxy
       - ansible-collections-security-ibm-qradar
+      - publish-to-galaxy
+      - publish-to-automation-hub
 
 - project:
     name: github.com/ansible-collections/junipernetworks.junos
