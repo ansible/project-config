@@ -41,6 +41,8 @@
   description: Ansible Network Collection for Cisco IOSXR
 - project: ansible-collections/cisco.nxos
   description: Ansible Network Collection for Cisco NXOS
+- project: ansible-collections/community.asa
+  description: Ansible Community Collection for Cisco ASA
 - project: ansible-collections/frr.frr
   description: Ansible Collection for Free Range Routing (FRR)
 - project: ansible-collections/ibm.qradar
