@@ -32,6 +32,7 @@
     name: github.com/ansible-collections/ansible.posix
     templates:
       - system-required
+      - ansible-collections-ansible-posix-units
       - publish-to-galaxy
       - publish-to-automation-hub
 
