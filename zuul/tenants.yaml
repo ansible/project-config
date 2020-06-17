@@ -32,6 +32,7 @@
           - ansible-collections/community.asa
           - ansible-collections/frr.frr
           - ansible-collections/ibm.qradar
+          - ansible-collections/community.qradar
           - ansible-collections/junipernetworks.junos
           - ansible-collections/openvswitch.openvswitch
           - ansible-collections/skydive

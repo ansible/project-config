@@ -47,6 +47,8 @@
   description: Ansible Collection for Free Range Routing (FRR)
 - project: ansible-collections/ibm.qradar
   description: IBM QRadar Ansible Collection
+- project: ansible-collections/community.qradar
+  description: Ansible Community Collection for IBM QRadar
 - project: ansible-collections/junipernetworks.junos
   description: Ansible Network Collection for Juniper JunOS
 - project: ansible-collections/openvswitch.openvswitch
