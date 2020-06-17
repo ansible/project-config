@@ -11,6 +11,8 @@
     merge-mode: squash-merge
     templates:
       - system-required
+      - ansible-collections-amazon-aws
+      - ansible-collections-amazon-aws-units
       - publish-to-galaxy
       - publish-to-automation-hub
 
