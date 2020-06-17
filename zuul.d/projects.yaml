@@ -102,16 +102,10 @@
 
 - project:
     name: github.com/ansible-collections/community.asa
-    third-party-check:
-      jobs:
-        - ansible-galaxy-importer
-        - build-ansible-collection
-    pre-release:
-      jobs:
-        - release-ansible-collection-galaxy
-    release:
-      jobs:
-        - release-ansible-collection-galaxy
+    merge-mode: squash-merge
+    templates:
+      - system-required
+      - publish-to-galaxy
 
 - project:
     name: github.com/ansible-collections/community.aws
