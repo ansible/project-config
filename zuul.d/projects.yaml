@@ -240,6 +240,12 @@
       - system-required
 
 - project:
+    name: github.com/ansible-community/molecule-alicloud
+    templates:
+      - publish-to-pypi
+      - system-required
+
+- project:
     name: github.com/ansible-community/molecule-azure
     templates:
       - publish-to-pypi

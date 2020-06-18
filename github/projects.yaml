@@ -65,6 +65,8 @@
   description: ansible-playbook + buildah = a sweet container image
 - project: ansible-community/molecule
   description: Molecule aids in the development and testing of Ansible roles
+- project: ansible-community/molecule-alicloud
+  description: Molecule AliCloud ECS Driver Plugin
 - project: ansible-community/molecule-azure
   description: Molecule Azure Driver Plugin
 - project: ansible-community/molecule-containers
