@@ -117,6 +117,7 @@
               - ansible/galaxy-importer
               - ansible/pylibssh
               - ansible/workshops
+              - vmware/govmomi
 
       github-3pci:
         untrusted-projects: []
