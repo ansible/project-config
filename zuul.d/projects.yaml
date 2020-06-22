@@ -193,6 +193,18 @@
         - release-ansible-collection-galaxy
 
 - project:
+    name: github.com/ansible-collections/community.internal_test_tools
+    third-party-check:
+      jobs:
+        - build-ansible-collection
+    pre-release:
+      jobs:
+        - release-ansible-collection-galaxy
+    release:
+      jobs:
+        - release-ansible-collection-galaxy
+
+- project:
     name: github.com/ansible-collections/community.libvirt
     third-party-check:
       jobs:
@@ -230,6 +242,18 @@
 
 - project:
     name: github.com/ansible-collections/community.rabbitmq
+    third-party-check:
+      jobs:
+        - build-ansible-collection
+    pre-release:
+      jobs:
+        - release-ansible-collection-galaxy
+    release:
+      jobs:
+        - release-ansible-collection-galaxy
+
+- project:
+    name: github.com/ansible-collections/community.sops
     third-party-check:
       jobs:
         - build-ansible-collection
