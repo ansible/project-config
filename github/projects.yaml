@@ -55,6 +55,8 @@
   description: Ansible Collection for Skydive network / protocols analyzer
 - project: ansible-collections/splunk.es
   description: Ansible Collection for Splunk Enterprise
+- project: ansible-collections/symantec.epm
+  description: Ansible Collection for Symantec Endpoint Protection Manager
 - project: ansible-collections/vmware
   description: Ansible Collection for VMWare
 - project: ansible-collections/vmware_rest
