@@ -351,6 +351,13 @@
       - publish-to-automation-hub
 
 - project:
+    name: github.com/ansible-collections/symantec.epm
+    merge-mode: squash-merge
+    templates:
+      - system-required
+      - publish-to-galaxy
+
+- project:
     name: github.com/ansible-collections/vmware
     merge-mode: squash-merge
     templates:
