@@ -36,6 +36,7 @@
           - ansible-collections/openvswitch.openvswitch
           - ansible-collections/skydive
           - ansible-collections/splunk.es
+          - ansible-collections/symantec.epm
           - ansible-collections/vmware
           - ansible-collections/vmware_rest
           - ansible-collections/vyos.vyos
