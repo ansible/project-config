@@ -106,10 +106,12 @@
               - ansible-collections/community.crypto
               - ansible-collections/community.general
               - ansible-collections/community.grafana
+              - ansible-collections/community.internal_test_tools
               - ansible-collections/community.libvirt
               - ansible-collections/community.mongodb
               - ansible-collections/community.network
               - ansible-collections/community.rabbitmq
+              - ansible-collections/community.sops
               - ansible-collections/community.windows
               - ansible-collections/community.zabbix
               - ansible/awx
