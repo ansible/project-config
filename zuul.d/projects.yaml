@@ -573,6 +573,12 @@
       - ansible-python-jobs
       - ansible-python3-jobs
       - publish-to-pypi
+    check:
+      jobs:
+        - ansible-builder-projecttoml-and-setuppy-insync
+    gate:
+      jobs:
+        - ansible-builder-projecttoml-and-setuppy-insync
 
 - project:
     name: github.com/ansible/ansible-lint
