@@ -147,6 +147,7 @@
       - secret: ansible_automation_hub_secret
         name: ansible_galaxy_info
     nodeset: centos-8-1vcpu
+    semaphore: ansible-automation-hub
 
 - job:
     name: release-ansible-collection-galaxy
