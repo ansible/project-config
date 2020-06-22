@@ -355,6 +355,7 @@
     merge-mode: squash-merge
     templates:
       - system-required
+      - ansible-collections-symantec-epm-units
       - publish-to-galaxy
 
 - project:
