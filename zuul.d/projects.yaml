@@ -110,6 +110,7 @@
     merge-mode: squash-merge
     templates:
       - system-required
+      - ansible-collections-community-asa
       - ansible-collections-community-asa-units
       - publish-to-galaxy
 
