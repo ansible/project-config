@@ -44,7 +44,7 @@
       - rackspace_iad_clouds_yaml
       - rackspace_ord_clouds_yaml
       - vexxhost_clouds_yaml
-    nodeset: centos-8-1vcpu
+    nodeset: centos-8-1vcpu-aws
 
 - job:
     name: base-minimal-test
@@ -70,7 +70,7 @@
       - rackspace_iad_clouds_yaml
       - rackspace_ord_clouds_yaml
       - vexxhost_clouds_yaml
-    nodeset: centos-8-1vcpu
+    nodeset: centos-8-1vcpu-aws
 
 # ansible/project-config jobs
 - job:
@@ -81,7 +81,7 @@
       tox env.
     vars:
       tox_envlist: github
-    nodeset: centos-8-1vcpu
+    nodeset: centos-8-1vcpu-aws
     files:
       - github/projects.yaml
       - requirements.txt
@@ -97,7 +97,7 @@
     post-run: playbooks/propose-github-updates/post.yaml
     secrets:
       - github_proposal_bot
-    nodeset: centos-8-1vcpu
+    nodeset: centos-8-1vcpu-aws
 
 - job:
     name: build-ansible-collection
@@ -109,7 +109,7 @@
       - playbooks/build-ansible-collection/post.yaml
     required-projects:
       - github.com/ansible-network/releases
-    nodeset: centos-8-1vcpu
+    nodeset: centos-8-1vcpu-aws
 
 - job:
     name: release-ansible-python
@@ -125,7 +125,7 @@
         name: pypi_info
     vars:
       release_python: python3
-    nodeset: centos-8-1vcpu
+    nodeset: centos-8-1vcpu-aws
 
 - job:
     name: release-ansible-collection-automation-hub
@@ -146,7 +146,7 @@
     secrets:
       - secret: ansible_automation_hub_secret
         name: ansible_galaxy_info
-    nodeset: centos-8-1vcpu
+    nodeset: centos-8-1vcpu-aws
     semaphore: ansible-automation-hub
 
 - job:
@@ -168,7 +168,7 @@
     secrets:
       - secret: galaxy_secret
         name: ansible_galaxy_info
-    nodeset: centos-8-1vcpu
+    nodeset: centos-8-1vcpu-aws
 
 - job:
     name: release-ansible-collection-galaxy-dev
@@ -189,7 +189,7 @@
     secrets:
       - secret: galaxy_dev_secret
         name: ansible_galaxy_info
-    nodeset: centos-8-1vcpu
+    nodeset: centos-8-1vcpu-aws
 
 - job:
     name: ansible-workshops-tox-integration
@@ -203,5 +203,5 @@
     secrets:
       - secret: aws_workshops_secrets
         name: aws_workshops_data
-    nodeset: centos-8-1vcpu
+    nodeset: centos-8-1vcpu-aws
     timeout: 5400
