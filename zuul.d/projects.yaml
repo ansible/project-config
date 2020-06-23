@@ -121,172 +121,73 @@
 
 - project:
     name: github.com/ansible-collections/community.aws
-    third-party-check:
-      jobs:
-        - build-ansible-collection
-    pre-release:
-      jobs:
-        - release-ansible-collection-galaxy
-    release:
-      jobs:
-        - release-ansible-collection-galaxy
+    templates:
+      - publish-to-galaxy-3pci
 
 - project:
     name: github.com/ansible-collections/community.azure
-    third-party-check:
-      jobs:
-        - build-ansible-collection
-    pre-release:
-      jobs:
-        - release-ansible-collection-galaxy
-    release:
-      jobs:
-        - release-ansible-collection-galaxy
+    templates:
+      - publish-to-galaxy-3pci
 
 - project:
     name: github.com/ansible-collections/community.cassandra
-    third-party-check:
-      jobs:
-        - build-ansible-collection
-    pre-release:
-      jobs:
-        - release-ansible-collection-galaxy
-    release:
-      jobs:
-        - release-ansible-collection-galaxy
+    templates:
+      - publish-to-galaxy-3pci
 
 - project:
     name: github.com/ansible-collections/community.crypto
-    third-party-check:
-      jobs:
-        - build-ansible-collection
-    pre-release:
-      jobs:
-        - release-ansible-collection-galaxy
-    release:
-      jobs:
-        - release-ansible-collection-galaxy
+    templates:
+      - publish-to-galaxy-3pci
 
 - project:
     name: github.com/ansible-collections/community.general
-    third-party-check:
-      jobs:
-        - ansible-galaxy-importer
-        - build-ansible-collection
-    pre-release:
-      jobs:
-        - release-ansible-collection-galaxy
-    release:
-      jobs:
-        - release-ansible-collection-galaxy
+    templates:
+      - publish-to-galaxy-3pci
 
 - project:
     name: github.com/ansible-collections/community.grafana
-    third-party-check:
-      jobs:
-        - build-ansible-collection
-    pre-release:
-      jobs:
-        - release-ansible-collection-galaxy
-    release:
-      jobs:
-        - release-ansible-collection-galaxy
+    templates:
+      - publish-to-galaxy-3pci
 
 - project:
     name: github.com/ansible-collections/community.internal_test_tools
-    third-party-check:
-      jobs:
-        - build-ansible-collection
-    pre-release:
-      jobs:
-        - release-ansible-collection-galaxy
-    release:
-      jobs:
-        - release-ansible-collection-galaxy
+    templates:
+      - publish-to-galaxy-3pci
 
 - project:
     name: github.com/ansible-collections/community.libvirt
-    third-party-check:
-      jobs:
-        - build-ansible-collection
-    pre-release:
-      jobs:
-        - release-ansible-collection-galaxy
-    release:
-      jobs:
-        - release-ansible-collection-galaxy
+    templates:
+      - publish-to-galaxy-3pci
 
 - project:
     name: github.com/ansible-collections/community.mongodb
-    third-party-check:
-      jobs:
-        - build-ansible-collection
-    pre-release:
-      jobs:
-        - release-ansible-collection-galaxy
-    release:
-      jobs:
-        - release-ansible-collection-galaxy
+    templates:
+      - publish-to-galaxy-3pci
 
 - project:
     name: github.com/ansible-collections/community.network
-    third-party-check:
-      jobs:
-        - build-ansible-collection
-    pre-release:
-      jobs:
-        - release-ansible-collection-galaxy
-    release:
-      jobs:
-        - release-ansible-collection-galaxy
+    templates:
+      - publish-to-galaxy-3pci
 
 - project:
     name: github.com/ansible-collections/community.rabbitmq
-    third-party-check:
-      jobs:
-        - build-ansible-collection
-    pre-release:
-      jobs:
-        - release-ansible-collection-galaxy
-    release:
-      jobs:
-        - release-ansible-collection-galaxy
+    templates:
+      - publish-to-galaxy-3pci
 
 - project:
     name: github.com/ansible-collections/community.sops
-    third-party-check:
-      jobs:
-        - build-ansible-collection
-    pre-release:
-      jobs:
-        - release-ansible-collection-galaxy
-    release:
-      jobs:
-        - release-ansible-collection-galaxy
+    templates:
+      - publish-to-galaxy-3pci
 
 - project:
     name: github.com/ansible-collections/community.windows
-    third-party-check:
-      jobs:
-        - build-ansible-collection
-    pre-release:
-      jobs:
-        - release-ansible-collection-galaxy
-    release:
-      jobs:
-        - release-ansible-collection-galaxy
+    templates:
+      - publish-to-galaxy-3pci
 
 - project:
     name: github.com/ansible-collections/community.zabbix
-    third-party-check:
-      jobs:
-        - build-ansible-collection
-    pre-release:
-      jobs:
-        - release-ansible-collection-galaxy
-    release:
-      jobs:
-        - release-ansible-collection-galaxy
+    templates:
+      - publish-to-galaxy-3pci
 
 - project:
     name: github.com/ansible-collections/frr.frr
