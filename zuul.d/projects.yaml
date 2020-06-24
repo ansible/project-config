@@ -201,6 +201,11 @@
       - publish-to-automation-hub
 
 - project:
+    name: github.com/ansible-collections/hetzner.hcloud
+    templates:
+      - publish-to-galaxy-3pci
+
+- project:
     name: github.com/ansible-collections/ibm.qradar
     merge-mode: squash-merge
     templates:
