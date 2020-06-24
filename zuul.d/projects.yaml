@@ -116,10 +116,8 @@
 
 - project:
     name: github.com/ansible-collections/community.aws
-    merge-mode: squash-merge
     templates:
-      - system-required
-      - publish-to-galaxy
+      - publish-to-galaxy-3pci
 
 - project:
     name: github.com/ansible-collections/community.aws
