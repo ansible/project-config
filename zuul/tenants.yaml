@@ -115,6 +115,7 @@
               - ansible-collections/community.sops
               - ansible-collections/community.windows
               - ansible-collections/community.zabbix
+              - ansible-collections/hetzner.hcloud
               - ansible/awx
               - ansible/galaxy
               - ansible/galaxy-importer
