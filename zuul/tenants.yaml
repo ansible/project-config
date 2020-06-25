@@ -24,7 +24,6 @@
           - ansible-collections/ansible.netcommon
           - ansible-collections/ansible.posix
           - ansible-collections/arista.eos
-          - ansible-collections/checkpoint
           - ansible-collections/cisco.asa
           - ansible-collections/cisco.ios
           - ansible-collections/cisco.iosxr

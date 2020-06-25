@@ -31,8 +31,6 @@
   description: Ansible Collection for Posix
 - project: ansible-collections/arista.eos
   description: Ansible Network Collection for Arista EOS
-- project: ansible-collections/checkpoint
-  description: Ansible Security Collection for Check Point devices
 - project: ansible-collections/cisco.asa
   description: Ansible Security Collection for Cisco ASA
 - project: ansible-collections/cisco.ios
