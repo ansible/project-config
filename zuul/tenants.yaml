@@ -92,7 +92,6 @@
           - ansible-security/ids_install
           - EducationSwing/zuul-test
           - project-receptor/python-receptor
-          - project-receptor/receptor
           - pycontribs/selinux
 
           # Don't load any configuration from these projects because we
