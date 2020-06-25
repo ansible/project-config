@@ -144,6 +144,11 @@
   description: Training Course for Ansible Automation Platform
 - project: EducationSwing/zuul-test
   description: zuul-test repo
+- project: project-receptor/python-receptor
+  description: >-
+    Project Receptor is a flexible multi-service relayer with remote execution and
+    orchestration capabilities linking controllers with executors across a mesh of
+    nodes.
 - project: project-receptor/receptor
   description: >-
     Project Receptor is a flexible multi-service relayer with remote execution and
