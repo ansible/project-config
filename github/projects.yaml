@@ -25,6 +25,8 @@
 ---
 - project: ansible-collections/amazon.aws
   description: Ansible Collection for Amazon AWS
+  options:
+    - has-projects
 - project: ansible-collections/ansible.netcommon
   description: Ansible Network Collection for Common Code
 - project: ansible-collections/ansible.posix
@@ -43,6 +45,10 @@
   description: Ansible Network Collection for Cisco NXOS
 - project: ansible-collections/community.asa
   description: Ansible Community Collection for Cisco ASA
+- project: ansible-collections/community.aws
+  description: Ansible Collection for Community AWS
+  options:
+    - has-projects
 - project: ansible-collections/frr.frr
   description: Ansible Collection for Free Range Routing (FRR)
 - project: ansible-collections/ibm.qradar
