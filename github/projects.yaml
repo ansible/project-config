@@ -155,3 +155,5 @@
     Project Receptor is a flexible multi-service relayer with remote execution and
     orchestration capabilities linking controllers with executors across a mesh of
     nodes.
+- project: pulp/pulp_installer
+  description: A collection of roles to install or upgrade Pulp 3

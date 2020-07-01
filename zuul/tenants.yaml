@@ -121,6 +121,7 @@
               - ansible/galaxy-importer
               - ansible/pylibssh
               - ansible/workshops
+              - pulp/pulp_installer
               - vmware/govmomi
 
       github-3pci:
