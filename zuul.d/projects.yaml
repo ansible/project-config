@@ -740,6 +740,13 @@
       - publish-to-pypi
 
 - project:
+    name: github.com/pulp/pulp_installer
+    third-party-check:
+      jobs:
+        - pulp-installer-vm-centos7
+        - pulp-installer-vm-centos8
+
+- project:
     name: github.com/pycontribs/selinux
     templates:
       - system-required
