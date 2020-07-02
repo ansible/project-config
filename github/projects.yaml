@@ -32,6 +32,7 @@
 ---
 - project: ansible-collections/amazon.aws
   description: Ansible Collection for Amazon AWS
+  default-branch: main
   options:
     - has-projects
 - project: ansible-collections/ansible.netcommon
@@ -55,6 +56,7 @@
   description: Ansible Community Collection for Cisco ASA
 - project: ansible-collections/community.aws
   description: Ansible Collection for Community AWS
+  default-branch: main
   options:
     - has-projects
 - project: ansible-collections/frr.frr
