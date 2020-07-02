@@ -15,6 +15,7 @@
 # Example format:
 # - project: ansible/foo
 #   archived: true
+#   default-branch: master
 #   description: This is a great project
 #   options:
 #     - has-downloads
@@ -53,6 +54,7 @@
   description: Ansible Collection for Free Range Routing (FRR)
 - project: ansible-collections/ibm.qradar
   description: IBM QRadar Ansible Collection
+  default-branch: main
 - project: ansible-collections/junipernetworks.junos
   description: Ansible Network Collection for Juniper JunOS
 - project: ansible-collections/openvswitch.openvswitch
