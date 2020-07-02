@@ -153,13 +153,18 @@ class Client(object):
 
             LOG.info('Fetching github branch info about %s', repo.name)
             branch = repo.get_branch(branch_name)
-            branch_protection = branch.get_protection()
+            try:
+                branch_p = branch.get_protection()
 
-            if kwargs['enforce_admins'] == branch_protection.enforce_admins:
-                del kwargs['enforce_admins']
-            _checks = branch_protection.required_status_checks
-            if _checks and kwargs['contexts'] == _checks.contexts:
-                del kwargs['contexts']
+                if kwargs['enforce_admins'] == branch_p.enforce_admins:
+                    del kwargs['enforce_admins']
+                _checks = branch_p.required_status_checks
+                if _checks and kwargs['contexts'] == _checks.contexts:
+                    del kwargs['contexts']
+            except github.GithubException:
+                # There is no branch protection rule to compare existing
+                # settings. Create the rule will all settings.
+                pass
 
             if kwargs:
                 LOG.info("Updating branch protection rule for %s", branch_name)
