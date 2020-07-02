@@ -121,11 +121,6 @@
       - publish-to-galaxy-3pci
 
 - project:
-    name: github.com/ansible-collections/community.aws
-    templates:
-      - publish-to-galaxy-3pci
-
-- project:
     name: github.com/ansible-collections/community.azure
     templates:
       - publish-to-galaxy-3pci
