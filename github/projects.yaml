@@ -107,24 +107,30 @@
   description: Ansible role for backup of running configurations from network devices
 - project: ansible-network/cisco_ios
   description: Ansible Network Cisco IOS Provider Role
+  default-branch: devel
 - project: ansible-network/cisco_iosxr
   description: Ansible Network Cisco IOS-XR Provider Role
+  default-branch: devel
 - project: ansible-network/cloud_vpn
   description: Ansible Cloud VPN Role
+  default-branch: devel
 - project: ansible-network/collection_migration
   description: scripts and scenarios for migration from core code to collections
 - project: ansible-network/community.netcommon
   description: Ansible Network Collection for Common Code
 - project: ansible-network/content_store
   description: Ansible Network content store role
+  default-branch: devel
 - project: ansible-network/network-engine
   description: >-
     This role provides the foundation for building network roles by providing
     modules and plugins that are common to all Ansible Network roles.
+  default-branch: devel
 - project: ansible-network/network_collections_migration
   description: Supported Ansible Network collections and migration scenarios
 - project: ansible-network/network_configurator
   description: Ansible role to configure Tower for network operations
+  default-branch: devel
 - project: ansible-network/network_content_collector
   description: Ansible Network content creator for collections
 - project: ansible-network/net_operations
@@ -134,10 +140,12 @@
   description: Sandbox for first time contributors
 - project: ansible-network/vyos
   description: Ansible Network VyOS Provider Role
+  default-branch: devel
 - project: ansible-network/windmill-config
   description: Ansible configuration files for windmill project
 - project: ansible-network/yang
   description: Ansible Yang Role
+  default-branch: devel
 - project: ansible-network/zuul-config
   description: Repo containing Zuul project configuration
 - project: ansible-security/ids_config
@@ -146,10 +154,13 @@
   description: Ansible role to install configuration Intrusion Detection Systems
 - project: ansible/ansible-builder
   description: An Ansible execution environment builder
+  default-branch: devel
 - project: ansible/network
   description: Ansible collection for network devices
+  default-branch: devel
 - project: ansible/workshops
   description: Training Course for Ansible Automation Platform
+  default-branch: devel
 - project: EducationSwing/zuul-test
   description: zuul-test repo
 - project: project-receptor/python-receptor
@@ -157,3 +168,4 @@
     Project Receptor is a flexible multi-service relayer with remote execution and
     orchestration capabilities linking controllers with executors across a mesh of
     nodes.
+  default-branch: devel
