@@ -11,7 +11,12 @@
 # WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
 # License for the specific language governing permissions and limitations
 # under the License.
-
+#
+# ⚠️ WARNING
+# This file describe how the different Github projects should be configured.
+# tools/manage-projects.py will periodically update Github to
+# ensure the projects are correctly configured, according to this file.
+#
 # Example format:
 # - project: ansible/foo
 #   archived: true
