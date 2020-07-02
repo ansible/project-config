@@ -30,6 +30,7 @@
 
 - project:
     name: github.com/ansible-collections/ansible.posix
+    default-branch: main
     templates:
       - system-required
       - ansible-collections-ansible-posix-units
