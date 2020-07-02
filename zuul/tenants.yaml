@@ -111,6 +111,7 @@
               - ansible-collections/community.libvirt
               - ansible-collections/community.mongodb
               - ansible-collections/community.network
+              - ansible-collections/community.proxysql
               - ansible-collections/community.rabbitmq
               - ansible-collections/community.sops
               - ansible-collections/community.windows
