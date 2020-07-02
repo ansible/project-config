@@ -17,6 +17,8 @@
 import sys
 import yaml
 
+github_yaml = 'github/projects.yaml'
+github_projects = yaml.safe_load(open(github_yaml))
 projects_yaml = 'zuul.d/projects.yaml'
 projects = yaml.safe_load(open(projects_yaml))
 
@@ -41,6 +43,30 @@ def check_projects_sorted():
                   {"last": last, "current": current})
             errors = True
         last = current
+
+    if not errors:
+        print("... all fine.")
+    return errors
+
+
+def check_projects_default_branch():
+    """Check that the projects default-branch is in sync."""
+
+    print("\nChecking project default-branch")
+    print("===============================")
+
+    errors = False
+    for gh in github_projects:
+        for entry in projects:
+            current = entry['project']['name']
+            if gh['project'] in current:
+                github_default_branch = gh.get('default-branch')
+                zuul_default_branch = entry['project'].get('default-branch')
+                if github_default_branch != zuul_default_branch:
+                    print("  ERROR: Wrong default-branch: %s" %
+                          current)
+                    errors = True
+                break
 
     if not errors:
         print("... all fine.")
@@ -173,6 +199,7 @@ def check_only_boilerplate():
 def check_all():
 
     errors = check_projects_sorted()
+    errors = check_projects_default_branch() or errors
     errors = blacklist_jobs() or errors
     errors = check_release_jobs() or errors
     errors = check_voting() or errors
