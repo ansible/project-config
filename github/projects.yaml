@@ -19,6 +19,7 @@
 #
 # Example format:
 # - project: ansible/foo
+#   acl-config: acls/ansible/bar.config
 #   archived: true
 #   default-branch: master
 #   description: This is a great project

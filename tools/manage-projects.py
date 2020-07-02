@@ -83,7 +83,7 @@ class Client(object):
             raise
 
         try:
-            LOG.info('Fetching github info about %s', repo_name)
+            LOG.info('Fetching github repository info about %s', repo_name)
             repo = org.get_repo(repo_name)
         except github.GithubException:
             # NOTE(pabelanger): We should also allow to import an existing
@@ -127,6 +127,43 @@ class Client(object):
         if kwargs:
             LOG.info("Updating %s in github", repo_name)
             repo.edit(repo_name, **kwargs)
+
+        acl_config = '%s.config' % os.path.join('acls', item['project'])
+
+        if acl_config:
+            dirname = (os.path.dirname(os.path.abspath(self.args.projects)))
+            acl_config = os.path.join(dirname, acl_config)
+            self.process_acls(acl_config, repo)
+
+    def process_acls(self, acl_config, repo):
+        if not os.path.isfile(acl_config):
+            return
+
+        config = yaml.safe_load(open(acl_config))
+        for entry in config:
+            branch_name = entry['name']
+
+            kwargs = {
+                'enforce_admins': entry.get('enforce_admins', False),
+            }
+
+            if entry.get('required_status_checks', []).get('contexts'):
+                kwargs['contexts'] = entry.get(
+                    'required_status_checks', []).get('contexts')
+
+            LOG.info('Fetching github branch info about %s', repo.name)
+            branch = repo.get_branch(branch_name)
+            branch_protection = branch.get_protection()
+
+            if kwargs['enforce_admins'] == branch_protection.enforce_admins:
+                del kwargs['enforce_admins']
+            _checks = branch_protection.required_status_checks
+            if _checks and kwargs['contexts'] == _checks.contexts:
+                del kwargs['contexts']
+
+            if kwargs:
+                LOG.info("Updating branch protection rule for %s", branch_name)
+                branch.edit_protection(**kwargs)
 
     def read_config(self):
         self.config = configparser.ConfigParser()
