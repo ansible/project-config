@@ -57,6 +57,7 @@
 - project: ansible-collections/community.aws
   description: Ansible Collection for Community AWS
   default-branch: main
+  acl-config: acls/ansible-collections/amazon.aws.config
   options:
     - has-projects
 - project: ansible-collections/frr.frr
