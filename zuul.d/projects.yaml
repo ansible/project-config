@@ -232,6 +232,7 @@
 
 - project:
     name: github.com/ansible-collections/openvswitch.openvswitch
+    default-branch: main
     merge-mode: squash-merge
     templates:
       - system-required
