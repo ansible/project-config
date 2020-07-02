@@ -95,6 +95,10 @@ class Client(object):
                 name=repo_name, **kwargs)
             return
 
+        # TODO(pabelanger): Currently github doesn't expose a way to auto init
+        # a repo to a branch other then master.
+        kwargs['default_branch'] = item.get('default-branch', 'master')
+
         if repo.archived:
             # Repo is archived, we cannot update it.
             return
@@ -105,6 +109,8 @@ class Client(object):
             del kwargs['allow_rebase_merge']
         if kwargs['allow_squash_merge'] == repo.allow_squash_merge:
             del kwargs['allow_squash_merge']
+        if kwargs['default_branch'] == repo.default_branch:
+            del kwargs['default_branch']
         if kwargs['description'] == repo.description:
             del kwargs['description']
         if kwargs['has_downloads'] == repo.has_downloads:
