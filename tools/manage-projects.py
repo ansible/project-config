@@ -147,9 +147,9 @@ class Client(object):
                 'enforce_admins': entry.get('enforce_admins', False),
             }
 
-            if entry.get('required_status_checks', []).get('contexts'):
-                kwargs['contexts'] = entry.get(
-                    'required_status_checks', []).get('contexts')
+            _status_checks = entry.get('required_status_checks', [])
+            if 'contexts' in _status_checks:
+                kwargs['contexts'] = _status_checks.get('contexts')
 
             LOG.info('Fetching github branch info about %s', repo.name)
             branch = repo.get_branch(branch_name)
