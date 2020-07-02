@@ -129,6 +129,8 @@ class Client(object):
             repo.edit(repo_name, **kwargs)
 
         acl_config = '%s.config' % os.path.join('acls', item['project'])
+        if item.get('acl-config'):
+            acl_config = item.get('acl-config')
 
         if acl_config:
             dirname = (os.path.dirname(os.path.abspath(self.args.projects)))
