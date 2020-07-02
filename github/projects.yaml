@@ -69,6 +69,7 @@
   description: Ansible Network Collection for Juniper JunOS
 - project: ansible-collections/openvswitch.openvswitch
   description: Ansible Network Collection for Open vSwitch
+  default-branch: main
 - project: ansible-collections/skydive
   description: Ansible Collection for Skydive network / protocols analyzer
 - project: ansible-collections/splunk.es
