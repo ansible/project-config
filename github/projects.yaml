@@ -37,6 +37,7 @@
   description: Ansible Network Collection for Common Code
 - project: ansible-collections/ansible.posix
   description: Ansible Collection for Posix
+  default-branch: main
 - project: ansible-collections/arista.eos
   description: Ansible Network Collection for Arista EOS
 - project: ansible-collections/checkpoint
