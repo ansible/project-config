@@ -260,6 +260,7 @@
 
 - project:
     name: github.com/ansible-collections/symantec.epm
+    default-branch: main
     merge-mode: squash-merge
     templates:
       - system-required
