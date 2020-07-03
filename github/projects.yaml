@@ -54,6 +54,7 @@
   description: Ansible Network Collection for Cisco NXOS
 - project: ansible-collections/community.asa
   description: Ansible Community Collection for Cisco ASA
+  default-branch: main
 - project: ansible-collections/community.aws
   description: Ansible Collection for Community AWS
   default-branch: main
