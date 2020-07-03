@@ -109,6 +109,7 @@
 
 - project:
     name: github.com/ansible-collections/community.asa
+    default-branch: main
     merge-mode: squash-merge
     templates:
       - system-required
