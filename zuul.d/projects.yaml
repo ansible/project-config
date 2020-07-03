@@ -668,15 +668,17 @@
     default-branch: devel
     templates:
       - system-required
-      - ansible-python-jobs
-      - ansible-python3-jobs
+      - ansible-python-jobs   # linting-only
+      - ansible-python3-jobs  # py3 tox jobs
       - publish-to-pypi
     check:
       jobs:
-        - ansible-tox-py27
+        - ansible-tox-py27:
+            branches: '^stable/1.*'
     gate:
       jobs:
-        - ansible-tox-py27
+        - ansible-tox-py27:
+            branches: '^stable/1.*'
 
 - project:
     name: github.com/ansible/ansible-zuul-jobs
