@@ -55,8 +55,6 @@
     merge-mode: squash-merge
     templates:
       - system-required
-      - ansible-python-jobs
-      - integrated-queue
       - publish-to-galaxy
 
 - project:
