@@ -40,6 +40,7 @@
 
 - project:
     name: github.com/ansible-collections/arista.eos
+    default-branch: main
     merge-mode: squash-merge
     templates:
       - system-required
