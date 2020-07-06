@@ -80,6 +80,7 @@
   description: Ansible Collection for Symantec Endpoint Protection Manager
 - project: ansible-collections/vmware
   description: Ansible Collection for VMWare
+  default-branch: main
 - project: ansible-collections/vmware_rest
   description: Ansible Collection for VMWare (REST modules)
 - project: ansible-collections/vyos.vyos
