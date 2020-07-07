@@ -62,6 +62,7 @@
 
 - project:
     name: github.com/ansible-collections/cisco.asa
+    default-branch: main
     merge-mode: squash-merge
     templates:
       - system-required
