@@ -47,6 +47,7 @@
   description: Ansible Security Collection for Check Point devices
 - project: ansible-collections/cisco.asa
   description: Ansible Security Collection for Cisco ASA
+  default-branch: main
 - project: ansible-collections/cisco.ios
   description: Ansible Network Collection for Cisco IOS
 - project: ansible-collections/cisco.iosxr
