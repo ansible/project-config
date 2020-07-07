@@ -101,6 +101,7 @@
 
 - project:
     name: github.com/ansible-collections/cisco.nxos
+    default-branch: main
     merge-mode: squash-merge
     templates:
       - system-required
