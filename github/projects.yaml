@@ -50,6 +50,7 @@
   default-branch: main
 - project: ansible-collections/cisco.ios
   description: Ansible Network Collection for Cisco IOS
+  default-branch: main
 - project: ansible-collections/cisco.iosxr
   description: Ansible Network Collection for Cisco IOSXR
 - project: ansible-collections/cisco.nxos
