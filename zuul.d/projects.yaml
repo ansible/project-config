@@ -231,6 +231,7 @@
 
 - project:
     name: github.com/ansible-collections/junipernetworks.junos
+    default-branch: main
     merge-mode: squash-merge
     templates:
       - system-required
