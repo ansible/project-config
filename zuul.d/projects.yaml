@@ -205,6 +205,7 @@
 
 - project:
     name: github.com/ansible-collections/frr.frr
+    default-branch: main
     merge-mode: squash-merge
     templates:
       - system-required

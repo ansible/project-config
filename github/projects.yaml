@@ -68,6 +68,7 @@
     - has-projects
 - project: ansible-collections/frr.frr
   description: Ansible Collection for Free Range Routing (FRR)
+  default-branch: main
 - project: ansible-collections/ibm.qradar
   description: IBM QRadar Ansible Collection
   default-branch: main
