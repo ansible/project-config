@@ -73,6 +73,7 @@
   default-branch: main
 - project: ansible-collections/junipernetworks.junos
   description: Ansible Network Collection for Juniper JunOS
+  default-branch: main
 - project: ansible-collections/openvswitch.openvswitch
   description: Ansible Network Collection for Open vSwitch
   default-branch: main
