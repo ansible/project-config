@@ -37,6 +37,7 @@
     - has-projects
 - project: ansible-collections/ansible.netcommon
   description: Ansible Network Collection for Common Code
+  default-branch: main
 - project: ansible-collections/ansible.posix
   description: Ansible Collection for Posix
   default-branch: main
