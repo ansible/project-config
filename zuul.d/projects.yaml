@@ -22,6 +22,7 @@
     templates:
       - system-required
       - ansible-collections-ansible-netcommon-units
+      - ansible-collections-arista-eos
       - ansible-collections-cisco-iosxr-netconf
       - ansible-collections-juniper-junos-netconf
       - ansible-collections-openvswitch-openvswitch
