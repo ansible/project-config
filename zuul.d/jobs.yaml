@@ -112,6 +112,13 @@
     nodeset: centos-8-1vcpu
 
 - job:
+    name: generate-and-build-ansible-collection
+    parent: build-ansible-collection
+    description: |
+      Generate content and Build ansible collections and return artifacts to zuul
+    pre-run: playbooks/generate-ansible-collection/pre.yaml
+
+- job:
     name: release-ansible-python
     description: |
       Release python tarballs / wheels to pypi.org.
