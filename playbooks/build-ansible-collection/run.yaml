@@ -10,6 +10,13 @@
         tox_install_siblings: false
         zuul_work_dir: "{{ zuul.projects['github.com/ansible-network/releases'].src_dir }}"
 
+    - name: Run tox environment(s) top repare the collection
+      include_role:
+        name: tox
+      vars:
+        tox_envlist: "{{ prepare_with_tox_envlist }}"
+      when: prepare_with_tox_envlist is defined
+
     - name: Generate version number for ansible collection
       args:
         chdir: "{{ ansible_user_dir }}/{{ item.src_dir }}"
