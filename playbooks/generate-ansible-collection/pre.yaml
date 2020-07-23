@@ -1,8 +1,0 @@
----
-- hosts: all
-  tasks:
-    - name: Run tox environment(s) top repare the collection
-      include_role:
-        name: tox
-      vars:
-        tox_envlist: "{{ generate_with_tox_envlist|default('refresh_modules') }}"
