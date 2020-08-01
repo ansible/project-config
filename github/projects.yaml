@@ -91,6 +91,7 @@
   default-branch: main
 - project: ansible-collections/vmware_rest
   description: Ansible Collection for VMWare (REST modules)
+  default-branch: main
 - project: ansible-collections/vyos.vyos
   description: Ansible Network Collection for VyOS
   default-branch: main
