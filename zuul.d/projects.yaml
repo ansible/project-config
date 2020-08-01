@@ -302,10 +302,9 @@
 - project:
     name: github.com/ansible-collections/vmware_rest
     default-branch: main
-    merge-mode: squash-merge
     templates:
       - system-required
-      - ansible-python-jobs
+      - ansible-collections-community-vmware-rest
       - publish-to-galaxy
 
 - project:
