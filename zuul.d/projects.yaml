@@ -186,6 +186,11 @@
       - publish-to-galaxy-3pci
 
 - project:
+    name: github.com/ansible-collections/community.okd
+    templates:
+      - publish-to-galaxy-3pci
+
+- project:
     name: github.com/ansible-collections/community.proxysql
     templates:
       - publish-to-galaxy-3pci
