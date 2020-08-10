@@ -97,6 +97,10 @@
         - event: push
           ref: ^refs/heads/.*$
     success:
+      smtp:
+        from: ansible-zuul@redhat.com
+        to: ansible-zuul@redhat.com
+        subject: 'Testing email for {change.project}'
       mysql:
     failure:
       mysql:
