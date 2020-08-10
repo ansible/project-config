@@ -172,6 +172,10 @@
     success:
       mysql:
     failure:
+      smtp:
+        from: ansible-zuul@redhat.com
+        to: ansible-zuul@redhat.com
+        subject: 'Release of {change.project} for ref {change.ref} failed'
       mysql:
 
 - pipeline:
