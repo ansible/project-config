@@ -25,6 +25,7 @@
       - ansible-collections-arista-eos
       - ansible-collections-cisco-ios
       - ansible-collections-cisco-iosxr-netconf
+      - ansible-collections-juniper-junos
       - ansible-collections-juniper-junos-netconf
       - ansible-collections-openvswitch-openvswitch
       - ansible-python-jobs
