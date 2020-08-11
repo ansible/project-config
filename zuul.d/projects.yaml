@@ -28,6 +28,7 @@
       - ansible-collections-juniper-junos
       - ansible-collections-juniper-junos-netconf
       - ansible-collections-openvswitch-openvswitch
+      - ansible-collections-vyos-vyos
       - ansible-python-jobs
       - integrated-queue
       - publish-to-galaxy
@@ -315,7 +316,7 @@
     merge-mode: squash-merge
     templates:
       - system-required
-      - ansible-collections-vyos-vyos
+
       - ansible-collections-vyos-vyos-units
       - ansible-python-jobs
       - integrated-queue
