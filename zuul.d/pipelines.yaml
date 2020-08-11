@@ -171,12 +171,16 @@
           ref: ^refs/tags/(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)$
     success:
       mysql:
+      smtp:
+        from: ansible-zuul@redhat.com
+        to: ansible-zuul@redhat.com
+        subject: 'Release of {change.project} for ref {change.ref} successful'
     failure:
+      mysql:
       smtp:
         from: ansible-zuul@redhat.com
         to: ansible-zuul@redhat.com
         subject: 'Release of {change.project} for ref {change.ref} failed'
-      mysql:
 
 - pipeline:
     name: periodic
