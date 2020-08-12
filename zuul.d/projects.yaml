@@ -316,7 +316,7 @@
     merge-mode: squash-merge
     templates:
       - system-required
-
+      - ansible-collections-vyos-vyos
       - ansible-collections-vyos-vyos-units
       - ansible-python-jobs
       - integrated-queue
