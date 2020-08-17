@@ -32,7 +32,7 @@
       - playbooks/base-minimal/post-logs.yaml
     roles:
       - zuul: opendev.org/zuul/zuul-jobs
-    post-timeout: 1800
+    post-timeout: 3600
     timeout: 1800
     vars:
       ara_report_executable: "/opt/venv/zuul-ansible/{{ ansible_version.full }}/bin/ara"
@@ -58,7 +58,7 @@
       - playbooks/base-minimal-test/post-logs.yaml
     roles:
       - zuul: opendev.org/zuul/zuul-jobs
-    post-timeout: 1800
+    post-timeout: 3600
     timeout: 1800
     vars:
       ara_report_executable: "/opt/venv/zuul-ansible/{{ ansible_version.full }}/bin/ara"
