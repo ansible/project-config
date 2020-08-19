@@ -29,6 +29,7 @@
           - ansible-collections/cisco.ios
           - ansible-collections/cisco.iosxr
           - ansible-collections/cisco.nxos
+          - ansible-collections/cloud.common
           - ansible-collections/community.asa
           - ansible-collections/frr.frr
           - ansible-collections/ibm.qradar
