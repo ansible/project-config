@@ -118,6 +118,16 @@
       - publish-to-automation-hub
 
 - project:
+    name: github.com/ansible-collections/cloud.common
+    default-branch: main
+    merge-mode: squash-merge
+    templates:
+      - system-required
+      - ansible-python-jobs
+      - integrated-queue
+      - publish-to-galaxy
+
+- project:
     name: github.com/ansible-collections/community.asa
     default-branch: main
     merge-mode: squash-merge
