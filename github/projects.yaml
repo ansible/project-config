@@ -58,6 +58,9 @@
 - project: ansible-collections/cisco.nxos
   description: Ansible Network Collection for Cisco NXOS
   default-branch: main
+- project: ansible-collections/cloud.common
+  description: Common files for the Cloud collections
+  default-branch: main
 - project: ansible-collections/community.asa
   description: Ansible Community Collection for Cisco ASA
   default-branch: main
