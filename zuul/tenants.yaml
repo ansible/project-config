@@ -109,6 +109,7 @@
               - ansible-collections/community.general
               - ansible-collections/community.grafana
               - ansible-collections/community.internal_test_tools
+              - ansible-collections/community.kubernetes
               - ansible-collections/community.libvirt
               - ansible-collections/community.mongodb
               - ansible-collections/community.mysql
