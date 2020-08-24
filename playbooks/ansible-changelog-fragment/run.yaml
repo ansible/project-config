@@ -4,7 +4,7 @@
   tasks:
     - name: Check for changelog fragments
       args:
-        chdir: "{{ zuul.project.src_dir }}"
+        chdir: "{{ zuul.executor.src_root }}/{{ zuul.project.canonical_name }}"
       shell: git diff --name-only --exit-code changelogs/fragments
       register: r
 
