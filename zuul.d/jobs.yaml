@@ -74,6 +74,13 @@
 
 # ansible/project-config jobs
 - job:
+    name: ansible-changelog-fragment
+    description: Ensure PRs have generated changelog fragments.
+    run: playbooks/ansible-changelog-fragment/run.yaml
+    nodeset:
+      nodes: []
+
+- job:
     name: project-config-tox-github
     parent: tox
     description: |
