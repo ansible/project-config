@@ -4,8 +4,7 @@
   tasks:
     - name: Check for changelog fragments
       args:
-        chdir: "{ zuul.project.src_dir }}"
-      ignore_errors: true
+        chdir: "{{ zuul.project.src_dir }}"
       shell: git diff --name-only --exit-code changelogs/fragments
       register: r
 
