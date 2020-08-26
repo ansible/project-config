@@ -77,11 +77,9 @@
     name: ansible-changelog-fragment
     description: Ensure PRs have generated changelog fragments.
     run: playbooks/ansible-changelog-fragment/run.yaml
-    irrelevant-files:
-      - ^changelogs/.*$
-      - ^doc/.*$
-      - galaxy.yml
-      - README.md
+    files:
+      - ^plugins/.*$
+      - ^tests/.*$
     nodeset:
       nodes: []
 
