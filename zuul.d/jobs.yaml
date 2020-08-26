@@ -78,8 +78,10 @@
     description: Ensure PRs have generated changelog fragments.
     run: playbooks/ansible-changelog-fragment/run.yaml
     irrelevant-files:
-      - changelogs/CHANGELOG.rst
-      - changelogs/changelog.yaml
+      - ^changelogs/.*$
+      - ^doc/.*$
+      - galaxy.yml
+      - README.md
     nodeset:
       nodes: []
 
