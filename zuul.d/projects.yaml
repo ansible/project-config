@@ -688,26 +688,6 @@
         - ansible-builder-projecttoml-and-setuppy-insync
 
 - project:
-    name: github.com/ansible/ansible-lint
-    # jobs listed in project-config and defined in ansible-zuul-jobs because
-    # the project is not gated by zuul (check/gate) as jobs cannot come from
-    # unsafe repositories. Once we switch ansible-lint to be gated by zuul,
-    # these can be moved to ansible-lint project itself, making their
-    # maintenance much easier.
-    third-party-check:
-      jobs:
-        - ansible-lint-tox-docs
-        - ansible-lint-tox-linters
-        - ansible-lint-tox-packaging
-        - ansible-lint-tox-py36-ansible28
-        - ansible-lint-tox-py36-ansible29
-        - ansible-lint-tox-py36-ansibledevel
-        - ansible-lint-tox-py37-ansible28
-        - ansible-lint-tox-py37-ansible29
-        - ansible-lint-tox-py37-ansibledevel
-        - ansible-lint-tox-py38-ansible29
-        - ansible-lint-tox-py38-ansibledevel
-- project:
     name: github.com/ansible/ansible-runner
     default-branch: devel
     templates:
