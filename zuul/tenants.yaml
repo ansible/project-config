@@ -100,7 +100,6 @@
           - include: []
             projects:
               - ansible/ansible
-              - ansible/ansible-lint
               - ansible-community/collection_migration
               - ansible-collections/community.aws
               - ansible-collections/community.azure
