@@ -330,6 +330,18 @@
       - publish-to-galaxy
 
 - project:
+    name: github.com/ansible-collections/vmware_rest_code_generator
+    default-branch: main
+    templates:
+      - ansible-python3-jobs
+    check:
+      jobs:
+        - ansible-tox-linters
+    gate:
+      jobs:
+        - ansible-tox-linters
+
+- project:
     name: github.com/ansible-collections/vyos.vyos
     default-branch: main
     merge-mode: squash-merge
