@@ -348,19 +348,7 @@
       - system-required
 
 - project:
-    name: github.com/ansible-community/molecule
-    templates:
-      - publish-to-pypi
-      - system-required
-
-- project:
     name: github.com/ansible-community/molecule-azure
-    templates:
-      - publish-to-pypi
-      - system-required
-
-- project:
-    name: github.com/ansible-community/molecule-containers
     templates:
       - publish-to-pypi
       - system-required
@@ -421,12 +409,6 @@
 
 - project:
     name: github.com/ansible-community/molecule-vagrant
-    templates:
-      - publish-to-pypi
-      - system-required
-
-- project:
-    name: github.com/ansible-community/pytest-molecule
     templates:
       - publish-to-pypi
       - system-required
