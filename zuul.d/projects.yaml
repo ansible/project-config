@@ -233,13 +233,10 @@
     merge-mode: squash-merge
     templates:
       - system-required
-      - ansible-collections-iosxr-community-yang
-      - ansible-collections-junos-community-yang
+      - ansible-collections-community-yang-units
       - ansible-python-jobs
-      - integrated-queue
       - publish-to-galaxy
       - publish-to-automation-hub
-
 
 - project:
     name: github.com/ansible-collections/community.zabbix
