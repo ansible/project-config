@@ -70,6 +70,9 @@
   acl-config: acls/ansible-collections/amazon.aws.config
   options:
     - has-projects
+- project: ansible-collections/community.yang
+  description: Ansible Community Collection to support Yang in network devices.
+  default-branch: main
 - project: ansible-collections/frr.frr
   description: Ansible Collection for Free Range Routing (FRR)
   default-branch: main
