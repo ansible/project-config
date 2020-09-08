@@ -70,6 +70,9 @@
   acl-config: acls/ansible-collections/amazon.aws.config
   options:
     - has-projects
+- project: ansible-collections/community.yang
+  description: Ansible Community Collection to support Yang in network devices.
+  default-branch: main
 - project: ansible-collections/frr.frr
   description: Ansible Collection for Free Range Routing (FRR)
   default-branch: main
@@ -100,9 +103,6 @@
   default-branch: main
 - project: ansible-collections/vyos.vyos
   description: Ansible Network Collection for VyOS
-  default-branch: main
-- project: ansible-collections/community.yang
-  description: Ansible Community Collection to support Yang in network devices.
   default-branch: main
 - project: ansible-community/ansible-bender
   description: ansible-playbook + buildah = a sweet container image
