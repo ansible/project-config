@@ -42,6 +42,7 @@
           - ansible-collections/vmware_rest
           - ansible-collections/vmware_rest_code_generator
           - ansible-collections/vyos.vyos
+          - ansible-collections/community.yang
           - ansible-community/ansible-bender
           - ansible-community/molecule
           - ansible-community/molecule-azure

@@ -101,6 +101,9 @@
 - project: ansible-collections/vyos.vyos
   description: Ansible Network Collection for VyOS
   default-branch: main
+- project: ansible-collections/community.yang
+  description: Ansible Community Collection to support Yang in network devices.
+  default-branch: main
 - project: ansible-community/ansible-bender
   description: ansible-playbook + buildah = a sweet container image
 - project: ansible-community/molecule
