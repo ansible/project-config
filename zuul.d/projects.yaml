@@ -235,7 +235,6 @@
       - system-required
       - ansible-python-jobs
       - publish-to-galaxy
-      - publish-to-automation-hub
 
 - project:
     name: github.com/ansible-collections/community.zabbix
