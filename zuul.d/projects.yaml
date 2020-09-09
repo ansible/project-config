@@ -233,7 +233,7 @@
     merge-mode: squash-merge
     templates:
       - system-required
-      - ansible-collections-community-yang-units
+      - publish-to-pypi
       - ansible-python-jobs
       - publish-to-galaxy
       - publish-to-automation-hub
