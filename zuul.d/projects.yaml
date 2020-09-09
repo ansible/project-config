@@ -228,6 +228,15 @@
       - publish-to-galaxy-3pci
 
 - project:
+    name: github.com/ansible-collections/community.yang
+    default-branch: main
+    merge-mode: squash-merge
+    templates:
+      - system-required
+      - ansible-python-jobs
+      - publish-to-galaxy
+
+- project:
     name: github.com/ansible-collections/community.zabbix
     templates:
       - publish-to-galaxy-3pci
