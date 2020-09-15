@@ -73,6 +73,7 @@
 - project: ansible-collections/community.vmware
   description: Ansible Collection for VMWare
   default-branch: main
+  acl-config: acls/ansible-collections/community.vmware.config
 - project: ansible-collections/community.yang
   description: Ansible Community Collection to support Yang in network devices.
   default-branch: main
@@ -95,15 +96,10 @@
 - project: ansible-collections/symantec.epm
   default-branch: main
   description: Ansible Collection for Symantec Endpoint Protection Manager
-- project: ansible-collections/vmware
-  description: Ansible Collection for VMWare
-  default-branch: main
 - project: ansible-collections/vmware.vmware_rest
   description: Ansible Collection for VMWare (REST modules)
   default-branch: main
-- project: ansible-collections/vmware_rest
-  description: Ansible Collection for VMWare (REST modules)
-  default-branch: main
+  acl-config: acls/ansible-collections/vmware.vmware_rest.config
 - project: ansible-collections/vmware_rest_code_generator
   description: Tooling ued to generate the vmware.vmware_rest collection
   default-branch: main
