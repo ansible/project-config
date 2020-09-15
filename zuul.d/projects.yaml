@@ -223,6 +223,15 @@
       - publish-to-galaxy-3pci
 
 - project:
+    name: github.com/ansible-collections/community.vmware
+    default-branch: main
+    merge-mode: squash-merge
+    templates:
+      - system-required
+      - ansible-collections-community-vmware
+      - publish-to-galaxy
+
+- project:
     name: github.com/ansible-collections/community.windows
     templates:
       - publish-to-galaxy-3pci
@@ -322,23 +331,6 @@
       - publish-to-galaxy
 
 - project:
-    name: github.com/ansible-collections/vmware
-    default-branch: main
-    merge-mode: squash-merge
-    templates:
-      - system-required
-      - ansible-collections-community-vmware
-      - publish-to-galaxy
-
-- project:
-    name: github.com/ansible-collections/vmware_rest
-    default-branch: main
-    templates:
-      - system-required
-      - ansible-collections-community-vmware-rest
-      - publish-to-galaxy
-
-- project:
     name: github.com/ansible-collections/vmware_rest_code_generator
     default-branch: main
     templates:
@@ -349,6 +341,14 @@
     gate:
       jobs:
         - ansible-tox-linters
+
+- project:
+    name: github.com/ansible-collections/vmware.vmware_rest
+    default-branch: main
+    templates:
+      - system-required
+      - ansible-collections-community-vmware-rest
+      - publish-to-galaxy
 
 - project:
     name: github.com/ansible-collections/vyos.vyos
