@@ -70,6 +70,9 @@
   acl-config: acls/ansible-collections/amazon.aws.config
   options:
     - has-projects
+- project: ansible-collections/community.vmware
+  description: Ansible Collection for VMWare
+  default-branch: main
 - project: ansible-collections/community.yang
   description: Ansible Community Collection to support Yang in network devices.
   default-branch: main
@@ -94,6 +97,9 @@
   description: Ansible Collection for Symantec Endpoint Protection Manager
 - project: ansible-collections/vmware
   description: Ansible Collection for VMWare
+  default-branch: main
+- project: ansible-collections/vmware.vmware_rest
+  description: Ansible Collection for VMWare (REST modules)
   default-branch: main
 - project: ansible-collections/vmware_rest
   description: Ansible Collection for VMWare (REST modules)
