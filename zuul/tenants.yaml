@@ -32,6 +32,7 @@
           - ansible-collections/cloud.common
           - ansible-collections/community.asa
           - ansible-collections/community.yang
+          - ansible-collections/community.vmware
           - ansible-collections/frr.frr
           - ansible-collections/ibm.qradar
           - ansible-collections/junipernetworks.junos
@@ -41,6 +42,7 @@
           - ansible-collections/symantec.epm
           - ansible-collections/vmware
           - ansible-collections/vmware_rest
+          - ansible-collections/vmware.vmware_rest
           - ansible-collections/vmware_rest_code_generator
           - ansible-collections/vyos.vyos
           - ansible-community/ansible-bender
