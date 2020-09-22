@@ -90,7 +90,6 @@
           - ansible-network/sandbox
           - ansible-network/vyos
           - ansible-network/windmill-config
-          - ansible-network/yang
           - ansible-security/ids_config
           - ansible-security/ids_install
           - EducationSwing/zuul-test

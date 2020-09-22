@@ -178,9 +178,6 @@
   default-branch: devel
 - project: ansible-network/windmill-config
   description: Ansible configuration files for windmill project
-- project: ansible-network/yang
-  description: Ansible Yang Role
-  default-branch: devel
 - project: ansible-network/zuul-config
   description: Repo containing Zuul project configuration
 - project: ansible-security/ids_config
