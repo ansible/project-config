@@ -96,6 +96,9 @@
 - project: ansible-collections/symantec.epm
   default-branch: main
   description: Ansible Collection for Symantec Endpoint Protection Manager
+- project: ansible-collections/trendmicro.deepsec
+  default-branch: main
+  description: Ansible Collection for managing TrendMicro DeepSecurity Endpoint Security solutions.
 - project: ansible-collections/vmware.vmware_rest
   description: Ansible Collection for VMWare (REST modules)
   default-branch: main
