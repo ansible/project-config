@@ -24,6 +24,11 @@
 
 - hosts: all:!appliance*
   tasks:
+    - name: Ensure git is installed
+      package:
+        name: git
+        state: present
+      become: true
     - name: Run prepare-workspace-git role
       include_role:
         name: prepare-workspace-git
