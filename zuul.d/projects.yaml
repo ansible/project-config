@@ -596,6 +596,12 @@
               - name: github.com/ansible-network/network-engine
 
 - project:
+    name: github.com/ansible-network/yang
+    default-branch: devel
+    templates:
+      - noop-jobs
+
+- project:
     name: github.com/ansible-security/ids_config
     check:
       jobs:
