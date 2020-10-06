@@ -703,6 +703,10 @@
               - zuul/tenants.yaml
 
 - project:
+    name: github.com/ansible/pylibssh
+    default-branch: devel
+
+- project:
     name: github.com/ansible/workshops
     default-branch: devel
     third-party-check:
