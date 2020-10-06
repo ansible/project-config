@@ -361,6 +361,7 @@
       - system-required
       - ansible-collections-community-vmware-rest
       - publish-to-galaxy
+      - publish-to-automation-hub
 
 - project:
     name: github.com/ansible-collections/vyos.vyos
