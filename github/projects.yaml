@@ -159,7 +159,7 @@
   description: Ansible configuration files for windmill project
 - project: ansible-network/yang
   archived: true
-  description: RETIRED, Ansible Yang Role
+  description: RETIRED, development work is moved to [Ansible yang collection](https://github.com/ansible-collections/community.yang)
   default-branch: devel
 - project: ansible-network/zuul-config
   description: Repo containing Zuul project configuration
