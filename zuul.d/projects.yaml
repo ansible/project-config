@@ -188,6 +188,11 @@
     name: github.com/ansible-collections/community.libvirt
     templates:
       - publish-to-galaxy-3pci
+#
+# - project:
+#     name: github.com/ansible-collections/community.molecule
+#     templates:
+#       - publish-to-galaxy-3pci
 
 - project:
     name: github.com/ansible-collections/community.mongodb
