@@ -645,11 +645,9 @@
     check:
       jobs:
         - ansible-builder-projecttoml-and-setuppy-insync
-        - ansible-tox-py38
     gate:
       jobs:
         - ansible-builder-projecttoml-and-setuppy-insync
-        - ansible-tox-py38
 
 - project:
     name: github.com/ansible/ansible-runner
