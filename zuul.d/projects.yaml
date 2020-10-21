@@ -404,8 +404,7 @@
 - project:
     name: github.com/ansible-community/molecule-vagrant
     templates:
-      - publish-to-pypi
-      - system-required
+      - noop-jobs
 
 - project:
     name: github.com/ansible-network/arista_eos
