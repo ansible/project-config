@@ -237,6 +237,11 @@
       - publish-to-galaxy-3pci
 
 - project:
+    name: github.com/ansible-collections/community.routeros
+    templates:
+      - publish-to-galaxy-3pci
+
+- project:
     name: github.com/ansible-collections/community.sops
     templates:
       - publish-to-galaxy-3pci
