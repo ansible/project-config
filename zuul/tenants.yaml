@@ -111,6 +111,7 @@
               - ansible-collections/community.postgresql
               - ansible-collections/community.proxysql
               - ansible-collections/community.rabbitmq
+              - ansible-collections/community.routeros
               - ansible-collections/community.sops
               - ansible-collections/community.windows
               - ansible-collections/community.zabbix
