@@ -371,6 +371,7 @@
     default-branch: main
     templates:
       - ansible-python3-jobs
+      - ansible-collections-community-vmware-rest
     check:
       jobs:
         - ansible-tox-linters
