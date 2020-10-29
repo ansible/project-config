@@ -84,7 +84,6 @@
           - ansible-network/windmill-config
           - ansible-security/ids_config
           - ansible-security/ids_install
-          - EducationSwing/zuul-test
           - project-receptor/python-receptor
           - pycontribs/selinux
 
