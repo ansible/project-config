@@ -748,11 +748,6 @@
         - workshops-tox-integration-windows
 
 - project:
-    name: github.com/EducationSwing/zuul-test
-    templates:
-      - system-required
-
-- project:
     name: github.com/project-receptor/python-receptor
     default-branch: devel
     templates:

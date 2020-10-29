@@ -182,8 +182,6 @@
 - project: ansible/workshops
   description: Training Course for Ansible Automation Platform
   default-branch: devel
-- project: EducationSwing/zuul-test
-  description: zuul-test repo
 - project: project-receptor/python-receptor
   description: >-
     Project Receptor is a flexible multi-service relayer with remote execution and
