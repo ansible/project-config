@@ -170,6 +170,10 @@
     name: github.com/ansible-collections/community.digitalocean
     templates:
       - publish-to-galaxy-3pci
+- project:
+    name: github.com/ansible-collections/community.docker
+    templates:
+      - publish-to-galaxy-3pci
 
 - project:
     name: github.com/ansible-collections/community.general
