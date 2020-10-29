@@ -44,6 +44,9 @@
 - project: ansible-collections/ansible.posix
   description: Ansible Collection for Posix
   default-branch: main
+- project: ansible-collections/ansible.utils
+  description: Ansible Network Collection for utils plugin.
+  default-branch: main
 - project: ansible-collections/arista.eos
   description: Ansible Network Collection for Arista EOS
   default-branch: main
