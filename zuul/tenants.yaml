@@ -98,6 +98,7 @@
               - ansible-collections/community.cassandra
               - ansible-collections/community.crypto
               - ansible-collections/community.digitalocean
+              - ansible-collections/community.docker
               - ansible-collections/community.general
               - ansible-collections/community.grafana
               - ansible-collections/community.internal_test_tools
