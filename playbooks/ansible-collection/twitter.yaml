@@ -17,4 +17,4 @@
     - name: Send twitter announcement
       args:
         chdir: "{{ zuul.executor.work_root }}/{{ zuul.projects['github.com/ansible-network/releases'].src_dir }}"
-      shell: ".tox/venv/bin/python tools/twitter-announcement.py 'Version {{ zuul.tag }} of the Ansible {{ zuul.project.short_name }} collection has been released to Ansible Automation hub (https://cloud.redhat.com/ansible/automation-hub/{{ zuul.project.short_name|replace('.', '/') }}) and galaxy (https://galaxy.ansible.com/{{ zuul.projet.short_name|replace('.','/') }}). See the release notes here: https://{{ zuul.project.canonical_name }}/blob/{{ zuul.tag }}/changelogs/CHANGELOG.rst'"
+      shell: ".tox/venv/bin/python tools/twitter-announcement.py 'Version {{ zuul.tag }} of the Ansible {{ zuul.project.short_name }} collection has been released to Ansible Automation hub (https://cloud.redhat.com/ansible/automation-hub/{{ zuul.project.short_name|replace('.', '/') }}) and galaxy (https://galaxy.ansible.com/{{ zuul.project.short_name|replace('.','/') }}). See the release notes here: https://{{ zuul.project.canonical_name }}/blob/{{ zuul.tag }}/changelogs/CHANGELOG.rst'"
