@@ -1,13 +1,13 @@
 ---
 - hosts: localhost
   tasks:
-    - name: Ensure tox is installed
-      shell: pip install --user tox
+    - name: Create virtualenv for ansible-network/releases
+      shell: virtualenv --python python3 ~/venv
 
-    - name: Bootstrap tox environment
+    - name: Bootstrap ansible-network/releases
       args:
         chdir: "{{ zuul.executor.work_root }}/{{ zuul.projects['github.com/ansible-network/releases'].src_dir }}"
-      shell: ~/.local/bin/tox -evenv --notest
+      shell: ~/venv/bin/pip install -r requirements.txt -r test-requirements.txt
 
     - name: Setup tweetrc credentials
       copy:
