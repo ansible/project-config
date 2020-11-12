@@ -687,6 +687,7 @@
     default-branch: devel
     templates:
       - system-required
+      - ansible-runner-container-image-jobs
       - ansible-python-jobs   # linting-only
       - ansible-python3-jobs  # py3 tox jobs
       - publish-to-pypi
