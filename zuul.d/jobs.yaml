@@ -228,3 +228,12 @@
         name: aws_workshops_data
     nodeset: centos-8-1vcpu
     timeout: 5400
+
+- job:
+    name: ansible-upload-container-image
+    parent: ansible-build-container-image
+    description: |
+      Build and upload a container image.
+    post-run: playbooks/container-image/upload.yaml
+    secrets:
+      - container_registry_credentials
