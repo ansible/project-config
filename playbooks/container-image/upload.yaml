@@ -1,0 +1,6 @@
+---
+- hosts: all
+  tasks:
+    - name: Setup upload-container-image role
+      include_role:
+        name: upload-container-image
