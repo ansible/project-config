@@ -194,6 +194,11 @@
       - publish-to-galaxy-3pci
 
 - project:
+    name: github.com/ansible-collections/community.google
+    templates:
+      - publish-to-galaxy-3pci
+
+- project:
     name: github.com/ansible-collections/community.grafana
     templates:
       - publish-to-galaxy-3pci
