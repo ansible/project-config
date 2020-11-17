@@ -385,9 +385,6 @@
     merge-mode: squash-merge
     templates:
       - system-required
-      - ansible-collections-trendmicro-deepsec
-      - ansible-collections-trendmicro-deepsec-units
-      - publish-to-galaxy
 
 - project:
     name: github.com/ansible-collections/vmware_rest_code_generator
