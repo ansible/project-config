@@ -284,6 +284,38 @@
       mysql:
 
 - pipeline:
+    name: lgtm
+    description: |
+      A pipeline to run lgtm jobs.
+    manager: independent
+    precedence: high
+    trigger:
+      github.com:
+        - event: pull_request
+          action:
+            - opened
+            - changed
+            - comment
+            - reopened
+    start:
+      github.com:
+        check: in_progress
+        comment: false
+        status: 'pending'
+    success:
+      github.com:
+        check: success
+        comment: false
+        status: 'success'
+      mysql:
+    failure:
+      github.com:
+        check: failure
+        comment: false
+        status: 'failure'
+      mysql:
+
+- pipeline:
     name: merge-check
     description: >
       Each time a change merges, this pipeline verifies that all open changes
