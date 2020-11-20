@@ -199,6 +199,11 @@
       - publish-to-galaxy-3pci
 
 - project:
+    name: github.com/ansible-collections/community.hrobot
+    templates:
+      - publish-to-galaxy-3pci
+
+- project:
     name: github.com/ansible-collections/community.internal_test_tools
     templates:
       - publish-to-galaxy-3pci
