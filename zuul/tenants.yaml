@@ -102,6 +102,7 @@
               - ansible-collections/community.general
               - ansible-collections/community.google
               - ansible-collections/community.grafana
+              - ansible-collections/community.hrobot
               - ansible-collections/community.internal_test_tools
               - ansible-collections/community.kubernetes
               - ansible-collections/community.kubevirt
