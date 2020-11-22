@@ -1,0 +1,29 @@
+---
+- hosts: all
+  tasks:
+    - name: Install container runtime
+      include_role:
+        name: "ensure-{{ (container_command == 'docker') | ternary('docker', 'podman') }}"
+
+    # NOTE(pabelanger): we force docker until we can figure out podman IPV6 issue
+    - name: Install docker runtime
+      when: buildset_registry is not defined
+      include_role:
+        name: ensure-docker
+
+    - name: Run buildset registry (if not already running)
+      when: buildset_registry is not defined
+      include_role:
+        name: run-buildset-registry
+      vars:
+        container_command: docker
+
+    - name: Use buildset registry
+      include_role:
+        name: use-buildset-registry
+
+- hosts: localhost
+  tasks:
+    - name: Run pull-from-intermediate-registry role
+      include_role:
+        name: pull-from-intermediate-registry

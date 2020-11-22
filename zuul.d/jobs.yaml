@@ -230,6 +230,30 @@
     timeout: 5400
 
 - job:
+    name: ansible-buildset-registry
+    description: |
+      Starts a buildset registry which interacts with the intermediate
+      CI registry to share speculative container images between
+      projects.
+
+      Configure any jobs which require the use of a buildset registry
+      to depend on this job using the "dependencies" job attribute.
+
+      This job will pause after starting the registry so that it is
+      available to any jobs which depend on it.  Once all such jobs
+      are complete, this job will finish.
+    pre-run: playbooks/buildset-registry/pre.yaml
+    run: playbooks/buildset-registry/run.yaml
+    post-run: playbooks/buildset-registry/post.yaml
+    requires: container-image
+    nodeset: ubuntu-bionic-1vcpu
+    vars:
+      container_command: docker
+    secrets:
+      - secret: ansible-intermediate-registry
+        name: intermediate_registry
+
+- job:
     name: ansible-upload-container-image
     parent: ansible-build-container-image
     description: |
