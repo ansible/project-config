@@ -122,6 +122,7 @@
               - ansible-collections/hetzner.hcloud
               - ansible/awx
               - ansible/galaxy
+              - ansible/galaxy_ng
               - ansible/galaxy-importer
               - ansible/pylibssh
               - ansible/workshops
