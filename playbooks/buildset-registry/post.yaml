@@ -1,3 +1,6 @@
 ---
-- hosts: all
-  tasks: []
+- hosts: localhost
+  tasks:
+    - name: Run push-to-intermediate-registry role
+      include_role:
+        name: push-to-intermediate-registry
