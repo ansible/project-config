@@ -254,6 +254,19 @@
         name: intermediate_registry
 
 - job:
+    name: ansible-buildset-registry-consumer
+    description: |
+      Pull from the intermediate registry
+
+      This is a parent for jobs which use container images and expect
+      a buildset registry to be running.  It pulls images from the
+      intermediate registry into it.
+    pre-run: playbooks/buildset-registry/pre.yaml
+    secrets:
+      - secret: ansible-intermediate-registry
+        name: intermediate_registry
+
+- job:
     name: ansible-upload-container-image
     parent: ansible-build-container-image
     description: |
