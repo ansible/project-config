@@ -766,6 +766,12 @@
     default-branch: devel
 
 - project:
+    name: github.com/ansible/python-builder-image
+    default-branch: main
+    templates:
+      - system-required
+
+- project:
     name: github.com/ansible/workshops
     default-branch: devel
     third-party-check:
