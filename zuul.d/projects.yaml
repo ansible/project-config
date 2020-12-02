@@ -204,6 +204,11 @@
       - publish-to-galaxy-3pci
 
 - project:
+    name: github.com/ansible-collections/community.hashi_vault
+    templates:
+      - publish-to-galaxy-3pci
+
+- project:
     name: github.com/ansible-collections/community.hrobot
     templates:
       - publish-to-galaxy-3pci
