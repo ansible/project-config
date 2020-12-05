@@ -20,6 +20,7 @@
           # merge conflicts
           - ansible/ansible-builder
           - ansible/ansible-runner
+          - ansible/python-base-image
           - ansible/python-builder-image
           - ansible-collections/amazon.aws
           - ansible-collections/ansible.netcommon

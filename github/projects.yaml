@@ -179,6 +179,9 @@
 - project: ansible/network
   description: Ansible collection for network devices
   default-branch: devel
+- project: ansible/python-base-image
+  description: A container image for running python projects
+  default-branch: main
 - project: ansible/python-builder-image
   description: A container image for building python projects
   default-branch: main
