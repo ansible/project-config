@@ -55,6 +55,7 @@
           - ansible/network
           - ansible-network/arista_eos
           - ansible-network/aws
+          - ansible-network/aws_management
           - ansible-network/azure
           - ansible-network/backup_config
           - ansible-network/cisco_asa
