@@ -463,6 +463,12 @@
       - ansible-python-jobs
 
 - project:
+    name: github.com/ansible-network/aws_management
+    default-branch: main
+    templates:
+      - system-required
+
+- project:
     name: github.com/ansible-network/azure
     default-branch: devel
     templates:
