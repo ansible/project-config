@@ -127,9 +127,9 @@
   description: IAM Policies and Management Tools for the Ansible Networking AWS Account
   acl-config: acls/ansible/bar.config
   default-branch: main
-    options:
-     - has-issues
-     - has-projects
+  options:
+    - has-issues
+    - has-projects
 - project: ansible-network/backup_config
   description: Ansible role for backup of running configurations from network devices
 - project: ansible-network/cisco_ios
