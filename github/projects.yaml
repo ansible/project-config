@@ -123,6 +123,13 @@
   description: Molecule LibVirt Provider
 - project: ansible-network/ansible-zuul-jobs
   description: Defines test jobs and roles
+- project: ansible-network/aws_management
+  description: IAM Policies and Management Tools for the Ansible Networking AWS Account
+  acl-config: acls/ansible/bar.config
+  default-branch: main
+    options:
+     - has-issues
+     - has-projects
 - project: ansible-network/backup_config
   description: Ansible role for backup of running configurations from network devices
 - project: ansible-network/cisco_ios
