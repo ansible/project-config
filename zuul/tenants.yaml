@@ -87,7 +87,6 @@
           - ansible-network/windmill-config
           - ansible-security/ids_config
           - ansible-security/ids_install
-          - project-receptor/python-receptor
           - pycontribs/selinux
 
           # Don't load any configuration from these projects because we
