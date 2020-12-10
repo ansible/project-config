@@ -182,6 +182,9 @@
 - project: ansible/ansible-builder
   description: An Ansible execution environment builder
   default-branch: devel
+- project: ansible/awx-ee
+  description: An Ansible execution environment for AWX project
+  default-branch: devel
 - project: ansible/network
   description: Ansible collection for network devices
   default-branch: devel
