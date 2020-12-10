@@ -743,6 +743,12 @@
       jobs: []
 
 - project:
+    name: github.com/ansible/awx-ee
+    default-branch: devel
+    templates:
+      - system-required
+
+- project:
     name: github.com/ansible/network
     default-branch: devel
     templates:
