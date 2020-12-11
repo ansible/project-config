@@ -188,6 +188,9 @@
 - project: ansible/network
   description: Ansible collection for network devices
   default-branch: devel
+- project: ansible/network-ee
+  description: An Ansible execution environment for Ansible Network Collections
+  default-branch: main
 - project: ansible/python-base-image
   description: A container image for running python projects
   default-branch: main

@@ -54,6 +54,7 @@
           - ansible-community/molecule-libvirt
           - ansible-community/molecule-vagrant
           - ansible/network
+          - ansible/network-ee
           - ansible-network/arista_eos
           - ansible-network/aws
           - ansible-network/aws_management
