@@ -23,6 +23,7 @@
 #   archived: true
 #   default-branch: master
 #   description: This is a great project
+#   homepage: https://example.org/ansible/foo
 #   options:
 #     - has-downloads
 #     - has-issues
@@ -197,6 +198,7 @@
 - project: ansible/python-builder-image
   description: A container image for building python projects
   default-branch: main
+  homepage: https://quay.io/ansible/python-builder
 - project: ansible/workshops
   description: Training Course for Ansible Automation Platform
   default-branch: devel
