@@ -69,6 +69,7 @@ class Client(object):
             'allow_rebase_merge': False,
             'allow_squash_merge': True,
             'description': item.get('description', None),
+            'homepage': item.get('homepage', None),
         }
         options = item.get('options', [])
         kwargs['has_downloads'] = 'has-downloads' in options or False
