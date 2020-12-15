@@ -693,6 +693,7 @@
     name: github.com/ansible/ansible-builder
     default-branch: devel
     templates:
+      - execution-environments-queue
       - system-required
       - ansible-python-jobs
       - ansible-python3-jobs
@@ -709,6 +710,7 @@
     default-branch: devel
     templates:
       - system-required
+      - execution-environments-queue
       - ansible-python-jobs   # linting-only
       - ansible-python3-jobs  # py3 tox jobs
       - publish-to-pypi
@@ -793,12 +795,14 @@
     default-branch: main
     templates:
       - system-required
+      - execution-environments-queue
 
 - project:
     name: github.com/ansible/python-builder-image
     default-branch: main
     templates:
       - system-required
+      - execution-environments-queue
 
 - project:
     name: github.com/ansible/workshops
