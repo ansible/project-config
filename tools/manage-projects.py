@@ -121,6 +121,8 @@ class Client(object):
             del kwargs['has_projects']
         if kwargs['has_wiki'] == repo.has_wiki:
             del kwargs['has_wiki']
+        if kwargs['homepage'] == repo.homepage:
+            del kwargs['homepage']
         if item.get('archived', False):
             kwargs['archived'] = True
 
