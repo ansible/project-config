@@ -186,15 +186,18 @@
 - project: ansible/awx-ee
   description: An Ansible execution environment for AWX project
   default-branch: devel
+  homepage: https://quay.io/ansible/awx-ee
 - project: ansible/network
   description: Ansible collection for network devices
   default-branch: devel
 - project: ansible/network-ee
   description: An Ansible execution environment for Ansible Network Collections
   default-branch: main
+  homepage: https://quay.io/ansible/network-ee
 - project: ansible/python-base-image
   description: A container image for running python projects
   default-branch: main
+  homepage: https://quay.io/ansible/python-base
 - project: ansible/python-builder-image
   description: A container image for building python projects
   default-branch: main
