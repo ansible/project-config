@@ -191,6 +191,10 @@
   description: An Ansible execution environment for AWX project
   default-branch: devel
   homepage: https://quay.io/ansible/awx-ee
+- project: ansible/cloud-ee
+  description: An Ansible execution environment for Ansible Cloud Collections
+  default-branch: main
+  homepage: https://quay.io/ansible/cloud-ee
 - project: ansible/network
   description: Ansible collection for network devices
   default-branch: devel

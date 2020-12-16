@@ -763,6 +763,12 @@
       - system-required
 
 - project:
+    name: github.com/ansible/cloud-ee
+    default-branch: main
+    templates:
+      - system-required
+
+- project:
     name: github.com/ansible/network
     default-branch: devel
     templates:
