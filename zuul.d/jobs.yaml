@@ -125,17 +125,27 @@
     name: release-ansible-python
     description: |
       Release python tarballs / wheels to pypi.org.
+    protected: true
     pre-run: playbooks/build-python-tarball/pre.yaml
     run: playbooks/build-python-tarball/run.yaml
     post-run:
       - playbooks/build-python-tarball/post.yaml
       - playbooks/publish/pypi.yaml
+    required-projects:
+      - github.com/ansible-network/releases
     secrets:
       - secret: pypi_secret
         name: pypi_info
     vars:
       release_python: python3
     nodeset: centos-8-1vcpu
+
+- job:
+    name: release-ansible-python-poetry
+    parent: release-ansible-python
+    final: true
+    vars:
+      release_poetry_project: true
 
 - job:
     name: release-ansible-collection-automation-hub
