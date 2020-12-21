@@ -9,7 +9,7 @@
           include_role:
             name: tox
           vars:
-            tox_envlist: venv
+            tox_envlist: generate_poetry_version
             tox_extra_args: -vv --notest
             tox_install_siblings: false
             zuul_work_dir: "{{ zuul.projects['github.com/ansible-network/releases'].src_dir }}"
@@ -17,7 +17,8 @@
         - name: Generate version number for poetry
           args:
             chdir: "{{ ansible_user_dir }}/{{ zuul.project.src_dir }}"
-          shell: "{{ ansible_user_dir }}/{{ zuul.projects['github.com/ansible-network/releases'].src_dir }}/.tox/venv/bin/generate-poetry-version"
+            executable: /bin/bash
+          shell: "source {{ ansible_user_dir }}/{{ zuul.projects['github.com/ansible-network/releases'].src_dir }}/.tox/generate_poetry_version/bin/activate; generate-poetry-version"
       when: release_poetry_project is defined
 
     - name: Run build-python-release role
