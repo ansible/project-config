@@ -103,6 +103,7 @@
               - ansible-collections/community.crypto
               - ansible-collections/community.digitalocean
               - ansible-collections/community.docker
+              - ansible-collections/community.fortios
               - ansible-collections/community.general
               - ansible-collections/community.google
               - ansible-collections/community.grafana
