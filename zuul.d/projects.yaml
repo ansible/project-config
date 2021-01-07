@@ -700,6 +700,13 @@
       - publish-to-pypi
 
 - project:
+    name: github.com/ansible/ansible-core-image
+    default-branch: main
+    templates:
+      - execution-environments-queue
+      - system-required
+
+- project:
     name: github.com/ansible/ansible-runner
     default-branch: devel
     templates:
