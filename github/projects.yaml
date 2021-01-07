@@ -184,8 +184,9 @@
   description: An Ansible execution environment builder
   default-branch: devel
 - project: ansible/ansible-core-image
-  description: A container image of Ansible Core
+  description: A container image of ansible-core
   default-branch: main
+  homepage: https://quay.io/ansible/ansible-core
 - project: ansible/awx-ee
   description: An Ansible execution environment for AWX project
   default-branch: devel
