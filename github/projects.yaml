@@ -183,6 +183,9 @@
 - project: ansible/ansible-builder
   description: An Ansible execution environment builder
   default-branch: devel
+- project: ansible/ansible-core-image
+  description: A container image of Ansible Core
+  default-branch: main
 - project: ansible/awx-ee
   description: An Ansible execution environment for AWX project
   default-branch: devel
