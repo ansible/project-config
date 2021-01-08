@@ -688,6 +688,12 @@
     default-branch: devel
     templates:
       - ansible-test-network-integration
+    post:
+      jobs:
+        - ansible-core-upload-container-image:
+            branches: devel
+            vars:
+              upload_container_image_promote: false
 
 - project:
     name: github.com/ansible/ansible-builder
