@@ -19,12 +19,14 @@ To add new repos into Zuul, it's a two step process:
 PR1
 ---
 
-Add to `zuul/tenants.yaml <https://github.com/ansible/project-config/blob/master/zuul/tenants.yaml>`_
+- Add to `zuul/tenants.yaml <https://github.com/ansible/project-config/blob/master/zuul/tenants.yaml>`_
 
 PR2
 ---
 
-Add to `zuul.d/projects.yaml <https://github.com/ansible/project-config/blob/master/zuul.d/projects.yaml>`_
+- Add to `zuul.d/projects.yaml <https://github.com/ansible/project-config/blob/master/zuul.d/projects.yaml>`_
+- Add to `github/acls <https://github.com/ansible/project-config/tree/master/github/acls>`_
+- Add to `github/projects.yaml <https://github.com/ansible/project-config/blob/master/github/projects.yaml>`_
 
 Status
 ======
