@@ -255,7 +255,6 @@
     pre-run: playbooks/buildset-registry/pre.yaml
     run: playbooks/buildset-registry/run.yaml
     post-run: playbooks/buildset-registry/post.yaml
-    requires: container-image
     nodeset: ubuntu-bionic-1vcpu
     vars:
       container_command: docker
