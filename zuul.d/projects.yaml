@@ -72,6 +72,8 @@
       - ansible-collections-arista-eos
       - ansible-collections-arista-eos-units
       - ansible-python-jobs
+      - network-ee-container-image-jobs
+      - network-ee-tests
       - integrated-queue
       - publish-to-galaxy
       - publish-to-automation-hub
