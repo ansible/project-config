@@ -695,6 +695,10 @@
     default-branch: devel
     templates:
       - ansible-test-network-integration
+    third-party-check-silent:
+      jobs:
+        - ansible-runner-build-container-image-stable-2.9:
+            branches: stable-2.9
     post:
       jobs:
         - ansible-core-upload-container-image:
