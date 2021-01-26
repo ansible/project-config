@@ -27,3 +27,4 @@
     - name: Run pull-from-intermediate-registry role
       include_role:
         name: pull-from-intermediate-registry
+      when: use_intermediate_registry | default(True)
