@@ -109,6 +109,8 @@
       - ansible-collections-cisco-ios
       - ansible-collections-cisco-ios-units
       - ansible-python-jobs
+      - network-ee-container-image-jobs
+      - network-ee-tests
       - integrated-queue
       - publish-to-galaxy
       - publish-to-automation-hub
