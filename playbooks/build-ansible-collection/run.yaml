@@ -30,4 +30,3 @@
         name: deploy-artifacts
       when:
         - ansible_test_collections | default(False)
-
