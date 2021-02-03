@@ -1,3 +1,4 @@
+---
 - name: Remove previously added zuul-build-sshkey
   lineinfile:
     path: "~/.ssh/authorized_keys"
@@ -22,11 +23,11 @@
     src: "{{ zuul_temp_ssh_key }}"
     dest: "~/.ssh/id_rsa"
     mode: 0600
-    force: no
+    force: false
 
 - name: Install build public key as SSH key on all nodes
   copy:
     src: "{{ zuul_temp_ssh_key }}.pub"
     dest: "~/.ssh/id_rsa.pub"
     mode: 0644
-    force: no
+    force: false
