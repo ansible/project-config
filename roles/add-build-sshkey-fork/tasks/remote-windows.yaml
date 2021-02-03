@@ -1,0 +1,25 @@
+- name: Configure ssh on remote node
+  delegate_to: localhost
+  shell: |+
+    set -eu
+
+    echo "Add node to known_hosts"
+    ssh -o BatchMode=yes -o ConnectTimeout=10 -o StrictHostKeyChecking=no {{ ansible_user }}@{{ ansible_host }} echo success
+
+    echo
+
+    # We use scp here as this is much more performant than ansible copy
+    echo "Copy build ssh keys to node"
+    ssh -o BatchMode=yes -o ConnectTimeout=10 -o StrictHostKeyChecking=no {{ ansible_user }}@{{ ansible_host }} powershell "md -Force -Path .ssh"
+    scp -B {{ zuul_temp_ssh_key }} {{ ansible_user }}@{{ ansible_host }}:.ssh/id_rsa
+    scp -B {{ zuul_temp_ssh_key }}.pub {{ ansible_user }}@{{ ansible_host }}:.ssh/id_rsa.pub
+
+    echo "Add build ssh keys to authorized_keys"
+    {% if win_admin_ssh | default(false) %}
+    ssh -o BatchMode=yes {{ ansible_user }}@{{ ansible_host }} cmd /c "type .ssh\\id_rsa.pub >> %programdata%\\ssh\\administrators_authorized_keys"
+    {% else %}
+    ssh -o BatchMode=yes {{ ansible_user }}@{{ ansible_host }} cmd /c "type .ssh\\id_rsa.pub >> .ssh\\authorized_keys"
+    {% endif %}
+  register: windows_remote_ssh
+  # Ignore errors here because this should not break non-ssh enabled windows hosts
+  ignore_errors: true

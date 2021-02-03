@@ -16,7 +16,7 @@
   tasks:
     - name: Run add-build-sshkey role
       include_role:
-        name: add-build-sshkey
+        name: add-build-sshkey-fork
       vars:
         zuul_ssh_key_algorithm: "ecdsa"
         zuul_ssh_key_size: "521"

@@ -1,0 +1,11 @@
+- name: Check to see if ssh key was already created for this build
+  stat:
+    path: "{{ zuul_temp_ssh_key }}"
+  register: zuul_temp_ssh_key_stat
+  delegate_to: localhost
+  run_once: true
+  failed_when: false
+
+- name: Create a new key in workspace based on build UUID
+  include_tasks: create-key-and-replace.yaml
+  when: not zuul_temp_ssh_key_stat.stat.exists

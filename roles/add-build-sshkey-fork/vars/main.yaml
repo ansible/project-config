@@ -1,0 +1,4 @@
+zuul_temp_ssh_key: "{{ zuul.executor.work_root }}/{{ zuul.build }}_id_rsa"
+zuul_build_sshkey_cleanup: false
+zuul_ssh_key_algorithm: "rsa"
+zuul_ssh_key_size: "2048"
