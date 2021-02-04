@@ -1,0 +1,5 @@
+- name: Remove the build SSH key from all nodes
+  authorized_key:
+    user: "{{ ansible_ssh_user }}"
+    key: "{{ lookup('file', zuul_temp_ssh_key + '.pub') }}"
+    state: absent
