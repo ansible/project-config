@@ -21,13 +21,13 @@
 - name: Install build private key as SSH key on all nodes
   copy:
     src: "{{ zuul_temp_ssh_key }}"
-    dest: "~/.ssh/id_rsa"
+    dest: "~/.ssh/{{ zuul_ssh_key_dest }}"
     mode: 0600
     force: false
 
 - name: Install build public key as SSH key on all nodes
   copy:
     src: "{{ zuul_temp_ssh_key }}.pub"
-    dest: "~/.ssh/id_rsa.pub"
+    dest: "~/.ssh/{{ zuul_ssh_key_dest }}.pub"
     mode: 0644
     force: false
