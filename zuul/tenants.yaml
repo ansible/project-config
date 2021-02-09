@@ -37,6 +37,7 @@
           - ansible-collections/cisco.nxos
           - ansible-collections/cloud.common
           - ansible-collections/community.asa
+          - ansible-collections/community.aws
           - ansible-collections/community.vmware
           - ansible-collections/community.yang
           - ansible-collections/frr.frr
@@ -99,7 +100,6 @@
             projects:
               - ansible/ansible
               - ansible-community/collection_migration
-              - ansible-collections/community.aws
               - ansible-collections/community.azure
               - ansible-collections/community.cassandra
               - ansible-collections/community.crypto
