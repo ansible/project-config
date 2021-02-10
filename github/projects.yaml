@@ -96,6 +96,9 @@
 - project: ansible-collections/openvswitch.openvswitch
   description: Ansible Network Collection for Open vSwitch
   default-branch: main
+- project: ansible-collections/servicenow.itsm
+  description: Ansible Collection for ServiceNow ITSM
+  default-branch: main
 - project: ansible-collections/skydive
   description: Ansible Collection for Skydive network / protocols analyzer
 - project: ansible-collections/splunk.es
