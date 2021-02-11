@@ -195,6 +195,10 @@
       mysql:
     failure:
       mysql:
+      smtp:
+        from: ansible-zuul@redhat.com
+        to: ansible-zuul@redhat.com
+        subject: 'Periodic check of {change.project} for ref {change.ref} failed'
 
 - pipeline:
     name: periodic-1hr
