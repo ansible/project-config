@@ -748,21 +748,31 @@
       - publish-to-pypi
     check:
       jobs:
-        - ansible-runner-tox-ansible27
-        - ansible-runner-tox-ansible28
-        - ansible-runner-tox-ansible29
+        - ansible-runner-tox-ansible27:
+            branches: 'devel'
+        - ansible-runner-tox-ansible28:
+            branches: 'devel'
+        - ansible-runner-tox-ansible29:
+            branches: 'devel'
         - ansible-runner-tox-ansible-base:  # not expecting older stable versions to support ansible-base
             branches: 'devel'
         - ansible-tox-py27:
             branches: '^stable/1.*'
+        - ansible-tox-py36:
+            branches: '^stable/1.*'
     gate:
       jobs:
-        - ansible-runner-tox-ansible27
-        - ansible-runner-tox-ansible28
-        - ansible-runner-tox-ansible29
+        - ansible-runner-tox-ansible27:
+            branches: 'devel'
+        - ansible-runner-tox-ansible28:
+            branches: 'devel'
+        - ansible-runner-tox-ansible29:
+            branches: 'devel'
         - ansible-runner-tox-ansible-base:  # not expecting older stable versions to support ansible-base
             branches: 'devel'
         - ansible-tox-py27:
+            branches: '^stable/1.*'
+        - ansible-tox-py36:
             branches: '^stable/1.*'
 
 - project:
