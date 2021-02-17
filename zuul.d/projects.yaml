@@ -301,6 +301,7 @@
     templates:
       - system-required
       - ansible-collections-community-vmware
+      - integrated-vmware-queue
       - publish-to-galaxy
 
 - project:
@@ -422,6 +423,7 @@
     templates:
       - ansible-python3-jobs
       - ansible-collections-community-vmware-rest-code-generator
+      - integrated-vmware-queue
     check:
       jobs:
         - ansible-tox-linters
@@ -435,6 +437,7 @@
     templates:
       - system-required
       - ansible-collections-community-vmware-rest
+      - integrated-vmware-queue
       - publish-to-galaxy
       - publish-to-automation-hub
 
