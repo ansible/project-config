@@ -706,22 +706,6 @@
       jobs:
         - ansible-runner-build-container-image-stable-2.9:
             branches: stable-2.9
-    post:
-      jobs:
-        - ansible-core-upload-container-image:
-            branches: devel
-            vars:
-              upload_container_image_promote: false
-        - ansible-runner-upload-container-image:
-            branches: devel
-            dependencies:
-              - name: ansible-core-upload-container-image
-            vars:
-              upload_container_image_promote: false
-        - ansible-runner-upload-container-image-stable-2.9:
-            branches: stable-2.9
-            vars:
-              upload_container_image_promote: false
 
 - project:
     name: github.com/ansible/ansible-builder
