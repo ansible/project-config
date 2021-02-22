@@ -1,0 +1,9 @@
+---
+- hosts: all
+  vars:
+    create_core_ci_stage: dev
+    create_core_ci_session_key: "{{ ansible_core_ci.key }}"
+  tasks:
+    - name: Prepare the aws/sts session
+      include_role:
+        name: ansible-core-ci-session

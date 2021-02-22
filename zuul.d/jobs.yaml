@@ -283,3 +283,11 @@
     post-run: playbooks/container-image/upload.yaml
     secrets:
       - container_registry_credentials
+
+- job:
+    name: ansible-core-ci-aws-session
+    description: |
+      Create an AWS/sts session with an ansible-core-ci key.
+    pre-run: playbooks/ansible-core-ci/pre.yaml
+    secrets:
+      - ansible_core_ci

@@ -1,0 +1,16 @@
+---
+- name: Ensure create_core_ci_session_key is set
+  assert:
+    that:
+      - create_core_ci_session_key is defined
+      - create_core_ci_session_key|length > 0
+  no_log: true
+- name: Create a new session
+  uri:
+    method: PUT
+    body_format: json
+    body: '{"config": {"platform": "aws", "version": "sts"}, "auth": {"remote": {"key": "{{ create_core_ci_session_key }}", "nonce": null}}, "threshold": 1}'
+    url: "https://ansible-core-ci.testing.ansible.com/{{ create_core_ci_session_stage }}/aws/{{ create_core_ci_instance_id }}"
+    dest: "{{ create_core_ci_local_target_file }}"
+    mode: '0400'
+  no_log: true
