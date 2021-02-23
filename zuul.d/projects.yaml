@@ -747,8 +747,6 @@
             branches: '^stable/1.*'
     gate:
       jobs:
-        - ansible-runner-tox-ansible27:
-            branches: 'devel'
         - ansible-runner-tox-ansible28:
             branches: 'devel'
         - ansible-runner-tox-ansible29:
