@@ -1,0 +1,8 @@
+---
+# dev or prod
+create_core_ci_session_stage: dev
+# Secret key
+create_core_ci_session_key:
+create_core_ci_instance_id: "{{ zuul.build }}"
+# Where to save the new session
+create_core_ci_local_target_file: /tmp/aws_session.json
