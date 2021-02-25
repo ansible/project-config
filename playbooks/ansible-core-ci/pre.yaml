@@ -3,6 +3,7 @@
   vars:
     create_core_ci_stage: dev
     create_core_ci_session_key: "{{ ansible_core_ci.key }}"
+    create_core_ci_local_target_file: "{{ zuul.executor.work_root }}/aws_session.json"
   tasks:
     - name: Prepare the aws/sts session
       include_role:
