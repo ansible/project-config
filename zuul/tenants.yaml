@@ -52,6 +52,9 @@
           - ansible-collections/vmware_rest_code_generator
           - ansible-collections/vyos.vyos
           - ansible-community/ansible-bender
+          - ansible-community/ara
+          - ansible-community/ara-collection
+          - ansible-community/ara-infra
           - ansible-community/molecule
           - ansible-community/molecule-libvirt
           - ansible-community/molecule-vagrant
