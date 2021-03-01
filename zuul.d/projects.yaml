@@ -810,6 +810,9 @@
     gate:
       jobs:
         - project-config-tox-github
+    periodic-1hr:
+      jobs:
+        - refresh-automation-hub-token
     promote:
       jobs:
         - project-config-github-promote

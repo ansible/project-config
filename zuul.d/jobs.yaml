@@ -148,6 +148,20 @@
       release_poetry_project: true
 
 - job:
+    name: refresh-automation-hub-token
+    description: |
+      Nightly job to refresh our offline token for automation hub
+
+      See https://access.redhat.com/articles/3626371 for expire information.
+    final: true
+    run: playbooks/refresh-automation-hub-token/run.yaml
+    secrets:
+      - secret: ansible_automation_hub_secret
+        name: ansible_galaxy_info
+    nodeset:
+      nodes: []
+
+- job:
     name: release-ansible-collection-automation-hub
     description: |
       Release ansible collection to https://cloud.redhat.com/ansible/automation-hub
