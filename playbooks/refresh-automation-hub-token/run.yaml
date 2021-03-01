@@ -1,0 +1,6 @@
+---
+- hosts: localhost
+  tasks:
+    - name: Refresh offline token
+      no_log: true
+      shell: "curl https://sso.redhat.com/auth/realms/redhat-external/protocol/openid-connect/token -d grant_type=refresh_token -d client_id=cloud-services -d refresh_token=\"{{ ansible_galaxy_info.token }}\" --fail --silent --show-error --output /dev/null"
