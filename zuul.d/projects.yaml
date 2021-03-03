@@ -14,6 +14,7 @@
       - system-required
       - publish-to-galaxy
       - publish-to-automation-hub
+      - ansible-collections-community-aws
 
 - project:
     name: github.com/ansible-collections/ansible.netcommon
@@ -170,7 +171,9 @@
     name: github.com/ansible-collections/community.aws
     default-branch: main
     templates:
+      - system-required
       - publish-to-galaxy-3pci
+      - ansible-collections-community-aws
 
 - project:
     name: github.com/ansible-collections/community.azure
