@@ -5,6 +5,10 @@
       include_role:
         name: bindep
 
+    - name: Ensure tox
+      include_role:
+        name: ensure-tox
+
     - name: Run revoke-sudo role
       include_role:
         name: revoke-sudo
