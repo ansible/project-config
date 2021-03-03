@@ -452,6 +452,8 @@
       - ansible-collections-vyos-vyos
       - ansible-collections-vyos-vyos-units
       - ansible-python-jobs
+      - network-ee-container-image-jobs
+      - network-ee-tests
       - integrated-queue
       - publish-to-galaxy
       - publish-to-automation-hub
