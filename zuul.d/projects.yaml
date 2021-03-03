@@ -172,7 +172,7 @@
     default-branch: main
     templates:
       - system-required
-      - publish-to-galaxy-3pci
+      - publish-to-galaxy
       - ansible-collections-community-aws
 
 - project:
