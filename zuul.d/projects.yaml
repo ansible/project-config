@@ -129,6 +129,8 @@
       - ansible-collections-cisco-iosxr
       - ansible-collections-cisco-iosxr-units
       - ansible-python-jobs
+      - network-ee-container-image-jobs
+      - network-ee-tests
       - integrated-queue
       - publish-to-galaxy
       - publish-to-automation-hub
