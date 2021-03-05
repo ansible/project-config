@@ -1,4 +1,3 @@
----
 - name: Create Temp SSH key
   command: ssh-keygen -t {{ zuul_ssh_key_algorithm }} -N '' -C 'zuul-build-sshkey' -f {{ zuul_temp_ssh_key }} -b {{ zuul_ssh_key_size }}
   delegate_to: localhost

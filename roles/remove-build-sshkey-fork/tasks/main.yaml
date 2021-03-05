@@ -1,4 +1,3 @@
----
 - name: Remove the build SSH key from all nodes
   authorized_key:
     user: "{{ ansible_ssh_user }}"

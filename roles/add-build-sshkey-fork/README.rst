@@ -11,8 +11,14 @@ newly generated private key.
 **Role Variables**
 
 .. zuul:rolevar:: zuul_temp_ssh_key
+   :default: ``{{ zuul.executor.work_root }}/{{ zuul.build }}_id_rsa``
 
    Where to put the newly-generated SSH private key.
+
+.. zuul:rolevar:: zuul_ssh_key_dest
+   :default: id_rsa
+
+   File name for the the newly-generated SSH private key.
 
 .. zuul:rolevar:: zuul_build_sshkey_cleanup
    :default: false
@@ -20,3 +26,15 @@ newly generated private key.
    Remove previous build sshkey. Set it to true for single use static node.
    Do not set it to true for multi-slot static nodes as it removes the
    build key configured by other jobs.
+
+.. zuul:rolevar:: zuul_ssh_key_algorithm
+   :default: rsa
+
+   The digital signature algorithm to be used to generate the key. Default value
+   'rsa'.
+
+.. zuul:rolevar:: zuul_ssh_key_size
+   :default: 3072
+
+   Specifies the number of bits in the key to create. The default length is
+   3072 bits (RSA).

@@ -1,4 +1,3 @@
----
 - name: Check to see if ssh key was already created for this build
   stat:
     path: "{{ zuul_temp_ssh_key }}"

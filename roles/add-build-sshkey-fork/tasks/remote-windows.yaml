@@ -1,4 +1,3 @@
----
 - name: Configure ssh on remote node
   delegate_to: localhost
   shell: |+
