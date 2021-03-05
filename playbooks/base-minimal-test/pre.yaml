@@ -18,9 +18,9 @@
       include_role:
         name: add-build-sshkey-fork
 
-    - name: Run add-build-sshkey role
+    - name: Run add-build-sshkey role (ECDSA)
       include_role:
-        name: add-build-sshkey-fork (ECDSA)
+        name: add-build-sshkey-fork
       vars:
         zuul_ssh_key_algorithm: ecdsa
         zuul_ssh_key_size: 521
