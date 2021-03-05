@@ -143,6 +143,8 @@
       - ansible-collections-cisco-nxos-units
       - ansible-python-jobs
       - integrated-queue
+      - network-ee-container-image-jobs
+      - network-ee-tests
       - publish-to-galaxy
       - publish-to-automation-hub
 
@@ -381,6 +383,8 @@
       - ansible-collections-openvswitch-openvswitch-units
       - ansible-python-jobs
       - integrated-queue
+      - network-ee-container-image-jobs
+      - network-ee-tests
       - publish-to-galaxy
       - publish-to-automation-hub
 
