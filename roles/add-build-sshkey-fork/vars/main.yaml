@@ -1,3 +1,4 @@
+---
 zuul_build_sshkey_cleanup: false
 zuul_ssh_key_algorithm: "rsa"
 zuul_ssh_key_size: "3072"
