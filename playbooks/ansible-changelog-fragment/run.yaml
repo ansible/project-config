@@ -1,15 +1,35 @@
 ---
+# There is a new changelog fragment, OR: there is a new plugin and no changes
+# of existing files. Fail otherwise.
+
 - hosts: localhost
   gather_facts: false
   tasks:
-    - name: Check for changelog fragments
-      args:
+    - name: Look for changelog fragment
+      command:
         chdir: "{{ zuul.executor.src_root }}/{{ zuul.project.canonical_name }}"
-      shell: git show --name-status --exit-code --oneline --diff-filter=A | grep changelogs/fragments/
-      register: r
-      failed_when: r.rc > 1
+        cmd: "git diff {{ zuul.project.default-branch }} --name-status --exit-code --diff-filter=A -- changelogs/fragments/"
+      register: pr_changelog_fragment
+      failed_when: pr_changelog_fragment.rc > 1
 
-    - name: Changelog fragment failed
-      fail:
-        msg: "Your pull-request is missing a changelog fragment, please add one. It should explain to end users the reason for your change."
-      when: r.rc
+    - name: Look for new plugin
+      command:
+        chdir: "{{ zuul.executor.src_root }}/{{ zuul.project.canonical_name }}"
+        cmd: "git diff {{ zuul.project.default-branch }} --name-status --exit-code --diff-filter=A -- plugins/"
+      register: pr_new_plugin
+      failed_when: pr_new_plugin.rc > 1
+
+    - name: Look for modified and deleted files
+      command:
+        chdir: "{{ zuul.executor.src_root }}/{{ zuul.project.canonical_name }}"
+        cmd: "git diff {{ zuul.project.default-branch }} --name-status --exit-code --diff-filter=MD"
+      register: pr_modified_files
+      failed_when: pr_modified_files.rc > 1
+
+    - name: Assert that a new changelog fragment is present if required
+      assert:
+        that:
+          - pr_changelog_fragment.rc == 1 or
+            pr_new_plugin.rc > pr_modified_files.rc
+        success_msg: "Your pull-request contains a new {{ pr_changelog_fragment.rc | bool | ternary('changelog fragment', 'plugin') }}."
+        fail_msg: "Your pull-request is missing a changelog fragment, please add one. It should explain to end users the reason for your change."
