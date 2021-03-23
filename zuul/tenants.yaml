@@ -61,6 +61,7 @@
           - ansible/cloud-ee
           - ansible/network
           - ansible/network-ee
+          - ansible-network/ansible_content_collections_metrics
           - ansible-network/arista_eos
           - ansible-network/aws
           - ansible-network/aws_management

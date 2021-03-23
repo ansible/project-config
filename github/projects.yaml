@@ -127,6 +127,9 @@
   description: Molecule LibVirt Provider
 - project: ansible-network/ansible-zuul-jobs
   description: Defines test jobs and roles
+- project: ansible-network/ansible_content_collections_metrics
+  description: The GUI provides a dashboard in terms of factual metrics system for the github projects managed by Ansible for content collections.
+  default-branch: main
 - project: ansible-network/aws_management
   description: IAM Policies and Management Tools for the Ansible Networking AWS Account
   default-branch: main
