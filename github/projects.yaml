@@ -193,6 +193,10 @@
   description: A container image of ansible-core
   default-branch: main
   homepage: https://quay.io/ansible/ansible-core
+- project: ansible/ansible-navigator
+  acl-config: acls/ansible/ansible-navigator.config
+  description: An Ansible execution environment for Ansible Navigator
+  default-branch: main
 - project: ansible/awx-ee
   description: An Ansible execution environment for AWX project
   default-branch: devel
