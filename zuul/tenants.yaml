@@ -20,7 +20,6 @@
           # merge conflicts
           - ansible/ansible-builder
           - ansible/ansible-core-image
-          - ansible/ansible-navigator
           - ansible/ansible-runner
           - ansible/awx-ee
           - ansible/python-base-image
