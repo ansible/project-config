@@ -128,6 +128,7 @@
 - project: ansible-network/ansible-zuul-jobs
   description: Defines test jobs and roles
 - project: ansible-network/ansible_content_collections_metrics
+  acl-config: acls/ansible-network/ansible_content_collections_metrics.config
   description: The GUI provides a dashboard in terms of factual metrics system for the github projects managed by Ansible for content collections.
   default-branch: main
 - project: ansible-network/aws_management
