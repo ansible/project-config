@@ -738,6 +738,12 @@
       - system-required
 
 - project:
+    name: github.com/ansible/ansible-navigator
+    default-branch: main
+    templates:
+      - system-required
+
+- project:
     name: github.com/ansible/ansible-runner
     default-branch: devel
     templates:
