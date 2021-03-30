@@ -742,6 +742,7 @@
     default-branch: main
     templates:
       - system-required
+      - ansible-navigator-jobs
 
 - project:
     name: github.com/ansible/ansible-runner
