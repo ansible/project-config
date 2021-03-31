@@ -739,6 +739,7 @@
 
 - project:
     name: github.com/ansible/ansible-navigator
+    merge-mode: squash-merge
     default-branch: main
     templates:
       - system-required
