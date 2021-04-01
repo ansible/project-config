@@ -1,2 +1,0 @@
----
-zuul_temp_ssh_key: "{{ zuul.executor.src_root }}/../{{ zuul.build }}_id_{{ zuul_ssh_key_algorithm }}"
