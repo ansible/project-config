@@ -21,6 +21,8 @@ PR1
 
 - Add to `zuul/tenants.yaml <https://github.com/ansible/project-config/blob/master/zuul/tenants.yaml>`_
 
+note: Follow up to the merge of the PR, Zuul will refresh it's configuration. The job is called `windmill-config-deploy`. For various reason, the update may fail, you can take a look at the previous runs here: https://dashboard.zuul.ansible.com/t/ansible/builds?job_name=windmill-config-deploy
+
 PR2
 ---
 
