@@ -6,4 +6,4 @@
   tasks:
     - name: Run remove-build-sshkey role
       include_role:
-        name: remove-build-sshkey-fork
+        name: remove-build-sshkey
