@@ -45,6 +45,7 @@
           - ansible-collections/ibm.qradar
           - ansible-collections/junipernetworks.junos
           - ansible-collections/openvswitch.openvswitch
+          - ansible-collections/servicenow.itsm
           - ansible-collections/skydive
           - ansible-collections/splunk.es
           - ansible-collections/symantec.epm
@@ -133,7 +134,6 @@
               - ansible-collections/community.windows
               - ansible-collections/community.zabbix
               - ansible-collections/hetzner.hcloud
-              - ansible-collections/servicenow.itsm
               - ansible/awx
               - ansible/galaxy
               - ansible/galaxy_ng
