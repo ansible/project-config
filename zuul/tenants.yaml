@@ -110,6 +110,7 @@
               - ansible-collections/community.cassandra
               - ansible-collections/community.crypto
               - ansible-collections/community.digitalocean
+              - ansible-collections/community.dns
               - ansible-collections/community.docker
               - ansible-collections/community.fortios
               - ansible-collections/community.general
