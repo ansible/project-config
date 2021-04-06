@@ -199,6 +199,10 @@
     templates:
       - publish-to-galaxy-3pci
 - project:
+    name: github.com/ansible-collections/community.dns
+    templates:
+      - publish-to-galaxy-3pci
+- project:
     name: github.com/ansible-collections/community.docker
     templates:
       - publish-to-galaxy-3pci
