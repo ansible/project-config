@@ -14,9 +14,16 @@
 
 - hosts: all:!appliance
   tasks:
-    - name: Run add-build-sshkey role
+    - name: Run add-build-sshkey role (RSA)
       include_role:
         name: add-build-sshkey
+
+    - name: Run add-build-sshkey role (ECDSA)
+      include_role:
+        name: add-build-sshkey
+      vars:
+        zuul_ssh_key_algorithm: ecdsa
+        zuul_ssh_key_size: 521
 
     - name: Run start-zuul-console role
       include_role:
