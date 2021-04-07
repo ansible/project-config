@@ -402,6 +402,9 @@
     merge-mode: squash-merge
     templates:
       - system-required
+      - ansible-collections-servicenow-itsm-units
+      - publish-to-galaxy
+      - publish-to-automation-hub
 
 - project:
     name: github.com/ansible-collections/skydive
