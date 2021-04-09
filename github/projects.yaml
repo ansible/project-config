@@ -198,6 +198,8 @@
   acl-config: acls/ansible/ansible-navigator.config
   description: An Ansible execution environment for Ansible Navigator
   default-branch: main
+- project: ansible/ansible-zuul-jobs
+  description: Zuul job definitions for the Ansible tenant.
 - project: ansible/awx-ee
   description: An Ansible execution environment for AWX project
   default-branch: devel
