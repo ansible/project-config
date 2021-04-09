@@ -795,6 +795,7 @@
 
 - project:
     name: github.com/ansible/ansible-zuul-jobs
+    merge-mode: squash-merge
     templates:
       - system-required
 
