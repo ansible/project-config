@@ -43,6 +43,7 @@
     merge-mode: squash-merge
     templates:
       - system-required
+      - integrated-queue
 
 - project:
     name: github.com/ansible-collections/ansible.posix
