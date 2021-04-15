@@ -20,6 +20,15 @@
   changed_when: check_changelog_fragment__rebase.stdout_lines | length > 1
 
 
+- name: Look for any diff between current and target branches
+  command:
+    cmd: "{{ check_changelog_fragment__git_command }}"
+    chdir: "{{ check_changelog_fragment__git_directory }}"
+  register: check_changelog_fragment__any_change
+  failed_when: check_changelog_fragment__any_change.rc > 1
+  changed_when: false
+
+
 - name: Look for a new changelog fragment
   command:
     cmd: "{{ check_changelog_fragment__git_command }} --diff-filter=A -- changelogs/fragments/"
@@ -52,11 +61,13 @@
 - name: Assert that a new changelog fragment is present if required
   assert:
     that:
-      - check_changelog_fragment__new_fragment.rc == 1 or
+      - check_changelog_fragment__any_change.rc == 0 or
+        check_changelog_fragment__new_fragment.rc == 1 or
         check_changelog_fragment__new_plugin.rc > check_changelog_fragment__changed_files.rc
     success_msg: >-
       Your pull-request contains a new {{ 'changelog fragment' if
       check_changelog_fragment__new_fragment.rc | bool else 'plugin' }}.
     fail_msg: >-
       Your pull-request is missing a changelog fragment, please add one.
-      It should explain to end users the reason for your change.
+      It should explain to end users the reason for your change. See
+      {{ check_changelog_fragment__reference }}
