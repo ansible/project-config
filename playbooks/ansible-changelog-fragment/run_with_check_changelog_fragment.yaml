@@ -1,0 +1,10 @@
+---
+- hosts: localhost
+  gather_facts: false
+  vars:
+    check_changelog_fragment__git_directory: "{{ zuul.executor.src_root }}/{{ zuul.project.canonical_name }}"
+    check_changelog_fragment__target_branch: "{{ zuul.project['default-branch'] }}"
+  tasks:
+    - name: Run check_changelog_fragment role
+      include_role:
+        name: check_changelog_fragment
