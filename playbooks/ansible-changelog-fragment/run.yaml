@@ -1,10 +1,15 @@
 ---
 - hosts: localhost
   gather_facts: false
-  vars:
-    check_changelog_fragment__git_directory: "{{ zuul.executor.src_root }}/{{ zuul.project.canonical_name }}"
-    check_changelog_fragment__target_branch: "{{ zuul.project.default-branch }}"
   tasks:
-    - name: Run check_changelog_fragment role
-      include_role:
-        name: check_changelog_fragment
+    - name: Check for changelog fragments
+      args:
+        chdir: "{{ zuul.executor.src_root }}/{{ zuul.project.canonical_name }}"
+      shell: git show --name-status --exit-code --oneline --diff-filter=A | grep changelogs/fragments/
+      register: r
+      failed_when: r.rc > 1
+
+    - name: Changelog fragment failed
+      fail:
+        msg: "Your pull-request is missing a changelog fragment, please add one. It should explain to end users the reason for your change."
+      when: r.rc
