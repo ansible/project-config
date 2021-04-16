@@ -9,17 +9,9 @@
 #     * the PR renames existing file(s)
 
 
-# Rebasing ensures diffs are related to the PR, and only to the PR. If the task
-# fails, this is because of conflicts, i.e. the PR is not ready for merging (or
-# one of git_directory or target_branch is incorrect).
-- name: Rebase the PR branch on the top of the target branch
-  command:
-    chdir: "{{ check_changelog_fragment__git_directory }}"
-    cmd: "git rebase {{ check_changelog_fragment__target_branch }}"
-  register: check_changelog_fragment__rebase
-  changed_when: check_changelog_fragment__rebase.stdout_lines | length > 1
-
-
+# This role needs to not fail when called by a scheduled job, that means the
+# check must be bypassed if not triggered by a PR commit. An empty diff seems
+# to be a good marker to achieve this.
 - name: Look for any diff between current and target branches
   command:
     cmd: "{{ check_changelog_fragment__git_command }}"
@@ -29,45 +21,47 @@
   changed_when: false
 
 
-- name: Look for a new changelog fragment
-  command:
-    cmd: "{{ check_changelog_fragment__git_command }} --diff-filter=A -- changelogs/fragments/"
-    chdir: "{{ check_changelog_fragment__git_directory }}"
-  register: check_changelog_fragment__new_fragment
-  failed_when: check_changelog_fragment__new_fragment.rc > 1
-  changed_when: false
+- name: Look for specific changes and check conditional changelog fragment
+  when: check_changelog_fragment__any_change.rc == 1
+  block:
+    - name: Look for a new changelog fragment
+      command:
+        cmd: "{{ check_changelog_fragment__git_command }} --diff-filter=A -- changelogs/fragments/"
+        chdir: "{{ check_changelog_fragment__git_directory }}"
+      register: check_changelog_fragment__new_fragment
+      failed_when: check_changelog_fragment__new_fragment.rc > 1
+      changed_when: false
 
 
-- name: Look for a new plugin
-  command:
-    cmd: "{{ check_changelog_fragment__git_command }} --diff-filter=A -- plugins/"
-    chdir: "{{ check_changelog_fragment__git_directory }}"
-  register: check_changelog_fragment__new_plugin
-  failed_when: check_changelog_fragment__new_plugin.rc > 1
-  changed_when: false
+    - name: Look for a new plugin
+      command:
+        cmd: "{{ check_changelog_fragment__git_command }} --diff-filter=A -- plugins/"
+        chdir: "{{ check_changelog_fragment__git_directory }}"
+      register: check_changelog_fragment__new_plugin
+      failed_when: check_changelog_fragment__new_plugin.rc > 1
+      changed_when: false
 
 
-- name: Look for changes of existing files (modified, deleted, renamed)
-  command:
-    cmd: "{{ check_changelog_fragment__git_command }} --diff-filter=MDR"
-    chdir: "{{ check_changelog_fragment__git_directory }}"
-  register: check_changelog_fragment__changed_files
-  failed_when: check_changelog_fragment__changed_files.rc > 1
-  changed_when: false
+    - name: Look for changes of existing files (modified, deleted, renamed)
+      command:
+        cmd: "{{ check_changelog_fragment__git_command }} --diff-filter=MDR"
+        chdir: "{{ check_changelog_fragment__git_directory }}"
+      register: check_changelog_fragment__changed_files
+      failed_when: check_changelog_fragment__changed_files.rc > 1
+      changed_when: false
 
 
-# There is a new changelog fragment (rc=1) OR: there is a new plugin (rc=1) AND
-# no changes of existing files (rc=0).
-- name: Assert that a new changelog fragment is present if required
-  assert:
-    that:
-      - check_changelog_fragment__any_change.rc == 0 or
-        check_changelog_fragment__new_fragment.rc == 1 or
-        check_changelog_fragment__new_plugin.rc > check_changelog_fragment__changed_files.rc
-    success_msg: >-
-      Your pull-request contains a new {{ 'changelog fragment' if
-      check_changelog_fragment__new_fragment.rc | bool else 'plugin' }}.
-    fail_msg: >-
-      Your pull-request is missing a changelog fragment, please add one.
-      It should explain to end users the reason for your change. See
-      {{ check_changelog_fragment__reference }}
+    # There is a new changelog fragment (rc=1) OR: there is a new plugin (rc=1)
+    # AND no changes of existing files (rc=0).
+    - name: Assert that a new changelog fragment is present if required
+      assert:
+        that:
+          - check_changelog_fragment__new_fragment.rc == 1 or
+            check_changelog_fragment__new_plugin.rc > check_changelog_fragment__changed_files.rc
+        success_msg: >-
+          Your pull-request contains a new {{ 'changelog fragment' if
+          check_changelog_fragment__new_fragment.rc | bool else 'plugin' }}.
+        fail_msg: >-
+          Your pull-request is missing a changelog fragment, please add one.
+          It should explain to end users the reason for your change. See
+          {{ check_changelog_fragment__reference }}
