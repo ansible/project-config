@@ -12,7 +12,7 @@
 # This role needs to not fail when called by a scheduled job, that means the
 # check must be bypassed if not triggered by a PR commit. An empty diff seems
 # to be a good marker to achieve this.
-- name: Look for any diff between current and target branches
+- name: Look for any diff between current branch and origin
   command:
     cmd: "{{ check_changelog_fragment__git_command }}"
     chdir: "{{ check_changelog_fragment__git_directory }}"
