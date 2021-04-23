@@ -17,6 +17,8 @@
     - name: Run add-build-sshkey role (RSA)
       include_role:
         name: add-build-sshkey
+      vars:
+        zuul_ssh_key_size: 2048
 
     - name: Run add-build-sshkey role (ECDSA)
       include_role:
