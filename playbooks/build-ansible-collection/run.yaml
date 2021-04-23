@@ -24,3 +24,9 @@
         ansible_galaxy_output_path: "{{ ansible_user_dir }}/artifacts"
         zuul_work_dir: "{{ ansible_user_dir }}/{{ item.src_dir }}"
       with_items: "{{ zuul.projects.values() | list }}"
+
+    - name: Fetch and install the artifacts
+      import_role:
+        name: deploy-artifacts
+      when:
+        - ansible_test_collections | default(False)
