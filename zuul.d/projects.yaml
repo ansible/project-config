@@ -14,7 +14,7 @@
       - system-required
       - publish-to-galaxy
       - publish-to-automation-hub
-      - ansible-collections-community-aws
+      - ansible-collections-amazon-aws
 
 - project:
     name: github.com/ansible-collections/ansible.netcommon
