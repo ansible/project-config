@@ -44,6 +44,8 @@
     templates:
       - system-required
       - integrated-queue
+      - ansible-collections-ansible-network-units
+      - publish-to-galaxy
 
 - project:
     name: github.com/ansible-collections/ansible.posix
