@@ -142,6 +142,7 @@
               - ansible/pylibssh
               - ansible/workshops
               - vmware/govmomi
+              - vmware/vsphere-automation-sdk-python
 
       github-3pci:
         untrusted-projects: []
