@@ -351,6 +351,8 @@
       - ansible-collections-frr-frr-units
       - ansible-python-jobs
       - integrated-queue
+      - network-ee-container-image-jobs
+      - network-ee-tests
       - publish-to-galaxy
       - publish-to-automation-hub
 
