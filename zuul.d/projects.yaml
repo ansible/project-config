@@ -500,8 +500,7 @@
 - project:
     name: github.com/ansible-community/molecule-libvirt
     templates:
-      - publish-to-pypi
-      - system-required
+      - noop-jobs
 
 - project:
     name: github.com/ansible-community/molecule-vagrant
