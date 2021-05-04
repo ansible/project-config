@@ -165,6 +165,8 @@
       - system-required
       - ansible-collections-cloud-common
       - ansible-python-jobs
+      - network-ee-container-image-jobs
+      - network-ee-tests
       - publish-to-galaxy
       - publish-to-automation-hub
 
