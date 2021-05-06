@@ -782,8 +782,6 @@
       - publish-to-pypi
     check:
       jobs:
-        - ansible-runner-tox-ansible28:
-            branches: 'devel'
         - ansible-runner-tox-ansible29:
             branches: 'devel'
         - ansible-runner-tox-ansible-base:  # not expecting older stable versions to support ansible-base
@@ -794,8 +792,6 @@
             branches: '^stable/1.*'
     gate:
       jobs:
-        - ansible-runner-tox-ansible28:
-            branches: 'devel'
         - ansible-runner-tox-ansible29:
             branches: 'devel'
         - ansible-runner-tox-ansible-base:  # not expecting older stable versions to support ansible-base
