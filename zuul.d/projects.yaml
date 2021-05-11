@@ -770,6 +770,7 @@
     templates:
       - system-required
       - ansible-navigator-jobs
+      - publish-to-pypi
 
 - project:
     name: github.com/ansible/ansible-runner
