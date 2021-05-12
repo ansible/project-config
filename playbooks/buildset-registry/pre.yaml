@@ -1,5 +1,5 @@
 ---
-- hosts: all
+- hosts: all:!appliance
   tasks:
     - name: Install container runtime
       include_role:
