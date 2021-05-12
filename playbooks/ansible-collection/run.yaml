@@ -5,5 +5,5 @@
       include_role:
         name: build-ansible-collection
       vars:
-        ansible_galaxy_executable: "{{ ansible_user_dir }}/{{ zuul.projects['github.com/ansible-network/releases'].src_dir }}/.tox/venv/bin/ansible-galaxy"
+        ansible_galaxy_executable: "{{ ansible_user_dir }}/{{ zuul.projects['github.com/ansible-network/releases'].src_dir }}/.tox/generate_ansible_collection/bin/ansible-galaxy"
         ansible_galaxy_output_path: "{{ ansible_user_dir }}/artifacts"
