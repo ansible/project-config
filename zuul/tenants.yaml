@@ -135,6 +135,7 @@
               - ansible-collections/community.windows
               - ansible-collections/community.zabbix
               - ansible-collections/hetzner.hcloud
+              - ansible-collections/kubernetes.core
               - ansible/awx
               - ansible/galaxy
               - ansible/galaxy_ng
