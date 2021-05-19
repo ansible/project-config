@@ -292,6 +292,7 @@
 - project:
     name: github.com/ansible-collections/community.okd
     templates:
+      - ansible-collections-community-okd
       - publish-to-galaxy-3pci
 
 - project:
