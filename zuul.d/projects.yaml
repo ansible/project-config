@@ -256,6 +256,7 @@
 - project:
     name: github.com/ansible-collections/community.kubernetes
     templates:
+      - ansible-collections-community-kubernetes
       - publish-to-galaxy-3pci
 
 - project:
