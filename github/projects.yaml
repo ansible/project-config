@@ -170,6 +170,8 @@
 - project: ansible-network/net_operations
   archived: true
   description: RETIRED, Ansible role for network operations automation
+- project: ansible-network/releases
+  description: Release jobs / content for Zuul
 - project: ansible-network/sandbox
   description: Sandbox for first time contributors
 - project: ansible-network/vyos
