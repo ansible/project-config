@@ -439,6 +439,7 @@
 
 - project:
     name: github.com/ansible-collections/splunk.es
+    default-branch: main
     merge-mode: squash-merge
     templates:
       - system-required
