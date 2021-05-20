@@ -103,6 +103,7 @@
   description: Ansible Collection for Skydive network / protocols analyzer
 - project: ansible-collections/splunk.es
   description: Ansible Collection for Splunk Enterprise
+  default-branch: main
 - project: ansible-collections/symantec.epm
   default-branch: main
   description: Ansible Collection for Symantec Endpoint Protection Manager
