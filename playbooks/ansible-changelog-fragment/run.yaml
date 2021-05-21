@@ -5,7 +5,7 @@
     - name: Check for changelog fragments
       args:
         chdir: "{{ zuul.executor.src_root }}/{{ zuul.project.canonical_name }}"
-      shell: git show --name-status --exit-code --oneline --diff-filter=A | grep changelogs/fragments/
+      shell: "git show HEAD...origin/{{ zuul.branch }} --name-status --exit-code --oneline --diff-filter=A | grep changelogs/fragments/"
       register: r
       failed_when: r.rc > 1
 
