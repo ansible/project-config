@@ -84,6 +84,16 @@
       nodes: []
 
 - job:
+    name: ansible-changelog-fragment2
+    description: Ensure PRs have generated changelog fragments.
+    run: playbooks/ansible-changelog-fragment/run2.yaml
+    files:
+      - ^plugins/.*$
+      - ^tests/.*$
+    nodeset:
+      nodes: []
+
+- job:
     name: project-config-tox-github
     parent: tox
     description: |
