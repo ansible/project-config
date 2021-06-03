@@ -201,6 +201,11 @@
       - publish-to-galaxy-3pci
 
 - project:
+    name: github.com/ansible-collections/community.ciscosmb
+    templates:
+      - publish-to-galaxy-3pci
+
+- project:
     name: github.com/ansible-collections/community.crypto
     templates:
       - publish-to-galaxy-3pci
