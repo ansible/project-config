@@ -108,6 +108,7 @@
               - ansible-community/collection_migration
               - ansible-collections/community.azure
               - ansible-collections/community.cassandra
+              - ansible-collections/community.ciscosmb
               - ansible-collections/community.crypto
               - ansible-collections/community.digitalocean
               - ansible-collections/community.dns
