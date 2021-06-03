@@ -39,7 +39,6 @@
           - ansible-collections/cloud.common
           - ansible-collections/community.asa
           - ansible-collections/community.aws
-          - ansible-collections/community.ciscosmb
           - ansible-collections/community.vmware
           - ansible-collections/community.yang
           - ansible-collections/frr.frr
@@ -109,6 +108,7 @@
               - ansible-community/collection_migration
               - ansible-collections/community.azure
               - ansible-collections/community.cassandra
+              - ansible-collections/community.ciscosmb
               - ansible-collections/community.crypto
               - ansible-collections/community.digitalocean
               - ansible-collections/community.dns
