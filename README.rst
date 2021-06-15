@@ -38,4 +38,4 @@ Status
 Talk to us
 ==========
 
-Freenode ``#ansible-zuul``
+Libera ``#ansible-zuul``
