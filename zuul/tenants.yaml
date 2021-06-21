@@ -28,8 +28,8 @@
           - ansible-collections/amazon.aws
           - ansible-collections/ansible.netcommon
           - ansible-collections/ansible.network
-          - ansible-collections/ansible.security
           - ansible-collections/ansible.posix
+          - ansible-collections/ansible.security
           - ansible-collections/ansible.utils
           - ansible-collections/arista.eos
           - ansible-collections/checkpoint
