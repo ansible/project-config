@@ -50,6 +50,18 @@
       - publish-to-automation-hub
 
 - project:
+    name: github.com/ansible-collections/ansible.security
+    default-branch: main
+    merge-mode: squash-merge
+    templates:
+      - system-required
+      - integrated-queue
+      - ansible-collections-ansible-security
+      - ansible-python-jobs
+      - publish-to-galaxy
+      - publish-to-automation-hub
+
+- project:
     name: github.com/ansible-collections/ansible.posix
     default-branch: main
     templates:
