@@ -69,6 +69,8 @@
       - integrated-queue
       - ansible-collections-ansible-security
       - publish-to-galaxy
+      - ansible-python-jobs
+      - publish-to-automation-hub
 
 - project:
     name: github.com/ansible-collections/ansible.utils
