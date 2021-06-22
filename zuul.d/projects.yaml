@@ -67,6 +67,8 @@
     templates:
       - system-required
       - integrated-queue
+      - ansible-collections-ansible-security
+      - publish-to-galaxy
 
 - project:
     name: github.com/ansible-collections/ansible.utils
