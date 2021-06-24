@@ -60,11 +60,6 @@
       - zuul: opendev.org/zuul/zuul-jobs
     post-timeout: 3600
     timeout: 1800
-    vars:
-      ara_report_executable: "/opt/venv/zuul-ansible/{{ ansible_version.full }}/bin/ara"
-      ara_report_type: html
-      ara_report_path: "{{ zuul.executor.log_root }}/ara-report"
-      ara_compress_html: false
     secrets:
       - rackspace_dfw_clouds_yaml
       - rackspace_iad_clouds_yaml

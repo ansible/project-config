@@ -2,14 +2,6 @@
 - hosts: localhost
   gather_facts: false
   tasks:
-    - name: Run ara-report role
-      include_role:
-        name: ara-report
-
-    - name: Run htmlify-logs role
-      include_role:
-        name: htmlify-logs
-
     - name: Run Zuul manifest role
       include_role:
         name: generate-zuul-manifest
