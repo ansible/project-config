@@ -107,6 +107,7 @@
             projects:
               - ansible/ansible
               - ansible-community/collection_migration
+              - ansible-collections/ansible.windows
               - ansible-collections/community.azure
               - ansible-collections/community.cassandra
               - ansible-collections/community.ciscosmb
