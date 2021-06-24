@@ -63,19 +63,16 @@
       github.com:
         check: in_progress
         comment: false
-        status: 'pending'
     success:
       github.com:
         check: success
         comment: false
         merge: true
-        status: 'success'
       mysql:
     failure:
       github.com:
         check: failure
         comment: false
-        status: 'failure'
       mysql:
     window-floor: 20
     window-increase-factor: 2
