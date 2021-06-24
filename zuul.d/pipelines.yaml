@@ -47,14 +47,14 @@
       github.com:
         label:
           - gate
-        status: "ansible-zuul\\[bot\\]:ansible/check:success"
+        status: "ansible-zuul:ansible/check:success"
         open: true
         current-patchset: true
     trigger:
       github.com:
         - event: pull_request
           action: status
-          status: "ansible-zuul\\[bot\\]:ansible/check:success"
+          status: "ansible-zuul:ansible/check:success"
         - event: pull_request
           action: labeled
           label:
