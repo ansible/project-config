@@ -47,6 +47,7 @@
       http://docs.openstack.org/infra/manual/developers.html#automated-testing
     manager: dependent
     precedence: high
+    supercedes: check
     require:
       github.com:
         label: gate
@@ -111,7 +112,6 @@
       http://docs.openstack.org/infra/manual/developers.html#automated-testing
     manager: supercedent
     precedence: high
-    supercedes: check
     post-review: true
     trigger:
       github.com:
