@@ -24,12 +24,10 @@
       github.com:
         check: success
         comment: false
-      mysql:
     failure:
       github.com:
         check: failure
         comment: false
-      mysql:
     dequeue:
       github.com:
         check: cancelled
@@ -70,12 +68,10 @@
         check: success
         comment: false
         merge: true
-      mysql:
     failure:
       github.com:
         check: failure
         comment: false
-      mysql:
     dequeue:
       github.com:
         check: cancelled
@@ -96,10 +92,6 @@
       github.com:
         - event: push
           ref: ^refs/heads/.*$
-    success:
-      mysql:
-    failure:
-      mysql:
 
 - pipeline:
     name: promote
@@ -123,11 +115,9 @@
     success:
       github.com:
         status: success
-      mysql:
     failure:
       github.com:
         status: failure
-      mysql:
 
 - pipeline:
     name: tag
@@ -139,10 +129,6 @@
       github.com:
         - event: push
           ref: ^refs/tags/.*$
-    success:
-      mysql:
-    failure:
-      mysql:
 
 - pipeline:
     name: pre-release
@@ -154,10 +140,6 @@
       github.com:
         - event: push
           ref: ^refs/tags/(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)-?((?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\.(?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*))*)$
-    success:
-      mysql:
-    failure:
-      mysql:
 
 - pipeline:
     name: release
@@ -170,13 +152,11 @@
         - event: push
           ref: ^refs/tags/(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)$
     success:
-      mysql:
       smtp:
         from: ansible-zuul@redhat.com
         to: ansible-zuul@redhat.com
         subject: 'Release of {change.project} for ref {change.ref} successful'
     failure:
-      mysql:
       smtp:
         from: ansible-zuul@redhat.com
         to: ansible-zuul@redhat.com
@@ -191,10 +171,7 @@
     trigger:
       timer:
         - time: '0 0 * * *'
-    success:
-      mysql:
     failure:
-      mysql:
       smtp:
         from: ansible-zuul@redhat.com
         to: ansible-zuul@redhat.com
@@ -209,10 +186,6 @@
     trigger:
       timer:
         - time: '0 * * * *'
-    success:
-      mysql:
-    failure:
-      mysql:
 
 - pipeline:
     name: periodic-6hr
@@ -223,10 +196,6 @@
     trigger:
       timer:
         - time: '0 */6 * * *'
-    success:
-      mysql:
-    failure:
-      mysql:
 
 - pipeline:
     name: periodic-weekly
@@ -239,10 +208,6 @@
         # Saturday 8am UTC is a better time to start weekend jobs, as Sunday
         # is a working day in some geographies.
         - time: '0 8 * * 6'
-    success:
-      mysql:
-    failure:
-      mysql:
 
 - pipeline:
     name: experimental
@@ -258,10 +223,8 @@
           comment: (?i)^\s*check experimental\s*$
     success:
       github.com: {}
-      mysql:
     failure:
       github.com: {}
-      mysql:
 
 - pipeline:
     name: unlabel-on-push
@@ -283,9 +246,6 @@
         unlabel:
           - gate
         comment: false
-      mysql:
-    failure:
-      mysql:
 
 - pipeline:
     name: lgtm
@@ -309,12 +269,10 @@
       github.com:
         comment: false
         status: success
-      mysql:
     failure:
       github.com:
         comment: false
         status: failure
-      mysql:
 
 - pipeline:
     name: merge-check
@@ -357,15 +315,12 @@
       github.com:
         check: success
         comment: false
-      mysql:
     failure:
       github.com:
         check: failure
         comment: false
-      mysql:
     # Don't report merge-failures to github.com
-    merge-failure:
-      mysql:
+    merge-failure: {}
 
 - pipeline:
     name: 3pci-check
@@ -398,15 +353,12 @@
       github-3pci:
         status: 'success'
         status-url: 'https://dashboard.zuul.ansible.com/t/ansible/buildset/{buildset.uuid}'
-      mysql:
     failure:
       github-3pci:
         status: 'failure'
         status-url: 'https://dashboard.zuul.ansible.com/t/ansible/buildset/{buildset.uuid}'
-      mysql:
     # Don't report merge-failures to github.com
-    merge-failure:
-      mysql:
+    merge-failure: {}
 
 - pipeline:
     name: third-party-check-silent
@@ -430,10 +382,5 @@
         - event: pull_request
           action: comment
           comment: (?i)^\s*recheck\s*$
-    success:
-      mysql:
-    failure:
-      mysql:
     # Don't report merge-failures to github.com
-    merge-failure:
-      mysql:
+    merge-failure: {}
