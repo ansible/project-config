@@ -30,6 +30,10 @@
         check: failure
         comment: false
       mysql:
+    dequeue:
+      github.com:
+        check: cancelled
+        comment: false
 
 - pipeline:
     name: gate
@@ -45,9 +49,7 @@
     precedence: high
     require:
       github.com:
-        label:
-          - gate
-        status: "ansible-zuul:ansible/check:success"
+        label: gate
         open: true
         current-patchset: true
     trigger:
@@ -57,8 +59,7 @@
           check: "ansible-zuul:ansible/check:success"
         - event: pull_request
           action: labeled
-          label:
-            - gate
+          label: gate
     start:
       github.com:
         check: in_progress
@@ -74,6 +75,10 @@
         check: failure
         comment: false
       mysql:
+    dequeue:
+      github.com:
+        check: cancelled
+        comment: false
     window-floor: 20
     window-increase-factor: 2
 
@@ -106,6 +111,7 @@
       http://docs.openstack.org/infra/manual/developers.html#automated-testing
     manager: supercedent
     precedence: high
+    supercedes: check
     post-review: true
     trigger:
       github.com:
