@@ -221,6 +221,8 @@
   description: An Ansible execution environment for Ansible Network Collections
   default-branch: main
   homepage: https://quay.io/ansible/network-ee
+- project: ansible/project-config
+  description: Zuul configuration files for the Ansible tenant
 - project: ansible/python-base-image
   description: A container image for running python projects
   default-branch: main
