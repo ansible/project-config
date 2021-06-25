@@ -61,6 +61,9 @@
         - event: pull_request
           action: labeled
           label: gate
+        - event: pull_request
+          action: comment
+          comment: (?i)^\s*recheck\s*$
     start:
       github.com:
         check: in_progress
