@@ -32,6 +32,8 @@
       github.com:
         check: cancelled
         comment: false
+    # Don't report merge-failures to github.com
+    merge-failure: {}
 
 - pipeline:
     name: gate
