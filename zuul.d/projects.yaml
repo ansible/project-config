@@ -958,6 +958,12 @@
         - workshops-tox-integration-windows
 
 - project:
+    name: github.com/pabelanger/pabelanger-sandbox1
+    3pci-check:
+      jobs:
+        - ansible-tox-linters
+
+- project:
     name: github.com/pycontribs/selinux
     templates:
       - system-required
