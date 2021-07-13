@@ -346,17 +346,20 @@
           comment: (?i)^\s*recheck\s*$
     start:
       github-3pci:
-        status: pending
-        status-url: 'https://dashboard.zuul.ansible.com/t/ansible/status/change/{change.number},{change.patchset}'
+        check: in_progress
         comment: false
     success:
       github-3pci:
-        status: 'success'
-        status-url: 'https://dashboard.zuul.ansible.com/t/ansible/buildset/{buildset.uuid}'
+        check: success
+        comment: false
     failure:
       github-3pci:
-        status: 'failure'
-        status-url: 'https://dashboard.zuul.ansible.com/t/ansible/buildset/{buildset.uuid}'
+        check: failure
+        comment: false
+    dequeue:
+      github-3pci:
+        check: cancelled
+        comment: false
     # Don't report merge-failures to github.com
     merge-failure: {}
 
