@@ -149,7 +149,12 @@
               - vmware/vsphere-automation-sdk-python
 
       github-3pci:
-        untrusted-projects: []
+        untrusted-projects:
+          # Don't load any configuration from these projects because we
+          # don't gate them, so they could wedge our config.
+          - include: []
+            projects:
+              - pabelanger/pabelanger-sandbox1
 
       opendev.org:
         untrusted-projects:
