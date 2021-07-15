@@ -45,6 +45,7 @@
           - ansible-collections/frr.frr
           - ansible-collections/ibm.qradar
           - ansible-collections/junipernetworks.junos
+          - ansible-collections/kubernetes.core
           - ansible-collections/openvswitch.openvswitch
           - ansible-collections/servicenow.itsm
           - ansible-collections/skydive
