@@ -419,7 +419,11 @@
 
 - project:
     name: github.com/ansible-collections/kubernetes.core
+    default-branch: main
+    merge-mode: squash-merge
     templates:
+      - system-required
+      - ansible-collections-kubernetes-core-units
       - publish-to-galaxy-3pci
 
 - project:
