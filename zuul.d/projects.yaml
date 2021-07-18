@@ -876,12 +876,6 @@
       jobs: []
 
 - project:
-    name: github.com/ansible/awx-ee
-    default-branch: devel
-    templates:
-      - system-required
-
-- project:
     name: github.com/ansible/cloud-ee
     default-branch: main
     templates:
