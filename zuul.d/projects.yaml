@@ -424,7 +424,7 @@
     templates:
       - system-required
       - ansible-collections-kubernetes-core-units
-      - publish-to-galaxy-3pci
+      - publish-to-galaxy
 
 - project:
     name: github.com/ansible-collections/openvswitch.openvswitch
