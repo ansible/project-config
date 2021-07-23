@@ -164,6 +164,9 @@
     This role provides the foundation for building network roles by providing
     modules and plugins that are common to all Ansible Network roles.
   default-branch: devel
+- project: ansible-network/network-runner
+  description: Ansible Network Runner
+  default-branch: devel
 - project: ansible-network/network_collections_migration
   description: Supported Ansible Network collections and migration scenarios
 - project: ansible-network/network_configurator
