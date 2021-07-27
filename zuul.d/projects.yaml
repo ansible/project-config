@@ -424,8 +424,6 @@
     templates:
       - system-required
       - ansible-collections-kubernetes-core-units
-      - network-ee-container-image-jobs
-      - network-ee-tests
       - publish-to-galaxy
 
 - project:
