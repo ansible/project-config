@@ -521,6 +521,7 @@
 - project:
     name: github.com/ansible-collections/vmware.vmware_rest
     default-branch: main
+    merge-mode: squash-merge
     templates:
       - system-required
       - ansible-collections-community-vmware-rest
