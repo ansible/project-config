@@ -96,6 +96,9 @@
 - project: ansible-collections/junipernetworks.junos
   description: Ansible Network Collection for Juniper JunOS
   default-branch: main
+- project: ansible-collections/kubernetes.core
+  description: The collection includes a variety of Ansible content to help automate the management of applications in Kubernetes and OpenShift clusters, as well as the provisioning and maintenance of clusters themselves.
+  default-branch: main
 - project: ansible-collections/openvswitch.openvswitch
   description: Ansible Network Collection for Open vSwitch
   default-branch: main
