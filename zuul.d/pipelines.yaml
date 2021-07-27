@@ -269,6 +269,7 @@
       github.com:
         comment: false
         status: success
+        review: approve
     failure:
       github.com:
         comment: false
