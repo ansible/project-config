@@ -253,13 +253,16 @@
       A pipeline to run lgtm jobs.
     manager: independent
     precedence: high
+    require:
+      github.com:
+        label: gate
+        open: true
+        current-patchset: true
     trigger:
       github.com:
         - event: pull_request
-          action:
-            - opened
-            - changed
-            - reopened
+          action: labeled
+          label: gate
     start:
       github.com:
         check: in_progress
