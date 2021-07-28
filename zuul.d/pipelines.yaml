@@ -68,6 +68,8 @@
         check: success
         comment: false
         merge: true
+        review: approve
+        review-body: "LGTM!"
     failure:
       github.com:
         check: failure
@@ -269,8 +271,6 @@
       github.com:
         comment: false
         status: success
-        review: approve
-        review-body: "LGTM!"
     failure:
       github.com:
         comment: false
