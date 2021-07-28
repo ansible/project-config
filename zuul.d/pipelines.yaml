@@ -259,22 +259,25 @@
           action:
             - opened
             - changed
-            - comment
             - reopened
     start:
       github.com:
+        check: in_progress
         comment: false
-        status: pending
     success:
       github.com:
+        check: success
         comment: false
-        status: success
         review: approve
         review-body: "LGTM!"
     failure:
       github.com:
+        check: failure
         comment: false
-        status: failure
+    dequeue:
+      github.com:
+        check: cancelled
+        comment: false
 
 - pipeline:
     name: merge-check
