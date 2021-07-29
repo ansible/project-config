@@ -260,7 +260,7 @@
       github.com:
         review:
           - type: approved
-            username: "ansible-zuul[bot]"
+            username: "ansible-zuul\\[bot\\]"
     require:
       github.com:
         label: gate
