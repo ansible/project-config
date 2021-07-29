@@ -256,6 +256,11 @@
       A pipeline to run lgtm jobs.
     manager: independent
     precedence: high
+    reject:
+      github.com:
+        review:
+          - type: approved
+            username: "ansible-zuul[bot]"
     require:
       github.com:
         label: gate
