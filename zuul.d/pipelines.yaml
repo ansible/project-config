@@ -30,7 +30,7 @@
         comment: false
     dequeue:
       github.com:
-        check: cancelled
+        check: skipped
         comment: false
 
 - pipeline:
