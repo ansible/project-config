@@ -15,8 +15,6 @@
       - publish-to-galaxy
       - publish-to-automation-hub
       - ansible-collections-amazon-aws
-      - network-ee-container-image-jobs
-      - network-ee-tests
 
 - project:
     name: github.com/ansible-collections/ansible.netcommon
@@ -532,8 +530,6 @@
       - integrated-vmware-queue
       - publish-to-galaxy
       - publish-to-automation-hub
-      - network-ee-container-image-jobs
-      - network-ee-tests
 
 - project:
     name: github.com/ansible-collections/vyos.vyos
