@@ -864,7 +864,6 @@
       - system-required
       - execution-environments-queue
       - ansible-python-jobs   # linting-only
-      - ansible-python3-jobs  # py3 tox jobs
       - publish-to-pypi
     check:
       jobs:
