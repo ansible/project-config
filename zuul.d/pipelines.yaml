@@ -271,6 +271,9 @@
         - event: pull_request
           action: labeled
           label: gate
+        - event: pull_request
+          action: comment
+          comment: (?i)^\s*recheck\s*$
     success:
       github.com:
         comment: false
