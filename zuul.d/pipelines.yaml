@@ -15,7 +15,6 @@
     require:
       github.com:
         label: gate
-        status: "ansible-zuul:ansible/check:(skipped|success)"
         open: true
         current-patchset: true
     trigger:
