@@ -109,7 +109,7 @@
       - playbooks/build-ansible-collection/post.yaml
     required-projects:
       - github.com/ansible-network/releases
-    nodeset: centos-8-1vcpu
+    nodeset: centos-8-stream
 
 - job:
     name: release-ansible-python
