@@ -53,6 +53,9 @@
         current-patchset: true
     trigger:
       github.com:
+        - event: check_run
+          action: completed
+          check: "ansible-zuul:ansible/check:success"
         - event: pull_request_review
           action: submitted
           state: approved
