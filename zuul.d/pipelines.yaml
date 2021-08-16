@@ -1,5 +1,39 @@
 ---
 - pipeline:
+    name: check
+    description: |
+      Newly uploaded patchsets enter this pipeline to receive an
+      initial +/-1 Verified vote.
+    manager: independent
+    precedence: normal
+    trigger:
+      github.com:
+        - event: pull_request
+          action:
+            - opened
+            - changed
+            - reopened
+        - event: pull_request
+          action: comment
+          comment: (?i)^\s*recheck\s*$
+    start:
+      github.com:
+        check: in_progress
+        comment: false
+    success:
+      github.com:
+        check: success
+        comment: false
+    failure:
+      github.com:
+        check: failure
+        comment: false
+    dequeue:
+      github.com:
+        check: skipped
+        comment: false
+
+- pipeline:
     name: gate
     description: |
       Changes that have been approved by core developers are enqueued
@@ -47,40 +81,6 @@
         comment: false
     window-floor: 20
     window-increase-factor: 2
-
-- pipeline:
-    name: check
-    description: |
-      Newly uploaded patchsets enter this pipeline to receive an
-      initial +/-1 Verified vote.
-    manager: independent
-    precedence: normal
-    trigger:
-      github.com:
-        - event: pull_request
-          action:
-            - opened
-            - changed
-            - reopened
-        - event: pull_request
-          action: comment
-          comment: (?i)^\s*recheck\s*$
-    start:
-      github.com:
-        check: in_progress
-        comment: false
-    success:
-      github.com:
-        check: success
-        comment: false
-    failure:
-      github.com:
-        check: failure
-        comment: false
-    dequeue:
-      github.com:
-        check: skipped
-        comment: false
 
 - pipeline:
     name: post
