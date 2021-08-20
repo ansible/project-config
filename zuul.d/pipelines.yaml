@@ -16,6 +16,9 @@
         - event: pull_request
           action: comment
           comment: (?i)^\s*recheck\s*$
+        - event: check_run
+          action: rerequested
+          check: "ansible-zuul:ansible/check:failure"
     start:
       github.com:
         check: in_progress
