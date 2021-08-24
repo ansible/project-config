@@ -840,7 +840,6 @@
       - execution-environments-queue
       - system-required
       - ansible-python-jobs
-      - ansible-python3-jobs
       - publish-to-pypi
 
 - project:
