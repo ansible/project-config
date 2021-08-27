@@ -401,17 +401,17 @@
     merge-failure: {}
 
 - pipeline:
-    name: aws-complete
-    description: On-demand pipeline for requesting a run against the complete set of integration tests in this collection. Leave review comment of "check aws-complete" to run jobs in this pipeline.
-    success-message: Build succeeded (aws-complete pipeline).
-    failure-message: Build failed (aws-complete pipeline).
+    name: ondemand
+    description: On-demand pipeline for requesting a run of optional tests in a collection. Leave review comment of "check ondemand" to run jobs in this pipeline.
+    success-message: Build succeeded (ondemand pipeline).
+    failure-message: Build failed (ondemand pipeline).
     manager: independent
     precedence: low
     trigger:
       github.com:
         - event: pull_request
           action: comment
-          comment: (?i)^\s*check aws?complete\s*$
+          comment: (?i)^\s*check ondemand\s*$
     success:
       github.com: {}
     failure:
