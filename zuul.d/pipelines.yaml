@@ -403,8 +403,6 @@
 - pipeline:
     name: ondemand
     description: On-demand pipeline for requesting a run of optional tests in a collection. Leave review comment of "check ondemand" to run jobs in this pipeline.
-    success-message: Build succeeded (ondemand pipeline).
-    failure-message: Build failed (ondemand pipeline).
     manager: independent
     precedence: low
     trigger:
@@ -412,7 +410,15 @@
         - event: pull_request
           action: comment
           comment: (?i)^\s*check ondemand\s*$
+    start:
+      github.com:
+        check: in_progress
+        comment: false
     success:
-      github.com: {}
+      github.com:
+        check: success
+        comment: false
     failure:
-      github.com: {}
+      github.com:
+        check: failure
+        comment: false
