@@ -293,17 +293,6 @@
         review-body: "LGTM!"
 
 - pipeline:
-    name: merge-check
-    description: >
-      Each time a change merges, this pipeline verifies that all open changes
-      on the same project are still mergeable.
-    failure-message: Build failed (merge-check pipeline).
-    manager: independent
-    precedence: low
-    ignore-dependencies: true
-    trigger: {}
-
-- pipeline:
     name: third-party-check
     description: |
       Newly uploaded patchsets to projects that are external to Ansible
