@@ -219,21 +219,27 @@
         - time: '0 8 * * 6'
 
 - pipeline:
-    name: experimental
-    description: On-demand pipeline for requesting a run against a set of jobs that are not yet gating. Leave review comment of "check experimental" to run jobs in this pipeline.
-    success-message: Build succeeded (experimental pipeline).
-    failure-message: Build failed (experimental pipeline).
+    name: ondemand
+    description: On-demand pipeline for requesting a run of optional tests in a collection. Leave review comment of "check ondemand" to run jobs in this pipeline.
     manager: independent
     precedence: low
     trigger:
       github.com:
         - event: pull_request
           action: comment
-          comment: (?i)^\s*check experimental\s*$
+          comment: (?i)^\s*check ondemand\s*$
+    start:
+      github.com:
+        check: in_progress
+        comment: false
     success:
-      github.com: {}
+      github.com:
+        check: success
+        comment: false
     failure:
-      github.com: {}
+      github.com:
+        check: failure
+        comment: false
 
 - pipeline:
     name: unlabel-on-push
@@ -399,26 +405,3 @@
           comment: (?i)^\s*recheck\s*$
     # Don't report merge-failures to github.com
     merge-failure: {}
-
-- pipeline:
-    name: ondemand
-    description: On-demand pipeline for requesting a run of optional tests in a collection. Leave review comment of "check ondemand" to run jobs in this pipeline.
-    manager: independent
-    precedence: low
-    trigger:
-      github.com:
-        - event: pull_request
-          action: comment
-          comment: (?i)^\s*check ondemand\s*$
-    start:
-      github.com:
-        check: in_progress
-        comment: false
-    success:
-      github.com:
-        check: success
-        comment: false
-    failure:
-      github.com:
-        check: failure
-        comment: false
