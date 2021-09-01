@@ -599,6 +599,12 @@
       - system-required
 
 - project:
+    name: github.com/ansible-community/molecule
+    default-branch: main
+    templates:
+      - noop-jobs
+
+- project:
     name: github.com/ansible-community/molecule-libvirt
     default-branch: main
     templates:
