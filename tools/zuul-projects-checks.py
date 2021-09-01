@@ -14,6 +14,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+import subprocess
 import sys
 import yaml
 
@@ -31,8 +32,7 @@ def normalize(s):
 def check_projects_sorted():
     """Check that the projects are in alphabetical order per section."""
 
-    print("\nChecking project list for alphabetical order")
-    print("============================================")
+    print("\n➜ Checking project list for alphabetical order")
 
     errors = False
     last = ""
@@ -49,22 +49,70 @@ def check_projects_sorted():
     return errors
 
 
+def check_projects_default_branch_with_gh():
+    """Check the project default-branches are in sync with Github."""
+
+    print("\n➜ Checking if Github and local default-branch config is consist")
+
+    errors = False
+    try:
+        subprocess.check_call(["gh", "auth", "status"])
+    except FileNotFoundError:
+        print("  WARNING: gh command not available. skipping the check")
+        return errors
+    except subprocess.CalledProcessError:
+        print("  WARNING: gh command is not configured, "
+              "skipping the check")
+        return errors
+
+    for entry in projects:
+        current = entry["project"]["name"]
+        if not current.startswith("github.com/"):
+            continue
+        expected_branch = entry["project"].get("default-branch", "master")
+        gh_repo = current[11:]
+        real_default_branch = subprocess.check_output(
+            [
+                "gh",
+                "repo",
+                "view",
+                gh_repo,
+                "--json",
+                "defaultBranchRef",
+                "--jq",
+                ".defaultBranchRef.name",
+            ],
+            text=True,
+        ).rstrip()
+        if real_default_branch != expected_branch:
+            print(
+                f"  ERROR: Repo {current}'s default-branch should "
+                f"be {real_default_branch}"
+            )
+            errors = False
+    if not errors:
+        print("... all fine.")
+    return errors
+
+
 def check_projects_default_branch():
     """Check that the projects default-branch is in sync."""
 
-    print("\nChecking project default-branch")
-    print("===============================")
+    print("\n➜ Checking local default-branch consistency")
 
     errors = False
     for gh in github_projects:
         for entry in projects:
-            current = entry['project']['name']
-            if gh['project'] in current:
-                github_default_branch = gh.get('default-branch')
-                zuul_default_branch = entry['project'].get('default-branch')
+            current = entry["project"]["name"]
+            if "github.com/" + gh["project"] == current:
+                github_default_branch = gh.get("default-branch")
+                zuul_default_branch = entry["project"].get("default-branch")
                 if github_default_branch != zuul_default_branch:
-                    print("  ERROR: Wrong default-branch: %s" %
-                          current)
+                    print(
+                        f"  ERROR: Wrong default-branch for {current} "
+                        f"{github_default_branch} in github/projects.yaml vs "
+                        f"{zuul_default_branch} in zuul.d/projects.yaml "
+                    )
                     errors = True
                 break
 
@@ -79,8 +127,7 @@ def check_release_jobs():
     release_templates = []
 
     errors = False
-    print("\nChecking release jobs")
-    print("======================")
+    print("\n➜ Checking release jobs")
     for entry in projects:
         project = entry['project']
         name = project['name']
@@ -105,8 +152,7 @@ def blacklist_jobs():
     blacklist_templates = []
 
     errors = False
-    print("\nChecking for obsolete jobs and templates")
-    print("=========================================")
+    print("\n➜ Checking for obsolete jobs and templates")
     for entry in projects:
         project = entry['project']
         name = project['name']
@@ -150,8 +196,7 @@ def check_pipelines(project, pipeline_name):
 
 def check_voting():
     errors = False
-    print("\nChecking voting status of jobs")
-    print("==============================")
+    print("\n➜ Checking voting status of jobs")
 
     for entry in projects:
         project = entry['project']
@@ -177,8 +222,7 @@ def check_only_boilerplate():
     """Check for redundant boilerplate with not jobs."""
 
     errors = False
-    print("\nChecking that every project has entries")
-    print("======================")
+    print("\n➜ Checking that every project has entries")
     for entry in projects:
         project = entry['project']
         if len(project.keys()) <= 1:
@@ -199,6 +243,7 @@ def check_only_boilerplate():
 def check_all():
 
     errors = check_projects_sorted()
+    errors = check_projects_default_branch_with_gh() or errors
     errors = check_projects_default_branch() or errors
     errors = blacklist_jobs() or errors
     errors = check_release_jobs() or errors
