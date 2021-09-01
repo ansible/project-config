@@ -58,7 +58,6 @@
           - ansible-community/ara
           - ansible-community/ara-collection
           - ansible-community/ara-infra
-          - ansible-community/molecule
           - ansible-community/molecule-libvirt
           - ansible-community/molecule-vagrant
           - ansible/cloud-ee
