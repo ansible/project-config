@@ -131,6 +131,7 @@
 - project: ansible-community/molecule
   description: Molecule aids in the development and testing of Ansible roles
 - project: ansible-community/molecule-libvirt
+  default-branch: main
   description: Molecule LibVirt Provider
 - project: ansible-network/ansible-zuul-jobs
   description: Defines test jobs and roles
