@@ -343,9 +343,8 @@
     templates:
       - publish-to-galaxy-3pci
 
-# TODO: This repository has been renamed to github.com/openshift/community.okd
 - project:
-    name: github.com/ansible-collections/community.okd
+    name: github.com/openshift/community.okd
     default-branch: main
     templates:
       - ansible-collections-community-okd
