@@ -344,7 +344,7 @@
       - publish-to-galaxy-3pci
 
 - project:
-    name: github.com/openshift/community.okd
+    name: github.com/ansible-collections/community.okd
     default-branch: main
     templates:
       - ansible-collections-community-okd
@@ -1003,6 +1003,13 @@
         - workshops-tox-integration-security
         - workshops-tox-integration-smart-mgmt
         - workshops-tox-integration-windows
+
+- project:
+    name: github.com/openshift/community.okd
+    default-branch: main
+    templates:
+      - ansible-collections-community-okd
+      - publish-to-galaxy-3pci
 
 - project:
     name: github.com/pabelanger/pabelanger-sandbox1
