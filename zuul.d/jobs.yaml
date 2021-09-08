@@ -259,7 +259,7 @@
     pre-run: playbooks/buildset-registry/pre.yaml
     run: playbooks/buildset-registry/run.yaml
     post-run: playbooks/buildset-registry/post.yaml
-    nodeset: ubuntu-bionic-1vcpu
+    nodeset: ubuntu-bionic-2vcpu
     vars:
       container_command: docker
     secrets:
