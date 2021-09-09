@@ -235,6 +235,3 @@
 - project: ansible/workshops
   description: Training Course for Ansible Automation Platform
   default-branch: devel
-- project: openshift/community.okd
-  description: OKD/Openshift collection for Ansible
-  default-branch: main
