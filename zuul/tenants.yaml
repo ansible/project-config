@@ -128,7 +128,6 @@
               - ansible-collections/community.mongodb
               - ansible-collections/community.mysql
               - ansible-collections/community.network
-              - ansible-collections/community.okd
               - ansible-collections/community.postgresql
               - ansible-collections/community.proxysql
               - ansible-collections/community.rabbitmq
