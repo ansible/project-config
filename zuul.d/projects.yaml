@@ -885,7 +885,6 @@
     merge-mode: squash-merge
     templates:
       - system-required
-      - ansible-navigator-jobs
       - publish-to-pypi
 
 - project:
