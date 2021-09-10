@@ -344,13 +344,6 @@
       - publish-to-galaxy-3pci
 
 - project:
-    name: github.com/ansible-collections/community.okd
-    default-branch: main
-    templates:
-      - ansible-collections-community-okd
-      - publish-to-galaxy-3pci
-
-- project:
     name: github.com/ansible-collections/community.postgresql
     default-branch: main
     templates:
