@@ -39,6 +39,7 @@
           - ansible-collections/cloud.common
           - ansible-collections/community.asa
           - ansible-collections/community.aws
+          - ansible-collections/community.healthchecksio
           - ansible-collections/community.vmware
           - ansible-collections/community.yang
           - ansible-collections/frr.frr
