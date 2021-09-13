@@ -294,6 +294,12 @@
 
 - pipeline:
     name: third-party-check
+    # ⚠️  you should probably use 3pci-check instead of this pipeline
+    # the plan is to deprecate third-party-check, now that we have the 2nd
+    # GitHub app working
+    # The main issue today is we need someone to add the 3pci github app to
+    # all the exiting 3pci projects listed in zuul tenant config. then we
+    # can remove this pipeline
     description: |
       Newly uploaded patchsets to projects that are external to Ansible
       enter this pipeline to receive an initial +/-1 Verified vote.
