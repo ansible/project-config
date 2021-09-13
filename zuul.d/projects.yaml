@@ -290,6 +290,12 @@
       - publish-to-galaxy-3pci
 
 - project:
+    name: github.com/ansible-collections/community.healthchecksio
+    default-branch: main
+    templates:
+      - publish-to-galaxy-3pci
+
+- project:
     name: github.com/ansible-collections/community.hrobot
     default-branch: main
     templates:
