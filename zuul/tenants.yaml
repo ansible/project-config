@@ -119,6 +119,7 @@
               - ansible-collections/community.google
               - ansible-collections/community.grafana
               - ansible-collections/community.hashi_vault
+              - ansible-collections/community.healthchecksio
               - ansible-collections/community.hrobot
               - ansible-collections/community.internal_test_tools
               - ansible-collections/community.kubernetes
