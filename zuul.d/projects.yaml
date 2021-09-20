@@ -471,6 +471,7 @@
       - ansible-collections-kubernetes-core-units
       - network-ee-container-image-jobs
       - publish-to-galaxy
+      - publish-to-automation-hub
 
 - project:
     name: github.com/ansible-collections/openvswitch.openvswitch
@@ -1007,6 +1008,7 @@
     templates:
       - ansible-collections-community-okd
       - publish-to-galaxy-3pci
+      - publish-to-automation-hub-3pci
 
 - project:
     name: github.com/pabelanger/pabelanger-sandbox1
