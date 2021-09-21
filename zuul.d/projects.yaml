@@ -1008,7 +1008,6 @@
     templates:
       - ansible-collections-community-okd
       - publish-to-galaxy-3pci
-      - publish-to-automation-hub-3pci
 
 - project:
     name: github.com/pabelanger/pabelanger-sandbox1
