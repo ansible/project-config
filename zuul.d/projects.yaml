@@ -46,6 +46,8 @@
     templates:
       - system-required
       - integrated-queue
+      - ansible-collections-ansible-network
+      - network-ee-container-image-jobs
       - ansible-collections-ansible-network-units
       - ansible-python-jobs
       - publish-to-galaxy
