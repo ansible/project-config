@@ -839,7 +839,6 @@
     templates:
       - execution-environments-queue
       - system-required
-      - ansible-python-jobs
       - publish-to-pypi
 
 - project:
