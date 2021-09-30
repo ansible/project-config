@@ -892,7 +892,6 @@
     templates:
       - system-required
       - execution-environments-queue
-      - ansible-python-jobs   # linting-only
       - publish-to-pypi
     check:
       jobs:
