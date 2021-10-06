@@ -1,6 +1,6 @@
 ---
 # dev or prod
-create_core_ci_session_stage: dev
+create_core_ci_session_stage: prod
 # Secret key
 create_core_ci_session_key:
 create_core_ci_instance_id: "{{ zuul.build }}"
