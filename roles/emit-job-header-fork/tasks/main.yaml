@@ -1,5 +1,5 @@
-# We don't want this to run for every host, it should only run once.
-- run_once: yes
+---
+- run_once: true
   block:
     - name: Setup log path fact
       include_role:
@@ -25,7 +25,7 @@
 
     - name: Pause for 5 minutes
       pause:
-          minutes: 5
+        minutes: 5
 
     - name: Print node information
       debug:
@@ -43,4 +43,4 @@
       loop: "{{ query('inventory_hostnames', 'all,!localhost') }}"
       loop_control:
         loop_var: zj_item
-      ignore_errors: yes
+      ignore_errors: true
