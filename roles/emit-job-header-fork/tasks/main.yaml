@@ -1,0 +1,46 @@
+# We don't want this to run for every host, it should only run once.
+- run_once: yes
+  block:
+    - name: Setup log path fact
+      include_role:
+        name: set-zuul-log-path-fact
+
+    - name: Print job information
+      debug:
+        msg: |
+          # Job Information
+          Ansible Version: {{ ansible_version['full'] }}
+          Job: {{ zuul.job }}
+          Pipeline: {{ zuul.pipeline }}
+          Executor: {{ zuul.executor.hostname }}
+          {% if zuul.change_url is defined %}
+          Triggered by: {{ zuul.change_url }}
+          {% endif %}
+          {% if zuul_log_url is defined and zuul_log_path is defined %}
+          Log URL (when completed): {{ zuul_log_url }}/{{ zuul_log_path }}/
+          {% endif %}
+          {% if zuul.event_id is defined %}
+          Event ID: {{ zuul.event_id }}
+          {% endif %}
+
+    - name: Pause for 5 minutes
+      pause:
+          minutes: 5
+
+    - name: Print node information
+      debug:
+        msg: |
+          # Node Information
+          Inventory Hostname: {{ zj_item }}
+          Hostname: {{ hostvars[zj_item]['ansible_hostname']|default('unknown') }}
+          Username: {{ hostvars[zj_item]['ansible_user']|default('unknown') }}
+          Distro: {{ hostvars[zj_item]['ansible_distribution'] | default('unknown') }} {{ hostvars[zj_item]['ansible_distribution_version'] | default('unknown') }}
+          Provider: {{ hostvars[zj_item]['nodepool']['provider'] }}
+          Label: {{ hostvars[zj_item]['nodepool']['label'] }}
+          {% if hostvars[zj_item]['nodepool']['interface_ip'] is defined %}
+          Interface IP: {{ hostvars[zj_item]['nodepool']['interface_ip'] }}
+          {% endif %}
+      loop: "{{ query('inventory_hostnames', 'all,!localhost') }}"
+      loop_control:
+        loop_var: zj_item
+      ignore_errors: yes
