@@ -33,6 +33,12 @@
 
 - hosts: all:!appliance*
   tasks:
+    - name: Install git (AWS EC2)
+      package:
+        name: git
+        state: present
+      become: true
+      when: nodepool.provider.startswith("ec2")
     - name: Run prepare-workspace-git role
       include_role:
         name: prepare-workspace-git
