@@ -4,7 +4,7 @@
   tasks:
     - name: Run emit-job-header role
       include_role:
-        name: emit-job-header-fork
+        name: emit-job-header
       vars:
         zuul_log_url: https://logs.zuul.ansible.com
 
