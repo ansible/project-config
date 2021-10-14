@@ -38,6 +38,11 @@
         name: git
         state: present
       become: true
+      # cloud-init may also be running in parallel
+      register: result
+      retries: 3
+      delay: 10
+      until: result is not failed
       when: nodepool.provider.startswith("ec2")
     - name: Run prepare-workspace-git role
       include_role:
