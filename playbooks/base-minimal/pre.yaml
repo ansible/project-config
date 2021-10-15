@@ -33,6 +33,17 @@
 
 - hosts: all:!appliance*
   tasks:
+    - name: Install git (AWS EC2)
+      package:
+        name: git
+        state: present
+      become: true
+      # cloud-init may also be running in parallel
+      register: result
+      retries: 6
+      delay: 10
+      until: result is not failed
+      when: nodepool.provider.startswith("ec2")
     - name: Run prepare-workspace-git role
       include_role:
         name: prepare-workspace-git
