@@ -31,19 +31,15 @@
       include_role:
         name: start-zuul-console
 
+- hosts: controller
+  tasks:
+    - name: Ensure the EC2 nodes are up to date
+      when: nodepool.provider.startswith("ec2")
+      include_role:
+        name: install-base-packages
+
 - hosts: all:!appliance*
   tasks:
-    - name: Install git (AWS EC2)
-      package:
-        name: git
-        state: present
-      become: true
-      # cloud-init may also be running in parallel
-      register: result
-      retries: 6
-      delay: 10
-      until: result is not failed
-      when: nodepool.provider.startswith("ec2")
     - name: Run prepare-workspace-git role
       include_role:
         name: prepare-workspace-git
