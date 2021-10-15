@@ -1,0 +1,4 @@
+---
+install_base_packages__packages:
+  - git
+  - unbound

@@ -1,0 +1,33 @@
+---
+- name: Include OS-specific variables
+  include_vars: "{{ item }}"
+  with_first_found:
+    - "{{ ansible_distribution }}-{{ ansible_distribution_major_version }}.yaml"
+    - "{{ ansible_distribution }}.{{ ansible_architecture }}.yaml"
+    - "{{ ansible_distribution }}.yaml"
+    - "{{ ansible_os_family }}.yaml"
+    - "default.yaml"
+
+- name: Upgrade packages
+  package:
+    update_cache: true
+    name: '*'
+    state: 'latest'
+  become: true
+  # cloud-init may also be running in parallel
+  register: result
+  retries: 6
+  delay: 10
+  until: result is not failed
+- name: Install base packages
+  package:
+    name: "{{ install_base_packages__packages }}"
+    state: present
+  become: true
+  register: result
+  retries: 6
+  delay: 10
+  until: result is not failed
+- name: Reboot the machine with the new kernel
+  reboot:
+  become: true

@@ -1,0 +1,8 @@
+---
+install_base_packages__packages:
+  - git
+  - virtualenv
+  - tox
+  - unbound
+  - python2.7
+  - libpython2.7-dev
