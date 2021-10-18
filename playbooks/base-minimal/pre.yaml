@@ -27,7 +27,7 @@
         zuul_ssh_key_algorithm: ecdsa
         zuul_ssh_key_size: 521
 
-- hosts: controller
+- hosts: all:!appliance*
   tasks:
     - name: Ensure the EC2 nodes are up to date
       when: nodepool.provider.startswith("ec2")
