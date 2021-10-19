@@ -223,6 +223,8 @@
       - system-required
       - publish-to-galaxy
       - ansible-collections-community-aws
+      - network-ee-container-image-jobs
+      - network-ee-tests
 
 - project:
     name: github.com/ansible-collections/community.azure
@@ -390,6 +392,8 @@
       - system-required
       - ansible-collections-community-vmware
       - integrated-vmware-queue
+      - network-ee-container-image-jobs
+      - network-ee-tests
       - publish-to-galaxy
 
 - project:
