@@ -1,11 +1,12 @@
 ---
 - hosts: all
+  vars:
+    base64_manifest: "{{ aws_workshops_data.base64_manifest }}"
+    redhat_username: "{{ aws_workshops_data.redhat_username }}"
+    redhat_password: "{{ aws_workshops_data.redhat_password }}"
+    offline_token: "{{ aws_workshops_data.offline_token }}"
+    developer_mode: true
   tasks:
-    - name: Copy tower-license
-      copy:
-        dest: '{{ ansible_user_dir }}/{{ zuul.project.src_dir }}/provisioner/tower_license.json'
-        content: '{{ aws_workshops_data.tower_license }}'
-
     - name: Ensure the aws folder exist in HOME
       file:
         path: '{{ ansible_env.HOME }}/.aws'
