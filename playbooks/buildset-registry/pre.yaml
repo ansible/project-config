@@ -5,18 +5,33 @@
       include_role:
         name: "ensure-{{ (container_command == 'docker') | ternary('docker', 'podman') }}"
 
-    # NOTE(pabelanger): we force docker until we can figure out podman IPV6 issue
-    - name: Install docker runtime
-      when: buildset_registry is not defined
-      include_role:
-        name: ensure-docker
+    - when: ansible_distribution != 'Fedora'
+      block:
+        # note(pabelanger): we force docker until we can figure out podman ipv6 issue
+        - name: install docker runtime
+          when: buildset_registry is not defined
+          include_role:
+            name: ensure-docker
+        - name: run buildset registry (if not already running)
+          when: buildset_registry is not defined
+          include_role:
+            name: run-buildset-registry
+          vars:
+            container_command: docker
 
-    - name: Run buildset registry (if not already running)
-      when: buildset_registry is not defined
-      include_role:
-        name: run-buildset-registry
-      vars:
-        container_command: docker
+    - when: ansible_distribution == 'Fedora'
+      block:
+        # note(pabelanger): we force docker until we can figure out podman ipv6 issue
+        - name: install docker runtime
+          when: buildset_registry is not defined
+          include_role:
+            name: ensure-podman
+        - name: run buildset registry (if not already running)
+          when: buildset_registry is not defined
+          include_role:
+            name: run-buildset-registry
+          vars:
+            container_command: podman
 
     - name: Use buildset registry
       include_role:
