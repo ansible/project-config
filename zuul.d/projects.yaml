@@ -241,6 +241,12 @@
       - publish-to-galaxy-3pci
 
 - project:
+    name: github.com/ansible-collections/community.cockroachdb
+    default-branch: main
+    templates:
+      - publish-to-galaxy-3pci
+
+- project:
     name: github.com/ansible-collections/community.crypto
     default-branch: main
     templates:
