@@ -1,12 +1,12 @@
 ---
-- hosts: all:!appliance
+- hosts: fedora-34
   tasks:
-    - name: Install container runtime
-      include_role:
-        name: "ensure-{{ (container_command == 'docker') | ternary('docker', 'podman') }}"
-
     - when: ansible_distribution != 'Fedora'
       block:
+        - name: Install container runtime
+          include_role:
+            name: "ensure-{{ (container_command == 'docker') | ternary('docker', 'podman') }}"
+
         # note(pabelanger): we force docker until we can figure out podman ipv6 issue
         - name: install docker runtime
           when: buildset_registry is not defined
@@ -21,8 +21,7 @@
 
     - when: ansible_distribution == 'Fedora'
       block:
-        # note(pabelanger): we force docker until we can figure out podman ipv6 issue
-        - name: install docker runtime
+        - name: install podman runtime
           when: buildset_registry is not defined
           include_role:
             name: ensure-podman
