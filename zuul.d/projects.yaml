@@ -874,6 +874,7 @@
 - project:
     name: github.com/ansible/ansible-builder
     default-branch: devel
+    merge-mode: squash-merge
     templates:
       - execution-environments-queue
       - system-required
@@ -897,6 +898,7 @@
 - project:
     name: github.com/ansible/ansible-runner
     default-branch: devel
+    merge-mode: squash-merge
     templates:
       - system-required
       - execution-environments-queue
