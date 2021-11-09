@@ -91,6 +91,16 @@
       - tox.ini
 
 - job:
+    name: project-config-tox-linters
+    parent: ansible-tox-linters
+    description: |
+      Run some policy checks on zuul.d/projects.yaml.
+      Uses ``linters`` tox env.
+    pre-run: playbooks/configure-tox-with-gh-cli/pre.yaml
+    secrets:
+      - ansible_github_token
+
+- job:
     name: propose-github-updates
     abstract: true
     pre-run: playbooks/propose-github-updates/pre.yaml
