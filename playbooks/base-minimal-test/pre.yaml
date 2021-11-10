@@ -29,8 +29,8 @@
 
 - hosts: controller
   tasks:
-    - name: Ensure the EC2 nodes are up to date
-      when: nodepool.provider.startswith("ec2")
+    - name: Ensure the non-DIB nodes are up to date
+      when: nodepool.provider.startswith("ec2") or (ansible_distribution == 'Fedora' and ansible_distribution_version == '35')
       include_role:
         name: install-base-packages
 
