@@ -1,1 +1,4 @@
 .tox
+.local
+.config
+github_token_file.txt

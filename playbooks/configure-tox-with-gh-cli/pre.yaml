@@ -1,0 +1,23 @@
+---
+- hosts: all
+  tasks:
+    - name: Install gh cli
+      become: true
+      block:
+        - name: add gh-cli repo
+          shell: "dnf config-manager --add-repo https://cli.github.com/packages/rpm/gh-cli.repo"
+
+        - name: Install gh cli
+          yum:
+            name:
+              - gh
+            state: latest
+
+    - name: Copy github token into file
+      copy:
+        content: "{{ ansible_github_token.value }}"
+        dest: "{{ zuul.project.src_dir }}/github_token_file.txt"
+
+  roles:
+    - ensure-python
+    - ensure-tox
