@@ -968,9 +968,11 @@
     check:
       jobs:
         - project-config-tox-github
+        - project-config-tox-linters
     gate:
       jobs:
         - project-config-tox-github
+        - project-config-tox-linters
     periodic:
       jobs:
         - refresh-automation-hub-token
