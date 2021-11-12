@@ -17,7 +17,6 @@
 import subprocess
 import sys
 import yaml
-import os
 
 github_yaml = 'github/projects.yaml'
 github_projects = yaml.safe_load(open(github_yaml))
@@ -57,20 +56,19 @@ def check_projects_default_branch_with_gh():
 
     errors = False
     gh_token_file = "github_token_file.txt"
-    if os.path.isfile(gh_token_file):
-        try:
-            with open(gh_token_file) as fh:
-                gh_auth_login = ["gh", "auth", "login", "--with-token"]
-                subprocess.check_call(gh_auth_login, stdin=fh)
-        except FileNotFoundError:
-            print("  WARNING: gh command not available. skipping the check")
-            return errors
-        except subprocess.CalledProcessError:
-            print("  WARNING: gh auth login failed, skipping the check")
-            return errors
-        except Exception as e:
-            print("  WARNING: gh auth login error: {}".format(e))
-            return errors
+    try:
+        with open(gh_token_file) as fh:
+            gh_auth_login = ["gh", "auth", "login", "--with-token"]
+            subprocess.check_call(gh_auth_login, stdin=fh)
+    except FileNotFoundError:
+        print("  WARNING: gh command not available. skipping the check")
+        return errors
+    except subprocess.CalledProcessError:
+        print("  WARNING: gh auth login failed, skipping the check")
+        return errors
+    except Exception as e:
+        print("  WARNING: gh auth login error: {}".format(e))
+        return errors
 
     try:
         subprocess.check_call(["gh", "auth", "status"])
