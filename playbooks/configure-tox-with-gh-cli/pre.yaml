@@ -16,7 +16,7 @@
     - name: Copy github token into file
       copy:
         content: "{{ ansible_github_token.value }}"
-        dest: "{{ zuul_work_dir }}/github_token_file.txt"
+        dest: "{{ zuul.project.src_dir }}/github_token_file.txt"
 
   roles:
     - ensure-python
