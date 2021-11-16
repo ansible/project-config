@@ -100,7 +100,6 @@
     pre-run: playbooks/configure-tox-with-gh-cli/pre.yaml
     secrets:
       - ansible_github_token
-    voting: false
 
 - job:
     name: propose-github-updates
