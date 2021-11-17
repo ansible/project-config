@@ -30,7 +30,7 @@
 - hosts: all:!appliance
   tasks:
     - name: Ensure the non-DIB nodes are up to date
-      when: (nodepool.provider.startswith("ec2") and (nodepool.label.startswith("fedora") or nodepool.label.startswith("ubuntu") or nodepool.label.startswith("centos"))) or (ansible_distribution == 'Fedora' and ansible_distribution_version == '35'))
+      when: (nodepool.provider.startswith("ec2") and (nodepool.label.startswith("fedora") or nodepool.label.startswith("ubuntu") or nodepool.label.startswith("centos"))) or (ansible_distribution == 'Fedora' and ansible_distribution_version == '35')
       include_role:
         name: install-base-packages
 
