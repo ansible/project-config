@@ -18,6 +18,7 @@
           - ansible/ansible-zuul-jobs
           # After this point, sorting projects alphabetically will help
           # merge conflicts
+          - ansible/ansible-automation-platform-azure-billing
           - ansible/ansible-builder
           - ansible/ansible-core-image
           - ansible/ansible-navigator
