@@ -846,8 +846,6 @@
 - project:
     name: github.com/ansible/ansible
     default-branch: devel
-    templates:
-      - ansible-test-network-integration
     third-party-check-silent:
       jobs:
         - ansible-runner-build-container-image-stable-2.9:
