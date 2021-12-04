@@ -79,6 +79,7 @@
           - ansible-network/config_manager
           - ansible-network/content_store
           - ansible-network/juniper_junos
+          - ansible-network/k8s-node-pool-config
           - ansible-network/net_operations
           - ansible-network/network_collections_migration
           - ansible-network/network_configurator

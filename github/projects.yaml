@@ -161,6 +161,9 @@
 - project: ansible-network/content_store
   description: Ansible Network content store role
   default-branch: devel
+- project: ansible-network/k8s-node-pool-config
+  description: Node Pool Configuration via a Kubernetes DaemonSet Image
+  default-branch: main
 - project: ansible-network/network-engine
   description: >-
     This role provides the foundation for building network roles by providing
