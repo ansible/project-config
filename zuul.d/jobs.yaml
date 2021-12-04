@@ -81,7 +81,7 @@
       tox env.
     vars:
       tox_envlist: github
-    nodeset: centos-8-1vcpu
+    nodeset: centos-8-stream
     files:
       - github/projects.yaml
       - requirements.txt
@@ -108,7 +108,7 @@
     post-run: playbooks/propose-github-updates/post.yaml
     secrets:
       - github_proposal_bot
-    nodeset: centos-8-1vcpu
+    nodeset: centos-8-stream
 
 - job:
     name: build-ansible-collection
