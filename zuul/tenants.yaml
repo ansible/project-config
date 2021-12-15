@@ -16,7 +16,9 @@
           - ansible/project-config
         untrusted-projects:
           # Order matters, load common job repos first
-          - ansible/ansible-zuul-jobs
+          - ansible/ansible-zuul-jobs:
+              extra-config-paths: [zuul.ansible.d/*]
+
           # After this point, sorting projects alphabetically will help
           # merge conflicts
           - ansible/ansible-builder
