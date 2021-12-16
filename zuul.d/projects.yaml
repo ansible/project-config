@@ -383,6 +383,12 @@
       - publish-to-galaxy-3pci
 
 - project:
+    name: github.com/ansible-collections/community.sap
+    default-branch: main
+    templates:
+      - publish-to-galaxy-3pci
+
+- project:
     name: github.com/ansible-collections/community.sops
     default-branch: main
     templates:
