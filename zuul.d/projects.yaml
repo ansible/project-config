@@ -7,18 +7,6 @@
       - system-required
 
 - project:
-    name: github.com/ansible-collections/amazon.aws
-    default-branch: main
-    merge-mode: squash-merge
-    templates:
-      - system-required
-      - publish-to-galaxy
-      - publish-to-automation-hub
-      - ansible-collections-amazon-aws
-      - network-ee-container-image-jobs
-      - network-ee-tests
-
-- project:
     name: github.com/ansible-collections/ansible.netcommon
     default-branch: main
     merge-mode: squash-merge
@@ -214,15 +202,6 @@
       - ansible-collections-community-asa
       - ansible-collections-community-asa-units
       - publish-to-galaxy
-
-- project:
-    name: github.com/ansible-collections/community.aws
-    default-branch: main
-    merge-mode: squash-merge
-    templates:
-      - system-required
-      - publish-to-galaxy
-      - ansible-collections-community-aws
 
 - project:
     name: github.com/ansible-collections/community.azure
