@@ -218,11 +218,6 @@
 - project:
     name: github.com/ansible-collections/community.aws
     default-branch: main
-    merge-mode: squash-merge
-    templates:
-      - system-required
-      - publish-to-galaxy
-      - ansible-collections-community-aws
 
 - project:
     name: github.com/ansible-collections/community.azure
