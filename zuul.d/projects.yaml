@@ -877,25 +877,9 @@
       - execution-environments-queue
       - publish-to-pypi
     check:
-      jobs:
-        - ansible-runner-tox-ansible29:
-            branches: 'devel'
-        - ansible-runner-tox-ansible-base:  # not expecting older stable versions to support ansible-base
-            branches: 'devel'
-        - ansible-tox-py27:
-            branches: '^stable/1.*'
-        - ansible-tox-py36:
-            branches: '^stable/1.*'
+      jobs: []
     gate:
-      jobs:
-        - ansible-runner-tox-ansible29:
-            branches: 'devel'
-        - ansible-runner-tox-ansible-base:  # not expecting older stable versions to support ansible-base
-            branches: 'devel'
-        - ansible-tox-py27:
-            branches: '^stable/1.*'
-        - ansible-tox-py36:
-            branches: '^stable/1.*'
+      jobs: []
 
 - project:
     name: github.com/ansible/ansible-zuul-jobs
