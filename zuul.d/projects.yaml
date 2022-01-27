@@ -10,13 +10,6 @@
     name: github.com/ansible-collections/amazon.aws
     default-branch: main
     merge-mode: squash-merge
-    templates:
-      - system-required
-      - publish-to-galaxy
-      - publish-to-automation-hub
-      - ansible-collections-amazon-aws
-      - network-ee-container-image-jobs
-      - network-ee-tests
 
 - project:
     name: github.com/ansible-collections/ansible.netcommon
