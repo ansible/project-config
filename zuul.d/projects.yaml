@@ -206,179 +206,125 @@
 
 - project:
     name: github.com/ansible-collections/community.azure
-    templates:
-      - publish-to-galaxy-3pci
+    default-branch: master
 
 - project:
     name: github.com/ansible-collections/community.cassandra
-    templates:
-      - publish-to-galaxy-3pci
+    default-branch: master
 
 - project:
     name: github.com/ansible-collections/community.ciscosmb
     default-branch: main
-    templates:
-      - publish-to-galaxy-3pci
 
 - project:
     name: github.com/ansible-collections/community.cockroachdb
     default-branch: main
-    templates:
-      - publish-to-galaxy-3pci
 
 - project:
     name: github.com/ansible-collections/community.crypto
     default-branch: main
-    templates:
-      - publish-to-galaxy-3pci
 
 - project:
     name: github.com/ansible-collections/community.digitalocean
     default-branch: main
-    templates:
-      - publish-to-galaxy-3pci
+
 - project:
     name: github.com/ansible-collections/community.dns
     default-branch: main
-    templates:
-      - publish-to-galaxy-3pci
+
 - project:
     name: github.com/ansible-collections/community.docker
     default-branch: main
-    templates:
-      - publish-to-galaxy-3pci
 
 - project:
     name: github.com/ansible-collections/community.fortios
     default-branch: main
-    templates:
-      - publish-to-galaxy-3pci
 
 - project:
     name: github.com/ansible-collections/community.general
     default-branch: main
-    templates:
-      - publish-to-galaxy-3pci
 
 - project:
     name: github.com/ansible-collections/community.google
     default-branch: main
-    templates:
-      - publish-to-galaxy-3pci
 
 - project:
     name: github.com/ansible-collections/community.grafana
     default-branch: main
-    templates:
-      - publish-to-galaxy-3pci
 
 - project:
     name: github.com/ansible-collections/community.hashi_vault
     default-branch: main
-    templates:
-      - publish-to-galaxy-3pci
 
 - project:
     name: github.com/ansible-collections/community.healthchecksio
     default-branch: main
-    templates:
-      - publish-to-galaxy-3pci
 
 - project:
     name: github.com/ansible-collections/community.hrobot
     default-branch: main
-    templates:
-      - publish-to-galaxy-3pci
 
 - project:
     name: github.com/ansible-collections/community.internal_test_tools
     default-branch: main
-    templates:
-      - publish-to-galaxy-3pci
 
 - project:
     name: github.com/ansible-collections/community.kubernetes
     default-branch: main
     templates:
       - ansible-collections-community-kubernetes
-      - publish-to-galaxy-3pci
 
 - project:
     name: github.com/ansible-collections/community.kubevirt
     default-branch: main
-    templates:
-      - publish-to-galaxy-3pci
 
 - project:
     name: github.com/ansible-collections/community.libvirt
     default-branch: main
-    templates:
-      - publish-to-galaxy-3pci
 
 - project:
     name: github.com/ansible-collections/community.molecule
     default-branch: main
-    templates:
-      - publish-to-galaxy-3pci
 
 - project:
     name: github.com/ansible-collections/community.mongodb
-    templates:
-      - publish-to-galaxy-3pci
+    default-branch: master
 
 - project:
     name: github.com/ansible-collections/community.mysql
     default-branch: main
-    templates:
-      - publish-to-galaxy-3pci
 
 - project:
     name: github.com/ansible-collections/community.network
     default-branch: main
-    templates:
-      - publish-to-galaxy-3pci
 
 - project:
     name: github.com/ansible-collections/community.postgresql
     default-branch: main
-    templates:
-      - publish-to-galaxy-3pci
 
 - project:
     name: github.com/ansible-collections/community.proxysql
     default-branch: main
-    templates:
-      - publish-to-galaxy-3pci
 
 - project:
     name: github.com/ansible-collections/community.rabbitmq
     default-branch: main
-    templates:
-      - publish-to-galaxy-3pci
 
 - project:
     name: github.com/ansible-collections/community.routeros
     default-branch: main
-    templates:
-      - publish-to-galaxy-3pci
 
 - project:
     name: github.com/ansible-collections/community.sap
     default-branch: main
-    templates:
-      - publish-to-galaxy-3pci
 
 - project:
     name: github.com/ansible-collections/community.sops
     default-branch: main
-    templates:
-      - publish-to-galaxy-3pci
 
 - project:
     name: github.com/ansible-collections/community.windows
     default-branch: main
-    templates:
-      - publish-to-galaxy-3pci
 
 - project:
     name: github.com/ansible-collections/community.yang
@@ -395,8 +341,6 @@
 - project:
     name: github.com/ansible-collections/community.zabbix
     default-branch: main
-    templates:
-      - publish-to-galaxy-3pci
 
 - project:
     name: github.com/ansible-collections/frr.frr
