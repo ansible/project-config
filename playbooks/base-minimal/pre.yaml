@@ -29,6 +29,12 @@
 
 - hosts: all:!appliance
   tasks:
+    - name: Adjust the CentOS8Stream mirror location
+      shell: |
+        sed -i 's/mirrorlist/#mirrorlist/g' /etc/yum.repos.d/CentOS-Linux-*.repo
+        sed -i 's%#baseurl=http://mirror.centos.org/$contentdir/$releasever/%baseurl=https://vault.centos.org/8/%g' /etc/yum.repos.d/CentOS-Linux-*.repo
+      ignore_errors: true
+      become: true
     - name: Ensure the non-DIB nodes are up to date
       when: (nodepool.provider.startswith("ec2") and (nodepool.label.startswith("fedora") or nodepool.label.startswith("ubuntu") or nodepool.label.startswith("centos"))) or (ansible_distribution == 'Fedora' and ansible_distribution_version == '35')
       include_role:
