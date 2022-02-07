@@ -779,7 +779,7 @@
     name: github.com/openshift/community.okd
     default-branch: main
     templates:
-      - ansible-collections-community-okd
+      - noop-jobs
 
 - project:
     name: github.com/pabelanger/pabelanger-sandbox1
