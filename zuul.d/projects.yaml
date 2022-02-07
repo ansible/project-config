@@ -757,16 +757,10 @@
 - project:
     name: github.com/ansible/python-base-image
     default-branch: main
-    templates:
-      - system-required
-      - execution-environments-queue
 
 - project:
     name: github.com/ansible/python-builder-image
     default-branch: main
-    templates:
-      - system-required
-      - execution-environments-queue
 
 - project:
     name: github.com/ansible/workshops
