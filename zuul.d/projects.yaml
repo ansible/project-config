@@ -458,13 +458,6 @@
     name: github.com/ansible-collections/servicenow.itsm
     default-branch: main
     merge-mode: squash-merge
-    templates:
-      - system-required
-      - ansible-collections-servicenow-itsm-units
-      - network-ee-container-image-jobs
-      - network-ee-tests
-      - publish-to-galaxy
-      - publish-to-automation-hub
 
 - project:
     name: github.com/ansible-collections/skydive
