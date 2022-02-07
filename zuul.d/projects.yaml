@@ -738,24 +738,6 @@
               - name: github.com/ansible-network/network-engine
 
 - project:
-    name: github.com/ansible-security/ids_config
-    check:
-      jobs:
-        - ansible-tox-linters
-    gate:
-      jobs:
-        - ansible-tox-linters
-
-- project:
-    name: github.com/ansible-security/ids_install
-    check:
-      jobs:
-        - ansible-tox-linters
-    gate:
-      jobs:
-        - ansible-tox-linters
-
-- project:
     name: github.com/ansible/ansible
     default-branch: devel
     third-party-check-silent:
