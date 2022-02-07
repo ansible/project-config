@@ -58,9 +58,14 @@
           - ansible-collections/vmware_rest_code_generator
           - ansible-collections/vyos.vyos
           - ansible-community/ansible-bender
-          - ansible-community/ara
-          - ansible-community/ara-collection
-          - ansible-community/ara-infra
+          # ara projects are moved to the new zuul, stop loading config from here
+          # https://github.com/ansible/zuul-config/commit/dca73fc4000651f977a6b472914c26bc6a1f2093
+          - ansible-community/ara:
+              include: []
+          - ansible-community/ara-collection:
+              include: []
+          - ansible-community/ara-infra:
+              include: []
           - ansible-community/molecule-libvirt
           - ansible-community/molecule-vagrant
           - ansible/cloud-ee
