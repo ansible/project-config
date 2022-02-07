@@ -49,12 +49,7 @@
     name: github.com/ansible-collections/ansible.posix
     default-branch: main
     templates:
-      - system-required
-      - ansible-collections-ansible-posix-units
-      - network-ee-container-image-jobs
-      - network-ee-tests
-      - publish-to-galaxy
-      - publish-to-automation-hub
+      - noop-jobs
 
 - project:
     name: github.com/ansible-collections/ansible.security
