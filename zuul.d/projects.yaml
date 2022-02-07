@@ -768,37 +768,27 @@
     default-branch: devel
     merge-mode: squash-merge
     templates:
-      - execution-environments-queue
-      - system-required
-      - publish-to-pypi
+      - noop-jobs
 
 - project:
     name: github.com/ansible/ansible-core-image
     default-branch: main
     templates:
-      - execution-environments-queue
-      - system-required
+      - noop-jobs
 
 - project:
     name: github.com/ansible/ansible-navigator
     default-branch: main
     merge-mode: squash-merge
     templates:
-      - system-required
-      - publish-to-pypi
+      - noop-jobs
 
 - project:
     name: github.com/ansible/ansible-runner
     default-branch: devel
     merge-mode: squash-merge
     templates:
-      - system-required
-      - execution-environments-queue
-      - publish-to-pypi
-    check:
-      jobs: []
-    gate:
-      jobs: []
+      - noop-jobs
 
 - project:
     name: github.com/ansible/ansible-zuul-jobs
@@ -822,13 +812,7 @@
     name: github.com/ansible/network
     default-branch: devel
     templates:
-      - system-required
-    check:
-      jobs:
-        - ansible-tox-linters
-    gate:
-      jobs:
-        - ansible-tox-linters
+      - noop-jobs
 
 - project:
     name: github.com/ansible/network-ee
