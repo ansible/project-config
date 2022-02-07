@@ -23,7 +23,6 @@
       - ansible-collections-cisco-iosxr-netconf
       - ansible-collections-juniper-junos-netcommon
       - ansible-collections-juniper-junos-netconf
-      - ansible-collections-openvswitch-openvswitch
       - ansible-collections-vyos-vyos
       - ansible-python-jobs
       - integrated-queue
@@ -50,12 +49,7 @@
     name: github.com/ansible-collections/ansible.posix
     default-branch: main
     templates:
-      - system-required
-      - ansible-collections-ansible-posix-units
-      - network-ee-container-image-jobs
-      - network-ee-tests
-      - publish-to-galaxy
-      - publish-to-automation-hub
+      - noop-jobs
 
 - project:
     name: github.com/ansible-collections/ansible.security
@@ -87,19 +81,6 @@
 - project:
     name: github.com/ansible-collections/ansible.windows
     default-branch: main
-    templates:
-      - publish-to-galaxy-3pci
-    pre-release:
-      jobs:
-        - release-ansible-collection-automation-hub
-    release:
-      jobs:
-        - release-ansible-collection-automation-hub
-        - release-ansible-collection-announcement:
-            dependencies:
-              - name: release-ansible-collection-automation-hub
-              - name: release-ansible-collection-galaxy
-                soft: true
 
 - project:
     name: github.com/ansible-collections/arista.eos
@@ -359,8 +340,6 @@
 - project:
     name: github.com/ansible-collections/hetzner.hcloud
     default-branch: main
-    templates:
-      - publish-to-galaxy-3pci
 
 - project:
     name: github.com/ansible-collections/ibm.qradar
@@ -394,14 +373,8 @@
 - project:
     name: github.com/ansible-collections/kubernetes.core
     default-branch: main
-    merge-mode: squash-merge
     templates:
-      - system-required
-      - ansible-collections-kubernetes-core-units
-      - network-ee-container-image-jobs
-      - network-ee-tests
-      - publish-to-galaxy
-      - publish-to-automation-hub
+      - noop-jobs
 
 - project:
     name: github.com/ansible-collections/openvswitch.openvswitch
@@ -422,22 +395,12 @@
     name: github.com/ansible-collections/servicenow.itsm
     default-branch: main
     merge-mode: squash-merge
-    templates:
-      - system-required
-      - ansible-collections-servicenow-itsm-units
-      - network-ee-container-image-jobs
-      - network-ee-tests
-      - publish-to-galaxy
-      - publish-to-automation-hub
 
 - project:
     name: github.com/ansible-collections/skydive
     merge-mode: squash-merge
     templates:
-      - system-required
-      - ansible-python-jobs
-      - integrated-queue
-      - publish-to-galaxy
+      - noop-jobs
 
 - project:
     name: github.com/ansible-collections/splunk.es
@@ -622,15 +585,7 @@
     name: github.com/ansible-network/network-engine
     default-branch: devel
     templates:
-      - ansible-python3-jobs
-    check:
-      jobs:
-        - ansible-tox-linters
-        - ansible-tox-py27
-    gate:
-      jobs:
-        - ansible-tox-linters
-        - ansible-tox-py27
+      - noop-jobs
 
 - project:
     name: github.com/ansible-network/network-image-builder
@@ -641,13 +596,7 @@
     name: github.com/ansible-network/network-runner
     default-branch: devel
     templates:
-      - ansible-python3-jobs
-    check:
-      jobs:
-        - ansible-tox-linters
-    gate:
-      jobs:
-        - ansible-tox-linters
+      - noop-jobs
 
 - project:
     name: github.com/ansible-network/openstack
@@ -725,85 +674,35 @@
               - name: github.com/ansible-network/network-engine
 
 - project:
-    name: github.com/ansible-security/ids_config
-    check:
-      jobs:
-        - ansible-tox-linters
-    gate:
-      jobs:
-        - ansible-tox-linters
-
-- project:
-    name: github.com/ansible-security/ids_install
-    check:
-      jobs:
-        - ansible-tox-linters
-    gate:
-      jobs:
-        - ansible-tox-linters
-
-- project:
     name: github.com/ansible/ansible
     default-branch: devel
-    third-party-check-silent:
-      jobs:
-        - ansible-runner-build-container-image-stable-2.9:
-            branches: stable-2.9
-    post:
-      jobs:
-        - ansible-runner-upload-container-image:
-            branches: devel
-            vars:
-              upload_container_image_promote: false
-        - ansible-runner-upload-container-image-stable-2.11:
-            branches: stable-2.11
-            vars:
-              upload_container_image_promote: false
-        - ansible-runner-upload-container-image-stable-2.10:
-            branches: stable-2.10
-            vars:
-              upload_container_image_promote: false
-        - ansible-runner-upload-container-image-stable-2.9:
-            branches: stable-2.9
-            vars:
-              upload_container_image_promote: false
 
 - project:
     name: github.com/ansible/ansible-builder
     default-branch: devel
     merge-mode: squash-merge
     templates:
-      - execution-environments-queue
-      - system-required
-      - publish-to-pypi
+      - noop-jobs
 
 - project:
     name: github.com/ansible/ansible-core-image
     default-branch: main
     templates:
-      - execution-environments-queue
-      - system-required
+      - noop-jobs
 
 - project:
     name: github.com/ansible/ansible-navigator
     default-branch: main
     merge-mode: squash-merge
     templates:
-      - system-required
-      - publish-to-pypi
+      - noop-jobs
 
 - project:
     name: github.com/ansible/ansible-runner
     default-branch: devel
     merge-mode: squash-merge
     templates:
-      - system-required
-      - execution-environments-queue
-      - publish-to-pypi
-    check:
-      jobs: []
-    gate:
-      jobs: []
+      - noop-jobs
 
 - project:
     name: github.com/ansible/ansible-zuul-jobs
@@ -818,22 +717,10 @@
       jobs: []
 
 - project:
-    name: github.com/ansible/cloud-ee
-    default-branch: main
-    templates:
-      - system-required
-
-- project:
     name: github.com/ansible/network
     default-branch: devel
     templates:
-      - system-required
-    check:
-      jobs:
-        - ansible-tox-linters
-    gate:
-      jobs:
-        - ansible-tox-linters
+      - noop-jobs
 
 - project:
     name: github.com/ansible/network-ee
@@ -900,7 +787,6 @@
     default-branch: main
     templates:
       - ansible-collections-community-okd
-      - publish-to-galaxy-3pci
 
 - project:
     name: github.com/pabelanger/pabelanger-sandbox1
