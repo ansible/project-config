@@ -458,10 +458,7 @@
     name: github.com/ansible-collections/skydive
     merge-mode: squash-merge
     templates:
-      - system-required
-      - ansible-python-jobs
-      - integrated-queue
-      - publish-to-galaxy
+      - noop-jobs
 
 - project:
     name: github.com/ansible-collections/splunk.es
