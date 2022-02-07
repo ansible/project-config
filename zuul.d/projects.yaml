@@ -651,15 +651,7 @@
     name: github.com/ansible-network/network-engine
     default-branch: devel
     templates:
-      - ansible-python3-jobs
-    check:
-      jobs:
-        - ansible-tox-linters
-        - ansible-tox-py27
-    gate:
-      jobs:
-        - ansible-tox-linters
-        - ansible-tox-py27
+      - noop-jobs
 
 - project:
     name: github.com/ansible-network/network-image-builder
