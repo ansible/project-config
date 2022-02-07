@@ -740,28 +740,6 @@
 - project:
     name: github.com/ansible/ansible
     default-branch: devel
-    third-party-check-silent:
-      jobs:
-        - ansible-runner-build-container-image-stable-2.9:
-            branches: stable-2.9
-    post:
-      jobs:
-        - ansible-runner-upload-container-image:
-            branches: devel
-            vars:
-              upload_container_image_promote: false
-        - ansible-runner-upload-container-image-stable-2.11:
-            branches: stable-2.11
-            vars:
-              upload_container_image_promote: false
-        - ansible-runner-upload-container-image-stable-2.10:
-            branches: stable-2.10
-            vars:
-              upload_container_image_promote: false
-        - ansible-runner-upload-container-image-stable-2.9:
-            branches: stable-2.9
-            vars:
-              upload_container_image_promote: false
 
 - project:
     name: github.com/ansible/ansible-builder
