@@ -81,6 +81,8 @@
 - project:
     name: github.com/ansible-collections/ansible.windows
     default-branch: main
+    templates:
+      - noop-jobs
 
 - project:
     name: github.com/ansible-collections/arista.eos
