@@ -18,7 +18,6 @@
     templates:
       - system-required
       - ansible-collections-ansible-netcommon-units
-      - ansible-collections-cisco-nxos-units
       - ansible-collections-ansible-netcommon
       - ansible-collections-juniper-junos-netconf
       - ansible-python-jobs
