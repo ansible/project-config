@@ -18,11 +18,9 @@
     templates:
       - system-required
       - ansible-collections-ansible-netcommon-units
-      - ansible-collections-arista-eos
-      - ansible-collections-cisco-ios
-      - ansible-collections-cisco-iosxr-netconf
+      - ansible-collections-cisco-nxos-units
+      - ansible-collections-ansible-netcommon
       - ansible-collections-juniper-junos-netconf
-      - ansible-collections-vyos-vyos
       - ansible-python-jobs
       - integrated-queue
       - network-ee-container-image-jobs
