@@ -10,6 +10,8 @@
     name: github.com/ansible-collections/amazon.aws
     default-branch: main
     merge-mode: squash-merge
+    templates:
+      - noop-jobs
 
 - project:
     name: github.com/ansible-collections/ansible.netcommon
@@ -156,6 +158,8 @@
 - project:
     name: github.com/ansible-collections/community.aws
     default-branch: main
+    templates:
+      - noop-jobs
 
 - project:
     name: github.com/ansible-collections/community.azure
@@ -399,6 +403,8 @@
 - project:
     name: github.com/ansible-collections/vmware.vmware_rest
     default-branch: main
+    templates:
+      - noop-jobs
 
 - project:
     name: github.com/ansible-collections/vyos.vyos
