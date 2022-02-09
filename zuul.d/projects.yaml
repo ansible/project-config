@@ -24,8 +24,6 @@
       - integrated-queue
       - network-ee-container-image-jobs
       - network-ee-tests
-      - publish-to-galaxy
-      - publish-to-automation-hub
 
 - project:
     name: github.com/ansible-collections/ansible.network
@@ -38,8 +36,6 @@
       - network-ee-container-image-jobs
       - ansible-collections-ansible-network-units
       - ansible-python-jobs
-      - publish-to-galaxy
-      - publish-to-automation-hub
 
 - project:
     name: github.com/ansible-collections/ansible.posix
@@ -55,9 +51,7 @@
       - system-required
       - integrated-queue
       - ansible-collections-ansible-security
-      - publish-to-galaxy
       - ansible-python-jobs
-      - publish-to-automation-hub
 
 - project:
     name: github.com/ansible-collections/ansible.utils
@@ -84,8 +78,6 @@
       - network-ee-container-image-jobs
       - network-ee-tests
       - integrated-queue
-      - publish-to-galaxy
-      - publish-to-automation-hub
 
 - project:
     name: github.com/ansible-collections/checkpoint
@@ -94,7 +86,6 @@
       - system-required
       - ansible-python-jobs
       - integrated-queue
-      - publish-to-galaxy
 
 - project:
     name: github.com/ansible-collections/cisco.asa
@@ -108,8 +99,6 @@
       - integrated-queue
       - network-ee-container-image-jobs
       - network-ee-tests
-      - publish-to-galaxy
-      - publish-to-automation-hub
 
 - project:
     name: github.com/ansible-collections/cisco.ios
@@ -123,8 +112,6 @@
       - network-ee-container-image-jobs
       - network-ee-tests
       - integrated-queue
-      - publish-to-galaxy
-      - publish-to-automation-hub
 
 - project:
     name: github.com/ansible-collections/cisco.iosxr
@@ -138,8 +125,6 @@
       - network-ee-container-image-jobs
       - network-ee-tests
       - integrated-queue
-      - publish-to-galaxy
-      - publish-to-automation-hub
 
 - project:
     name: github.com/ansible-collections/cisco.nxos
@@ -153,8 +138,6 @@
       - integrated-queue
       - network-ee-container-image-jobs
       - network-ee-tests
-      - publish-to-galaxy
-      - publish-to-automation-hub
 
 - project:
     name: github.com/ansible-collections/cloud.common
@@ -169,7 +152,6 @@
       - system-required
       - ansible-collections-community-asa
       - ansible-collections-community-asa-units
-      - publish-to-galaxy
 
 - project:
     name: github.com/ansible-collections/community.aws
@@ -307,7 +289,6 @@
       - ansible-collections-community-yang-cisco-iosxr
       - ansible-collections-community-yang-units
       - ansible-python-jobs
-      - publish-to-galaxy
 
 - project:
     name: github.com/ansible-collections/community.zabbix
@@ -335,8 +316,6 @@
       - integrated-queue
       - network-ee-container-image-jobs
       - network-ee-tests
-      - publish-to-galaxy
-      - publish-to-automation-hub
 
 - project:
     name: github.com/ansible-collections/junipernetworks.junos
@@ -350,8 +329,6 @@
       - integrated-queue
       - network-ee-container-image-jobs
       - network-ee-tests
-      - publish-to-galaxy
-      - publish-to-automation-hub
 
 - project:
     name: github.com/ansible-collections/kubernetes.core
@@ -371,8 +348,6 @@
       - integrated-queue
       - network-ee-container-image-jobs
       - network-ee-tests
-      - publish-to-galaxy
-      - publish-to-automation-hub
 
 - project:
     name: github.com/ansible-collections/servicenow.itsm
@@ -396,8 +371,6 @@
       - integrated-queue
       - network-ee-container-image-jobs
       - network-ee-tests
-      - publish-to-galaxy
-      - publish-to-automation-hub
 
 - project:
     name: github.com/ansible-collections/symantec.epm
@@ -410,8 +383,6 @@
       - integrated-queue
       - network-ee-container-image-jobs
       - network-ee-tests
-      - publish-to-galaxy
-      - publish-to-automation-hub
 
 - project:
     name: github.com/ansible-collections/trendmicro.deepsec
@@ -424,8 +395,6 @@
       - integrated-queue
       - network-ee-container-image-jobs
       - network-ee-tests
-      - publish-to-galaxy
-      - publish-to-automation-hub
 
 - project:
     name: github.com/ansible-collections/vmware.vmware_rest
@@ -443,8 +412,6 @@
       - network-ee-container-image-jobs
       - network-ee-tests
       - integrated-queue
-      - publish-to-galaxy
-      - publish-to-automation-hub
 
 - project:
     name: github.com/ansible-community/ansible-bender
