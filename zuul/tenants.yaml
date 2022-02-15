@@ -21,7 +21,6 @@
 
           # After this point, sorting projects alphabetically will help
           # merge conflicts
-          - ansible/ansible-builder
           - ansible/ansible-core-image
           - ansible/ansible-navigator
           - ansible/ansible-runner
@@ -114,6 +113,7 @@
           - include: []
             projects:
               - ansible/ansible
+              - ansible/ansible-builder
               - ansible-community/collection_migration
               - ansible-collections/ansible.windows
               - ansible-collections/community.azure
