@@ -42,6 +42,9 @@
 - project: ansible-collections/ansible.network
   description: Ansible Network Collection for network and IP utilities that are not specific to any platform or OS.
   default-branch: main
+- project: ansible-collections/ansible.plugin_builder
+  description: A collection to scaffold Ansible plugins.
+  default-branch: main
 - project: ansible-collections/ansible.posix
   description: Ansible Collection for Posix
   default-branch: main
@@ -125,9 +128,6 @@
   default-branch: main
 - project: ansible-collections/vyos.vyos
   description: Ansible Network Collection for VyOS
-  default-branch: main
-- project: ansible-collections/ansible.plugin_builder
-  description: A collection to scaffold Ansible plugins.
   default-branch: main
 - project: ansible-community/ansible-bender
   description: ansible-playbook + buildah = a sweet container image
