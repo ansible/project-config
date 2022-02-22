@@ -145,6 +145,8 @@
     name: github.com/ansible-collections/cloud.common
     default-branch: main
     merge-mode: squash-merge
+    templates:
+      - noop-jobs
 
 - project:
     name: github.com/ansible-collections/community.asa
