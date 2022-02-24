@@ -42,7 +42,7 @@
 - project: ansible-collections/ansible.network
   description: Ansible Network Collection for network and IP utilities that are not specific to any platform or OS.
   default-branch: main
-- project: ansible-collections/ansible.plugin_builder
+- project: ansible-community/ansible.plugin_builder
   description: A collection to scaffold Ansible plugins.
   default-branch: main
 - project: ansible-collections/ansible.posix
