@@ -135,6 +135,7 @@
               - ansible-collections/community.internal_test_tools
               - ansible-collections/community.kubernetes
               - ansible-collections/community.kubevirt
+              - ansible-collections/community.lbry
               - ansible-collections/community.libvirt
               - ansible-collections/community.molecule
               - ansible-collections/community.mongodb
