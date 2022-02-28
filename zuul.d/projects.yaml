@@ -427,6 +427,13 @@
       - system-required
 
 - project:
+    name: github.com/ansible-community/ansible.plugin_builder
+    default-branch: main
+    merge-mode: squash-merge
+    templates:
+      - system-required
+
+- project:
     name: github.com/ansible-community/molecule-libvirt
     default-branch: main
     templates:
