@@ -432,6 +432,7 @@
     merge-mode: squash-merge
     templates:
       - system-required
+      - ansible-community-ansible-plugin-builder
 
 - project:
     name: github.com/ansible-community/molecule-libvirt
