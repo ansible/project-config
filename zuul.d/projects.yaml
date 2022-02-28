@@ -238,6 +238,10 @@
     default-branch: main
 
 - project:
+    name: github.com/ansible-collections/community.lbry
+    default-branch: main
+
+- project:
     name: github.com/ansible-collections/community.libvirt
     default-branch: main
 
