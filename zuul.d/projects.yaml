@@ -429,6 +429,7 @@
 - project:
     name: github.com/ansible-community/ansible.plugin_builder
     default-branch: main
+    merge-mode: squash-merge
     templates:
       - system-required
 
