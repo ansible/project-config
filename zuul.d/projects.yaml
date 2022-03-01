@@ -572,7 +572,6 @@
     default-branch: main
     templates:
       - noop-jobs
-     
 - project:
     name: github.com/ansible-network/ansible_content_collections_metrics
     default-branch: main
