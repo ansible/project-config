@@ -571,14 +571,12 @@
     name: github.com/ansible-community/molecule-vagrant
     default-branch: main
     templates:
-      - noop-jobs
-      
+      - noop-jobs   
 - project:
     name: github.com/ansible-network/ansible_content_collections_metrics
     default-branch: main
     templates:
-      - ansible-python-jobs
-      
+      - ansible-python-jobs      
 - project:
     name: github.com/ansible-network/arista_eos
     default-branch: devel
