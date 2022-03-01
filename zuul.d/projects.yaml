@@ -578,12 +578,6 @@
     default-branch: devel
     templates:
       - ansible-python-jobs
-      
-- project:
-    name: github.com/ansible-network/ansible_content_collections_metrics
-    default-branch: main
-    templates:
-      - ansible-python-jobs      
 
 - project:
     name: github.com/ansible-network/aws_management
