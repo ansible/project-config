@@ -320,8 +320,6 @@
       - ansible-collections-security-ibm-qradar
       - ansible-python-jobs
       - integrated-queue
-      - network-ee-container-image-jobs
-      - network-ee-tests
 
 - project:
     name: github.com/ansible-collections/junipernetworks.junos
