@@ -688,7 +688,7 @@
     name: github.com/ansible/network-ee
     default-branch: main
     templates:
-      - system-required
+      - noop-jobs
 
 - project:
     name: github.com/ansible/project-config
