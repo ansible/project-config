@@ -32,12 +32,7 @@
     default-branch: main
     merge-mode: squash-merge
     templates:
-      - system-required
-      - integrated-queue
-      - ansible-collections-ansible-network
-      - network-ee-container-image-jobs
-      - ansible-collections-ansible-network-units
-      - ansible-python-jobs
+      - noop-jobs
 
 - project:
     name: github.com/ansible-collections/ansible.posix
