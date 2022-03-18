@@ -80,9 +80,7 @@
     name: github.com/ansible-collections/checkpoint
     merge-mode: squash-merge
     templates:
-      - system-required
-      - ansible-python-jobs
-      - integrated-queue
+      - noop-jobs
 
 - project:
     name: github.com/ansible-collections/cisco.asa
