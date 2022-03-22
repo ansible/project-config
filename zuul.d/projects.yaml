@@ -350,12 +350,7 @@
     default-branch: main
     merge-mode: squash-merge
     templates:
-      - system-required
-      - ansible-collections-symantec-epm-units
-      - ansible-python-jobs
-      - integrated-queue
-      - network-ee-container-image-jobs
-      - network-ee-tests
+      - noop-jobs
 
 - project:
     name: github.com/ansible-collections/trendmicro.deepsec
