@@ -265,11 +265,7 @@
     default-branch: main
     merge-mode: squash-merge
     templates:
-      - system-required
-      - ansible-collections-community-yang-juniper-junos
-      - ansible-collections-community-yang-cisco-iosxr
-      - ansible-collections-community-yang-units
-      - ansible-python-jobs
+      - noop-jobs
 
 - project:
     name: github.com/ansible-collections/community.zabbix
