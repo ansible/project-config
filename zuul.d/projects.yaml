@@ -128,9 +128,7 @@
     default-branch: main
     merge-mode: squash-merge
     templates:
-      - system-required
-      - ansible-collections-community-asa
-      - ansible-collections-community-asa-units
+      - noop-jobs
 
 - project:
     name: github.com/ansible-collections/community.aws
