@@ -353,7 +353,7 @@
 - project:
     name: github.com/ansible-community/ansible-bender
     templates:
-      - system-required
+      - noop-jobs
 
 - project:
     name: github.com/ansible-community/ansible.plugin_builder
@@ -377,19 +377,19 @@
     name: github.com/ansible-network/ansible_content_collections_metrics
     default-branch: main
     templates:
-      - ansible-python-jobs
+      - noop-jobs
 
 - project:
     name: github.com/ansible-network/arista_eos
     default-branch: devel
     templates:
-      - ansible-python-jobs
+      - noop-jobs
 
 - project:
     name: github.com/ansible-network/aws_management
     default-branch: main
     templates:
-      - system-required
+      - noop-jobs
 
 - project:
     name: github.com/ansible-network/azure
@@ -412,37 +412,25 @@
     name: github.com/ansible-network/cisco_ios
     default-branch: devel
     templates:
-      - ansible-python3-jobs
-    check:
-      jobs:
-        - ansible-tox-linters
-        - ansible-tox-py27
-    gate:
-      jobs:
-        - ansible-tox-linters
-        - ansible-tox-py27
+      - noop-jobs
 
 - project:
     name: github.com/ansible-network/cisco_iosxr
     default-branch: devel
     templates:
-      - ansible-python-jobs
+      - noop-jobs
 
 - project:
     name: github.com/ansible-network/cisco_nxos
     default-branch: devel
     templates:
-      - ansible-python-jobs
+      - noop-jobs
 
 - project:
     name: github.com/ansible-network/cloud_vpn
     default-branch: devel
-    check:
-      jobs:
-        - ansible-tox-linters
-    gate:
-      jobs:
-        - ansible-tox-linters
+    templates:
+      - noop-jobs
 
 - project:
     name: github.com/ansible-network/collection_migration
@@ -465,14 +453,7 @@
     name: github.com/ansible-network/juniper_junos
     default-branch: devel
     templates:
-      - ansible-python-jobs
-      - ansible-python3-jobs
-    check:
-      jobs:
-        - ansible-tox-py27
-    gate:
-      jobs:
-        - ansible-tox-py27
+      - noop-jobs
 
 - project:
     name: github.com/ansible-network/network_configurator
@@ -585,7 +566,7 @@
     name: github.com/ansible/ansible-zuul-jobs
     merge-mode: squash-merge
     templates:
-      - system-required
+      - noop-jobs
 
 - project:
     name: github.com/ansible/awx
@@ -643,15 +624,8 @@
 - project:
     name: github.com/ansible/workshops
     default-branch: devel
-    third-party-check:
-      jobs:
-        - ansible-tox-linters
-        - workshops-tox-integration-f5
-        - workshops-tox-integration-networking
-        - workshops-tox-integration-rhel
-        - workshops-tox-integration-security
-        - workshops-tox-integration-smart-mgmt
-        - workshops-tox-integration-windows
+    templates:
+      - noop-jobs
 
 - project:
     name: github.com/openshift/community.okd
@@ -661,11 +635,10 @@
 
 - project:
     name: github.com/pabelanger/pabelanger-sandbox1
-    3pci-check:
-      jobs:
-        - ansible-tox-linters
+    templates:
+      - noop-jobs
 
 - project:
     name: github.com/pycontribs/selinux
     templates:
-      - system-required
+      - noop-jobs
