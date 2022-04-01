@@ -38,10 +38,7 @@
     default-branch: main
     merge-mode: squash-merge
     templates:
-      - system-required
-      - integrated-queue
-      - ansible-collections-ansible-security
-      - ansible-python-jobs
+      - noop-jobs
 
 - project:
     name: github.com/ansible-collections/ansible.utils
@@ -266,10 +263,7 @@
     default-branch: main
     merge-mode: squash-merge
     templates:
-      - system-required
-      - ansible-collections-security-ibm-qradar
-      - ansible-python-jobs
-      - integrated-queue
+      - noop-jobs
 
 - project:
     name: github.com/ansible-collections/junipernetworks.junos
@@ -307,12 +301,7 @@
     default-branch: main
     merge-mode: squash-merge
     templates:
-      - system-required
-      - ansible-collections-security-splunk-es
-      - ansible-python-jobs
-      - integrated-queue
-      - network-ee-container-image-jobs
-      - network-ee-tests
+      - noop-jobs
 
 - project:
     name: github.com/ansible-collections/symantec.epm
@@ -326,12 +315,7 @@
     default-branch: main
     merge-mode: squash-merge
     templates:
-      - system-required
-      - ansible-collections-security-trendmicro-deepsec-units
-      - ansible-python-jobs
-      - integrated-queue
-      - network-ee-container-image-jobs
-      - network-ee-tests
+      - noop-jobs
 
 - project:
     name: github.com/ansible-collections/vmware.vmware_rest
