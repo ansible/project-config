@@ -543,12 +543,6 @@
       - noop-jobs
 
 - project:
-    name: github.com/ansible/ansible-zuul-jobs
-    merge-mode: squash-merge
-    templates:
-      - noop-jobs
-
-- project:
     name: github.com/ansible/awx
     default-branch: devel
     check:
