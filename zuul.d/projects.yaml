@@ -354,13 +354,7 @@
     default-branch: main
     merge-mode: squash-merge
     templates:
-      - system-required
-      - ansible-collections-vyos-vyos
-      - ansible-collections-vyos-vyos-units
-      - ansible-python-jobs
-      - network-ee-container-image-jobs
-      - network-ee-tests
-      - integrated-queue
+      - noop-jobs
 
 - project:
     name: github.com/ansible-community/ansible-bender
