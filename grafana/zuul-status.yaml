@@ -1,0 +1,217 @@
+---
+dashboard:
+  title: Zuul Status
+  rows:
+    - title: Description
+      height: 100px
+      panels:
+        - title: Description
+          content: |
+            **This dashboard is managed by [Grafyaml](http://docs.openstack.org/infra/system-config/grafyaml.html).**
+
+            If you would like to make changes to this dashboard, please see the grafana directory in [project-config](https://github.com/ansible/project-config/blob/master/grafana/zuul-status.yaml).
+          type: text
+    - title: Pipelines
+      height: 150px
+      panels:
+        - title: Check
+          span: 2
+          sparkline:
+            full: true
+            show: true
+          targets:
+            - target: gauges.zuul.tenant.ansible.pipeline.check.current_changes
+          type: singlestat
+          valueName: current
+        - title: Gate
+          span: 2
+          sparkline:
+            full: true
+            show: true
+          targets:
+            - target: gauges.zuul.tenant.ansible.pipeline.gate.current_changes
+          type: singlestat
+          valueName: current
+        - title: Promote
+          span: 2
+          sparkline:
+            full: true
+            show: true
+          targets:
+            - target: gauges.zuul.tenant.ansible.pipeline.promote.current_changes
+          type: singlestat
+          valueName: current
+        - title: Post
+          span: 2
+          sparkline:
+            full: true
+            show: true
+          targets:
+            - target: gauges.zuul.tenant.ansible.pipeline.post.current_changes
+          type: singlestat
+          valueName: current
+        - title: Tag
+          span: 2
+          sparkline:
+            full: true
+            show: true
+          targets:
+            - target: gauges.zuul.tenant.ansible.pipeline.tag.current_changes
+          type: singlestat
+          valueName: current
+        - title: Pre-Release
+          span: 2
+          sparkline:
+            full: true
+            show: true
+          targets:
+            - target: gauges.zuul.tenant.ansible.pipeline.pre-release.current_changes
+          type: singlestat
+          valueName: current
+        - title: Release
+          span: 2
+          sparkline:
+            full: true
+            show: true
+          targets:
+            - target: gauges.zuul.tenant.ansible.pipeline.release.current_changes
+          type: singlestat
+          valueName: current
+        - title: Periodic
+          span: 2
+          sparkline:
+            full: true
+            show: true
+          targets:
+            - target: gauges.zuul.tenant.ansible.pipeline.periodic.current_changes
+          type: singlestat
+          valueName: current
+        - title: Periodic 1hr
+          span: 2
+          sparkline:
+            full: true
+            show: true
+          targets:
+            - target: gauges.zuul.tenant.ansible.pipeline.periodic-1hr.current_changes
+          type: singlestat
+          valueName: current
+        - title: Merge-Check
+          span: 2
+          sparkline:
+            full: true
+            show: true
+          targets:
+            - target: gauges.zuul.tenant.ansible.pipeline.merge-check.current_changes
+          type: singlestat
+          valueName: current
+      showTitle: true
+    - title: Graphs
+      height: 250px
+      panels:
+        - title: Zuul Jobs Launched (per Hour)
+          span: 4
+          targets:
+            - target: alias(summarize(sumSeries(counters.zuul.tenant.ansible.pipeline.*.all_jobs.count), '1h'), 'All Jobs')
+          type: graph
+        - title: Node Requests
+          span: 4
+          yaxes:
+            - min: 0
+            - show: false
+          targets:
+            - target: alias(gauges.zuul.nodepool.current_requests, 'Requests')
+          type: graph
+        - title: Zuul Job Queue
+          span: 4
+          targets:
+            - target: alias(gauges.zuul.geard.queue.running, 'Running')
+            - target: alias(gauges.zuul.geard.queue.waiting, 'Waiting')
+            - target: alias(gauges.zuul.geard.queue.total, 'Total Jobs')
+          type: graph
+        - title: GitHub Events (per Hour)
+          span: 4
+          targets:
+            - target: alias(summarize(counters.zuul.event.github.pull_request.count, '1h'), 'Pull requests')
+            - target: alias(summarize(counters.zuul.event.github.pull_request_review.count, '1h'), 'Pull request reviews')
+            - target: alias(summarize(counters.zuul.event.github.push.count, '1h'), 'Pushes')
+          type: graph
+        - title: Test Nodes
+          span: 4
+          stack: true
+          tooltip:
+            value_type: individual
+          targets:
+            - target: alias(gauges.nodepool.nodes.building, 'Building')
+            - target: alias(gauges.nodepool.nodes.ready, 'Available')
+            - target: alias(gauges.nodepool.nodes.in-use, 'In Use')
+            - target: alias(gauges.nodepool.nodes.used, 'Used')
+            - target: alias(gauges.nodepool.nodes.deleting, 'Deleting')
+            - target: alias(sumSeries(gauges.nodepool.provider.*.max_servers), 'Max')
+          seriesOverrides:
+            - alias: Max
+              stack: false
+          type: graph
+    - title: Executors
+      showTitle: true
+      height: 250px
+      panels:
+        - title: Executors
+          span: 6
+          targets:
+            - target: alias(gauges.zuul.executors.online, 'Online')
+            - target: alias(gauges.zuul.executors.accepting, 'Accepting')
+          type: graph
+        - title: Running Builds
+          span: 6
+          targets:
+            - target: aliasSub(gauges.zuul.executor.*.running_builds, ".*\.(.*)_sjc1_vexxhost_zuul_ansible_com.*", "\1")
+          type: graph
+        - title: Executor Queue
+          span: 6
+          targets:
+            - target: alias(gauges.zuul.executors.jobs_queued, 'Queued Jobs')
+            - target: alias(gauges.zuul.executors.jobs_running, 'Running Jobs')
+          type: graph
+        - title: Load Average
+          span: 6
+          targets:
+            - target: aliasSub(scale(gauges.zuul.executor.*.load_average, 0.01), ".*\.(.*)_sjc1_vexxhost_zuul_ansible_com.*", "\1")
+          type: graph
+        - title: Starting Builds
+          span: 6
+          targets:
+            - target: aliasSub(gauges.zuul.executor.*.starting_builds, ".*\.(.*)_sjc1_vexxhost_zuul_ansible_com.*", "\1")
+          type: graph
+        - title: Used HDD (Percentage)
+          span: 6
+          yaxes:
+            - label: Used HDD %
+              format: percent
+            - show: false
+          targets:
+            - target: aliasSub(scale(gauges.zuul.executor.*.pct_used_hdd, 0.01), ".*\.(.*)_sjc1_vexxhost_zuul_ansible_com.*", "\1")
+          type: graph
+        - title: Used RAM (Percentage)
+          span: 6
+          yaxes:
+            - label: Used RAM %
+              format: percent
+            - show: false
+          targets:
+            - target: aliasSub(scale(gauges.zuul.executor.*.pct_used_ram, 0.01), ".*\.(.*)_sjc1_vexxhost_zuul_ansible_com.*", "\1")
+          type: graph
+    - title: Mergers
+      showTitle: true
+      height: 250px
+      panels:
+        - title: Mergers
+          span: 6
+          targets:
+            - target: alias(gauges.zuul.mergers.online, 'Online')
+          type: graph
+        - title: Merger Queue
+          span: 6
+          targets:
+            - target: alias(gauges.zuul.mergers.jobs_queued, 'Queued Jobs')
+            - target: alias(gauges.zuul.mergers.jobs_running, 'Running Jobs')
+          type: graph
